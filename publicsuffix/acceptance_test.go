@@ -15,6 +15,12 @@ func TestValid(t *testing.T) {
 	testCases := []validTestCase{
 		validTestCase{"example.com", "example.com", &DomainName{"com", "example", ""}},
 		validTestCase{"foo.example.com", "example.com", &DomainName{"com", "example", "foo"}},
+
+		validTestCase{"verybritish.co.uk", "verybritish.co.uk", &DomainName{"co.uk", "verybritish", ""}},
+		validTestCase{"foo.verybritish.co.uk", "verybritish.co.uk", &DomainName{"co.uk", "verybritish", "foo"}},
+
+		validTestCase{"parliament.uk", "parliament.uk", &DomainName{"uk", "parliament", ""}},
+		validTestCase{"foo.parliament.uk", "parliament.uk", &DomainName{"uk", "parliament", "foo"}},
 	}
 
 	for _, testCase := range testCases {

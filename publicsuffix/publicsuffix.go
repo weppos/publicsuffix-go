@@ -16,6 +16,8 @@ const (
 
 	listTokenPrivateDomains = "===BEGIN PRIVATE DOMAINS==="
 	listTokenComment        = "//"
+
+	defaultListFile = "list.dat"
 )
 
 // DefaultList is the default List and is used by Parse and Domain.
@@ -293,10 +295,18 @@ func (d *DomainName) String() string {
 }
 
 func Domain(name string) (string, error) {
+	if DefaultList.Size() == 0 {
+		initDefaultList()
+	}
+
 	return Ldomain(DefaultList, name)
 }
 
 func Parse(name string) (*DomainName, error) {
+	if DefaultList.Size() == 0 {
+		initDefaultList()
+	}
+
 	return Lparse(DefaultList, name)
 }
 
@@ -323,6 +333,13 @@ func Lparse(l *List, name string) (*DomainName, error) {
 	dn := &DomainName{}
 	dn.Tld, dn.Sld, dn.Trd = decompose(&r, n)
 	return dn, nil
+}
+
+func initDefaultList() {
+	err := DefaultList.LoadFile(defaultListFile, DefaultParserOptions)
+	if err != nil {
+		panic(err)
+	}
 }
 
 func normalize(name string) (string, error) {
