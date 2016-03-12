@@ -1,3 +1,6 @@
+// Package publicsuffix provides a domain name parser
+// based on data from the public suffix list http://publicsuffix.org/.
+// A public suffix is one under which Internet users can directly register names.
 package publicsuffix
 
 import (
@@ -5,7 +8,9 @@ import (
 	"fmt"
 	"io"
 	"os"
+	"path"
 	"regexp"
+	"runtime"
 	"strings"
 )
 
@@ -284,9 +289,10 @@ func Labels(name string) []string {
 
 // DomainName represents a domain name.
 type DomainName struct {
-	Tld string
-	Sld string
-	Trd string
+	Tld  string
+	Sld  string
+	Trd  string
+	Rule *Rule
 }
 
 // String joins the components of the domain name into a single string.
@@ -396,7 +402,7 @@ func ParseFromListWithOptions(l *List, name string, options *FindOptions) (*Doma
 		return nil, fmt.Errorf("%s is a suffix", n)
 	}
 
-	dn := &DomainName{}
+	dn := &DomainName{Rule: &r}
 	dn.Tld, dn.Sld, dn.Trd = decompose(&r, n)
 	return dn, nil
 }
@@ -405,7 +411,13 @@ func ParseFromListWithOptions(l *List, name string, options *FindOptions) (*Doma
 // The list is lazy-initialized the first time it is requested.
 func DefaultList() *List {
 	if defaultList.Size() == 0 {
-		err := defaultList.LoadFile(defaultListFile, DefaultParserOptions)
+		// build the path to the file using the current directory
+		// otherwise when this lib is loaded in a different package
+		// the initializer crashes because it can't find the file
+		_, filename, _, _ := runtime.Caller(0)
+		filepath := path.Join(path.Dir(filename), defaultListFile)
+
+		err := defaultList.LoadFile(filepath, DefaultParserOptions)
 		if err != nil {
 			panic(err)
 		}

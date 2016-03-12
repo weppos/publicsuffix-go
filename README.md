@@ -107,6 +107,42 @@ publicsuffix.DomainFromListWithOptions(list, "google.blogspot.com", nil)
 // blogspot.com
 ```
 
+## Differences with `golang.org/x/net/publicsuffix`
+
+The [`golang.org/x/net/publicsuffix`](https://godoc.org/golang.org/x/net/publicsuffix) is a package part of the Golang `x/net` package, that provides a public suffix list implementation.
+
+The main difference is that the `x/net` package is optimized for speed, but it's less flexible. The list is compiled and embedded into the package itself. However, this is also the main downside.
+The [list is not frequently refreshed](https://github.com/letsencrypt/boulder/issues/1374#issuecomment-182429297), hence the results may be inaccurate, in particular if you heavily rely on the private domain section of the list. Changes in the IANA section are less frequent, whereas changes in the Private Domains section happens weekly.
+
+This package provides the following extra features:
+
+- Ability to load an arbitrary list at runtime (e.g. you can feed your own list, or create multiple lists)
+- Ability to create multiple lists
+- Ability to parse a domain using a previously defined list
+- Ability to add custom rules to an existing list, or merge/load rules from other lists (provided as file or string)
+- Advanced access to the list rules
+- Ability to ignore private domains at runtime, or when the list is parsed
+
+This package also aims for 100% compatibility with the `x/net` package. A special adapter is provided as a drop-in replacement. Simply change the include statement from
+
+```go
+include (
+    "golang.org/x/net/publicsuffix"
+)
+```
+
+to
+
+```go
+include (
+    "github.com/weppos/publicsuffix-go/net/publicsuffix"
+)
+```
+
+The `github.com/weppos/publicsuffix-go/net/publicsuffix` package defines the same methods defined in `golang.org/x/net/publicsuffix`, but these methods are implemented using the `github.com/weppos/publicsuffix-go/publicsuffix` package.
+
+Note that the adapter doesn't offer the flexibility of `github.com/weppos/publicsuffix-go/publicsuffix`, such as the ability to use multiple lists or disable private domains at runtime.
+
 
 ## License
 

@@ -1,7 +1,6 @@
 package publicsuffix
 
 import (
-	"reflect"
 	"testing"
 )
 
@@ -13,17 +12,17 @@ type validTestCase struct {
 
 func TestValid(t *testing.T) {
 	testCases := []validTestCase{
-		validTestCase{"example.com", "example.com", &DomainName{"com", "example", ""}},
-		validTestCase{"foo.example.com", "example.com", &DomainName{"com", "example", "foo"}},
+		validTestCase{"example.com", "example.com", &DomainName{"com", "example", "", NewRule("com")}},
+		validTestCase{"foo.example.com", "example.com", &DomainName{"com", "example", "foo", NewRule("com")}},
 
-		validTestCase{"verybritish.co.uk", "verybritish.co.uk", &DomainName{"co.uk", "verybritish", ""}},
-		validTestCase{"foo.verybritish.co.uk", "verybritish.co.uk", &DomainName{"co.uk", "verybritish", "foo"}},
+		validTestCase{"verybritish.co.uk", "verybritish.co.uk", &DomainName{"co.uk", "verybritish", "", NewRule("*.uk")}},
+		validTestCase{"foo.verybritish.co.uk", "verybritish.co.uk", &DomainName{"co.uk", "verybritish", "foo", NewRule("*.uk")}},
 
-		validTestCase{"parliament.uk", "parliament.uk", &DomainName{"uk", "parliament", ""}},
-		validTestCase{"foo.parliament.uk", "parliament.uk", &DomainName{"uk", "parliament", "foo"}},
+		validTestCase{"parliament.uk", "parliament.uk", &DomainName{"uk", "parliament", "", NewRule("!parliament.uk")}},
+		validTestCase{"foo.parliament.uk", "parliament.uk", &DomainName{"uk", "parliament", "foo", NewRule("!parliament.uk")}},
 
-		validTestCase{"foo.blogspot.com", "foo.blogspot.com", &DomainName{"blogspot.com", "foo", ""}},
-		validTestCase{"bar.foo.blogspot.com", "foo.blogspot.com", &DomainName{"blogspot.com", "foo", "bar"}},
+		validTestCase{"foo.blogspot.com", "foo.blogspot.com", &DomainName{"blogspot.com", "foo", "", NewRule("blogspot.com")}},
+		validTestCase{"bar.foo.blogspot.com", "foo.blogspot.com", &DomainName{"blogspot.com", "foo", "bar", NewRule("blogspot.com")}},
 	}
 
 	for _, testCase := range testCases {
@@ -31,7 +30,7 @@ func TestValid(t *testing.T) {
 		if err != nil {
 			t.Errorf("TestValid(%v) returned error: %v", testCase.input, err)
 		}
-		if want := testCase.parsed; !reflect.DeepEqual(got, want) {
+		if want := testCase.parsed; want.String() != got.String() {
 			t.Errorf("TestValid(%v) = %v, want %v", testCase.input, got, want)
 		}
 
