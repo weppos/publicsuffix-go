@@ -21,6 +21,9 @@ const (
 // DefaultList is the default List and is used by Parse.
 var DefaultList = NewList()
 
+// DefaultRule is the default Rule that represents "*".
+var DefaultRule = NewRule("*")
+
 // DefaultParserOptions are the default options used to parse a Public Suffix list.
 var DefaultParserOptions = &ParserOption{PrivateDomains: true}
 
@@ -80,6 +83,21 @@ func (l *List) LoadFile(path string, options *ParserOption) error {
 	return l.parse(f, options)
 }
 
+// AddRule adds a new rule to the list.
+//
+// The exact position of the rule into the list is unpredictable.
+// The list may be optimized internally for lookups, therefore the algorithm
+// will decide the best position for the new rule.
+func (l *List) AddRule(r *Rule) error {
+	l.rules = append(l.rules, *r)
+	return nil
+}
+
+// experimental
+func (l *List) Size() int {
+	return len(l.rules)
+}
+
 func (l *List) parse(r io.Reader, options *ParserOption) error {
 	if options == nil {
 		options = DefaultParserOptions
@@ -120,18 +138,38 @@ Scanning:
 	return nil
 }
 
-// AddRule adds a new rule to the list.
-//
-// The exact position of the rule into the list is unpredictable.
-// The list may be optimized internally for lookups, therefore the algorithm
-// will decide the best position for the new rule.
-func (l *List) AddRule(r *Rule) error {
-	l.rules = append(l.rules, *r)
-	return nil
+// Finds and returns the most appropriate rule for the domain name.
+func (l *List) Find(name string) Rule {
+	var rule *Rule
+
+	for _, r := range l.Select(name) {
+		if r.Type == ExceptionType {
+			return r
+		}
+		if rule == nil || rule.Length < r.Length {
+			rule = &r
+		}
+	}
+
+	if rule != nil {
+		return *rule
+	}
+
+	return *DefaultRule
 }
 
-func (l *List) rulesCount() int {
-	return len(l.rules)
+// experimental
+func (l *List) Select(name string) []Rule {
+	var found []Rule
+
+	// In this phase the search is a simple sequential scan
+	for _, rule := range l.rules {
+		if rule.Match(name) {
+			found = append(found, rule)
+		}
+	}
+
+	return found
 }
 
 // NewRule parses the rule content, creates and returns a Rule.
@@ -141,7 +179,11 @@ func NewRule(content string) *Rule {
 
 	switch content[0:1] {
 	case "*": // wildcard
-		value = content[2:len(content)]
+		if content == "*" {
+			value = ""
+		} else {
+			value = content[2:len(content)]
+		}
 		rule = &Rule{Type: WildcardType, Value: value, Length: len(Labels(value)) + 1}
 	case "!": // exception
 		value = content[1:len(content)]

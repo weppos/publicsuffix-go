@@ -31,7 +31,7 @@ blogspot.com
 		t.Fatalf("Parse returned an error: %v", err)
 	}
 
-	if want, got := 3, list.rulesCount(); want != got {
+	if want, got := 3, list.Size(); want != got {
 		t.Errorf("Parse returned a list with %v rules, want %v", got, want)
 		t.Fatalf("%v", list.rules)
 	}
@@ -68,7 +68,7 @@ func TestNewListFromFile(t *testing.T) {
 		t.Fatalf("Parse returned an error: %v", err)
 	}
 
-	if want, got := 3, list.rulesCount(); want != got {
+	if want, got := 3, list.Size(); want != got {
 		t.Errorf("Parse returned a list with %v rules, want %v", got, want)
 		t.Fatalf("%v", list.rules)
 	}
@@ -102,17 +102,88 @@ func TestNewListFromFile(t *testing.T) {
 func TestListAddRule(t *testing.T) {
 	list := &List{}
 
-	if list.rulesCount() != 0 {
-		t.Fatalf("Empty list should have 0 rules, got %v", list.rulesCount())
+	if list.Size() != 0 {
+		t.Fatalf("Empty list should have 0 rules, got %v", list.Size())
 	}
 
 	rule := NewRule("com")
 	list.AddRule(rule)
-	if list.rulesCount() != 1 {
-		t.Fatalf("List should have 1 rule, got %v", list.rulesCount())
+	if list.Size() != 1 {
+		t.Fatalf("List should have 1 rule, got %v", list.Size())
 	}
 	if got := &list.rules[0]; !reflect.DeepEqual(rule, got) {
 		t.Fatalf("List[0] expected to be %v, got %v", rule, got)
+	}
+}
+
+type listFindTestCase struct {
+	input    string
+	expected *Rule
+}
+
+func TestListFind(t *testing.T) {
+	src := `
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at https://mozilla.org/MPL/2.0/.
+
+// ===BEGIN ICANN DOMAINS===
+
+// com
+com
+
+// uk
+*.uk
+*.sch.uk
+!bl.uk
+!british-library.uk
+
+// io
+io
+
+// ===END ICANN DOMAINS===
+// ===BEGIN PRIVATE DOMAINS===
+
+// Google, Inc.
+blogspot.com
+
+// ===END PRIVATE DOMAINS===
+	`
+
+	// fixme
+	p1 := NewRule("blogspot.com")
+	p1.Private = true
+
+	testCases := []listFindTestCase{
+		// match IANA
+		listFindTestCase{"example.com", NewRule("com")},
+		listFindTestCase{"foo.example.com", NewRule("com")},
+
+		// match wildcard
+		listFindTestCase{"example.uk", NewRule("*.uk")},
+		listFindTestCase{"example.co.uk", NewRule("*.uk")},
+		listFindTestCase{"foo.example.co.uk", NewRule("*.uk")},
+
+		// match exception
+		listFindTestCase{"british-library.uk", NewRule("!british-library.uk")},
+		listFindTestCase{"foo.british-library.uk", NewRule("!british-library.uk")},
+
+		// match default rule
+		listFindTestCase{"test", DefaultRule},
+		listFindTestCase{"example.test", DefaultRule},
+		listFindTestCase{"foo.example.test", DefaultRule},
+
+		// match private
+		listFindTestCase{"blogspot.com", p1},
+		listFindTestCase{"foo.blogspot.com", p1},
+	}
+
+	list, _ := NewListFromString(src, nil)
+
+	for _, testCase := range testCases {
+		if want, got := testCase.expected, list.Find(testCase.input); !reflect.DeepEqual(want, &got) {
+			t.Errorf("Find(%v) = %v, want %v", testCase.input, &got, want)
+		}
 	}
 }
 
@@ -143,44 +214,44 @@ func TestNewRule_Exception(t *testing.T) {
 	}
 }
 
-type matchTestCase struct {
+type ruleMatchTestCase struct {
 	rule     *Rule
 	input    string
 	expected bool
 }
 
 func TestRuleMatch(t *testing.T) {
-	testCases := []matchTestCase{
+	testCases := []ruleMatchTestCase{
 		// standard match
-		matchTestCase{NewRule("uk"), "uk", true},
-		matchTestCase{NewRule("uk"), "example.uk", true},
-		matchTestCase{NewRule("uk"), "example.co.uk", true},
-		matchTestCase{NewRule("co.uk"), "example.co.uk", true},
+		ruleMatchTestCase{NewRule("uk"), "uk", true},
+		ruleMatchTestCase{NewRule("uk"), "example.uk", true},
+		ruleMatchTestCase{NewRule("uk"), "example.co.uk", true},
+		ruleMatchTestCase{NewRule("co.uk"), "example.co.uk", true},
 
 		// special rules match
-		matchTestCase{NewRule("*.com"), "com", false},
-		matchTestCase{NewRule("*.com"), "example.com", true},
-		matchTestCase{NewRule("*.com"), "foo.example.com", true},
-		matchTestCase{NewRule("!example.com"), "com", false},
-		matchTestCase{NewRule("!example.com"), "example.com", true},
-		matchTestCase{NewRule("!example.com"), "foo.example.com", true},
+		ruleMatchTestCase{NewRule("*.com"), "com", false},
+		ruleMatchTestCase{NewRule("*.com"), "example.com", true},
+		ruleMatchTestCase{NewRule("*.com"), "foo.example.com", true},
+		ruleMatchTestCase{NewRule("!example.com"), "com", false},
+		ruleMatchTestCase{NewRule("!example.com"), "example.com", true},
+		ruleMatchTestCase{NewRule("!example.com"), "foo.example.com", true},
 
 		// TLD mismatch
-		matchTestCase{NewRule("gk"), "example.uk", false},
-		matchTestCase{NewRule("gk"), "example.co.uk", false},
+		ruleMatchTestCase{NewRule("gk"), "example.uk", false},
+		ruleMatchTestCase{NewRule("gk"), "example.co.uk", false},
 
 		// general mismatch
-		matchTestCase{NewRule("uk.co"), "example.co.uk", false},
-		matchTestCase{NewRule("go.uk"), "example.co.uk", false},
+		ruleMatchTestCase{NewRule("uk.co"), "example.co.uk", false},
+		ruleMatchTestCase{NewRule("go.uk"), "example.co.uk", false},
 		// rule is longer than input, should not match
-		matchTestCase{NewRule("co.uk"), "uk", false},
+		ruleMatchTestCase{NewRule("co.uk"), "uk", false},
 
 		// partial matches/mismatches
-		matchTestCase{NewRule("co"), "example.co.uk", false},
-		matchTestCase{NewRule("example"), "example.uk", false},
-		matchTestCase{NewRule("le.it"), "example.it", false},
-		matchTestCase{NewRule("le.it"), "le.it", true},
-		matchTestCase{NewRule("le.it"), "foo.le.it", true},
+		ruleMatchTestCase{NewRule("co"), "example.co.uk", false},
+		ruleMatchTestCase{NewRule("example"), "example.uk", false},
+		ruleMatchTestCase{NewRule("le.it"), "example.it", false},
+		ruleMatchTestCase{NewRule("le.it"), "le.it", true},
+		ruleMatchTestCase{NewRule("le.it"), "foo.le.it", true},
 	}
 
 	for _, testCase := range testCases {
@@ -190,26 +261,26 @@ func TestRuleMatch(t *testing.T) {
 	}
 }
 
-type decomposeTestCase struct {
+type ruleDecomposeTestCase struct {
 	rule     *Rule
 	input    string
 	expected [2]string
 }
 
 func TestRuleDecompose(t *testing.T) {
-	testCases := []decomposeTestCase{
-		decomposeTestCase{NewRule("com"), "com", [2]string{"", ""}},
-		decomposeTestCase{NewRule("com"), "example.com", [2]string{"example", "com"}},
-		decomposeTestCase{NewRule("com"), "foo.example.com", [2]string{"foo.example", "com"}},
+	testCases := []ruleDecomposeTestCase{
+		ruleDecomposeTestCase{NewRule("com"), "com", [2]string{"", ""}},
+		ruleDecomposeTestCase{NewRule("com"), "example.com", [2]string{"example", "com"}},
+		ruleDecomposeTestCase{NewRule("com"), "foo.example.com", [2]string{"foo.example", "com"}},
 
-		decomposeTestCase{NewRule("!british-library.uk"), "uk", [2]string{"", ""}},
-		decomposeTestCase{NewRule("!british-library.uk"), "british-library.uk", [2]string{"british-library", "uk"}},
-		decomposeTestCase{NewRule("!british-library.uk"), "foo.british-library.uk", [2]string{"foo.british-library", "uk"}},
+		ruleDecomposeTestCase{NewRule("!british-library.uk"), "uk", [2]string{"", ""}},
+		ruleDecomposeTestCase{NewRule("!british-library.uk"), "british-library.uk", [2]string{"british-library", "uk"}},
+		ruleDecomposeTestCase{NewRule("!british-library.uk"), "foo.british-library.uk", [2]string{"foo.british-library", "uk"}},
 
-		decomposeTestCase{NewRule("*.com"), "com", [2]string{"", ""}},
-		decomposeTestCase{NewRule("*.com"), "example.com", [2]string{"", ""}},
-		decomposeTestCase{NewRule("*.com"), "foo.example.com", [2]string{"foo", "example.com"}},
-		decomposeTestCase{NewRule("*.com"), "bar.foo.example.com", [2]string{"bar.foo", "example.com"}},
+		ruleDecomposeTestCase{NewRule("*.com"), "com", [2]string{"", ""}},
+		ruleDecomposeTestCase{NewRule("*.com"), "example.com", [2]string{"", ""}},
+		ruleDecomposeTestCase{NewRule("*.com"), "foo.example.com", [2]string{"foo", "example.com"}},
+		ruleDecomposeTestCase{NewRule("*.com"), "bar.foo.example.com", [2]string{"bar.foo", "example.com"}},
 	}
 
 	for _, testCase := range testCases {
