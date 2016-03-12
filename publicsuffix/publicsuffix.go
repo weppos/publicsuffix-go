@@ -18,7 +18,7 @@ const (
 	listTokenComment        = "//"
 )
 
-// DefaultList is the default List and is used by Parse.
+// DefaultList is the default List and is used by Parse and Domain.
 var DefaultList = NewList()
 
 // DefaultRule is the default Rule that represents "*".
@@ -223,19 +223,20 @@ func (r *Rule) Match(name string) bool {
 
 // Decompose takes a name as input and decomposes it into a tuple of <TRD+SLD, TLD>,
 // according to the rule definition and type.
-//
-// For exa
-//
 func (r *Rule) Decompose(name string) [2]string {
-	var re *regexp.Regexp
-	suffix := strings.Join(r.parts(), "./")
+	var parts []string
 
 	switch r.Type {
 	case WildcardType:
-		re = regexp.MustCompile(fmt.Sprintf(`^(.+)\.(.*?\.%s)$`, suffix))
+		parts = []string{}
+		parts = append(parts, `.*?`)
+		parts = append(parts, r.parts()...)
 	default:
-		re = regexp.MustCompile(fmt.Sprintf(`^(.+)\.(%s)$`, suffix))
+		parts = r.parts()
 	}
+
+	suffix := strings.Join(parts, `\.`)
+	re := regexp.MustCompile(fmt.Sprintf(`^(.+)\.(%s)$`, suffix))
 
 	matches := re.FindStringSubmatch(name)
 	if len(matches) < 3 {
@@ -250,9 +251,96 @@ func (r *Rule) parts() []string {
 	if r.Type == ExceptionType {
 		return labels[1:]
 	}
+	if r.Type == WildcardType && r.Value == "" {
+		return []string{}
+	}
 	return labels
 }
 
+// Labels decomposes given domain name into labels,
+// corresponding to the dot-separated tokens.
 func Labels(name string) []string {
 	return strings.Split(name, ".")
+}
+
+// DomainName represents a domain name.
+type DomainName struct {
+	Tld string
+	Sld string
+	Trd string
+}
+
+// String joins the components of the domain name into a single string.
+// Empty labels are skipped.
+//
+// Example:
+// 	DomainName{"com", "example"}.String()
+//	// "example.com"
+// 	DomainName{"com", "example", "www"}.String()
+//	// "www.example.com"
+//
+func (d *DomainName) String() string {
+	switch {
+	case d.Tld == "":
+		return ""
+	case d.Sld == "":
+		return d.Tld
+	case d.Trd == "":
+		return d.Sld + "." + d.Tld
+	default:
+		return d.Trd + "." + d.Sld + "." + d.Tld
+	}
+}
+
+func Domain(name string) (string, error) {
+	return Ldomain(DefaultList, name)
+}
+
+func Parse(name string) (*DomainName, error) {
+	return Lparse(DefaultList, name)
+}
+
+func Ldomain(l *List, name string) (string, error) {
+	dn, err := Lparse(l, name)
+	if err != nil {
+		return "", err
+	}
+
+	return dn.Sld + "." + dn.Tld, nil
+}
+
+func Lparse(l *List, name string) (*DomainName, error) {
+	n, err := normalize(name)
+	if err != nil {
+		return nil, nil
+	}
+
+	r := l.Find(n)
+	if tld := r.Decompose(n)[1]; tld == "" {
+		return nil, fmt.Errorf("%s is a suffix", n)
+	}
+
+	dn := &DomainName{}
+	dn.Tld, dn.Sld, dn.Trd = decompose(&r, n)
+	return dn, nil
+}
+
+func normalize(name string) (string, error) {
+	return name, nil
+}
+
+func decompose(r *Rule, name string) (tld, sld, trd string) {
+	parts := r.Decompose(name)
+	left, tld := parts[0], parts[1]
+
+	dot := strings.LastIndex(left, ".")
+	if dot == -1 {
+		sld = left
+		trd = ""
+	} else {
+		sld = left[dot+1:]
+		trd = left[0:dot]
+	}
+
+	return
 }
