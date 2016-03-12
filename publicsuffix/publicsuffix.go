@@ -49,25 +49,31 @@ func NewList() *List {
 // NewListFromString parses a string that represents a Public Suffix source
 // and returns a List initialized with the rules in the source.
 func NewListFromString(src string, options *ParserOption) (*List, error) {
-	r := strings.NewReader(src)
-
 	l := NewList()
-	err := l.parse(r, options)
-	return l, err
+	return l, l.Load(src, options)
 }
 
 // NewListFromString parses a string that represents a Public Suffix source
 // and returns a List initialized with the rules in the source.
 func NewListFromFile(path string, options *ParserOption) (*List, error) {
+	l := NewList()
+	return l, l.LoadFile(path, options)
+}
+
+// experimental
+func (l *List) Load(src string, options *ParserOption) error {
+	r := strings.NewReader(src)
+	return l.parse(r, options)
+}
+
+// experimental
+func (l *List) LoadFile(path string, options *ParserOption) error {
 	f, err := os.Open(path)
 	if err != nil {
-		return nil, err
+		return err
 	}
 	defer f.Close()
-
-	l := NewList()
-	err = l.parse(f, options)
-	return l, err
+	return l.parse(f, options)
 }
 
 func (l *List) parse(r io.Reader, options *ParserOption) error {
