@@ -5,12 +5,123 @@ import (
 	"testing"
 )
 
+func TestNewListFromString(t *testing.T) {
+	src := `
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at https://mozilla.org/MPL/2.0/.
+
+// ===BEGIN ICANN DOMAINS===
+
+// ac : http://en.wikipedia.org/wiki/.ac
+ac
+com.ac
+
+// ===END ICANN DOMAINS===
+// ===BEGIN PRIVATE DOMAINS===
+
+// Google, Inc.
+blogspot.com
+
+// ===END PRIVATE DOMAINS===
+	`
+
+	list, err := NewListFromString(src, nil)
+	if err != nil {
+		t.Fatalf("Parse returned an error: %v", err)
+	}
+
+	if want, got := 3, list.rulesCount(); want != got {
+		t.Errorf("Parse returned a list with %v rules, want %v", got, want)
+		t.Fatalf("%v", list.rules)
+	}
+
+	rules := list.rules
+	var testRules []Rule
+
+	testRules = []Rule{}
+	for _, rule := range rules {
+		if rule.Private == false {
+			testRules = append(testRules, rule)
+		}
+	}
+	if want, got := 2, len(testRules); want != got {
+		t.Errorf("Parse returned a list with %v IANA rules, want %v", got, want)
+		t.Fatalf("%v", testRules)
+	}
+
+	testRules = []Rule{}
+	for _, rule := range rules {
+		if rule.Private == true {
+			testRules = append(testRules, rule)
+		}
+	}
+	if want, got := 1, len(testRules); want != got {
+		t.Errorf("Parse returned a list with %v PRIVATE rules, want %v", got, want)
+		t.Fatalf("%v", testRules)
+	}
+}
+
+func TestNewListFromFile(t *testing.T) {
+	list, err := NewListFromFile("../fixtures/test.txt", nil)
+	if err != nil {
+		t.Fatalf("Parse returned an error: %v", err)
+	}
+
+	if want, got := 3, list.rulesCount(); want != got {
+		t.Errorf("Parse returned a list with %v rules, want %v", got, want)
+		t.Fatalf("%v", list.rules)
+	}
+
+	rules := list.rules
+	var testRules []Rule
+
+	testRules = []Rule{}
+	for _, rule := range rules {
+		if rule.Private == false {
+			testRules = append(testRules, rule)
+		}
+	}
+	if want, got := 2, len(testRules); want != got {
+		t.Errorf("Parse returned a list with %v IANA rules, want %v", got, want)
+		t.Fatalf("%v", testRules)
+	}
+
+	testRules = []Rule{}
+	for _, rule := range rules {
+		if rule.Private == true {
+			testRules = append(testRules, rule)
+		}
+	}
+	if want, got := 1, len(testRules); want != got {
+		t.Errorf("Parse returned a list with %v PRIVATE rules, want %v", got, want)
+		t.Fatalf("%v", testRules)
+	}
+}
+
+func TestListAddRule(t *testing.T) {
+	list := &List{}
+
+	if list.rulesCount() != 0 {
+		t.Fatalf("Empty list should have 0 rules, got %v", list.rulesCount())
+	}
+
+	rule := NewRule("com")
+	list.AddRule(rule)
+	if list.rulesCount() != 1 {
+		t.Fatalf("List should have 1 rule, got %v", list.rulesCount())
+	}
+	if got := &list.rules[0]; !reflect.DeepEqual(rule, got) {
+		t.Fatalf("List[0] expected to be %v, got %v", rule, got)
+	}
+}
+
 func TestNewRule_Normal(t *testing.T) {
 	rule := NewRule("com")
 	want := &Rule{Type: NormalType, Value: "com", Length: 1}
 
 	if !reflect.DeepEqual(want, rule) {
-		t.Errorf("NewRule returned %v, want %v", rule, want)
+		t.Fatalf("NewRule returned %v, want %v", rule, want)
 	}
 }
 
@@ -19,7 +130,7 @@ func TestNewRule_Wildcard(t *testing.T) {
 	want := &Rule{Type: WildcardType, Value: "example.com", Length: 3}
 
 	if !reflect.DeepEqual(want, rule) {
-		t.Errorf("NewRule returned %v, want %v", rule, want)
+		t.Fatalf("NewRule returned %v, want %v", rule, want)
 	}
 }
 
@@ -28,7 +139,7 @@ func TestNewRule_Exception(t *testing.T) {
 	want := &Rule{Type: ExceptionType, Value: "example.com", Length: 2}
 
 	if !reflect.DeepEqual(want, rule) {
-		t.Errorf("NewRule returned %v, want %v", rule, want)
+		t.Fatalf("NewRule returned %v, want %v", rule, want)
 	}
 }
 
@@ -38,7 +149,7 @@ type matchTestCase struct {
 	expected bool
 }
 
-func TestMatch(t *testing.T) {
+func TestRuleMatch(t *testing.T) {
 	testCases := []matchTestCase{
 		// standard match
 		matchTestCase{NewRule("uk"), "uk", true},
@@ -85,7 +196,7 @@ type decomposeTestCase struct {
 	expected [2]string
 }
 
-func TestDecompose(t *testing.T) {
+func TestRuleDecompose(t *testing.T) {
 	testCases := []decomposeTestCase{
 		decomposeTestCase{NewRule("com"), "com", [2]string{"", ""}},
 		decomposeTestCase{NewRule("com"), "example.com", [2]string{"example", "com"}},

@@ -1,22 +1,127 @@
 package publicsuffix
 
 import (
-	"strings"
-	"regexp"
+	"bufio"
 	"fmt"
+	"io"
+	"os"
+	"regexp"
+	"strings"
 )
 
 const (
 	NormalType    = 1
 	WildcardType  = 2
 	ExceptionType = 3
+
+	listTokenPrivateDomains = "===BEGIN PRIVATE DOMAINS==="
+	listTokenComment        = "//"
 )
+
+// DefaultList is the default List and is used by Parse.
+var DefaultList = NewList()
+
+// DefaultParserOptions are the default options used to parse a Public Suffix list.
+var DefaultParserOptions = &ParserOption{PrivateDomains: true}
 
 type Rule struct {
 	Type    int
 	Value   string
 	Length  int
 	Private bool
+}
+
+type ParserOption struct {
+	PrivateDomains bool
+}
+
+type List struct {
+	// rules is kept private because you should not access rules directly
+	// for lookup optimization the list will not be guaranteed to be a simple slice forever
+	rules []Rule
+}
+
+// NewList creates a new empty list.
+func NewList() *List {
+	return &List{}
+}
+
+// NewListFromString parses a string that represents a Public Suffix source
+// and returns a List initialized with the rules in the source.
+func NewListFromString(src string, options *ParserOption) (*List, error) {
+	r := strings.NewReader(src)
+
+	l := NewList()
+	err := l.parse(r, options)
+	return l, err
+}
+
+// NewListFromString parses a string that represents a Public Suffix source
+// and returns a List initialized with the rules in the source.
+func NewListFromFile(path string, options *ParserOption) (*List, error) {
+	f, err := os.Open(path)
+	if err != nil {
+		return nil, err
+	}
+	defer f.Close()
+
+	l := NewList()
+	err = l.parse(f, options)
+	return l, err
+}
+
+func (l *List) parse(r io.Reader, options *ParserOption) error {
+	if options == nil {
+		options = DefaultParserOptions
+	}
+
+	scanner := bufio.NewScanner(r)
+	scanner.Split(bufio.ScanLines)
+	var section int // 1 == ICANN, 2 == PRIVATE
+
+Scanning:
+	for scanner.Scan() {
+		line := strings.TrimSpace(scanner.Text())
+		switch {
+
+		// skip blank lines
+		case line == "":
+			break
+
+		// include private domains or stop scanner
+		case strings.Contains(line, listTokenPrivateDomains):
+			if !options.PrivateDomains {
+				break Scanning
+			}
+			section = 2
+
+		// skip comments
+		case strings.HasPrefix(line, listTokenComment):
+			break
+
+		default:
+			rule := NewRule(line)
+			rule.Private = (section == 2)
+			l.AddRule(rule)
+		}
+
+	}
+
+	return nil
+}
+
+// AddRule adds a new rule to the list.
+//
+// The exact position of the rule into the list is unpredictable.
+// The list may be optimized internally for lookups, therefore the algorithm
+// will decide the best position for the new rule.
+func (l *List) AddRule(r *Rule) error {
+	l.rules = append(l.rules, *r)
+	return nil
+}
+
+func (l *List) rulesCount() int {
+	return len(l.rules)
 }
 
 // NewRule parses the rule content, creates and returns a Rule.
@@ -31,7 +136,7 @@ func NewRule(content string) *Rule {
 	case "!": // exception
 		value = content[1:len(content)]
 		rule = &Rule{Type: ExceptionType, Value: value, Length: len(Labels(value))}
-	default:  // normal
+	default: // normal
 		value = content
 		rule = &Rule{Type: NormalType, Value: value, Length: len(Labels(value))}
 	}
@@ -95,7 +200,6 @@ func (r *Rule) parts() []string {
 	}
 	return labels
 }
-
 
 func Labels(name string) []string {
 	return strings.Split(name, ".")
