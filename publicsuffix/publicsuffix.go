@@ -29,6 +29,9 @@ var DefaultRule = NewRule("*")
 // DefaultParserOptions are the default options used to parse a Public Suffix list.
 var DefaultParserOptions = &ParserOption{PrivateDomains: true}
 
+// DefaultFindOptions are the default options used to perform the lookup of rules in the list.
+var DefaultFindOptions = &FindOptions{IgnorePrivate: false}
+
 // Rule represents a single rule in a Public Suffix List.
 type Rule struct {
 	Type    int
@@ -41,6 +44,12 @@ type Rule struct {
 // is parsed from a file or a string.
 type ParserOption struct {
 	PrivateDomains bool
+}
+
+// FindOptions are the options you can use to customize the way a Rule
+// is searched within the list.
+type FindOptions struct {
+	IgnorePrivate bool
 }
 
 // List represents a Public Suffix List.
@@ -141,10 +150,10 @@ Scanning:
 }
 
 // Finds and returns the most appropriate rule for the domain name.
-func (l *List) Find(name string) Rule {
+func (l *List) Find(name string, options *FindOptions) Rule {
 	var rule *Rule
 
-	for _, r := range l.Select(name) {
+	for _, r := range l.Select(name, options) {
 		if r.Type == ExceptionType {
 			return r
 		}
@@ -161,14 +170,22 @@ func (l *List) Find(name string) Rule {
 }
 
 // experimental
-func (l *List) Select(name string) []Rule {
+func (l *List) Select(name string, options *FindOptions) []Rule {
 	var found []Rule
+
+	if options == nil {
+		options = DefaultFindOptions
+	}
 
 	// In this phase the search is a simple sequential scan
 	for _, rule := range l.rules {
-		if rule.Match(name) {
-			found = append(found, rule)
+		if !rule.Match(name) {
+			continue
 		}
+		if options.IgnorePrivate == true && rule.Private {
+			continue
+		}
+		found = append(found, rule)
 	}
 
 	return found
@@ -308,7 +325,7 @@ func (d *DomainName) String() string {
 //	// example.co.uk
 //
 func Domain(name string) (string, error) {
-	return Ldomain(DefaultList(), name)
+	return DomainFromListWithOptions(DefaultList(), name, DefaultFindOptions)
 }
 
 // Parse decomposes the name into TLD, SLD, TRD
@@ -327,7 +344,7 @@ func Domain(name string) (string, error) {
 //	// &DomainName{"co.uk", "example"}
 //
 func Parse(name string) (*DomainName, error) {
-	return Lparse(DefaultList(), name)
+	return ParseFromListWithOptions(DefaultList(), name, DefaultFindOptions)
 }
 
 // Ldomain extract and return the domain name from the input
@@ -337,15 +354,15 @@ func Parse(name string) (*DomainName, error) {
 //
 //	list := NewList()
 //
-// 	publicsuffix.Ldomain(list, "example.com")
+// 	publicsuffix.DomainFromListWithOptions(list, "example.com")
 //	// example.com
-// 	publicsuffix.Ldomain(list, "www.example.com)
+// 	publicsuffix.DomainFromListWithOptions(list, "www.example.com)
 //	// example.com
-// 	publicsuffix.Ldomain(list, "www.example.co.uk")
+// 	publicsuffix.DomainFromListWithOptions(list, "www.example.co.uk")
 //	// example.co.uk
 //
-func Ldomain(l *List, name string) (string, error) {
-	dn, err := Lparse(l, name)
+func DomainFromListWithOptions(l *List, name string, options *FindOptions) (string, error) {
+	dn, err := ParseFromListWithOptions(l, name, options)
 	if err != nil {
 		return "", err
 	}
@@ -361,20 +378,20 @@ func Ldomain(l *List, name string) (string, error) {
 //
 //	list := NewList()
 //
-// 	publicsuffix.Lparse(list, "example.com")
+// 	publicsuffix.ParseFromListWithOptions(list, "example.com")
 //	// &DomainName{"com", "example"}
-// 	publicsuffix.Lparse(list, "www.example.com)
+// 	publicsuffix.ParseFromListWithOptions(list, "www.example.com)
 //	// &DomainName{"com", "example", "www"}
-// 	publicsuffix.Lparse(list, "www.example.co.uk")
+// 	publicsuffix.ParseFromListWithOptions(list, "www.example.co.uk")
 //	// &DomainName{"co.uk", "example"}
 //
-func Lparse(l *List, name string) (*DomainName, error) {
+func ParseFromListWithOptions(l *List, name string, options *FindOptions) (*DomainName, error) {
 	n, err := normalize(name)
 	if err != nil {
 		return nil, err
 	}
 
-	r := l.Find(n)
+	r := l.Find(n, options)
 	if tld := r.Decompose(n)[1]; tld == "" {
 		return nil, fmt.Errorf("%s is a suffix", n)
 	}
