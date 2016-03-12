@@ -12,6 +12,7 @@ import (
 	"regexp"
 	"runtime"
 	"strings"
+	"net/http/cookiejar"
 )
 
 const (
@@ -453,4 +454,26 @@ func decompose(r *Rule, name string) (tld, sld, trd string) {
 	}
 
 	return
+}
+
+// CookieList implements the cookiejar.PublicSuffixList interface.
+var CookieJarList cookiejar.PublicSuffixList = cookiejarList{}
+
+type cookiejarList struct {
+	List *List
+}
+
+// PublicSuffix implements cookiejar.PublicSuffixList.
+func (l cookiejarList) PublicSuffix(domain string) string {
+	if l.List == nil {
+		l.List = DefaultList()
+	}
+
+	rule := l.List.Find(domain, nil)
+	return rule.Decompose(domain)[1]
+}
+
+// PublicSuffix implements cookiejar.String.
+func (cookiejarList) String() string {
+	return "github.com/weppos/publicsuffix-go/publicsuffix"
 }

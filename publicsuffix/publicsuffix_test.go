@@ -303,3 +303,24 @@ func TestLabels(t *testing.T) {
 		}
 	}
 }
+
+func TestCookieJarList(t *testing.T) {
+	testCases := map[string]string{
+		"example.com" : "com",
+		"www.example.com" : "com",
+		"example.co.uk" : "co.uk",
+		"www.example.co.uk": "co.uk",
+		"example.blogspot.com": "blogspot.com",
+		"www.example.blogspot.com": "blogspot.com",
+		"parliament.uk": "uk",
+		"www.parliament.uk": "uk",
+		// not listed
+		"www.example.test": "test",
+	}
+
+	for input, suffix := range testCases {
+		if output := CookieJarList.PublicSuffix(input); output != suffix {
+			t.Errorf("CookieJarList.PublicSuffix(%v) = %v, want %v", input, output, suffix)
+		}
+	}
+}

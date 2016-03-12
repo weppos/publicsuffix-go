@@ -17,6 +17,8 @@ func TestPublicSuffix(t *testing.T) {
 		"www.example.blogspot.com",
 		"parliament.uk",
 		"www.parliament.uk",
+		// not listed
+		"www.example.test",
 	}
 
 	for _, testCase := range testCases {
@@ -39,6 +41,8 @@ func TestEffectiveTLDPlusOne(t *testing.T) {
 		"www.example.blogspot.com",
 		"parliament.uk",
 		"www.parliament.uk",
+		// not listed
+		"www.example.test",
 	}
 
 	for _, testCase := range testCases {

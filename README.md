@@ -144,6 +144,20 @@ The `github.com/weppos/publicsuffix-go/net/publicsuffix` package defines the sam
 Note that the adapter doesn't offer the flexibility of `github.com/weppos/publicsuffix-go/publicsuffix`, such as the ability to use multiple lists or disable private domains at runtime.
 
 
+## `cookiejar.PublicSuffixList` interface
+
+This package implements the [`cookiejar.PublicSuffixList` interface](https://godoc.org/net/http/cookiejar#PublicSuffixList). It means it can be used as a value for the `PublicSuffixList` option when creating a `net/http/cookiejar`.
+
+```go
+import (
+    "net/http/cookiejar"
+    "github.com/weppos/publicsuffix-go/publicsuffix"
+)
+
+deliciousJar := cookiejar.New(&cookiejar.Options{PublicSuffixList: publicsuffix.CookieJarList})
+```
+
+
 ## License
 
 Copyright (c) 2016 Simone Carletti. This is Free Software distributed under the MIT license.

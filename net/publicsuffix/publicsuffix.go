@@ -21,7 +21,15 @@ func PublicSuffix(domain string) (publicSuffix string, icann bool) {
 	//return d.Rule.Value, !d.Rule.Private
 
 	rule := psl.DefaultList().Find(domain, nil)
-	return rule.Value, !rule.Private
+	publicSuffix = rule.Decompose(domain)[1]
+	icann = !rule.Private
+
+	// x/net/publicsuffix sets icann to false when the default rule "*" is used
+	if rule.Value == "" && rule.Type == psl.WildcardType {
+		icann = false
+	}
+
+	return
 }
 
 // EffectiveTLDPlusOne returns the effective top level domain plus one more label.
