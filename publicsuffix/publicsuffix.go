@@ -24,6 +24,7 @@ var DefaultList = NewList()
 // DefaultParserOptions are the default options used to parse a Public Suffix list.
 var DefaultParserOptions = &ParserOption{PrivateDomains: true}
 
+// Rule represents a single rule in a Public Suffix List.
 type Rule struct {
 	Type    int
 	Value   string
@@ -31,10 +32,13 @@ type Rule struct {
 	Private bool
 }
 
+// ParserOption are the options you can use to customize the way a List
+// is parsed from a file or a string.
 type ParserOption struct {
 	PrivateDomains bool
 }
 
+// List represents a Public Suffix List.
 type List struct {
 	// rules is kept private because you should not access rules directly
 	// for lookup optimization the list will not be guaranteed to be a simple slice forever
