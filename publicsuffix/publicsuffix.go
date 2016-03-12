@@ -275,11 +275,12 @@ type DomainName struct {
 // String joins the components of the domain name into a single string.
 // Empty labels are skipped.
 //
-// Example:
+// Examples:
+//
 // 	DomainName{"com", "example"}.String()
-//	// "example.com"
+//	// example.com
 // 	DomainName{"com", "example", "www"}.String()
-//	// "www.example.com"
+//	// www.example.com
 //
 func (d *DomainName) String() string {
 	switch {
@@ -294,6 +295,18 @@ func (d *DomainName) String() string {
 	}
 }
 
+// Domain extract and return the domain name from the input
+// using the default (Public Suffix) List.
+//
+// Examples:
+//
+// 	publicsuffix.Domain("example.com")
+//	// example.com
+// 	publicsuffix.Domain("www.example.com)
+//	// example.com
+// 	publicsuffix.Domain("www.example.co.uk")
+//	// example.co.uk
+//
 func Domain(name string) (string, error) {
 	if DefaultList.Size() == 0 {
 		initDefaultList()
@@ -302,6 +315,21 @@ func Domain(name string) (string, error) {
 	return Ldomain(DefaultList, name)
 }
 
+// Parse decomposes the name into TLD, SLD, TRD
+// using the default (Public Suffix) List,
+// and returns the result as a DomainName
+//
+// Examples:
+//
+//	list := NewList()
+//
+// 	publicsuffix.Parse("example.com")
+//	// &DomainName{"com", "example"}
+// 	publicsuffix.Parse("www.example.com)
+//	// &DomainName{"com", "example", "www"}
+// 	publicsuffix.Parse("www.example.co.uk")
+//	// &DomainName{"co.uk", "example"}
+//
 func Parse(name string) (*DomainName, error) {
 	if DefaultList.Size() == 0 {
 		initDefaultList()
@@ -310,6 +338,20 @@ func Parse(name string) (*DomainName, error) {
 	return Lparse(DefaultList, name)
 }
 
+// Ldomain extract and return the domain name from the input
+// using the (Public Suffix) list passed as argument.
+//
+// Examples:
+//
+//	list := NewList()
+//
+// 	publicsuffix.Ldomain(list, "example.com")
+//	// example.com
+// 	publicsuffix.Ldomain(list, "www.example.com)
+//	// example.com
+// 	publicsuffix.Ldomain(list, "www.example.co.uk")
+//	// example.co.uk
+//
 func Ldomain(l *List, name string) (string, error) {
 	dn, err := Lparse(l, name)
 	if err != nil {
@@ -319,6 +361,21 @@ func Ldomain(l *List, name string) (string, error) {
 	return dn.Sld + "." + dn.Tld, nil
 }
 
+// Lparse decomposes the name into TLD, SLD, TRD
+// using the (Public Suffix) list passed as argument,
+// and returns the result as a DomainName
+//
+// Examples:
+//
+//	list := NewList()
+//
+// 	publicsuffix.Lparse(list, "example.com")
+//	// &DomainName{"com", "example"}
+// 	publicsuffix.Lparse(list, "www.example.com)
+//	// &DomainName{"com", "example", "www"}
+// 	publicsuffix.Lparse(list, "www.example.co.uk")
+//	// &DomainName{"co.uk", "example"}
+//
 func Lparse(l *List, name string) (*DomainName, error) {
 	n, err := normalize(name)
 	if err != nil {
