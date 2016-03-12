@@ -379,7 +379,7 @@ func Ldomain(l *List, name string) (string, error) {
 func Lparse(l *List, name string) (*DomainName, error) {
 	n, err := normalize(name)
 	if err != nil {
-		return nil, nil
+		return nil, err
 	}
 
 	r := l.Find(n)
@@ -400,7 +400,16 @@ func initDefaultList() {
 }
 
 func normalize(name string) (string, error) {
-	return name, nil
+	ret := strings.ToLower(name)
+
+	if ret == "" {
+		return "", fmt.Errorf("Name is blank")
+	}
+	if string(ret[0]) == "." {
+		return "", fmt.Errorf("Name %s starts with a dot", ret)
+	}
+
+	return ret, nil
 }
 
 func decompose(r *Rule, name string) (tld, sld, trd string) {

@@ -63,7 +63,7 @@ blogspot.com
 }
 
 func TestNewListFromFile(t *testing.T) {
-	list, err := NewListFromFile("../fixtures/test.txt", nil)
+	list, err := NewListFromFile("../fixtures/list-simple.txt", nil)
 	if err != nil {
 		t.Fatalf("Parse returned an error: %v", err)
 	}
