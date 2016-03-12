@@ -20,8 +20,8 @@ const (
 	defaultListFile = "list.dat"
 )
 
-// DefaultList is the default List and is used by Parse and Domain.
-var DefaultList = NewList()
+// defaultList is the default List and it is used by Parse and Domain.
+var defaultList = NewList()
 
 // DefaultRule is the default Rule that represents "*".
 var DefaultRule = NewRule("*")
@@ -308,11 +308,7 @@ func (d *DomainName) String() string {
 //	// example.co.uk
 //
 func Domain(name string) (string, error) {
-	if DefaultList.Size() == 0 {
-		initDefaultList()
-	}
-
-	return Ldomain(DefaultList, name)
+	return Ldomain(DefaultList(), name)
 }
 
 // Parse decomposes the name into TLD, SLD, TRD
@@ -331,11 +327,7 @@ func Domain(name string) (string, error) {
 //	// &DomainName{"co.uk", "example"}
 //
 func Parse(name string) (*DomainName, error) {
-	if DefaultList.Size() == 0 {
-		initDefaultList()
-	}
-
-	return Lparse(DefaultList, name)
+	return Lparse(DefaultList(), name)
 }
 
 // Ldomain extract and return the domain name from the input
@@ -392,11 +384,17 @@ func Lparse(l *List, name string) (*DomainName, error) {
 	return dn, nil
 }
 
-func initDefaultList() {
-	err := DefaultList.LoadFile(defaultListFile, DefaultParserOptions)
-	if err != nil {
-		panic(err)
+// DefaultList returns the default list, initialized with the rules stored in the list.
+// The list is lazy-initialized the first time it is requested.
+func DefaultList() *List {
+	if defaultList.Size() == 0 {
+		err := defaultList.LoadFile(defaultListFile, DefaultParserOptions)
+		if err != nil {
+			panic(err)
+		}
 	}
+
+	return defaultList
 }
 
 func normalize(name string) (string, error) {
