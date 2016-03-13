@@ -74,7 +74,7 @@ func NewListFromString(src string, options *ParserOption) (*List, error) {
 	return l, err
 }
 
-// NewListFromString parses a string that represents a Public Suffix source
+// NewListFromFile parses a string that represents a Public Suffix source
 // and returns a List initialized with the rules in the source.
 func NewListFromFile(path string, options *ParserOption) (*List, error) {
 	l := NewList()
