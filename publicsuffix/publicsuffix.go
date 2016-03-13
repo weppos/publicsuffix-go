@@ -7,12 +7,10 @@ import (
 	"bufio"
 	"fmt"
 	"io"
-	"os"
-	"path"
-	"regexp"
-	"runtime"
-	"strings"
 	"net/http/cookiejar"
+	"os"
+	"regexp"
+	"strings"
 )
 
 const (
@@ -22,8 +20,6 @@ const (
 
 	listTokenPrivateDomains = "===BEGIN PRIVATE DOMAINS==="
 	listTokenComment        = "//"
-
-	defaultListFile = "list.dat"
 )
 
 // defaultList is the default List and it is used by Parse and Domain.
@@ -74,27 +70,34 @@ func NewList() *List {
 // and returns a List initialized with the rules in the source.
 func NewListFromString(src string, options *ParserOption) (*List, error) {
 	l := NewList()
-	return l, l.Load(src, options)
+	_, err := l.LoadString(src, options)
+	return l, err
 }
 
 // NewListFromString parses a string that represents a Public Suffix source
 // and returns a List initialized with the rules in the source.
 func NewListFromFile(path string, options *ParserOption) (*List, error) {
 	l := NewList()
-	return l, l.LoadFile(path, options)
+	_, err := l.LoadFile(path, options)
+	return l, err
 }
 
 // experimental
-func (l *List) Load(src string, options *ParserOption) error {
+func (l *List) Load(r io.Reader, options *ParserOption) ([]Rule, error) {
+	return l.parse(r, options)
+}
+
+// experimental
+func (l *List) LoadString(src string, options *ParserOption) ([]Rule, error) {
 	r := strings.NewReader(src)
 	return l.parse(r, options)
 }
 
 // experimental
-func (l *List) LoadFile(path string, options *ParserOption) error {
+func (l *List) LoadFile(path string, options *ParserOption) ([]Rule, error) {
 	f, err := os.Open(path)
 	if err != nil {
-		return err
+		return nil, err
 	}
 	defer f.Close()
 	return l.parse(f, options)
@@ -115,10 +118,11 @@ func (l *List) Size() int {
 	return len(l.rules)
 }
 
-func (l *List) parse(r io.Reader, options *ParserOption) error {
+func (l *List) parse(r io.Reader, options *ParserOption) ([]Rule, error) {
 	if options == nil {
 		options = DefaultParserOptions
 	}
+	var rules []Rule
 
 	scanner := bufio.NewScanner(r)
 	scanner.Split(bufio.ScanLines)
@@ -148,11 +152,12 @@ Scanning:
 			rule := NewRule(line)
 			rule.Private = (section == 2)
 			l.AddRule(rule)
+			rules = append(rules, *rule)
 		}
 
 	}
 
-	return nil
+	return rules, nil
 }
 
 // Finds and returns the most appropriate rule for the domain name.
@@ -412,16 +417,7 @@ func ParseFromListWithOptions(l *List, name string, options *FindOptions) (*Doma
 // The list is lazy-initialized the first time it is requested.
 func DefaultList() *List {
 	if defaultList.Size() == 0 {
-		// build the path to the file using the current directory
-		// otherwise when this lib is loaded in a different package
-		// the initializer crashes because it can't find the file
-		_, filename, _, _ := runtime.Caller(0)
-		filepath := path.Join(path.Dir(filename), defaultListFile)
-
-		err := defaultList.LoadFile(filepath, DefaultParserOptions)
-		if err != nil {
-			panic(err)
-		}
+		initDefaultList()
 	}
 
 	return defaultList
