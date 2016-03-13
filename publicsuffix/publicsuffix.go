@@ -292,9 +292,9 @@ func Labels(name string) []string {
 
 // DomainName represents a domain name.
 type DomainName struct {
-	Tld  string
-	Sld  string
-	Trd  string
+	TLD  string
+	SLD  string
+	TRD  string
 	Rule *Rule
 }
 
@@ -310,14 +310,14 @@ type DomainName struct {
 //
 func (d *DomainName) String() string {
 	switch {
-	case d.Tld == "":
+	case d.TLD == "":
 		return ""
-	case d.Sld == "":
-		return d.Tld
-	case d.Trd == "":
-		return d.Sld + "." + d.Tld
+	case d.SLD == "":
+		return d.TLD
+	case d.TRD == "":
+		return d.SLD + "." + d.TLD
 	default:
-		return d.Trd + "." + d.Sld + "." + d.Tld
+		return d.TRD + "." + d.SLD + "." + d.TLD
 	}
 }
 
@@ -376,7 +376,7 @@ func DomainFromListWithOptions(l *List, name string, options *FindOptions) (stri
 		return "", err
 	}
 
-	return dn.Sld + "." + dn.Tld, nil
+	return dn.SLD + "." + dn.TLD, nil
 }
 
 // Lparse decomposes the name into TLD, SLD, TRD
@@ -406,7 +406,7 @@ func ParseFromListWithOptions(l *List, name string, options *FindOptions) (*Doma
 	}
 
 	dn := &DomainName{Rule: &r}
-	dn.Tld, dn.Sld, dn.Trd = decompose(&r, n)
+	dn.TLD, dn.SLD, dn.TRD = decompose(&r, n)
 	return dn, nil
 }
 
