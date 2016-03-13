@@ -150,7 +150,7 @@ blogspot.com
 // ===END PRIVATE DOMAINS===
 	`
 
-	// fixme
+	// FIXME
 	p1 := NewRule("blogspot.com")
 	p1.Private = true
 

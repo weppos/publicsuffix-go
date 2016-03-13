@@ -125,7 +125,6 @@ func (l *List) parse(r io.Reader, options *ParserOption) ([]Rule, error) {
 	var rules []Rule
 
 	scanner := bufio.NewScanner(r)
-	scanner.Split(bufio.ScanLines)
 	var section int // 1 == ICANN, 2 == PRIVATE
 
 Scanning:
@@ -157,7 +156,7 @@ Scanning:
 
 	}
 
-	return rules, nil
+	return rules, scanner.Err()
 }
 
 // Finds and returns the most appropriate rule for the domain name.
@@ -193,7 +192,7 @@ func (l *List) Select(name string, options *FindOptions) []Rule {
 		if !rule.Match(name) {
 			continue
 		}
-		if options.IgnorePrivate == true && rule.Private {
+		if options.IgnorePrivate && rule.Private {
 			continue
 		}
 		found = append(found, rule)
@@ -212,11 +211,11 @@ func NewRule(content string) *Rule {
 		if content == "*" {
 			value = ""
 		} else {
-			value = content[2:len(content)]
+			value = content[2:]
 		}
 		rule = &Rule{Type: WildcardType, Value: value, Length: len(Labels(value)) + 1}
 	case "!": // exception
-		value = content[1:len(content)]
+		value = content[1:]
 		rule = &Rule{Type: ExceptionType, Value: value, Length: len(Labels(value))}
 	default: // normal
 		value = content
@@ -258,9 +257,7 @@ func (r *Rule) Decompose(name string) [2]string {
 
 	switch r.Type {
 	case WildcardType:
-		parts = []string{}
-		parts = append(parts, `.*?`)
-		parts = append(parts, r.parts()...)
+		parts = append([]string{`.*?`}, r.parts()...)
 	default:
 		parts = r.parts()
 	}
@@ -295,9 +292,9 @@ func Labels(name string) []string {
 
 // DomainName represents a domain name.
 type DomainName struct {
-	Tld  string
-	Sld  string
-	Trd  string
+	TLD  string
+	SLD  string
+	TRD  string
 	Rule *Rule
 }
 
@@ -313,14 +310,14 @@ type DomainName struct {
 //
 func (d *DomainName) String() string {
 	switch {
-	case d.Tld == "":
+	case d.TLD == "":
 		return ""
-	case d.Sld == "":
-		return d.Tld
-	case d.Trd == "":
-		return d.Sld + "." + d.Tld
+	case d.SLD == "":
+		return d.TLD
+	case d.TRD == "":
+		return d.SLD + "." + d.TLD
 	default:
-		return d.Trd + "." + d.Sld + "." + d.Tld
+		return d.TRD + "." + d.SLD + "." + d.TLD
 	}
 }
 
@@ -379,7 +376,7 @@ func DomainFromListWithOptions(l *List, name string, options *FindOptions) (stri
 		return "", err
 	}
 
-	return dn.Sld + "." + dn.Tld, nil
+	return dn.SLD + "." + dn.TLD, nil
 }
 
 // Lparse decomposes the name into TLD, SLD, TRD
@@ -409,7 +406,7 @@ func ParseFromListWithOptions(l *List, name string, options *FindOptions) (*Doma
 	}
 
 	dn := &DomainName{Rule: &r}
-	dn.Tld, dn.Sld, dn.Trd = decompose(&r, n)
+	dn.TLD, dn.SLD, dn.TRD = decompose(&r, n)
 	return dn, nil
 }
 
@@ -429,7 +426,7 @@ func normalize(name string) (string, error) {
 	if ret == "" {
 		return "", fmt.Errorf("Name is blank")
 	}
-	if string(ret[0]) == "." {
+	if ret[0] == '.' {
 		return "", fmt.Errorf("Name %s starts with a dot", ret)
 	}
 
@@ -471,5 +468,5 @@ func (l cookiejarList) PublicSuffix(domain string) string {
 
 // PublicSuffix implements cookiejar.String.
 func (cookiejarList) String() string {
-	return "github.com/weppos/publicsuffix-go/publicsuffix"
+	return defaultListVersion
 }
