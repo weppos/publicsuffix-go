@@ -257,7 +257,6 @@ func (r *Rule) Decompose(name string) [2]string {
 
 	switch r.Type {
 	case WildcardType:
-		parts = []string{}
 		parts = append(parts, `.*?`)
 		parts = append(parts, r.parts()...)
 	default:
