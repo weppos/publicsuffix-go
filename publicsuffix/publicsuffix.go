@@ -468,5 +468,5 @@ func (l cookiejarList) PublicSuffix(domain string) string {
 
 // PublicSuffix implements cookiejar.String.
 func (cookiejarList) String() string {
-	return "github.com/weppos/publicsuffix-go/publicsuffix"
+	return defaultListVersion
 }
