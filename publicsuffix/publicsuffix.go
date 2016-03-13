@@ -356,7 +356,7 @@ func Parse(name string) (*DomainName, error) {
 	return ParseFromListWithOptions(DefaultList(), name, DefaultFindOptions)
 }
 
-// Ldomain extract and return the domain name from the input
+// DomainFromListWithOptions extract and return the domain name from the input
 // using the (Public Suffix) list passed as argument.
 //
 // Examples:
@@ -379,7 +379,7 @@ func DomainFromListWithOptions(l *List, name string, options *FindOptions) (stri
 	return dn.SLD + "." + dn.TLD, nil
 }
 
-// Lparse decomposes the name into TLD, SLD, TRD
+// ParseFromListWithOptions decomposes the name into TLD, SLD, TRD
 // using the (Public Suffix) list passed as argument,
 // and returns the result as a DomainName
 //
@@ -449,7 +449,7 @@ func decompose(r *Rule, name string) (tld, sld, trd string) {
 	return
 }
 
-// CookieList implements the cookiejar.PublicSuffixList interface.
+// CookieJarList implements the cookiejar.PublicSuffixList interface.
 var CookieJarList cookiejar.PublicSuffixList = cookiejarList{}
 
 type cookiejarList struct {
