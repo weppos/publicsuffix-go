@@ -3,17 +3,13 @@ package main
 // +build ignore
 
 import (
-	"net/http"
-	"go/format"
-	"fmt"
-	"os"
 	"bytes"
+	"fmt"
+	"go/format"
+	"net/http"
+	"os"
 
 	"github.com/weppos/publicsuffix-go/publicsuffix"
-)
-
-var (
-
 )
 
 func main() {
@@ -54,12 +50,6 @@ func initDefaultList() {
 		fmt.Fprintf(buf, fmt.Sprintf("\n%v,%v,%v,%v", rule.Type, rule.Value, rule.Length, private))
 	}
 
-	//for _, rule := range list.Rules() {
-	//	fmt.Fprintf(buf,
-	//		fmt.Sprintf(`
-	//l.AddRule(&Rule{%d, "%s", %d, %v})`,
-	//			rule.Type, rule.Value, rule.Length, rule.Private))
-	//}
 	fmt.Fprintf(buf, "`")
 	fmt.Fprintf(buf, `
 
