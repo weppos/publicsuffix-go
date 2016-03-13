@@ -125,7 +125,6 @@ func (l *List) parse(r io.Reader, options *ParserOption) ([]Rule, error) {
 	var rules []Rule
 
 	scanner := bufio.NewScanner(r)
-	scanner.Split(bufio.ScanLines)
 	var section int // 1 == ICANN, 2 == PRIVATE
 
 Scanning:
@@ -157,7 +156,7 @@ Scanning:
 
 	}
 
-	return rules, nil
+	return rules, scanner.Err()
 }
 
 // Finds and returns the most appropriate rule for the domain name.
