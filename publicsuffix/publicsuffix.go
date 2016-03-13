@@ -70,32 +70,34 @@ func NewList() *List {
 // and returns a List initialized with the rules in the source.
 func NewListFromString(src string, options *ParserOption) (*List, error) {
 	l := NewList()
-	return l, l.LoadString(src, options)
+	_, err := l.LoadString(src, options)
+	return l, err
 }
 
 // NewListFromString parses a string that represents a Public Suffix source
 // and returns a List initialized with the rules in the source.
 func NewListFromFile(path string, options *ParserOption) (*List, error) {
 	l := NewList()
-	return l, l.LoadFile(path, options)
+	_, err := l.LoadFile(path, options)
+	return l, err
 }
 
 // experimental
-func (l *List) Load(r io.Reader, options *ParserOption) error {
+func (l *List) Load(r io.Reader, options *ParserOption) ([]Rule, error) {
 	return l.parse(r, options)
 }
 
 // experimental
-func (l *List) LoadString(src string, options *ParserOption) error {
+func (l *List) LoadString(src string, options *ParserOption) ([]Rule, error) {
 	r := strings.NewReader(src)
 	return l.parse(r, options)
 }
 
 // experimental
-func (l *List) LoadFile(path string, options *ParserOption) error {
+func (l *List) LoadFile(path string, options *ParserOption) ([]Rule, error) {
 	f, err := os.Open(path)
 	if err != nil {
-		return err
+		return nil, err
 	}
 	defer f.Close()
 	return l.parse(f, options)
@@ -116,15 +118,11 @@ func (l *List) Size() int {
 	return len(l.rules)
 }
 
-// private
-func (l *List) Rules() []Rule {
-	return l.rules
-}
-
-func (l *List) parse(r io.Reader, options *ParserOption) error {
+func (l *List) parse(r io.Reader, options *ParserOption) ([]Rule, error) {
 	if options == nil {
 		options = DefaultParserOptions
 	}
+	var rules []Rule
 
 	scanner := bufio.NewScanner(r)
 	scanner.Split(bufio.ScanLines)
@@ -154,11 +152,12 @@ Scanning:
 			rule := NewRule(line)
 			rule.Private = (section == 2)
 			l.AddRule(rule)
+			rules = append(rules, *rule)
 		}
 
 	}
 
-	return nil
+	return rules, nil
 }
 
 // Finds and returns the most appropriate rule for the domain name.

@@ -21,7 +21,11 @@ func main() {
 	defer resp.Body.Close()
 
 	list := publicsuffix.NewList()
-	list.Load(resp.Body, nil)
+	rules, _ := list.Load(resp.Body, nil)
+	if err != nil {
+		fmt.Println(err)
+		os.Exit(1)
+	}
 
 	buf := new(bytes.Buffer)
 
@@ -42,7 +46,7 @@ func initDefaultList() {
         rules := `)
 
 	fmt.Fprintf(buf, "`")
-	for _, rule := range list.Rules() {
+	for _, rule := range rules {
 		private := 0
 		if rule.Private {
 			private = 1
