@@ -43,20 +43,27 @@ import (
 const defaultListVersion = "HEAD"
 
 func initDefaultList() {
-        rules := []string {
-`)
+        rules := `)
 
+	fmt.Fprintf(buf, "`")
 	for _, rule := range list.Rules() {
 		private := 0
 		if rule.Private {
 			private = 1
 		}
-		fmt.Fprintf(buf, fmt.Sprintf("`%v,%v,%v,%v`,\n", rule.Type, rule.Value, rule.Length, private))
+		fmt.Fprintf(buf, fmt.Sprintf("\n%v,%v,%v,%v", rule.Type, rule.Value, rule.Length, private))
 	}
 
-	fmt.Fprintf(buf, `}
+	//for _, rule := range list.Rules() {
+	//	fmt.Fprintf(buf,
+	//		fmt.Sprintf(`
+	//l.AddRule(&Rule{%d, "%s", %d, %v})`,
+	//			rule.Type, rule.Value, rule.Length, rule.Private))
+	//}
+	fmt.Fprintf(buf, "`")
+	fmt.Fprintf(buf, `
 
-	for _, rule := range rules {
+	for _, rule := range strings.Split(rules, "\n") {
 		if len(rule) > 0 {
                         tokens := strings.Split(rule, ",")
                         t, _ := strconv.Atoi(tokens[0])
