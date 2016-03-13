@@ -211,11 +211,11 @@ func NewRule(content string) *Rule {
 		if content == "*" {
 			value = ""
 		} else {
-			value = content[2:len(content)]
+			value = content[2:]
 		}
 		rule = &Rule{Type: WildcardType, Value: value, Length: len(Labels(value)) + 1}
 	case "!": // exception
-		value = content[1:len(content)]
+		value = content[1:]
 		rule = &Rule{Type: ExceptionType, Value: value, Length: len(Labels(value))}
 	default: // normal
 		value = content
