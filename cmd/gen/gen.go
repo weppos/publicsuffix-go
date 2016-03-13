@@ -6,25 +6,29 @@ import (
 	"bytes"
 	"fmt"
 	"go/format"
+	"io/ioutil"
 	"net/http"
 	"os"
+	"regexp"
+	"strings"
+	"time"
 
 	"github.com/weppos/publicsuffix-go/publicsuffix"
 )
 
 func main() {
-	resp, err := http.Get("https://raw.githubusercontent.com/publicsuffix/list/master/public_suffix_list.dat")
+	sha, datetime := extractHeadInfo()
+
+	resp, err := http.Get(fmt.Sprintf("https://raw.githubusercontent.com/publicsuffix/list/%s/public_suffix_list.dat", sha))
 	if err != nil {
-		fmt.Println(err)
-		os.Exit(1)
+		fatal(err)
 	}
 	defer resp.Body.Close()
 
 	list := publicsuffix.NewList()
 	rules, _ := list.Load(resp.Body, nil)
 	if err != nil {
-		fmt.Println(err)
-		os.Exit(1)
+		fatal(err)
 	}
 
 	buf := new(bytes.Buffer)
@@ -33,17 +37,17 @@ func main() {
 	fmt.Fprintf(buf, "// DO NOT EDIT MANUALLY\n\n")
 	fmt.Fprintf(buf, "package publicsuffix\n\n")
 
-	fmt.Fprintf(buf, `
+	fmt.Fprintf(buf, fmt.Sprintf(`
 import (
 	"strconv"
 	"strings"
 	"fmt"
 )
 
-const defaultListVersion = "HEAD"
+const defaultListVersion = "PSL version %s (%v)"
 
 func initDefaultList() {
-        rules := `)
+        rules := `, sha, datetime.Format(time.ANSIC)))
 
 	fmt.Fprintf(buf, "`")
 	for _, rule := range rules {
@@ -76,4 +80,42 @@ func initDefaultList() {
 		panic(err)
 	}
 	_, err = os.Stdout.Write(b)
+}
+
+// Is there a better way?
+func extractHeadInfo() (sha string, datetime time.Time) {
+	var re *regexp.Regexp
+	resp, err := http.Get("https://github.com/publicsuffix/list")
+	if err != nil {
+		fatal(err)
+	}
+	defer resp.Body.Close()
+
+	data, err := ioutil.ReadAll(resp.Body)
+	if err != nil {
+		fatal(err)
+	}
+
+	re = regexp.MustCompile(`<a class="commit-tease-sha" (?:.+)>([\w\s\n]+)<\/a>`)
+	sha = strings.TrimSpace(re.FindStringSubmatch(string(data[:]))[1])
+	if sha == "" {
+		fatal(fmt.Errorf("sha is blank"))
+	}
+
+	re = regexp.MustCompile(`<span itemprop="dateModified">(?:.+)datetime="([\w\d\:\-]+)"(?:.+)</span>`)
+	stringtime := re.FindStringSubmatch(string(data[:]))[1]
+	if stringtime == "" {
+		fatal(fmt.Errorf("date is blank"))
+	}
+	datetime, err = time.Parse(time.RFC3339, stringtime)
+	if err != nil {
+		fatal(err)
+	}
+
+	return sha, datetime
+}
+
+func fatal(err error) {
+	fmt.Println(err)
+	os.Exit(1)
 }

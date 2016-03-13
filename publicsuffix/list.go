@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-const defaultListVersion = "HEAD"
+const defaultListVersion = "PSL version 1e52b7e (Thu Mar 10 21:05:05 2016)"
 
 func initDefaultList() {
 	rules := `
