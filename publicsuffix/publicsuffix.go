@@ -192,7 +192,7 @@ func (l *List) Select(name string, options *FindOptions) []Rule {
 		if !rule.Match(name) {
 			continue
 		}
-		if options.IgnorePrivate == true && rule.Private {
+		if options.IgnorePrivate && rule.Private {
 			continue
 		}
 		found = append(found, rule)
