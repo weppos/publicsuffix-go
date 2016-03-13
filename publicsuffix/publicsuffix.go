@@ -426,7 +426,7 @@ func normalize(name string) (string, error) {
 	if ret == "" {
 		return "", fmt.Errorf("Name is blank")
 	}
-	if string(ret[0]) == "." {
+	if ret[0] == '.' {
 		return "", fmt.Errorf("Name %s starts with a dot", ret)
 	}
 
