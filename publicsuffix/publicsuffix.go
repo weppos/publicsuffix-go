@@ -159,7 +159,7 @@ Scanning:
 	return rules, scanner.Err()
 }
 
-// Finds and returns the most appropriate rule for the domain name.
+// Find and returns the most appropriate rule for the domain name.
 func (l *List) Find(name string, options *FindOptions) Rule {
 	var rule *Rule
 
