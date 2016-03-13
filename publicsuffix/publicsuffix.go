@@ -8,9 +8,7 @@ import (
 	"fmt"
 	"io"
 	"os"
-	"path"
 	"regexp"
-	"runtime"
 	"strings"
 	"net/http/cookiejar"
 )
@@ -74,7 +72,7 @@ func NewList() *List {
 // and returns a List initialized with the rules in the source.
 func NewListFromString(src string, options *ParserOption) (*List, error) {
 	l := NewList()
-	return l, l.Load(src, options)
+	return l, l.LoadString(src, options)
 }
 
 // NewListFromString parses a string that represents a Public Suffix source
@@ -85,7 +83,12 @@ func NewListFromFile(path string, options *ParserOption) (*List, error) {
 }
 
 // experimental
-func (l *List) Load(src string, options *ParserOption) error {
+func (l *List) Load(r io.Reader, options *ParserOption) error {
+	return l.parse(r, options)
+}
+
+// experimental
+func (l *List) LoadString(src string, options *ParserOption) error {
 	r := strings.NewReader(src)
 	return l.parse(r, options)
 }
@@ -113,6 +116,11 @@ func (l *List) AddRule(r *Rule) error {
 // experimental
 func (l *List) Size() int {
 	return len(l.rules)
+}
+
+// private
+func (l *List) Rules() []Rule {
+	return l.rules
 }
 
 func (l *List) parse(r io.Reader, options *ParserOption) error {
@@ -412,16 +420,7 @@ func ParseFromListWithOptions(l *List, name string, options *FindOptions) (*Doma
 // The list is lazy-initialized the first time it is requested.
 func DefaultList() *List {
 	if defaultList.Size() == 0 {
-		// build the path to the file using the current directory
-		// otherwise when this lib is loaded in a different package
-		// the initializer crashes because it can't find the file
-		_, filename, _, _ := runtime.Caller(0)
-		filepath := path.Join(path.Dir(filename), defaultListFile)
-
-		err := defaultList.LoadFile(filepath, DefaultParserOptions)
-		if err != nil {
-			panic(err)
-		}
+		initDefaultList()
 	}
 
 	return defaultList
