@@ -7,10 +7,10 @@ import (
 	"bufio"
 	"fmt"
 	"io"
+	"net/http/cookiejar"
 	"os"
 	"regexp"
 	"strings"
-	"net/http/cookiejar"
 )
 
 const (
@@ -20,8 +20,6 @@ const (
 
 	listTokenPrivateDomains = "===BEGIN PRIVATE DOMAINS==="
 	listTokenComment        = "//"
-
-	defaultListFile = "list.dat"
 )
 
 // defaultList is the default List and it is used by Parse and Domain.
