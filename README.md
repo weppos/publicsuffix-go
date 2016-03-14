@@ -34,7 +34,7 @@ $ go test ./...
 There are 3 different test suites built into this library:
 
 - Acceptance: the acceptance test suite contains some high level tests to ensure the library behaves as expected
-- PSL: the PSL test suite runs the library against the []official Public Suffix test cases](https://github.com/publicsuffix/list/blob/master/tests/tests.txt)
+- PSL: the PSL test suite runs the library against the [official Public Suffix test cases](https://github.com/publicsuffix/list/blob/master/tests/tests.txt)
 - Unit: the unit test suite stresses the various single components of this package
 
 
