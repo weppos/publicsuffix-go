@@ -23,7 +23,7 @@ const (
 )
 
 // defaultList is the default List and it is used by Parse and Domain.
-var defaultList = NewList()
+var DefaultList = NewList()
 
 // DefaultRule is the default Rule that represents "*".
 var DefaultRule = NewRule("*")
@@ -334,7 +334,7 @@ func (d *DomainName) String() string {
 //	// example.co.uk
 //
 func Domain(name string) (string, error) {
-	return DomainFromListWithOptions(DefaultList(), name, DefaultFindOptions)
+	return DomainFromListWithOptions(DefaultList, name, DefaultFindOptions)
 }
 
 // Parse decomposes the name into TLD, SLD, TRD
@@ -353,7 +353,7 @@ func Domain(name string) (string, error) {
 //	// &DomainName{"co.uk", "example"}
 //
 func Parse(name string) (*DomainName, error) {
-	return ParseFromListWithOptions(DefaultList(), name, DefaultFindOptions)
+	return ParseFromListWithOptions(DefaultList, name, DefaultFindOptions)
 }
 
 // DomainFromListWithOptions extract and return the domain name from the input
@@ -410,16 +410,6 @@ func ParseFromListWithOptions(l *List, name string, options *FindOptions) (*Doma
 	return dn, nil
 }
 
-// DefaultList returns the default list, initialized with the rules stored in the list.
-// The list is lazy-initialized the first time it is requested.
-func DefaultList() *List {
-	if defaultList.Size() == 0 {
-		initDefaultList()
-	}
-
-	return defaultList
-}
-
 func normalize(name string) (string, error) {
 	ret := strings.ToLower(name)
 
@@ -458,10 +448,6 @@ type cookiejarList struct {
 
 // PublicSuffix implements cookiejar.PublicSuffixList.
 func (l cookiejarList) PublicSuffix(domain string) string {
-	if l.List == nil {
-		l.List = DefaultList()
-	}
-
 	rule := l.List.Find(domain, nil)
 	return rule.Decompose(domain)[1]
 }
