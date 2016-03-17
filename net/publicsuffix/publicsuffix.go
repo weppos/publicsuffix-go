@@ -20,7 +20,7 @@ func PublicSuffix(domain string) (publicSuffix string, icann bool) {
 	//
 	//return d.Rule.Value, !d.Rule.Private
 
-	rule := psl.DefaultList().Find(domain, nil)
+	rule := psl.DefaultList.Find(domain, nil)
 	publicSuffix = rule.Decompose(domain)[1]
 	icann = !rule.Private
 

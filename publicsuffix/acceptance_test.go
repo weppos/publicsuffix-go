@@ -61,7 +61,7 @@ func TestIncludePrivate(t *testing.T) {
 	}
 
 	for _, testCase := range testCases {
-		got, err := DomainFromListWithOptions(DefaultList(), testCase.input, &FindOptions{IgnorePrivate: testCase.ignore})
+		got, err := DomainFromListWithOptions(DefaultList, testCase.input, &FindOptions{IgnorePrivate: testCase.ignore})
 
 		if testCase.error && err == nil {
 			t.Errorf("TestIncludePrivate(%v) should have returned error, got: %v", testCase.input, got)

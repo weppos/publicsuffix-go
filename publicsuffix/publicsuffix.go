@@ -440,7 +440,7 @@ func decompose(r *Rule, name string) (tld, sld, trd string) {
 }
 
 // CookieJarList implements the cookiejar.PublicSuffixList interface.
-var CookieJarList cookiejar.PublicSuffixList = cookiejarList{}
+var CookieJarList cookiejar.PublicSuffixList = cookiejarList{DefaultList}
 
 type cookiejarList struct {
 	List *List
