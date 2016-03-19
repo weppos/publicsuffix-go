@@ -10,8 +10,6 @@ Package <tt>publicsuffix</tt> provides a Go domain name parser based on the [Pub
 
 This library is currently under development, therefore the methods and the implementation should be considered a work-in-progress. Changes in the method naming, method signatures, public or internal APIs may happen at any time.
 
-Use this library at your own risk. :boom:
-
 
 ## Getting started
 
