@@ -3,10 +3,10 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version df75422 (Sat Mar 19 19:57:14 2016)"
+const defaultListVersion = "PSL version 6ec573d (Fri Mar 25 21:54:54 2016)"
 
 func init() {
-	r := [7863]Rule{
+	r := [7866]Rule{
 		{1, "ac", 1, false},
 		{1, "com.ac", 2, false},
 		{1, "edu.ac", 2, false},
@@ -6115,6 +6115,7 @@ func init() {
 		{1, "aramco", 1, false},
 		{1, "archi", 1, false},
 		{1, "army", 1, false},
+		{1, "art", 1, false},
 		{1, "arte", 1, false},
 		{1, "asda", 1, false},
 		{1, "associates", 1, false},
@@ -7823,6 +7824,7 @@ func init() {
 		{1, "nid.io", 2, true},
 		{1, "operaunite.com", 2, true},
 		{1, "outsystemscloud.com", 2, true},
+		{1, "oy.lc", 2, true},
 		{1, "pagefrontapp.com", 2, true},
 		{1, "art.pl", 2, true},
 		{1, "gliwice.pl", 2, true},
@@ -7832,6 +7834,7 @@ func init() {
 		{1, "zakopane.pl", 2, true},
 		{1, "pantheonsite.io", 2, true},
 		{1, "gotpantheon.com", 2, true},
+		{1, "mypep.link", 2, true},
 		{1, "xen.prgmr.com", 3, true},
 		{1, "priv.at", 2, true},
 		{1, "qa2.com", 2, true},
