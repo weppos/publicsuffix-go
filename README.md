@@ -6,11 +6,6 @@ Package <tt>publicsuffix</tt> provides a Go domain name parser based on the [Pub
 [![GoDoc](https://godoc.org/github.com/weppos/publicsuffix-go/publicsuffix?status.svg)](https://godoc.org/github.com/weppos/publicsuffix-go/publicsuffix)
 
 
-## :warning: Development Warning
-
-This library is currently under development, therefore the methods and the implementation should be considered a work-in-progress. Changes in the method naming, method signatures, public or internal APIs may happen at any time.
-
-
 ## Getting started
 
 ```shell
