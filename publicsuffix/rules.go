@@ -3,10 +3,10 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version ed34e6d (Mon Apr 18 15:07:55 2016)"
+const defaultListVersion = "PSL version 2226f9c (Mon May  9 22:24:09 2016)"
 
 func init() {
-	r := [7892]Rule{
+	r := [7899]Rule{
 		{1, "ac", 1, false},
 		{1, "com.ac", 2, false},
 		{1, "edu.ac", 2, false},
@@ -6225,6 +6225,7 @@ func init() {
 		{1, "cal", 1, false},
 		{1, "call", 1, false},
 		{1, "calvinklein", 1, false},
+		{1, "cam", 1, false},
 		{1, "camera", 1, false},
 		{1, "camp", 1, false},
 		{1, "cancerresearch", 1, false},
@@ -6440,6 +6441,7 @@ func init() {
 		{1, "flsmidth", 1, false},
 		{1, "fly", 1, false},
 		{1, "foo", 1, false},
+		{1, "food", 1, false},
 		{1, "foodnetwork", 1, false},
 		{1, "football", 1, false},
 		{1, "ford", 1, false},
@@ -6547,6 +6549,7 @@ func init() {
 		{1, "hosting", 1, false},
 		{1, "hot", 1, false},
 		{1, "hoteles", 1, false},
+		{1, "hotels", 1, false},
 		{1, "hotmail", 1, false},
 		{1, "house", 1, false},
 		{1, "how", 1, false},
@@ -6973,6 +6976,7 @@ func init() {
 		{1, "shia", 1, false},
 		{1, "shiksha", 1, false},
 		{1, "shoes", 1, false},
+		{1, "shop", 1, false},
 		{1, "shopping", 1, false},
 		{1, "shouji", 1, false},
 		{1, "show", 1, false},
@@ -7386,6 +7390,7 @@ func init() {
 		{1, "reg.dk", 2, true},
 		{1, "store.dk", 2, true},
 		{1, "dedyn.io", 2, true},
+		{1, "dnshome.de", 2, true},
 		{1, "dreamhosters.com", 2, true},
 		{1, "mydrobo.com", 2, true},
 		{1, "duckdns.org", 2, true},
@@ -7841,10 +7846,12 @@ func init() {
 		{1, "ngrok.io", 2, true},
 		{1, "nfshost.com", 2, true},
 		{1, "nsupdate.info", 2, true},
+		{1, "nerdpol.ovh", 2, true},
 		{1, "nyc.mn", 2, true},
 		{1, "nid.io", 2, true},
 		{1, "operaunite.com", 2, true},
 		{1, "outsystemscloud.com", 2, true},
+		{1, "ownprovider.com", 2, true},
 		{1, "oy.lc", 2, true},
 		{1, "pagefrontapp.com", 2, true},
 		{1, "art.pl", 2, true},
