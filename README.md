@@ -119,7 +119,7 @@ This package provides the following extra features:
 This package also aims for 100% compatibility with the `x/net` package. A special adapter is provided as a drop-in replacement. Simply change the include statement from
 
 ```go
-include (
+import (
     "golang.org/x/net/publicsuffix"
 )
 ```
@@ -127,7 +127,7 @@ include (
 to
 
 ```go
-include (
+import (
     "github.com/weppos/publicsuffix-go/net/publicsuffix"
 )
 ```
