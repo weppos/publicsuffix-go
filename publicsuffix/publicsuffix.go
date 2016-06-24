@@ -328,7 +328,7 @@ func (d *DomainName) String() string {
 //
 // 	publicsuffix.Domain("example.com")
 //	// example.com
-// 	publicsuffix.Domain("www.example.com)
+// 	publicsuffix.Domain("www.example.com")
 //	// example.com
 // 	publicsuffix.Domain("www.example.co.uk")
 //	// example.co.uk
@@ -347,7 +347,7 @@ func Domain(name string) (string, error) {
 //
 // 	publicsuffix.Parse("example.com")
 //	// &DomainName{"com", "example"}
-// 	publicsuffix.Parse("www.example.com)
+// 	publicsuffix.Parse("www.example.com")
 //	// &DomainName{"com", "example", "www"}
 // 	publicsuffix.Parse("www.example.co.uk")
 //	// &DomainName{"co.uk", "example"}
@@ -365,7 +365,7 @@ func Parse(name string) (*DomainName, error) {
 //
 // 	publicsuffix.DomainFromListWithOptions(list, "example.com")
 //	// example.com
-// 	publicsuffix.DomainFromListWithOptions(list, "www.example.com)
+// 	publicsuffix.DomainFromListWithOptions(list, "www.example.com")
 //	// example.com
 // 	publicsuffix.DomainFromListWithOptions(list, "www.example.co.uk")
 //	// example.co.uk
@@ -389,7 +389,7 @@ func DomainFromListWithOptions(l *List, name string, options *FindOptions) (stri
 //
 // 	publicsuffix.ParseFromListWithOptions(list, "example.com")
 //	// &DomainName{"com", "example"}
-// 	publicsuffix.ParseFromListWithOptions(list, "www.example.com)
+// 	publicsuffix.ParseFromListWithOptions(list, "www.example.com")
 //	// &DomainName{"com", "example", "www"}
 // 	publicsuffix.ParseFromListWithOptions(list, "www.example.co.uk")
 //	// &DomainName{"co.uk", "example"}
