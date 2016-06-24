@@ -181,8 +181,8 @@ blogspot.com
 	list, _ := NewListFromString(src, nil)
 
 	for _, testCase := range testCases {
-		if want, got := testCase.expected, list.Find(testCase.input, nil); !reflect.DeepEqual(want, &got) {
-			t.Errorf("Find(%v) = %v, want %v", testCase.input, &got, want)
+		if want, got := testCase.expected, list.Find(testCase.input, nil); !reflect.DeepEqual(want, got) {
+			t.Errorf("Find(%v) = %v, want %v", testCase.input, got, want)
 		}
 	}
 }
