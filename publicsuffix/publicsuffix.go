@@ -163,7 +163,7 @@ Scanning:
 func (l *List) Find(name string, options *FindOptions) Rule {
 	var rule *Rule
 
-	for _, r := range l.Select(name, options) {
+	for _, r := range l.selectRules(name, options) {
 		if r.Type == ExceptionType {
 			return r
 		}
@@ -179,8 +179,7 @@ func (l *List) Find(name string, options *FindOptions) Rule {
 	return *DefaultRule
 }
 
-// experimental
-func (l *List) Select(name string, options *FindOptions) []Rule {
+func (l *List) selectRules(name string, options *FindOptions) []Rule {
 	var found []Rule
 
 	if options == nil {
