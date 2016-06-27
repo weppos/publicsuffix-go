@@ -3,10 +3,10 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version 4054ff0 (Sun Jun 26 14:22:36 2016)"
+const defaultListVersion = "PSL version 90fa72a (Mon Jun 27 18:52:28 2016)"
 
 func init() {
-	r := [8005]Rule{
+	r := [8011]Rule{
 		{1, "ac", 1, false},
 		{1, "com.ac", 2, false},
 		{1, "edu.ac", 2, false},
@@ -7381,6 +7381,7 @@ func init() {
 		{1, "co.nl", 2, true},
 		{1, "co.no", 2, true},
 		{2, "platform.sh", 3, true},
+		{1, "realm.cz", 2, true},
 		{2, "cryptonomic.net", 3, true},
 		{1, "cupcake.is", 2, true},
 		{1, "cyon.link", 2, true},
@@ -7735,6 +7736,10 @@ func init() {
 		{1, "tr.eu.org", 3, true},
 		{1, "uk.eu.org", 3, true},
 		{1, "us.eu.org", 3, true},
+		{1, "eu-1.evennode.com", 3, true},
+		{1, "eu-2.evennode.com", 3, true},
+		{1, "us-1.evennode.com", 3, true},
+		{1, "us-2.evennode.com", 3, true},
 		{1, "apps.fbsbx.com", 3, true},
 		{1, "a.ssl.fastly.net", 4, true},
 		{1, "b.ssl.fastly.net", 4, true},
@@ -8004,6 +8009,7 @@ func init() {
 		{1, "sopot.pl", 2, true},
 		{1, "bloxcms.com", 2, true},
 		{1, "townnews-staging.com", 2, true},
+		{1, "tuxfamily.org", 2, true},
 		{1, "hk.com", 2, true},
 		{1, "hk.org", 2, true},
 		{1, "ltd.hk", 2, true},
