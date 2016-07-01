@@ -3,10 +3,10 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version 8f970f6 (Tue Jun 28 07:27:19 2016)"
+const defaultListVersion = "PSL version aa87d27 (Thu Jun 30 14:17:07 2016)"
 
 func init() {
-	r := [8010]Rule{
+	r := [8013]Rule{
 		{1, "ac", 1, false},
 		{1, "com.ac", 2, false},
 		{1, "edu.ac", 2, false},
@@ -7366,6 +7366,7 @@ func init() {
 		{1, "us.org", 2, true},
 		{1, "co.com", 2, true},
 		{1, "c.la", 2, true},
+		{1, "certmgr.org", 2, true},
 		{1, "xenapponazure.com", 2, true},
 		{1, "virtueeldomein.nl", 2, true},
 		{1, "cloudcontrolled.com", 2, true},
@@ -7745,6 +7746,7 @@ func init() {
 		{1, "global.ssl.fastly.net", 4, true},
 		{1, "a.prod.fastly.net", 4, true},
 		{1, "global.prod.fastly.net", 4, true},
+		{1, "fhapp.xyz", 2, true},
 		{1, "firebaseapp.com", 2, true},
 		{1, "flynnhub.com", 2, true},
 		{1, "freebox-os.com", 2, true},
@@ -7848,6 +7850,7 @@ func init() {
 		{1, "withyoutube.com", 2, true},
 		{1, "hashbang.sh", 2, true},
 		{1, "hasura-app.io", 2, true},
+		{1, "hepforge.org", 2, true},
 		{1, "herokuapp.com", 2, true},
 		{1, "herokussl.com", 2, true},
 		{1, "iki.fi", 2, true},
