@@ -3,10 +3,10 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version e9f8e87 (Sun Jul  3 08:25:54 2016)"
+const defaultListVersion = "PSL version fb4a6bc (Thu Jul  7 00:50:50 2016)"
 
 func init() {
-	r := [8015]Rule{
+	r := [8017]Rule{
 		{1, "ac", 1, false},
 		{1, "com.ac", 2, false},
 		{1, "edu.ac", 2, false},
@@ -7300,10 +7300,10 @@ func init() {
 		{1, "us-gov-west-1.compute.amazonaws.com", 4, true},
 		{1, "us-west-1.compute.amazonaws.com", 4, true},
 		{1, "us-west-2.compute.amazonaws.com", 4, true},
-		{1, "us-east-1.amazonaws.com", 3, true},
 		{1, "compute-1.amazonaws.com", 3, true},
 		{1, "z-1.compute-1.amazonaws.com", 4, true},
 		{1, "z-2.compute-1.amazonaws.com", 4, true},
+		{1, "us-east-1.amazonaws.com", 3, true},
 		{1, "compute.amazonaws.com.cn", 4, true},
 		{1, "cn-north-1.compute.amazonaws.com.cn", 5, true},
 		{1, "elasticbeanstalk.com", 2, true},
@@ -7326,10 +7326,10 @@ func init() {
 		{1, "s3.cn-north-1.amazonaws.com.cn", 5, true},
 		{1, "s3.eu-central-1.amazonaws.com", 4, true},
 		{1, "on-aptible.com", 2, true},
-		{1, "potager.org", 2, true},
-		{1, "poivron.org", 2, true},
-		{1, "sweetpepper.org", 2, true},
 		{1, "pimienta.org", 2, true},
+		{1, "poivron.org", 2, true},
+		{1, "potager.org", 2, true},
+		{1, "sweetpepper.org", 2, true},
 		{1, "myfritz.net", 2, true},
 		{1, "betainabox.com", 2, true},
 		{1, "boxfuse.io", 2, true},
@@ -7859,6 +7859,8 @@ func init() {
 		{1, "biz.at", 2, true},
 		{1, "info.at", 2, true},
 		{2, "magentosite.cloud", 3, true},
+		{1, "meteorapp.com", 2, true},
+		{1, "eu.meteorapp.com", 3, true},
 		{1, "co.pl", 2, true},
 		{1, "azurewebsites.net", 2, true},
 		{1, "azure-mobile.net", 2, true},
