@@ -3,10 +3,10 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version 5fb94da (Tue Jul 19 08:04:20 2016)"
+const defaultListVersion = "PSL version 1df90f8 (Thu Jul 21 07:59:56 2016)"
 
 func init() {
-	r := [8020]Rule{
+	r := [8021]Rule{
 		{1, "ac", 1, false},
 		{1, "com.ac", 2, false},
 		{1, "edu.ac", 2, false},
@@ -7768,6 +7768,7 @@ func init() {
 		{2, "ext.githubcloud.com", 4, true},
 		{1, "gist.githubcloud.com", 3, true},
 		{2, "githubcloudusercontent.com", 3, true},
+		{1, "gitlab.io", 2, true},
 		{1, "ro.com", 2, true},
 		{1, "goip.de", 2, true},
 		{2, "0emm.com", 3, true},
