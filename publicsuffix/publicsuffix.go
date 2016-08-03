@@ -186,6 +186,10 @@ func (l *List) Find(name string, options *FindOptions) *Rule {
 		return bestRule
 	}
 
+	if options.DefaultRule == nil {
+		return DefaultRule
+	}
+
 	return options.DefaultRule
 }
 

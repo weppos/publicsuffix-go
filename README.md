@@ -81,14 +81,14 @@ Sometimes, you want to ignore these domains and only query against the IANA suff
 In the first case, the private domains are ignored at runtime: they will still be included in the lists but the lookup will skip them when found.
 
 ```go
-publicsuffix.DomainFromListWithOptions(publicsuffix.DefaultList(), "google.blogspot.com", nil)
+publicsuffix.DomainFromListWithOptions(publicsuffix.DefaultList, "google.blogspot.com", nil)
 // google.blogspot.com
 
-publicsuffix.DomainFromListWithOptions(publicsuffix.DefaultList(), "google.blogspot.com", &FindOptions{IgnorePrivate: true})
+publicsuffix.DomainFromListWithOptions(publicsuffix.DefaultList, "google.blogspot.com", &publicsuffix.FindOptions{IgnorePrivate: true})
 // blogspot.com
 
 // Note that the DefaultFindOptions includes the private domains by default
-publicsuffix.DomainFromListWithOptions(publicsuffix.DefaultList(), "google.blogspot.com", DefaultFindOptions)
+publicsuffix.DomainFromListWithOptions(publicsuffix.DefaultList, "google.blogspot.com", publicsuffix.DefaultFindOptions)
 // google.blogspot.com
 ```
 
