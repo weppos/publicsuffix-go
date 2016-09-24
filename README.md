@@ -1,6 +1,6 @@
-# Public Suffix <small>Go</small>
+# Public Suffix <small>for Go</small>
 
-Package <tt>publicsuffix</tt> provides a Go domain name parser based on the [Public Suffix List](http://publicsuffix.org/).
+The package <tt>publicsuffix</tt> provides a Go domain name parser based on the [Public Suffix List](http://publicsuffix.org/).
 
 [![Build Status](https://travis-ci.org/weppos/publicsuffix-go.svg?branch=master)](https://travis-ci.org/weppos/publicsuffix-go)
 [![GoDoc](https://godoc.org/github.com/weppos/publicsuffix-go/publicsuffix?status.svg)](https://godoc.org/github.com/weppos/publicsuffix-go/publicsuffix)
