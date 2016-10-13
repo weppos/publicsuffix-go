@@ -3,10 +3,10 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version 1a8f371 (Wed Oct 12 01:25:48 2016)"
+const defaultListVersion = "PSL version 087bfe4 (Thu Oct 13 01:40:54 2016)"
 
 func init() {
-	r := [8059]Rule{
+	r := [8087]Rule{
 		{1, "ac", 1, false},
 		{1, "com.ac", 2, false},
 		{1, "edu.ac", 2, false},
@@ -7879,9 +7879,37 @@ func init() {
 		{1, "iki.fi", 2, true},
 		{1, "biz.at", 2, true},
 		{1, "info.at", 2, true},
+		{1, "ac.leg.br", 3, true},
+		{1, "al.leg.br", 3, true},
+		{1, "am.leg.br", 3, true},
+		{1, "ap.leg.br", 3, true},
+		{1, "ba.leg.br", 3, true},
+		{1, "ce.leg.br", 3, true},
+		{1, "df.leg.br", 3, true},
+		{1, "es.leg.br", 3, true},
+		{1, "go.leg.br", 3, true},
+		{1, "ma.leg.br", 3, true},
+		{1, "mg.leg.br", 3, true},
+		{1, "ms.leg.br", 3, true},
+		{1, "mt.leg.br", 3, true},
+		{1, "pa.leg.br", 3, true},
+		{1, "pb.leg.br", 3, true},
+		{1, "pe.leg.br", 3, true},
+		{1, "pi.leg.br", 3, true},
+		{1, "pr.leg.br", 3, true},
+		{1, "rj.leg.br", 3, true},
+		{1, "rn.leg.br", 3, true},
+		{1, "ro.leg.br", 3, true},
+		{1, "rr.leg.br", 3, true},
+		{1, "rs.leg.br", 3, true},
+		{1, "sc.leg.br", 3, true},
+		{1, "se.leg.br", 3, true},
+		{1, "sp.leg.br", 3, true},
+		{1, "to.leg.br", 3, true},
 		{2, "triton.zone", 3, true},
 		{2, "cns.joyent.com", 4, true},
 		{1, "js.org", 2, true},
+		{1, "keymachine.de", 2, true},
 		{1, "knightpoint.systems", 2, true},
 		{1, "co.krd", 2, true},
 		{1, "edu.krd", 2, true},
