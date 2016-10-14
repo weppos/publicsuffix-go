@@ -3,10 +3,10 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version 087bfe4 (Thu Oct 13 01:40:54 2016)"
+const defaultListVersion = "PSL version dc70bb0 (Thu Oct 13 22:53:36 2016)"
 
 func init() {
-	r := [8087]Rule{
+	r := [8098]Rule{
 		{1, "ac", 1, false},
 		{1, "com.ac", 2, false},
 		{1, "edu.ac", 2, false},
@@ -7392,6 +7392,17 @@ func init() {
 		{1, "r.cdn77.net", 3, true},
 		{1, "rsc.cdn77.org", 3, true},
 		{1, "ssl.origin.cdn77-secure.org", 4, true},
+		{1, "cloudns.asia", 2, true},
+		{1, "cloudns.biz", 2, true},
+		{1, "cloudns.club", 2, true},
+		{1, "cloudns.cc", 2, true},
+		{1, "cloudns.eu", 2, true},
+		{1, "cloudns.in", 2, true},
+		{1, "cloudns.info", 2, true},
+		{1, "cloudns.org", 2, true},
+		{1, "cloudns.pro", 2, true},
+		{1, "cloudns.pw", 2, true},
+		{1, "cloudns.us", 2, true},
 		{1, "co.nl", 2, true},
 		{1, "co.no", 2, true},
 		{2, "platform.sh", 3, true},
