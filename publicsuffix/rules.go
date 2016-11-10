@@ -3,10 +3,10 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version 922865b (Tue Nov  8 20:29:18 2016)"
+const defaultListVersion = "PSL version 75ad59c (Wed Nov  9 09:00:26 2016)"
 
 func init() {
-	r := [8116]Rule{
+	r := [8114]Rule{
 		{1, "ac", 1, false},
 		{1, "com.ac", 2, false},
 		{1, "edu.ac", 2, false},
@@ -2212,9 +2212,7 @@ func init() {
 		{1, "aso.kumamoto.jp", 3, false},
 		{1, "choyo.kumamoto.jp", 3, false},
 		{1, "gyokuto.kumamoto.jp", 3, false},
-		{1, "hitoyoshi.kumamoto.jp", 3, false},
 		{1, "kamiamakusa.kumamoto.jp", 3, false},
-		{1, "kashima.kumamoto.jp", 3, false},
 		{1, "kikuchi.kumamoto.jp", 3, false},
 		{1, "kumamoto.kumamoto.jp", 3, false},
 		{1, "mashiki.kumamoto.jp", 3, false},
