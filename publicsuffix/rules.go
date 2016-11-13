@@ -3,10 +3,10 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version 75ad59c (Wed Nov  9 09:00:26 2016)"
+const defaultListVersion = "PSL version 41a519a (Thu Nov 10 20:25:03 2016)"
 
 func init() {
-	r := [8114]Rule{
+	r := [8126]Rule{
 		{1, "ac", 1, false},
 		{1, "com.ac", 2, false},
 		{1, "edu.ac", 2, false},
@@ -8067,9 +8067,20 @@ func init() {
 		{1, "sandcats.io", 2, true},
 		{1, "logoip.de", 2, true},
 		{1, "logoip.com", 2, true},
+		{1, "firewall-gateway.com", 2, true},
+		{1, "firewall-gateway.de", 2, true},
+		{1, "my-gateway.de", 2, true},
+		{1, "my-router.de", 2, true},
+		{1, "spdns.de", 2, true},
+		{1, "spdns.eu", 2, true},
+		{1, "firewall-gateway.net", 2, true},
+		{1, "my-firewall.org", 2, true},
+		{1, "myfirewall.org", 2, true},
+		{1, "spdns.org", 2, true},
 		{1, "biz.ua", 2, true},
 		{1, "co.ua", 2, true},
 		{1, "pp.ua", 2, true},
+		{1, "shiftedit.io", 2, true},
 		{1, "myshopblocks.com", 2, true},
 		{1, "1kapp.com", 2, true},
 		{1, "appchizi.com", 2, true},
@@ -8121,6 +8132,7 @@ func init() {
 		{1, "yolasite.com", 2, true},
 		{1, "za.net", 2, true},
 		{1, "za.org", 2, true},
+		{1, "now.sh", 2, true},
 	}
 	DefaultList.rules = r[:]
 }
