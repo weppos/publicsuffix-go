@@ -46,18 +46,18 @@ func TestValid(t *testing.T) {
 
 type privateTestCase struct {
 	input  string
+	domain string
 	ignore bool
 	error  bool
-	domain string
 }
 
 func TestIncludePrivate(t *testing.T) {
 	testCases := []privateTestCase{
-		privateTestCase{"blogspot.com", false, true, ""},
-		privateTestCase{"blogspot.com", true, false, "blogspot.com"},
+		privateTestCase{"blogspot.com", "", false, true},
+		privateTestCase{"blogspot.com", "blogspot.com", true, false},
 
-		privateTestCase{"foo.blogspot.com", false, false, "foo.blogspot.com"},
-		privateTestCase{"foo.blogspot.com", true, false, "blogspot.com"},
+		privateTestCase{"foo.blogspot.com", "foo.blogspot.com", false, false},
+		privateTestCase{"foo.blogspot.com", "blogspot.com", true, false},
 	}
 
 	for _, testCase := range testCases {
@@ -76,5 +76,77 @@ func TestIncludePrivate(t *testing.T) {
 			t.Errorf("Domain(%v) = %v, want %v", testCase.input, got, want)
 		}
 	}
+}
 
+type idnaTestCase struct {
+	input  string
+	domain string
+	error  bool
+}
+
+func TestIDNA(t *testing.T) {
+	testACases := []idnaTestCase{
+		// A-labels are supported
+		// Check single IDN part
+		idnaTestCase{"xn--p1ai", "", true},
+		idnaTestCase{"example.xn--p1ai", "example.xn--p1ai", false},
+		idnaTestCase{"subdomain.example.xn--p1ai", "example.xn--p1ai", false},
+		// Check multiple IDN parts
+		idnaTestCase{"xn--example--3bhk5a.xn--p1ai", "xn--example--3bhk5a.xn--p1ai", false},
+		idnaTestCase{"subdomain.xn--example--3bhk5a.xn--p1ai", "xn--example--3bhk5a.xn--p1ai", false},
+		// Check multiple IDN rules
+		idnaTestCase{"example.xn--o1ach.xn--90a3ac", "example.xn--o1ach.xn--90a3ac", false},
+		idnaTestCase{"sudbomain.example.xn--o1ach.xn--90a3ac", "example.xn--o1ach.xn--90a3ac", false},
+	}
+
+	// TODO(weppos): some tests are passing because of the default rule *
+	// Consider to add some tests overriding the default rule to nil.
+	// Right now, setting the default rule to nil with cause a panic if the lookup results in a nil.
+	for _, testCase := range testACases {
+		got, err := DomainFromListWithOptions(DefaultList, testCase.input, nil)
+
+		if testCase.error && err == nil {
+			t.Errorf("A-label %v should have returned error, got: %v", testCase.input, got)
+			continue
+		}
+		if !testCase.error && err != nil {
+			t.Errorf("A-label %v returned error: %v", testCase.input, err)
+			continue
+		}
+
+		if want := testCase.domain; want != got {
+			t.Errorf("A-label Domain(%v) = %v, want %v", testCase.input, got, want)
+		}
+	}
+
+	testUCases := []idnaTestCase{
+		// U-labels are NOT supported
+		// Check single IDN part
+		idnaTestCase{"рф", "", true},
+		idnaTestCase{"example.рф", "", true},
+		idnaTestCase{"subdomain.example.рф", "", true},
+		// Check multiple IDN parts
+		idnaTestCase{"example-упр.рф", "", true},
+		idnaTestCase{"subdomain.example-упр.рф", "", true},
+		// Check multiple IDN rules
+		idnaTestCase{"example.упр.срб", "", true},
+		idnaTestCase{"sudbomain.example.упр.срб", "", true},
+	}
+
+	for _, testCase := range testUCases {
+		got, err := DomainFromListWithOptions(DefaultList, testCase.input, nil)
+
+		if testCase.error && err == nil {
+			t.Errorf("U-label %v should have returned error, got: %v", testCase.input, got)
+			continue
+		}
+		if !testCase.error && err != nil {
+			t.Errorf("U-label %v returned error: %v", testCase.input, err)
+			continue
+		}
+
+		if want := testCase.domain; want != got {
+			t.Errorf("U-label Domain(%v) = %v, want %v", testCase.input, got, want)
+		}
+	}
 }

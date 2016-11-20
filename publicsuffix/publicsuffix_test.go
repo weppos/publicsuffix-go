@@ -150,7 +150,7 @@ blogspot.com
 // ===END PRIVATE DOMAINS===
 	`
 
-	// FIXME
+	// TODO(weppos): abiliuty to set type to a rule.
 	p1 := NewRule("blogspot.com")
 	p1.Private = true
 
