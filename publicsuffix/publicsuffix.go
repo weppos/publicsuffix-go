@@ -14,6 +14,11 @@ import (
 )
 
 const (
+	// Version identifies the current library version.
+	// This is a pro-forma convention given that Go dependencies
+	// tends to be fetched directly from the repo.
+	Version = "0.2.0"
+
 	NormalType    = 1
 	WildcardType  = 2
 	ExceptionType = 3
@@ -119,7 +124,7 @@ func (l *List) AddRule(r *Rule) error {
 	return nil
 }
 
-// experimental
+// Size returns the size of the list, which is the number of rules.
 func (l *List) Size() int {
 	return len(l.rules)
 }

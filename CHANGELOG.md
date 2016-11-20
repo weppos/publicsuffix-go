@@ -1,6 +1,8 @@
 # CHANGELOG
 
-#### master
+#### 0.2.0
+
+- CHANGED: Definition updates.
 
 - CHANGED: List.Select() is no longer exported. This was an experimental method and it's now kept private as the Find() implementation may change in the future.
 
