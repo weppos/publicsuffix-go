@@ -12,17 +12,17 @@ type validTestCase struct {
 
 func TestValid(t *testing.T) {
 	testCases := []validTestCase{
-		validTestCase{"example.com", "example.com", &DomainName{"com", "example", "", NewRule("com")}},
-		validTestCase{"foo.example.com", "example.com", &DomainName{"com", "example", "foo", NewRule("com")}},
+		validTestCase{"example.com", "example.com", &DomainName{"com", "example", "", MustNewRule("com")}},
+		validTestCase{"foo.example.com", "example.com", &DomainName{"com", "example", "foo", MustNewRule("com")}},
 
-		validTestCase{"verybritish.co.uk", "verybritish.co.uk", &DomainName{"co.uk", "verybritish", "", NewRule("*.uk")}},
-		validTestCase{"foo.verybritish.co.uk", "verybritish.co.uk", &DomainName{"co.uk", "verybritish", "foo", NewRule("*.uk")}},
+		validTestCase{"verybritish.co.uk", "verybritish.co.uk", &DomainName{"co.uk", "verybritish", "", MustNewRule("*.uk")}},
+		validTestCase{"foo.verybritish.co.uk", "verybritish.co.uk", &DomainName{"co.uk", "verybritish", "foo", MustNewRule("*.uk")}},
 
-		validTestCase{"parliament.uk", "parliament.uk", &DomainName{"uk", "parliament", "", NewRule("!parliament.uk")}},
-		validTestCase{"foo.parliament.uk", "parliament.uk", &DomainName{"uk", "parliament", "foo", NewRule("!parliament.uk")}},
+		validTestCase{"parliament.uk", "parliament.uk", &DomainName{"uk", "parliament", "", MustNewRule("!parliament.uk")}},
+		validTestCase{"foo.parliament.uk", "parliament.uk", &DomainName{"uk", "parliament", "foo", MustNewRule("!parliament.uk")}},
 
-		validTestCase{"foo.blogspot.com", "foo.blogspot.com", &DomainName{"blogspot.com", "foo", "", NewRule("blogspot.com")}},
-		validTestCase{"bar.foo.blogspot.com", "foo.blogspot.com", &DomainName{"blogspot.com", "foo", "bar", NewRule("blogspot.com")}},
+		validTestCase{"foo.blogspot.com", "foo.blogspot.com", &DomainName{"blogspot.com", "foo", "", MustNewRule("blogspot.com")}},
+		validTestCase{"bar.foo.blogspot.com", "foo.blogspot.com", &DomainName{"blogspot.com", "foo", "bar", MustNewRule("blogspot.com")}},
 	}
 
 	for _, testCase := range testCases {
