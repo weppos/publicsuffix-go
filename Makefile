@@ -4,5 +4,8 @@ gen:
 clean:
 	rm publicsuffix/rules.*
 
+get-deps:
+	go get golang.org/x/net/idna
+
 test:
 	go test ./... -v
