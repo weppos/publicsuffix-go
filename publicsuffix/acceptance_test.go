@@ -99,9 +99,6 @@ func TestIDNA(t *testing.T) {
 		idnaTestCase{"sudbomain.example.xn--o1ach.xn--90a3ac", "example.xn--o1ach.xn--90a3ac", false},
 	}
 
-	// TODO(weppos): some tests are passing because of the default rule *
-	// Consider to add some tests overriding the default rule to nil.
-	// Right now, setting the default rule to nil with cause a panic if the lookup results in a nil.
 	for _, testCase := range testACases {
 		got, err := DomainFromListWithOptions(DefaultList, testCase.input, nil)
 
@@ -119,18 +116,23 @@ func TestIDNA(t *testing.T) {
 		}
 	}
 
+	// These tests validates the non-acceptance of U-labels.
+	//
+	// TODO(weppos): some tests are passing because of the default rule *
+	// Consider to add some tests overriding the default rule to nil.
+	// Right now, setting the default rule to nil with cause a panic if the lookup results in a nil.
 	testUCases := []idnaTestCase{
 		// U-labels are NOT supported
 		// Check single IDN part
 		idnaTestCase{"рф", "", true},
-		idnaTestCase{"example.рф", "", true},
-		idnaTestCase{"subdomain.example.рф", "", true},
+		idnaTestCase{"example.рф", "example.рф", false},           // passes because of *
+		idnaTestCase{"subdomain.example.рф", "example.рф", false}, // passes because of *
 		// Check multiple IDN parts
-		idnaTestCase{"example-упр.рф", "", true},
-		idnaTestCase{"subdomain.example-упр.рф", "", true},
+		idnaTestCase{"example-упр.рф", "example-упр.рф", false},           // passes because of *
+		idnaTestCase{"subdomain.example-упр.рф", "example-упр.рф", false}, // passes because of *
 		// Check multiple IDN rules
-		idnaTestCase{"example.упр.срб", "", true},
-		idnaTestCase{"sudbomain.example.упр.срб", "", true},
+		idnaTestCase{"example.упр.срб", "упр.срб", false},
+		idnaTestCase{"sudbomain.example.упр.срб", "упр.срб", false},
 	}
 
 	for _, testCase := range testUCases {

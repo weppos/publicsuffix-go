@@ -172,7 +172,7 @@ Scanning:
 			var rule *Rule
 			var err error
 
-			if (options.ASCIIEncoded) {
+			if options.ASCIIEncoded {
 				rule, err = NewRule(line)
 			} else {
 				rule, err = NewRuleUnicode(line)
@@ -271,7 +271,7 @@ func NewRuleUnicode(content string) (*Rule, error) {
 }
 
 // MustNewRule is like NewRule, but panics if the content cannot be parsed.
-func MustNewRule(content string) (*Rule) {
+func MustNewRule(content string) *Rule {
 	rule, err := NewRule(content)
 	if err != nil {
 		panic(err)
