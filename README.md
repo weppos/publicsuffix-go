@@ -84,18 +84,18 @@ In the first case, the private domains are ignored at runtime: they will still b
 publicsuffix.DomainFromListWithOptions(publicsuffix.DefaultList(), "google.blogspot.com", nil)
 // google.blogspot.com
 
-publicsuffix.DomainFromListWithOptions(publicsuffix.DefaultList(), "google.blogspot.com", &FindOptions{IgnorePrivate: true})
+publicsuffix.DomainFromListWithOptions(publicsuffix.DefaultList(), "google.blogspot.com", &publicsuffix.FindOptions{IgnorePrivate: true})
 // blogspot.com
 
 // Note that the DefaultFindOptions includes the private domains by default
-publicsuffix.DomainFromListWithOptions(publicsuffix.DefaultList(), "google.blogspot.com", DefaultFindOptions)
+publicsuffix.DomainFromListWithOptions(publicsuffix.DefaultList(), "google.blogspot.com", publicsuffix.DefaultFindOptions)
 // google.blogspot.com
 ```
 
 This solution is easy, but slower. If you find yourself ignoring the private domains in all cases (or in most cases), you may want to create a custom list without the private domains.
 
 ```go
-list := NewListFromFile("path/to/list.txt", &ParserOption{PrivateDomains: false})
+list := NewListFromFile("path/to/list.txt", &publicsuffix.ParserOption{PrivateDomains: false})
 publicsuffix.DomainFromListWithOptions(list, "google.blogspot.com", nil)
 // blogspot.com
 ```
