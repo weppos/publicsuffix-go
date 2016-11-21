@@ -108,7 +108,7 @@ IDNA-aware applications generally use the A-label form for storing and manipulat
 
 Although the PSL list has been traditionally U-label encoded, this library follows the common industry standards and stores the rules in their A-label form. Therefore, unless explicitly mentioned, any method call, comparison or internal representation is expected to be ASCII-compatible encoded (ACE).
 
-Passing Unicode names to the library may either result is error or unexpected behaviors.
+Passing Unicode names to the library may either result in error or unexpected behaviors.
 
 If you are interested in the details of this decision, you can read the full discussion [here](https://github.com/weppos/publicsuffix-go/issues/31).
 
