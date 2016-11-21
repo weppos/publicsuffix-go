@@ -100,6 +100,19 @@ publicsuffix.DomainFromListWithOptions(list, "google.blogspot.com", nil)
 // blogspot.com
 ```
 
+## IDN domains, A-labels and U-labels
+
+[A-label and U-label](https://tools.ietf.org/html/rfc5890#section-2.3.2.1) are two different ways to represent IDN domain names. These two encodings are also known as ASCII (A-label) or Pynucode vs Unicode (U-label). Conversions between U-labels and A-labels are performed according to the ["Punycode" specification](https://tools.ietf.org/html/rfc3492), adding or removing the ACE prefix as needed.
+
+IDNA-aware applications generally use the A-label form for storing and manipulating data, whereas the U-labels can appear in presentation and user interface forms.
+
+Although the PSL list has been traditionally U-label encoded, this library follows the common industry standards and stores the rules in their A-label form. Therefore, unless explicitly mentioned, any method call, comparison or internal representation is expected to be ASCII-compatible encoded (ACE).
+
+Passing Unicode names to the library may either result is error or unexpected behaviors.
+
+If you are interested in the details of this decision, you can read the full discussion [here](https://github.com/weppos/publicsuffix-go/issues/31).
+
+
 ## Differences with `golang.org/x/net/publicsuffix`
 
 The [`golang.org/x/net/publicsuffix`](https://godoc.org/golang.org/x/net/publicsuffix) is a package part of the Golang `x/net` package, that provides a public suffix list implementation.
