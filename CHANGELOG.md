@@ -1,5 +1,11 @@
 # CHANGELOG
 
+#### 0.3.0
+
+- CHANGED: Definition updates.
+
+- CHANGED: Changed internal representation of PSL rules to be A-label encoded, as well the public interface of the library to use ASCII-encoded names by default (GH-31, GH-40).
+
 #### 0.2.0
 
 - CHANGED: Definition updates.
