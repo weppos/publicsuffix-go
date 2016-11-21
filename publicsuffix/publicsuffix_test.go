@@ -212,7 +212,7 @@ blogspot.com
 // ===END PRIVATE DOMAINS===
 	`
 
-	// TODO(weppos): abiliuty to set type to a rule.
+	// TODO(weppos): ability to set type to a rule.
 	p1 := MustNewRule("blogspot.com")
 	p1.Private = true
 
