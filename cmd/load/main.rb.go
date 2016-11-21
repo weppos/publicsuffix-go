@@ -1,8 +1,8 @@
 package main
 
 import (
-	"time"
 	"fmt"
+	"time"
 
 	"github.com/weppos/publicsuffix-go/publicsuffix"
 )
