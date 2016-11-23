@@ -3,10 +3,10 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version def2d60 (Sat Nov 19 16:11:30 2016)"
+const defaultListVersion = "PSL version 429a309 (Wed Nov 23 01:15:41 2016)"
 
 func init() {
-	r := [8128]Rule{
+	r := [8146]Rule{
 		{1, "ac", 1, false},
 		{1, "com.ac", 2, false},
 		{1, "edu.ac", 2, false},
@@ -7405,6 +7405,15 @@ func init() {
 		{1, "co.nl", 2, true},
 		{1, "co.no", 2, true},
 		{2, "platform.sh", 3, true},
+		{1, "dyn.cosidns.de", 3, true},
+		{1, "dynamisches-dns.de", 2, true},
+		{1, "dnsupdater.de", 2, true},
+		{1, "internet-dns.de", 2, true},
+		{1, "l-o-g-i-n.de", 2, true},
+		{1, "dynamic-dns.info", 2, true},
+		{1, "feste-ip.net", 2, true},
+		{1, "knx-server.net", 2, true},
+		{1, "static-access.net", 2, true},
 		{1, "realm.cz", 2, true},
 		{2, "cryptonomic.net", 3, true},
 		{1, "cupcake.is", 2, true},
@@ -7715,6 +7724,8 @@ func init() {
 		{1, "ddnss.org", 2, true},
 		{1, "dynv6.net", 2, true},
 		{1, "e4.cz", 2, true},
+		{1, "enonic.io", 2, true},
+		{1, "customer.enonic.io", 3, true},
 		{1, "eu.org", 2, true},
 		{1, "al.eu.org", 3, true},
 		{1, "asso.eu.org", 3, true},
@@ -8132,6 +8143,13 @@ func init() {
 		{1, "router.management", 2, true},
 		{1, "wmflabs.org", 2, true},
 		{1, "yolasite.com", 2, true},
+		{1, "ybo.faith", 2, true},
+		{1, "yombo.me", 2, true},
+		{1, "homelink.one", 2, true},
+		{1, "ybo.party", 2, true},
+		{1, "ybo.review", 2, true},
+		{1, "ybo.science", 2, true},
+		{1, "ybo.trade", 2, true},
 		{1, "za.net", 2, true},
 		{1, "za.org", 2, true},
 		{1, "now.sh", 2, true},
