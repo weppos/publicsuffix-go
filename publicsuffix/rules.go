@@ -3,10 +3,10 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version a3f3ae4 (Thu Dec  8 00:38:21 2016)"
+const defaultListVersion = "PSL version 114609d (Fri Dec  9 22:55:32 2016)"
 
 func init() {
-	r := [8160]Rule{
+	r := [8165]Rule{
 		{1, "ac", 1, false},
 		{1, "com.ac", 2, false},
 		{1, "edu.ac", 2, false},
@@ -7303,12 +7303,13 @@ func init() {
 		{2, "elasticbeanstalk.com", 3, true},
 		{2, "elb.amazonaws.com", 4, true},
 		{2, "elb.amazonaws.com.cn", 5, true},
-		{1, "s3.amazonaws.com", 3, true},
+		{2, "s3.amazonaws.com", 4, true},
 		{1, "s3-ap-northeast-1.amazonaws.com", 3, true},
 		{1, "s3-ap-northeast-2.amazonaws.com", 3, true},
 		{1, "s3-ap-south-1.amazonaws.com", 3, true},
 		{1, "s3-ap-southeast-1.amazonaws.com", 3, true},
 		{1, "s3-ap-southeast-2.amazonaws.com", 3, true},
+		{1, "s3-ca-central-1.amazonaws.com", 3, true},
 		{1, "s3-eu-central-1.amazonaws.com", 3, true},
 		{1, "s3-eu-west-1.amazonaws.com", 3, true},
 		{1, "s3-external-1.amazonaws.com", 3, true},
@@ -7321,6 +7322,7 @@ func init() {
 		{1, "s3.ap-northeast-2.amazonaws.com", 4, true},
 		{1, "s3.ap-south-1.amazonaws.com", 4, true},
 		{1, "s3.cn-north-1.amazonaws.com.cn", 5, true},
+		{1, "s3.ca-central-1.amazonaws.com", 4, true},
 		{1, "s3.eu-central-1.amazonaws.com", 4, true},
 		{1, "s3.us-east-2.amazonaws.com", 4, true},
 		{1, "s3.dualstack.ap-northeast-1.amazonaws.com", 5, true},
@@ -7328,6 +7330,7 @@ func init() {
 		{1, "s3.dualstack.ap-south-1.amazonaws.com", 5, true},
 		{1, "s3.dualstack.ap-southeast-1.amazonaws.com", 5, true},
 		{1, "s3.dualstack.ap-southeast-2.amazonaws.com", 5, true},
+		{1, "s3.dualstack.ca-central-1.amazonaws.com", 5, true},
 		{1, "s3.dualstack.eu-central-1.amazonaws.com", 5, true},
 		{1, "s3.dualstack.eu-west-1.amazonaws.com", 5, true},
 		{1, "s3.dualstack.sa-east-1.amazonaws.com", 5, true},
@@ -7343,6 +7346,7 @@ func init() {
 		{1, "s3-website-sa-east-1.amazonaws.com", 3, true},
 		{1, "s3-website.ap-northeast-2.amazonaws.com", 4, true},
 		{1, "s3-website.ap-south-1.amazonaws.com", 4, true},
+		{1, "s3-website.ca-central-1.amazonaws.com", 4, true},
 		{1, "s3-website.eu-central-1.amazonaws.com", 4, true},
 		{1, "s3-website.us-east-2.amazonaws.com", 4, true},
 		{1, "on-aptible.com", 2, true},
@@ -8076,6 +8080,7 @@ func init() {
 		{1, "pantheonsite.io", 2, true},
 		{1, "gotpantheon.com", 2, true},
 		{1, "mypep.link", 2, true},
+		{1, "on-web.fr", 2, true},
 		{1, "xen.prgmr.com", 3, true},
 		{1, "priv.at", 2, true},
 		{1, "protonet.io", 2, true},
