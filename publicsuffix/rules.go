@@ -3,10 +3,10 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version 114609d (Fri Dec  9 22:55:32 2016)"
+const defaultListVersion = "PSL version 4b50ee2 (Sun Dec 11 16:43:23 2016)"
 
 func init() {
-	r := [8165]Rule{
+	r := [8166]Rule{
 		{1, "ac", 1, false},
 		{1, "com.ac", 2, false},
 		{1, "edu.ac", 2, false},
@@ -3971,20 +3971,21 @@ func init() {
 		{1, "net.ng", 2, false},
 		{1, "org.ng", 2, false},
 		{1, "sch.ng", 2, false},
-		{1, "com.ni", 2, false},
-		{1, "gob.ni", 2, false},
-		{1, "edu.ni", 2, false},
-		{1, "org.ni", 2, false},
-		{1, "nom.ni", 2, false},
-		{1, "net.ni", 2, false},
-		{1, "mil.ni", 2, false},
-		{1, "co.ni", 2, false},
-		{1, "biz.ni", 2, false},
-		{1, "web.ni", 2, false},
-		{1, "int.ni", 2, false},
+		{1, "ni", 1, false},
 		{1, "ac.ni", 2, false},
+		{1, "biz.ni", 2, false},
+		{1, "co.ni", 2, false},
+		{1, "com.ni", 2, false},
+		{1, "edu.ni", 2, false},
+		{1, "gob.ni", 2, false},
 		{1, "in.ni", 2, false},
 		{1, "info.ni", 2, false},
+		{1, "int.ni", 2, false},
+		{1, "mil.ni", 2, false},
+		{1, "net.ni", 2, false},
+		{1, "nom.ni", 2, false},
+		{1, "org.ni", 2, false},
+		{1, "web.ni", 2, false},
 		{1, "nl", 1, false},
 		{1, "bv.nl", 2, false},
 		{1, "no", 1, false},
