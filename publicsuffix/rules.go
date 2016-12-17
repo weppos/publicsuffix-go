@@ -3,10 +3,10 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version 4b50ee2 (Sun Dec 11 16:43:23 2016)"
+const defaultListVersion = "PSL version ffb052a (Fri Dec 16 11:29:11 2016)"
 
 func init() {
-	r := [8166]Rule{
+	r := [8181]Rule{
 		{1, "ac", 1, false},
 		{1, "com.ac", 2, false},
 		{1, "edu.ac", 2, false},
@@ -7350,6 +7350,8 @@ func init() {
 		{1, "s3-website.ca-central-1.amazonaws.com", 4, true},
 		{1, "s3-website.eu-central-1.amazonaws.com", 4, true},
 		{1, "s3-website.us-east-2.amazonaws.com", 4, true},
+		{1, "t3l3p0rt.net", 2, true},
+		{1, "tele.amune.org", 3, true},
 		{1, "on-aptible.com", 2, true},
 		{1, "user.party.eus", 3, true},
 		{1, "pimienta.org", 2, true},
@@ -8155,6 +8157,19 @@ func init() {
 		{2, "transurl.eu", 3, true},
 		{2, "transurl.nl", 3, true},
 		{1, "tuxfamily.org", 2, true},
+		{1, "dd-dns.de", 2, true},
+		{1, "diskstation.eu", 2, true},
+		{1, "diskstation.org", 2, true},
+		{1, "dray-dns.de", 2, true},
+		{1, "draydns.de", 2, true},
+		{1, "dyn-vpn.de", 2, true},
+		{1, "dynvpn.de", 2, true},
+		{1, "mein-vigor.de", 2, true},
+		{1, "my-vigor.de", 2, true},
+		{1, "my-wan.de", 2, true},
+		{1, "syno-ds.de", 2, true},
+		{1, "synology-diskstation.de", 2, true},
+		{1, "synology-ds.de", 2, true},
 		{1, "hk.com", 2, true},
 		{1, "hk.org", 2, true},
 		{1, "ltd.hk", 2, true},
