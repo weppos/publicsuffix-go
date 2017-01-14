@@ -240,7 +240,10 @@ blogspot.com
 		listFindTestCase{"foo.blogspot.com", p1},
 	}
 
-	list, _ := NewListFromString(src, nil)
+	list, err := NewListFromString(src, nil)
+	if err != nil {
+		t.Fatalf("Unable to parse list: %v", err)
+	}
 
 	for _, testCase := range testCases {
 		if want, got := testCase.expected, list.Find(testCase.input, nil); !reflect.DeepEqual(want, got) {
