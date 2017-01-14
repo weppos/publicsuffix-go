@@ -162,7 +162,7 @@ func TestNewListFromFile(t *testing.T) {
 }
 
 func TestListAddRule(t *testing.T) {
-	list := &List{}
+	list := NewList()
 
 	if list.Size() != 0 {
 		t.Fatalf("Empty list should have 0 rules, got %v", list.Size())
