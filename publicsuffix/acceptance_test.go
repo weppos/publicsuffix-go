@@ -12,17 +12,17 @@ type validTestCase struct {
 
 func TestValid(t *testing.T) {
 	testCases := []validTestCase{
-		validTestCase{"example.com", "example.com", &DomainName{"com", "example", "", MustNewRule("com")}},
-		validTestCase{"foo.example.com", "example.com", &DomainName{"com", "example", "foo", MustNewRule("com")}},
+		{"example.com", "example.com", &DomainName{"com", "example", "", MustNewRule("com")}},
+		{"foo.example.com", "example.com", &DomainName{"com", "example", "foo", MustNewRule("com")}},
 
-		validTestCase{"verybritish.co.uk", "verybritish.co.uk", &DomainName{"co.uk", "verybritish", "", MustNewRule("*.uk")}},
-		validTestCase{"foo.verybritish.co.uk", "verybritish.co.uk", &DomainName{"co.uk", "verybritish", "foo", MustNewRule("*.uk")}},
+		{"verybritish.co.uk", "verybritish.co.uk", &DomainName{"co.uk", "verybritish", "", MustNewRule("*.uk")}},
+		{"foo.verybritish.co.uk", "verybritish.co.uk", &DomainName{"co.uk", "verybritish", "foo", MustNewRule("*.uk")}},
 
-		validTestCase{"parliament.uk", "parliament.uk", &DomainName{"uk", "parliament", "", MustNewRule("!parliament.uk")}},
-		validTestCase{"foo.parliament.uk", "parliament.uk", &DomainName{"uk", "parliament", "foo", MustNewRule("!parliament.uk")}},
+		{"parliament.uk", "parliament.uk", &DomainName{"uk", "parliament", "", MustNewRule("!parliament.uk")}},
+		{"foo.parliament.uk", "parliament.uk", &DomainName{"uk", "parliament", "foo", MustNewRule("!parliament.uk")}},
 
-		validTestCase{"foo.blogspot.com", "foo.blogspot.com", &DomainName{"blogspot.com", "foo", "", MustNewRule("blogspot.com")}},
-		validTestCase{"bar.foo.blogspot.com", "foo.blogspot.com", &DomainName{"blogspot.com", "foo", "bar", MustNewRule("blogspot.com")}},
+		{"foo.blogspot.com", "foo.blogspot.com", &DomainName{"blogspot.com", "foo", "", MustNewRule("blogspot.com")}},
+		{"bar.foo.blogspot.com", "foo.blogspot.com", &DomainName{"blogspot.com", "foo", "bar", MustNewRule("blogspot.com")}},
 	}
 
 	for _, testCase := range testCases {
@@ -53,11 +53,11 @@ type privateTestCase struct {
 
 func TestIncludePrivate(t *testing.T) {
 	testCases := []privateTestCase{
-		privateTestCase{"blogspot.com", "", false, true},
-		privateTestCase{"blogspot.com", "blogspot.com", true, false},
+		{"blogspot.com", "", false, true},
+		{"blogspot.com", "blogspot.com", true, false},
 
-		privateTestCase{"foo.blogspot.com", "foo.blogspot.com", false, false},
-		privateTestCase{"foo.blogspot.com", "blogspot.com", true, false},
+		{"foo.blogspot.com", "foo.blogspot.com", false, false},
+		{"foo.blogspot.com", "blogspot.com", true, false},
 	}
 
 	for _, testCase := range testCases {
@@ -88,15 +88,15 @@ func TestIDNA(t *testing.T) {
 	testACases := []idnaTestCase{
 		// A-labels are supported
 		// Check single IDN part
-		idnaTestCase{"xn--p1ai", "", true},
-		idnaTestCase{"example.xn--p1ai", "example.xn--p1ai", false},
-		idnaTestCase{"subdomain.example.xn--p1ai", "example.xn--p1ai", false},
+		{"xn--p1ai", "", true},
+		{"example.xn--p1ai", "example.xn--p1ai", false},
+		{"subdomain.example.xn--p1ai", "example.xn--p1ai", false},
 		// Check multiple IDN parts
-		idnaTestCase{"xn--example--3bhk5a.xn--p1ai", "xn--example--3bhk5a.xn--p1ai", false},
-		idnaTestCase{"subdomain.xn--example--3bhk5a.xn--p1ai", "xn--example--3bhk5a.xn--p1ai", false},
+		{"xn--example--3bhk5a.xn--p1ai", "xn--example--3bhk5a.xn--p1ai", false},
+		{"subdomain.xn--example--3bhk5a.xn--p1ai", "xn--example--3bhk5a.xn--p1ai", false},
 		// Check multiple IDN rules
-		idnaTestCase{"example.xn--o1ach.xn--90a3ac", "example.xn--o1ach.xn--90a3ac", false},
-		idnaTestCase{"sudbomain.example.xn--o1ach.xn--90a3ac", "example.xn--o1ach.xn--90a3ac", false},
+		{"example.xn--o1ach.xn--90a3ac", "example.xn--o1ach.xn--90a3ac", false},
+		{"sudbomain.example.xn--o1ach.xn--90a3ac", "example.xn--o1ach.xn--90a3ac", false},
 	}
 
 	for _, testCase := range testACases {
@@ -124,15 +124,15 @@ func TestIDNA(t *testing.T) {
 	testUCases := []idnaTestCase{
 		// U-labels are NOT supported
 		// Check single IDN part
-		idnaTestCase{"рф", "", true},
-		idnaTestCase{"example.рф", "example.рф", false},           // passes because of *
-		idnaTestCase{"subdomain.example.рф", "example.рф", false}, // passes because of *
+		{"рф", "", true},
+		{"example.рф", "example.рф", false},           // passes because of *
+		{"subdomain.example.рф", "example.рф", false}, // passes because of *
 		// Check multiple IDN parts
-		idnaTestCase{"example-упр.рф", "example-упр.рф", false},           // passes because of *
-		idnaTestCase{"subdomain.example-упр.рф", "example-упр.рф", false}, // passes because of *
+		{"example-упр.рф", "example-упр.рф", false},           // passes because of *
+		{"subdomain.example-упр.рф", "example-упр.рф", false}, // passes because of *
 		// Check multiple IDN rules
-		idnaTestCase{"example.упр.срб", "упр.срб", false},
-		idnaTestCase{"sudbomain.example.упр.срб", "упр.срб", false},
+		{"example.упр.срб", "упр.срб", false},
+		{"sudbomain.example.упр.срб", "упр.срб", false},
 	}
 
 	for _, testCase := range testUCases {
