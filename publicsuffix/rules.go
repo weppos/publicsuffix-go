@@ -3,10 +3,10 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version 7914f59 (Fri Dec 30 10:28:08 2016)"
+const defaultListVersion = "PSL version 45a2bf8 (Wed Jan 18 01:04:06 2017)"
 
 func init() {
-	r := [8061]Rule{
+	r := [8066]Rule{
 		{1, "ac", 1, false},
 		{1, "com.ac", 2, false},
 		{1, "edu.ac", 2, false},
@@ -4779,6 +4779,7 @@ func init() {
 		{1, "net.om", 2, false},
 		{1, "org.om", 2, false},
 		{1, "pro.om", 2, false},
+		{1, "onion", 1, false},
 		{1, "org", 1, false},
 		{1, "pa", 1, false},
 		{1, "ac.pa", 2, false},
@@ -7685,11 +7686,14 @@ func init() {
 		{1, "us-1.evennode.com", 3, true},
 		{1, "us-2.evennode.com", 3, true},
 		{1, "apps.fbsbx.com", 3, true},
+		{1, "map.fastly.net", 3, true},
+		{1, "a.prod.fastly.net", 4, true},
+		{1, "global.prod.fastly.net", 4, true},
 		{1, "a.ssl.fastly.net", 4, true},
 		{1, "b.ssl.fastly.net", 4, true},
 		{1, "global.ssl.fastly.net", 4, true},
-		{1, "a.prod.fastly.net", 4, true},
-		{1, "global.prod.fastly.net", 4, true},
+		{1, "fastlylb.net", 2, true},
+		{1, "map.fastlylb.net", 3, true},
 		{1, "fhapp.xyz", 2, true},
 		{1, "firebaseapp.com", 2, true},
 		{1, "flynnhub.com", 2, true},
@@ -8053,6 +8057,7 @@ func init() {
 		{1, "inc.hk", 2, true},
 		{1, "lib.de.us", 3, true},
 		{1, "router.management", 2, true},
+		{1, "remotewd.com", 2, true},
 		{1, "wmflabs.org", 2, true},
 		{1, "yolasite.com", 2, true},
 		{1, "ybo.faith", 2, true},
