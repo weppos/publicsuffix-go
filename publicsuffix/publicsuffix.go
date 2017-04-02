@@ -501,8 +501,8 @@ func decompose(r *Rule, name string) (tld, sld, trd string) {
 // before-after replacements to make sure an already ASCII input always results in the same output
 // even if passed through ToASCII.
 //
-// See go.googlesource.com/net@67957fd0b1, go.googlesource.com/net@f2499483f9, go.googlesource.com/net@78ebe5c8b6,
-// and weppos/publicsuffix-go#???.
+// See golang/net@67957fd0b1, golang/net@f2499483f9, golang/net@78ebe5c8b6,
+// and weppos/publicsuffix-go#66.
 func ToASCII(s string) (string, error) {
 	// .example.com should be .example.com
 	// ..example.com should be ..example.com
