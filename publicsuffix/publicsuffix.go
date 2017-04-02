@@ -497,7 +497,7 @@ func decompose(r *Rule, name string) (tld, sld, trd string) {
 // ToASCII is a wrapper for idna.ToASCII.
 //
 // This wrapper exists because idna.ToASCII backward-compatibility was broken twice in few months
-// and I can't trust that package anymore. The wrapper performs some terrible-but-necessary
+// and I can't call this package directly anymore. The wrapper performs some terrible-but-necessary
 // before-after replacements to make sure an already ASCII input always results in the same output
 // even if passed through ToASCII.
 //
