@@ -5,8 +5,6 @@ import (
 	"os"
 	"strings"
 	"testing"
-
-	"golang.org/x/net/idna"
 )
 
 type pslTestCase struct {
@@ -48,12 +46,12 @@ func TestPsl(t *testing.T) {
 	}
 
 	for _, testCase := range testCases {
-		input, err := idna.ToASCII(testCase.input)
+		input, err := ToASCII(testCase.input)
 		if err != nil {
 			t.Fatalf("failed to convert input %v to ASCII", testCase.input)
 		}
 
-		output, err := idna.ToASCII(testCase.output)
+		output, err := ToASCII(testCase.output)
 		if err != nil {
 			t.Fatalf("failed to convert output %v to ASCII", testCase.output)
 		}

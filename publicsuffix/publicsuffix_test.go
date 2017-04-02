@@ -401,6 +401,24 @@ func TestLabels(t *testing.T) {
 	}
 }
 
+func TestToASCII(t *testing.T) {
+	testCases := []string{
+		"example.com",
+		".example.com",
+		"..example.com",
+	}
+
+	for _, input := range testCases {
+		output, err := ToASCII(input)
+		if err != nil {
+			t.Errorf("ToASCII(%s) returned error", input)
+		}
+		if output != input {
+			t.Errorf("ToASCII(%s) = %s, want %s", input, output, input)
+		}
+	}
+}
+
 func TestCookieJarList(t *testing.T) {
 	testCases := map[string]string{
 		"example.com":              "com",
