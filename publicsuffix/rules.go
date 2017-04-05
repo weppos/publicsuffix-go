@@ -3,10 +3,10 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version 6efe629 (Fri Mar 31 19:05:40 2017)"
+const defaultListVersion = "PSL version ac5d634 (Tue Apr  4 20:18:45 2017)"
 
 func init() {
-	r := [8108]Rule{
+	r := [8115]Rule{
 		{1, "ac", 1, false},
 		{1, "com.ac", 2, false},
 		{1, "edu.ac", 2, false},
@@ -5909,7 +5909,12 @@ func init() {
 		{1, "net.zm", 2, false},
 		{1, "org.zm", 2, false},
 		{1, "sch.zm", 2, false},
-		{2, "zw", 2, false},
+		{1, "zw", 1, false},
+		{1, "ac.zw", 2, false},
+		{1, "co.zw", 2, false},
+		{1, "gov.zw", 2, false},
+		{1, "mil.zw", 2, false},
+		{1, "org.zw", 2, false},
 		{1, "aaa", 1, false},
 		{1, "aarp", 1, false},
 		{1, "abarth", 1, false},
@@ -7651,8 +7656,10 @@ func init() {
 		{1, "us.eu.org", 3, true},
 		{1, "eu-1.evennode.com", 3, true},
 		{1, "eu-2.evennode.com", 3, true},
+		{1, "eu-3.evennode.com", 3, true},
 		{1, "us-1.evennode.com", 3, true},
 		{1, "us-2.evennode.com", 3, true},
+		{1, "us-3.evennode.com", 3, true},
 		{1, "apps.fbsbx.com", 3, true},
 		{1, "ru.net", 2, true},
 		{1, "adygeya.ru", 2, true},
