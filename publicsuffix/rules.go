@@ -3,10 +3,10 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version ac5d634 (Tue Apr  4 20:18:45 2017)"
+const defaultListVersion = "PSL version 387c30d (Fri Apr  7 19:15:31 2017)"
 
 func init() {
-	r := [8115]Rule{
+	r := [8128]Rule{
 		{1, "ac", 1, false},
 		{1, "com.ac", 2, false},
 		{1, "edu.ac", 2, false},
@@ -7211,6 +7211,8 @@ func init() {
 		{1, "sweetpepper.org", 2, true},
 		{1, "myasustor.com", 2, true},
 		{1, "myfritz.net", 2, true},
+		{2, "awdev.ca", 3, true},
+		{2, "advisor.ws", 3, true},
 		{1, "backplaneapp.io", 2, true},
 		{1, "betainabox.com", 2, true},
 		{1, "bnr.la", 2, true},
@@ -7254,6 +7256,7 @@ func init() {
 		{1, "certmgr.org", 2, true},
 		{1, "xenapponazure.com", 2, true},
 		{1, "virtueeldomein.nl", 2, true},
+		{1, "c66.me", 2, true},
 		{1, "cloudcontrolled.com", 2, true},
 		{1, "cloudcontrolapp.com", 2, true},
 		{1, "co.ca", 2, true},
@@ -7292,6 +7295,7 @@ func init() {
 		{1, "cyon.link", 2, true},
 		{1, "cyon.site", 2, true},
 		{1, "daplie.me", 2, true},
+		{1, "localhost.daplie.me", 3, true},
 		{1, "biz.dk", 2, true},
 		{1, "co.dk", 2, true},
 		{1, "firm.dk", 2, true},
@@ -7743,6 +7747,9 @@ func init() {
 		{1, "b.ssl.fastly.net", 4, true},
 		{1, "global.ssl.fastly.net", 4, true},
 		{1, "fhapp.xyz", 2, true},
+		{1, "fedorainfracloud.org", 2, true},
+		{1, "fedorapeople.org", 2, true},
+		{1, "cloud.fedoraproject.org", 3, true},
 		{1, "firebaseapp.com", 2, true},
 		{1, "flynnhub.com", 2, true},
 		{1, "freebox-os.com", 2, true},
@@ -7859,6 +7866,7 @@ func init() {
 		{1, "hepforge.org", 2, true},
 		{1, "herokuapp.com", 2, true},
 		{1, "herokussl.com", 2, true},
+		{1, "moonscale.net", 2, true},
 		{1, "iki.fi", 2, true},
 		{1, "biz.at", 2, true},
 		{1, "info.at", 2, true},
@@ -7889,6 +7897,7 @@ func init() {
 		{1, "se.leg.br", 3, true},
 		{1, "sp.leg.br", 3, true},
 		{1, "to.leg.br", 3, true},
+		{1, "ipifony.net", 2, true},
 		{2, "triton.zone", 3, true},
 		{2, "cns.joyent.com", 4, true},
 		{1, "js.org", 2, true},
@@ -7995,6 +8004,7 @@ func init() {
 		{1, "webhop.me", 2, true},
 		{1, "zapto.org", 2, true},
 		{1, "nyc.mn", 2, true},
+		{1, "cya.gg", 2, true},
 		{1, "nid.io", 2, true},
 		{1, "opencraft.hosting", 2, true},
 		{1, "operaunite.com", 2, true},
@@ -8075,6 +8085,7 @@ func init() {
 		{1, "i234.me", 2, true},
 		{1, "myds.me", 2, true},
 		{1, "synology.me", 2, true},
+		{1, "vpnplus.to", 2, true},
 		{1, "taifun-dns.de", 2, true},
 		{1, "gda.pl", 2, true},
 		{1, "gdansk.pl", 2, true},
@@ -8100,6 +8111,7 @@ func init() {
 		{1, "syno-ds.de", 2, true},
 		{1, "synology-diskstation.de", 2, true},
 		{1, "synology-ds.de", 2, true},
+		{1, "uber.space", 2, true},
 		{1, "hk.com", 2, true},
 		{1, "hk.org", 2, true},
 		{1, "ltd.hk", 2, true},
@@ -8108,6 +8120,7 @@ func init() {
 		{1, "router.management", 2, true},
 		{1, "remotewd.com", 2, true},
 		{1, "wmflabs.org", 2, true},
+		{1, "xs4all.space", 2, true},
 		{1, "yolasite.com", 2, true},
 		{1, "ybo.faith", 2, true},
 		{1, "yombo.me", 2, true},
