@@ -3,10 +3,10 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version 387c30d (Fri Apr  7 19:15:31 2017)"
+const defaultListVersion = "PSL version cdc497d (Mon Apr 10 20:20:33 2017)"
 
 func init() {
-	r := [8128]Rule{
+	r := [8138]Rule{
 		{1, "ac", 1, false},
 		{1, "com.ac", 2, false},
 		{1, "edu.ac", 2, false},
@@ -152,6 +152,7 @@ func init() {
 		{1, "gov.ar", 2, false},
 		{1, "int.ar", 2, false},
 		{1, "mil.ar", 2, false},
+		{1, "musica.ar", 2, false},
 		{1, "net.ar", 2, false},
 		{1, "org.ar", 2, false},
 		{1, "tur.ar", 2, false},
@@ -5872,6 +5873,12 @@ func init() {
 		{1, "xn--ogbpf8fl", 1, false},
 		{1, "xn--mgbtf8fl", 1, false},
 		{1, "xn--o3cw4h", 1, false},
+		{1, "xn--12c1fe0br.xn--o3cw4h", 2, false},
+		{1, "xn--12co0c3b4eva.xn--o3cw4h", 2, false},
+		{1, "xn--h3cuzk1di.xn--o3cw4h", 2, false},
+		{1, "xn--o3cyx2a.xn--o3cw4h", 2, false},
+		{1, "xn--m3ch0j3a.xn--o3cw4h", 2, false},
+		{1, "xn--12cfi8ixb8l.xn--o3cw4h", 2, false},
 		{1, "xn--pgbs0dh", 1, false},
 		{1, "xn--kpry57d", 1, false},
 		{1, "xn--kprw13d", 1, false},
@@ -8031,6 +8038,8 @@ func init() {
 		{1, "dev-myqnapcloud.com", 2, true},
 		{1, "alpha-myqnapcloud.com", 2, true},
 		{1, "myqnapcloud.com", 2, true},
+		{1, "vapor.cloud", 2, true},
+		{1, "vaporcloud.io", 2, true},
 		{1, "rackmaze.com", 2, true},
 		{1, "rackmaze.net", 2, true},
 		{1, "rhcloud.com", 2, true},
@@ -8051,6 +8060,7 @@ func init() {
 		{1, "my-firewall.org", 2, true},
 		{1, "myfirewall.org", 2, true},
 		{1, "spdns.org", 2, true},
+		{2, "sensiosite.cloud", 3, true},
 		{1, "biz.ua", 2, true},
 		{1, "co.ua", 2, true},
 		{1, "pp.ua", 2, true},
