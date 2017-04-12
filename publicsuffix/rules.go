@@ -3,10 +3,10 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version cdc497d (Mon Apr 10 20:20:33 2017)"
+const defaultListVersion = "PSL version 9c1f854 (Tue Apr 11 17:39:19 2017)"
 
 func init() {
-	r := [8138]Rule{
+	r := [8150]Rule{
 		{1, "ac", 1, false},
 		{1, "com.ac", 2, false},
 		{1, "edu.ac", 2, false},
@@ -7224,6 +7224,12 @@ func init() {
 		{1, "betainabox.com", 2, true},
 		{1, "bnr.la", 2, true},
 		{1, "boxfuse.io", 2, true},
+		{1, "square7.ch", 2, true},
+		{1, "bplaced.com", 2, true},
+		{1, "bplaced.de", 2, true},
+		{1, "square7.de", 2, true},
+		{1, "bplaced.net", 2, true},
+		{1, "square7.net", 2, true},
 		{1, "browsersafetymark.io", 2, true},
 		{1, "mycd.eu", 2, true},
 		{1, "ae.org", 2, true},
@@ -7671,6 +7677,11 @@ func init() {
 		{1, "us-1.evennode.com", 3, true},
 		{1, "us-2.evennode.com", 3, true},
 		{1, "us-3.evennode.com", 3, true},
+		{1, "twmail.cc", 2, true},
+		{1, "twmail.net", 2, true},
+		{1, "twmail.org", 2, true},
+		{1, "mymailer.com.tw", 3, true},
+		{1, "url.tw", 2, true},
 		{1, "apps.fbsbx.com", 3, true},
 		{1, "ru.net", 2, true},
 		{1, "adygeya.ru", 2, true},
@@ -8038,6 +8049,7 @@ func init() {
 		{1, "dev-myqnapcloud.com", 2, true},
 		{1, "alpha-myqnapcloud.com", 2, true},
 		{1, "myqnapcloud.com", 2, true},
+		{2, "quipelements.com", 3, true},
 		{1, "vapor.cloud", 2, true},
 		{1, "vaporcloud.io", 2, true},
 		{1, "rackmaze.com", 2, true},
