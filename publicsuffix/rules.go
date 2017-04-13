@@ -3,10 +3,10 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version 9c1f854 (Tue Apr 11 17:39:19 2017)"
+const defaultListVersion = "PSL version cae8dc7 (Wed Apr 12 15:24:57 2017)"
 
 func init() {
-	r := [8150]Rule{
+	r := [8152]Rule{
 		{1, "ac", 1, false},
 		{1, "com.ac", 2, false},
 		{1, "edu.ac", 2, false},
@@ -7292,7 +7292,6 @@ func init() {
 		{1, "cloudns.us", 2, true},
 		{1, "co.nl", 2, true},
 		{1, "co.no", 2, true},
-		{2, "platform.sh", 3, true},
 		{1, "dyn.cosidns.de", 3, true},
 		{1, "dynamisches-dns.de", 2, true},
 		{1, "dnsupdater.de", 2, true},
@@ -7924,6 +7923,7 @@ func init() {
 		{1, "co.krd", 2, true},
 		{1, "edu.krd", 2, true},
 		{2, "magentosite.cloud", 3, true},
+		{1, "hb.cldmail.ru", 3, true},
 		{1, "meteorapp.com", 2, true},
 		{1, "eu.meteorapp.com", 3, true},
 		{1, "co.pl", 2, true},
@@ -8041,6 +8041,8 @@ func init() {
 		{1, "gotpantheon.com", 2, true},
 		{1, "mypep.link", 2, true},
 		{1, "on-web.fr", 2, true},
+		{2, "platform.sh", 3, true},
+		{2, "platformsh.site", 3, true},
 		{1, "xen.prgmr.com", 3, true},
 		{1, "priv.at", 2, true},
 		{1, "protonet.io", 2, true},
