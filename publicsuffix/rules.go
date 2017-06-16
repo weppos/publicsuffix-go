@@ -3,10 +3,10 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version f47d806 (Wed Jun 14 11:49:01 2017)"
+const defaultListVersion = "PSL version 6b7d01b (Thu Jun 15 09:00:45 2017)"
 
 func init() {
-	r := [8203]Rule{
+	r := [8226]Rule{
 		{1, "ac", 1, false},
 		{1, "com.ac", 2, false},
 		{1, "edu.ac", 2, false},
@@ -7652,6 +7652,7 @@ func init() {
 		{1, "definima.io", 2, true},
 		{1, "dynv6.net", 2, true},
 		{1, "e4.cz", 2, true},
+		{1, "mytuleap.com", 2, true},
 		{1, "enonic.io", 2, true},
 		{1, "customer.enonic.io", 3, true},
 		{1, "eu.org", 2, true},
@@ -7810,6 +7811,7 @@ func init() {
 		{1, "filegear.me", 2, true},
 		{1, "firebaseapp.com", 2, true},
 		{1, "flynnhub.com", 2, true},
+		{1, "flynnhosting.net", 2, true},
 		{1, "freebox-os.com", 2, true},
 		{1, "freeboxos.com", 2, true},
 		{1, "fbx-os.fr", 2, true},
@@ -7974,6 +7976,8 @@ func init() {
 		{1, "barsy.support", 2, true},
 		{2, "magentosite.cloud", 3, true},
 		{1, "hb.cldmail.ru", 3, true},
+		{1, "cloud.metacentrum.cz", 3, true},
+		{1, "custom.metacentrum.cz", 3, true},
 		{1, "meteorapp.com", 2, true},
 		{1, "eu.meteorapp.com", 3, true},
 		{1, "co.pl", 2, true},
@@ -8170,6 +8174,25 @@ func init() {
 		{1, "sopot.pl", 2, true},
 		{1, "bloxcms.com", 2, true},
 		{1, "townnews-staging.com", 2, true},
+		{1, "12hp.at", 2, true},
+		{1, "2ix.at", 2, true},
+		{1, "4lima.at", 2, true},
+		{1, "lima-city.at", 2, true},
+		{1, "12hp.ch", 2, true},
+		{1, "2ix.ch", 2, true},
+		{1, "4lima.ch", 2, true},
+		{1, "lima-city.ch", 2, true},
+		{1, "trafficplex.cloud", 2, true},
+		{1, "de.cool", 2, true},
+		{1, "12hp.de", 2, true},
+		{1, "2ix.de", 2, true},
+		{1, "4lima.de", 2, true},
+		{1, "lima-city.de", 2, true},
+		{1, "1337.pictures", 2, true},
+		{1, "clan.rip", 2, true},
+		{1, "lima-city.rocks", 2, true},
+		{1, "webspace.rocks", 2, true},
+		{1, "lima.zone", 2, true},
 		{2, "transurl.be", 3, true},
 		{2, "transurl.eu", 3, true},
 		{2, "transurl.nl", 3, true},
