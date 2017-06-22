@@ -3,10 +3,10 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version 8c3dfb7 (Fri Jun 16 16:37:34 2017)"
+const defaultListVersion = "PSL version f5118e8 (Wed Jun 21 11:06:23 2017)"
 
 func init() {
-	r := [8229]Rule{
+	r := [8242]Rule{
 		{1, "ac", 1, false},
 		{1, "com.ac", 2, false},
 		{1, "edu.ac", 2, false},
@@ -7308,6 +7308,11 @@ func init() {
 		{1, "xenapponazure.com", 2, true},
 		{1, "virtueeldomein.nl", 2, true},
 		{1, "c66.me", 2, true},
+		{1, "jdevcloud.com", 2, true},
+		{1, "wpdevcloud.com", 2, true},
+		{1, "cloudaccess.host", 2, true},
+		{1, "freesite.host", 2, true},
+		{1, "cloudaccess.net", 2, true},
 		{1, "cloudcontrolled.com", 2, true},
 		{1, "cloudcontrolapp.com", 2, true},
 		{1, "co.ca", 2, true},
@@ -7353,6 +7358,7 @@ func init() {
 		{1, "store.dk", 2, true},
 		{1, "dedyn.io", 2, true},
 		{1, "dnshome.de", 2, true},
+		{1, "drayddns.com", 2, true},
 		{1, "dreamhosters.com", 2, true},
 		{1, "mydrobo.com", 2, true},
 		{1, "drud.io", 2, true},
@@ -7931,6 +7937,7 @@ func init() {
 		{1, "iki.fi", 2, true},
 		{1, "biz.at", 2, true},
 		{1, "info.at", 2, true},
+		{1, "info.cx", 2, true},
 		{1, "ac.leg.br", 3, true},
 		{1, "al.leg.br", 3, true},
 		{1, "am.leg.br", 3, true},
@@ -8175,6 +8182,10 @@ func init() {
 		{1, "gdynia.pl", 2, true},
 		{1, "med.pl", 2, true},
 		{1, "sopot.pl", 2, true},
+		{1, "cust.dev.thingdust.io", 4, true},
+		{1, "cust.disrec.thingdust.io", 4, true},
+		{1, "cust.prod.thingdust.io", 4, true},
+		{1, "cust.testing.thingdust.io", 4, true},
 		{1, "bloxcms.com", 2, true},
 		{1, "townnews-staging.com", 2, true},
 		{1, "12hp.at", 2, true},
@@ -8224,6 +8235,8 @@ func init() {
 		{1, "wedeploy.me", 2, true},
 		{1, "remotewd.com", 2, true},
 		{1, "wmflabs.org", 2, true},
+		{1, "cistron.nl", 2, true},
+		{1, "demon.nl", 2, true},
 		{1, "xs4all.space", 2, true},
 		{1, "yolasite.com", 2, true},
 		{1, "ybo.faith", 2, true},
