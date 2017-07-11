@@ -3,10 +3,10 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version d818677 (Thu Jun 22 10:07:34 2017)"
+const defaultListVersion = "PSL version 0fdf7e8 (Mon Jul 10 19:08:54 2017)"
 
 func init() {
-	r := [8237]Rule{
+	r := [8245]Rule{
 		{1, "ac", 1, false},
 		{1, "com.ac", 2, false},
 		{1, "edu.ac", 2, false},
@@ -5856,6 +5856,7 @@ func init() {
 		{1, "xn--mgbaam7a8h", 1, false},
 		{1, "xn--y9a3aq", 1, false},
 		{1, "xn--54b7fta0cc", 1, false},
+		{1, "xn--90ae", 1, false},
 		{1, "xn--90ais", 1, false},
 		{1, "xn--fiqs8s", 1, false},
 		{1, "xn--fiqz9s", 1, false},
@@ -5865,6 +5866,13 @@ func init() {
 		{1, "xn--node", 1, false},
 		{1, "xn--qxam", 1, false},
 		{1, "xn--j6w193g", 1, false},
+		{1, "xn--2scrj9c", 1, false},
+		{1, "xn--3hcrj9c", 1, false},
+		{1, "xn--45br5cyl", 1, false},
+		{1, "xn--h2breg3eve", 1, false},
+		{1, "xn--h2brj9c8c", 1, false},
+		{1, "xn--mgbgu82a", 1, false},
+		{1, "xn--rvc1e0am3e", 1, false},
 		{1, "xn--h2brj9c", 1, false},
 		{1, "xn--mgbbh1a71e", 1, false},
 		{1, "xn--fpcrj9c3d", 1, false},
