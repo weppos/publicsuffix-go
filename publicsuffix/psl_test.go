@@ -5,8 +5,6 @@ import (
 	"os"
 	"strings"
 	"testing"
-
-	"golang.org/x/net/idna"
 )
 
 type pslTestCase struct {
@@ -48,15 +46,17 @@ func TestPsl(t *testing.T) {
 	}
 
 	for _, testCase := range testCases {
-		input := testCase.input
-		if strings.Contains(testCase.input, "xn--") {
-			input, _ = idna.ToUnicode(input)
+		input, err := ToASCII(testCase.input)
+		if err != nil {
+			t.Fatalf("failed to convert input %v to ASCII", testCase.input)
+		}
+
+		output, err := ToASCII(testCase.output)
+		if err != nil {
+			t.Fatalf("failed to convert output %v to ASCII", testCase.output)
 		}
 
 		got, err := Domain(input)
-		if strings.Contains(testCase.input, "xn--") {
-			got, _ = idna.ToASCII(got)
-		}
 
 		if testCase.error && err == nil {
 			t.Errorf("PSL(%v) should have returned error, got: %v", testCase.input, got)
@@ -66,7 +66,7 @@ func TestPsl(t *testing.T) {
 			t.Errorf("PSL(%v) returned error: %v", testCase.input, err)
 			continue
 		}
-		if testCase.output != got {
+		if got != output {
 			t.Errorf("PSL(%v) = %v, want %v", testCase.input, got, testCase.output)
 			continue
 		}

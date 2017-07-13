@@ -1,6 +1,6 @@
-# Public Suffix <small>Go</small>
+# Public Suffix <small>for Go</small>
 
-Package <tt>publicsuffix</tt> provides a Go domain name parser based on the [Public Suffix List](http://publicsuffix.org/).
+The package <tt>publicsuffix</tt> provides a Go domain name parser based on the [Public Suffix List](http://publicsuffix.org/).
 
 [![Build Status](https://travis-ci.org/weppos/publicsuffix-go.svg?branch=master)](https://travis-ci.org/weppos/publicsuffix-go)
 [![GoDoc](https://godoc.org/github.com/weppos/publicsuffix-go/publicsuffix?status.svg)](https://godoc.org/github.com/weppos/publicsuffix-go/publicsuffix)
@@ -84,21 +84,34 @@ In the first case, the private domains are ignored at runtime: they will still b
 publicsuffix.DomainFromListWithOptions(publicsuffix.DefaultList, "google.blogspot.com", nil)
 // google.blogspot.com
 
-publicsuffix.DomainFromListWithOptions(publicsuffix.DefaultList, "google.blogspot.com", &publicsuffix.FindOptions{IgnorePrivate: true})
+publicsuffix.DomainFromListWithOptions(publicsuffix.DefaultList(), "google.blogspot.com", &publicsuffix.FindOptions{IgnorePrivate: true})
 // blogspot.com
 
 // Note that the DefaultFindOptions includes the private domains by default
-publicsuffix.DomainFromListWithOptions(publicsuffix.DefaultList, "google.blogspot.com", publicsuffix.DefaultFindOptions)
+publicsuffix.DomainFromListWithOptions(publicsuffix.DefaultList(), "google.blogspot.com", publicsuffix.DefaultFindOptions)
 // google.blogspot.com
 ```
 
 This solution is easy, but slower. If you find yourself ignoring the private domains in all cases (or in most cases), you may want to create a custom list without the private domains.
 
 ```go
-list := NewListFromFile("path/to/list.txt", &ParserOption{PrivateDomains: false})
+list := NewListFromFile("path/to/list.txt", &publicsuffix.ParserOption{PrivateDomains: false})
 publicsuffix.DomainFromListWithOptions(list, "google.blogspot.com", nil)
 // blogspot.com
 ```
+
+## IDN domains, A-labels and U-labels
+
+[A-label and U-label](https://tools.ietf.org/html/rfc5890#section-2.3.2.1) are two different ways to represent IDN domain names. These two encodings are also known as ASCII (A-label) or Pynucode vs Unicode (U-label). Conversions between U-labels and A-labels are performed according to the ["Punycode" specification](https://tools.ietf.org/html/rfc3492), adding or removing the ACE prefix as needed.
+
+IDNA-aware applications generally use the A-label form for storing and manipulating data, whereas the U-labels can appear in presentation and user interface forms.
+
+Although the PSL list has been traditionally U-label encoded, this library follows the common industry standards and stores the rules in their A-label form. Therefore, unless explicitly mentioned, any method call, comparison or internal representation is expected to be ASCII-compatible encoded (ACE).
+
+Passing Unicode names to the library may either result in error or unexpected behaviors.
+
+If you are interested in the details of this decision, you can read the full discussion [here](https://github.com/weppos/publicsuffix-go/issues/31).
+
 
 ## Differences with `golang.org/x/net/publicsuffix`
 
@@ -153,4 +166,4 @@ deliciousJar := cookiejar.New(&cookiejar.Options{PublicSuffixList: publicsuffix.
 
 ## License
 
-Copyright (c) 2016 Simone Carletti. This is Free Software distributed under the MIT license.
+Copyright (c) 2016-2017 Simone Carletti. This is Free Software distributed under the MIT license.
