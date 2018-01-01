@@ -3,10 +3,10 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version 836815a (Mon Dec 25 18:34:34 2017)"
+const defaultListVersion = "PSL version fcd8cc6 (Thu Dec 28 15:26:50 2017)"
 
 func init() {
-	r := [8414]Rule{
+	r := [8419]Rule{
 		{1, "ac", 1, false},
 		{1, "com.ac", 2, false},
 		{1, "edu.ac", 2, false},
@@ -7284,6 +7284,7 @@ func init() {
 		{1, "eu-central-1.elasticbeanstalk.com", 3, true},
 		{1, "eu-west-1.elasticbeanstalk.com", 3, true},
 		{1, "eu-west-2.elasticbeanstalk.com", 3, true},
+		{1, "eu-west-3.elasticbeanstalk.com", 3, true},
 		{1, "sa-east-1.elasticbeanstalk.com", 3, true},
 		{1, "us-east-1.elasticbeanstalk.com", 3, true},
 		{1, "us-east-2.elasticbeanstalk.com", 3, true},
@@ -7302,6 +7303,7 @@ func init() {
 		{1, "s3-eu-central-1.amazonaws.com", 3, true},
 		{1, "s3-eu-west-1.amazonaws.com", 3, true},
 		{1, "s3-eu-west-2.amazonaws.com", 3, true},
+		{1, "s3-eu-west-3.amazonaws.com", 3, true},
 		{1, "s3-external-1.amazonaws.com", 3, true},
 		{1, "s3-fips-us-gov-west-1.amazonaws.com", 3, true},
 		{1, "s3-sa-east-1.amazonaws.com", 3, true},
@@ -7315,6 +7317,7 @@ func init() {
 		{1, "s3.ca-central-1.amazonaws.com", 4, true},
 		{1, "s3.eu-central-1.amazonaws.com", 4, true},
 		{1, "s3.eu-west-2.amazonaws.com", 4, true},
+		{1, "s3.eu-west-3.amazonaws.com", 4, true},
 		{1, "s3.us-east-2.amazonaws.com", 4, true},
 		{1, "s3.dualstack.ap-northeast-1.amazonaws.com", 5, true},
 		{1, "s3.dualstack.ap-northeast-2.amazonaws.com", 5, true},
@@ -7325,6 +7328,7 @@ func init() {
 		{1, "s3.dualstack.eu-central-1.amazonaws.com", 5, true},
 		{1, "s3.dualstack.eu-west-1.amazonaws.com", 5, true},
 		{1, "s3.dualstack.eu-west-2.amazonaws.com", 5, true},
+		{1, "s3.dualstack.eu-west-3.amazonaws.com", 5, true},
 		{1, "s3.dualstack.sa-east-1.amazonaws.com", 5, true},
 		{1, "s3.dualstack.us-east-1.amazonaws.com", 5, true},
 		{1, "s3.dualstack.us-east-2.amazonaws.com", 5, true},
@@ -7341,6 +7345,7 @@ func init() {
 		{1, "s3-website.ca-central-1.amazonaws.com", 4, true},
 		{1, "s3-website.eu-central-1.amazonaws.com", 4, true},
 		{1, "s3-website.eu-west-2.amazonaws.com", 4, true},
+		{1, "s3-website.eu-west-3.amazonaws.com", 4, true},
 		{1, "s3-website.us-east-2.amazonaws.com", 4, true},
 		{1, "t3l3p0rt.net", 2, true},
 		{1, "tele.amune.org", 3, true},
