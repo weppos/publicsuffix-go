@@ -3,10 +3,10 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version fcd8cc6 (Thu Dec 28 15:26:50 2017)"
+const defaultListVersion = "PSL version a27c7e9 (Thu Jan 11 19:10:15 2018)"
 
 func init() {
-	r := [8419]Rule{
+	r := [8431]Rule{
 		{1, "ac", 1, false},
 		{1, "com.ac", 2, false},
 		{1, "edu.ac", 2, false},
@@ -346,12 +346,14 @@ func init() {
 		{1, "transporte.bo", 2, false},
 		{1, "wiki.bo", 2, false},
 		{1, "br", 1, false},
+		{1, "9guacu.br", 2, false},
 		{1, "abc.br", 2, false},
 		{1, "adm.br", 2, false},
 		{1, "adv.br", 2, false},
 		{1, "agr.br", 2, false},
 		{1, "aju.br", 2, false},
 		{1, "am.br", 2, false},
+		{1, "anani.br", 2, false},
 		{1, "aparecida.br", 2, false},
 		{1, "arq.br", 2, false},
 		{1, "art.br", 2, false},
@@ -364,6 +366,7 @@ func init() {
 		{1, "bmd.br", 2, false},
 		{1, "boavista.br", 2, false},
 		{1, "bsb.br", 2, false},
+		{1, "campinagrande.br", 2, false},
 		{1, "campinas.br", 2, false},
 		{1, "caxias.br", 2, false},
 		{1, "cim.br", 2, false},
@@ -374,6 +377,7 @@ func init() {
 		{1, "coop.br", 2, false},
 		{1, "cri.br", 2, false},
 		{1, "cuiaba.br", 2, false},
+		{1, "curitiba.br", 2, false},
 		{1, "def.br", 2, false},
 		{1, "ecn.br", 2, false},
 		{1, "eco.br", 2, false},
@@ -391,6 +395,7 @@ func init() {
 		{1, "fnd.br", 2, false},
 		{1, "fortal.br", 2, false},
 		{1, "fot.br", 2, false},
+		{1, "foz.br", 2, false},
 		{1, "fst.br", 2, false},
 		{1, "g12.br", 2, false},
 		{1, "ggf.br", 2, false},
@@ -438,6 +443,8 @@ func init() {
 		{1, "londrina.br", 2, false},
 		{1, "macapa.br", 2, false},
 		{1, "maceio.br", 2, false},
+		{1, "manaus.br", 2, false},
+		{1, "maringa.br", 2, false},
 		{1, "mat.br", 2, false},
 		{1, "med.br", 2, false},
 		{1, "mil.br", 2, false},
@@ -467,8 +474,13 @@ func init() {
 		{1, "ribeirao.br", 2, false},
 		{1, "rio.br", 2, false},
 		{1, "riobranco.br", 2, false},
+		{1, "riopreto.br", 2, false},
 		{1, "salvador.br", 2, false},
 		{1, "sampa.br", 2, false},
+		{1, "santamaria.br", 2, false},
+		{1, "santoandre.br", 2, false},
+		{1, "saobernardo.br", 2, false},
+		{1, "saogonca.br", 2, false},
 		{1, "sjc.br", 2, false},
 		{1, "slg.br", 2, false},
 		{1, "slz.br", 2, false},
