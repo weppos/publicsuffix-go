@@ -3,10 +3,10 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version 0f3b07d (Thu Jan 25 09:22:16 2018)"
+const defaultListVersion = "PSL version c45eff1 (Sun Feb 18 20:49:23 2018)"
 
 func init() {
-	r := [8439]Rule{
+	r := [8445]Rule{
 		{1, "ac", 1, false},
 		{1, "com.ac", 2, false},
 		{1, "edu.ac", 2, false},
@@ -7431,6 +7431,7 @@ func init() {
 		{1, "xenapponazure.com", 2, true},
 		{1, "virtueeldomein.nl", 2, true},
 		{1, "c66.me", 2, true},
+		{1, "cloud66.ws", 2, true},
 		{1, "jdevcloud.com", 2, true},
 		{1, "wpdevcloud.com", 2, true},
 		{1, "cloudaccess.host", 2, true},
@@ -8120,6 +8121,8 @@ func init() {
 		{1, "git-repos.de", 2, true},
 		{1, "lcube-server.de", 2, true},
 		{1, "svn-repos.de", 2, true},
+		{1, "linkyard.cloud", 2, true},
+		{1, "linkyard-cloud.ch", 2, true},
 		{1, "we.bs", 2, true},
 		{1, "barsy.bg", 2, true},
 		{1, "barsyonline.com", 2, true},
@@ -8322,6 +8325,7 @@ func init() {
 		{1, "sandcats.io", 2, true},
 		{1, "logoip.de", 2, true},
 		{1, "logoip.com", 2, true},
+		{1, "schokokeks.net", 2, true},
 		{1, "scrysec.com", 2, true},
 		{1, "firewall-gateway.com", 2, true},
 		{1, "firewall-gateway.de", 2, true},
@@ -8425,6 +8429,7 @@ func init() {
 		{1, "ltd.hk", 2, true},
 		{1, "inc.hk", 2, true},
 		{1, "lib.de.us", 3, true},
+		{1, "2038.io", 2, true},
 		{1, "router.management", 2, true},
 		{1, "v-info.info", 2, true},
 		{1, "wedeploy.io", 2, true},
@@ -8435,6 +8440,7 @@ func init() {
 		{1, "cistron.nl", 2, true},
 		{1, "demon.nl", 2, true},
 		{1, "xs4all.space", 2, true},
+		{1, "official.academy", 2, true},
 		{1, "yolasite.com", 2, true},
 		{1, "ybo.faith", 2, true},
 		{1, "yombo.me", 2, true},
