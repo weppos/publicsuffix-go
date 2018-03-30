@@ -6,14 +6,14 @@ import (
 	"bytes"
 	"fmt"
 	"go/format"
-	"io/ioutil"
 	"net/http"
 	"os"
-	"regexp"
 	"strings"
 	"text/template"
 	"time"
+	"context"
 
+	"github.com/google/go-github/github"
 	"github.com/weppos/publicsuffix-go/publicsuffix"
 )
 
@@ -66,7 +66,7 @@ func main() {
 		VersionDate string
 		Rules       []publicsuffix.Rule
 	}{
-		sha,
+		sha[:6],
 		datetime.Format(time.ANSIC),
 		rules,
 	}
@@ -85,37 +85,16 @@ func main() {
 	//_, err = os.Stdout.Write(buf.Bytes())
 }
 
-// Is there a better way?
 func extractHeadInfo() (sha string, datetime time.Time) {
-	var re *regexp.Regexp
-	resp, err := http.Get("https://github.com/publicsuffix/list")
-	if err != nil {
-		fatal(err)
-	}
-	defer resp.Body.Close()
+	client := github.NewClient(nil)
 
-	data, err := ioutil.ReadAll(resp.Body)
+	commits, _, err := client.Repositories.ListCommits(context.Background(), "publicsuffix", "list", nil)
 	if err != nil {
 		fatal(err)
 	}
 
-	re = regexp.MustCompile(`<a class="commit-tease-sha" (?:.+)>([\w\s\n]+)<\/a>`)
-	sha = strings.TrimSpace(re.FindStringSubmatch(string(data[:]))[1])
-	if sha == "" {
-		fatal(fmt.Errorf("sha is blank"))
-	}
-
-	re = regexp.MustCompile(`<span itemprop="dateModified">(?:.+)datetime="([\w\d\:\-]+)"(?:.+)</span>`)
-	stringtime := re.FindStringSubmatch(string(data[:]))[1]
-	if stringtime == "" {
-		fatal(fmt.Errorf("date is blank"))
-	}
-	datetime, err = time.Parse(time.RFC3339, stringtime)
-	if err != nil {
-		fatal(err)
-	}
-
-	return sha, datetime
+	lastCommit := commits[0]
+	return lastCommit.GetSHA(), lastCommit.GetCommit().GetCommitter().GetDate()
 }
 
 func fatal(err error) {
