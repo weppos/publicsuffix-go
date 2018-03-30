@@ -179,4 +179,4 @@ deliciousJar := cookiejar.New(&cookiejar.Options{PublicSuffixList: publicsuffix.
 
 ## License
 
-Copyright (c) 2016-2017 Simone Carletti. This is Free Software distributed under the MIT license.
+Copyright (c) 2016-2018 Simone Carletti. This is Free Software distributed under the MIT license.
