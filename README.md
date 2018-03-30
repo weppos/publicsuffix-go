@@ -8,12 +8,25 @@ The package <tt>publicsuffix</tt> provides a Go domain name parser based on the 
 
 ## Getting started
 
+Clone the repository [in your workspace](https://golang.org/doc/code.html#Organization) and move into it:
+
 ```shell
-$ git clone git@github.com:weppos/publicsuffix-go.git
-$ cd publicsuffix-go
+mkdir -p $GOPATH/src/github.com/weppos && cd $_
+git clone git@github.com:weppos/publicsuffix-go.git
+cd publicsuffix-go
+```
+
+Fetch the dependencies:
+
+```shell
+go get ./...
 ```
 
 Run the test suite.
+
+```shell
+go test ./...
+```
 
 
 ## Testing
@@ -21,7 +34,7 @@ Run the test suite.
 The following command runs the entire test suite.
 
 ```shell
-$ go test ./...
+go test ./...
 ```
 
 There are 3 different test suites built into this library:
@@ -34,7 +47,7 @@ There are 3 different test suites built into this library:
 ## Installation
 
 ```shell
-$ go get github.com/weppos/publicsuffix-go
+go get github.com/weppos/publicsuffix-go
 ```
 
 
