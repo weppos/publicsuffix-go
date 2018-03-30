@@ -1,5 +1,10 @@
 # CHANGELOG
 
+#### 0.4.0
+
+- CHANGED: gen tool now uses GitHub API instead of scraping GitHub UI (GH-93).
+- CHANGED: Definition updates.
+
 #### 0.3.2
 
 - CHANGED: Definition updates.

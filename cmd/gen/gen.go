@@ -1,9 +1,8 @@
-// +build ignore
-
 package main
 
 import (
 	"bytes"
+	"context"
 	"fmt"
 	"go/format"
 	"net/http"
@@ -11,7 +10,6 @@ import (
 	"strings"
 	"text/template"
 	"time"
-	"context"
 
 	"github.com/google/go-github/github"
 	"github.com/weppos/publicsuffix-go/publicsuffix"
