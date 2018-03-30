@@ -3,10 +3,10 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version 4dcee00 (Mon Mar 12 15:05:23 2018)"
+const defaultListVersion = "PSL version f85ba3 (Wed Mar 28 10:55:33 2018)"
 
 func init() {
-	r := [8447]Rule{
+	r := [8456]Rule{
 		{1, "ac", 1, false},
 		{1, "com.ac", 2, false},
 		{1, "edu.ac", 2, false},
@@ -7299,6 +7299,7 @@ func init() {
 		{1, "elasticbeanstalk.com", 2, true},
 		{1, "ap-northeast-1.elasticbeanstalk.com", 3, true},
 		{1, "ap-northeast-2.elasticbeanstalk.com", 3, true},
+		{1, "ap-northeast-3.elasticbeanstalk.com", 3, true},
 		{1, "ap-south-1.elasticbeanstalk.com", 3, true},
 		{1, "ap-southeast-1.elasticbeanstalk.com", 3, true},
 		{1, "ap-southeast-2.elasticbeanstalk.com", 3, true},
@@ -8112,6 +8113,11 @@ func init() {
 		{1, "to.leg.br", 3, true},
 		{1, "pixolino.com", 2, true},
 		{1, "ipifony.net", 2, true},
+		{1, "myjino.ru", 2, true},
+		{2, "hosting.myjino.ru", 4, true},
+		{2, "landing.myjino.ru", 4, true},
+		{2, "spectrum.myjino.ru", 4, true},
+		{2, "vps.myjino.ru", 4, true},
 		{2, "triton.zone", 3, true},
 		{2, "cns.joyent.com", 4, true},
 		{1, "js.org", 2, true},
@@ -8288,6 +8294,7 @@ func init() {
 		{1, "operaunite.com", 2, true},
 		{1, "outsystemscloud.com", 2, true},
 		{1, "ownprovider.com", 2, true},
+		{1, "ox.rs", 2, true},
 		{1, "oy.lc", 2, true},
 		{1, "pgfog.com", 2, true},
 		{1, "pagefrontapp.com", 2, true},
@@ -8308,6 +8315,7 @@ func init() {
 		{1, "protonet.io", 2, true},
 		{1, "chirurgiens-dentistes-en-france.fr", 2, true},
 		{1, "byen.site", 2, true},
+		{1, "ras.ru", 2, true},
 		{1, "qa2.com", 2, true},
 		{1, "dev-myqnapcloud.com", 2, true},
 		{1, "alpha-myqnapcloud.com", 2, true},
@@ -8383,6 +8391,7 @@ func init() {
 		{1, "gdynia.pl", 2, true},
 		{1, "med.pl", 2, true},
 		{1, "sopot.pl", 2, true},
+		{1, "gwiddle.co.uk", 3, true},
 		{1, "cust.dev.thingdust.io", 4, true},
 		{1, "cust.disrec.thingdust.io", 4, true},
 		{1, "cust.prod.thingdust.io", 4, true},
