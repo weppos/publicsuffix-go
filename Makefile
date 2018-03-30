@@ -8,4 +8,4 @@ clean:
 	rm publicsuffix/rules.*
 
 get-deps:
-	go get golang.org/x/net/idna
+	go get ./...
