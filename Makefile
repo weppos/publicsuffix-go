@@ -2,7 +2,7 @@ test:
 	go test ./... -v
 
 gen:
-	go run cmd/gen/gen.go > publicsuffix/rules.txt && mv publicsuffix/rules.txt publicsuffix/rules.go
+	go generate ./...
 
 clean:
 	rm publicsuffix/rules.*
