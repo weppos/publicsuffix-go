@@ -3,10 +3,10 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version 5131ff (Fri Apr 13 16:33:42 2018)"
+const defaultListVersion = "PSL version 03b8ff (Tue Apr 17 23:32:48 2018)"
 
 func init() {
-	r := [8454]Rule{
+	r := [8463]Rule{
 		{1, "ac", 1, false},
 		{1, "com.ac", 2, false},
 		{1, "edu.ac", 2, false},
@@ -5972,6 +5972,7 @@ func init() {
 		{1, "xn--mgbgu82a", 1, false},
 		{1, "xn--rvc1e0am3e", 1, false},
 		{1, "xn--h2brj9c", 1, false},
+		{1, "xn--mgbbh1a", 1, false},
 		{1, "xn--mgbbh1a71e", 1, false},
 		{1, "xn--fpcrj9c3d", 1, false},
 		{1, "xn--gecrj9c", 1, false},
@@ -6257,6 +6258,7 @@ func init() {
 		{1, "cfd", 1, false},
 		{1, "chanel", 1, false},
 		{1, "channel", 1, false},
+		{1, "charity", 1, false},
 		{1, "chase", 1, false},
 		{1, "chat", 1, false},
 		{1, "cheap", 1, false},
@@ -6565,6 +6567,7 @@ func init() {
 		{1, "imdb", 1, false},
 		{1, "immo", 1, false},
 		{1, "immobilien", 1, false},
+		{1, "inc", 1, false},
 		{1, "industries", 1, false},
 		{1, "infiniti", 1, false},
 		{1, "ing", 1, false},
@@ -6667,6 +6670,7 @@ func init() {
 		{1, "live", 1, false},
 		{1, "living", 1, false},
 		{1, "lixil", 1, false},
+		{1, "llc", 1, false},
 		{1, "loan", 1, false},
 		{1, "loans", 1, false},
 		{1, "locker", 1, false},
@@ -6743,7 +6747,6 @@ func init() {
 		{1, "movistar", 1, false},
 		{1, "msd", 1, false},
 		{1, "mtn", 1, false},
-		{1, "mtpc", 1, false},
 		{1, "mtr", 1, false},
 		{1, "mutual", 1, false},
 		{1, "nab", 1, false},
@@ -6997,6 +7000,7 @@ func init() {
 		{1, "soy", 1, false},
 		{1, "space", 1, false},
 		{1, "spiegel", 1, false},
+		{1, "sport", 1, false},
 		{1, "spot", 1, false},
 		{1, "spreadbetting", 1, false},
 		{1, "srl", 1, false},
@@ -7240,6 +7244,7 @@ func init() {
 		{1, "xn--nqv7f", 1, false},
 		{1, "xn--nqv7fs00ema", 1, false},
 		{1, "xn--nyqy26a", 1, false},
+		{1, "xn--otu796d", 1, false},
 		{1, "xn--p1acf", 1, false},
 		{1, "xn--pbt977c", 1, false},
 		{1, "xn--pssy2u", 1, false},
@@ -8140,6 +8145,8 @@ func init() {
 		{1, "hb.cldmail.ru", 3, true},
 		{1, "cloud.metacentrum.cz", 3, true},
 		{1, "custom.metacentrum.cz", 3, true},
+		{1, "flt.cloud.muni.cz", 4, true},
+		{1, "usr.cloud.muni.cz", 4, true},
 		{1, "meteorapp.com", 2, true},
 		{1, "eu.meteorapp.com", 3, true},
 		{1, "co.pl", 2, true},
@@ -8458,6 +8465,8 @@ func init() {
 		{1, "ybo.review", 2, true},
 		{1, "ybo.science", 2, true},
 		{1, "ybo.trade", 2, true},
+		{1, "nohost.me", 2, true},
+		{1, "noho.st", 2, true},
 		{1, "za.net", 2, true},
 		{1, "za.org", 2, true},
 		{1, "now.sh", 2, true},
