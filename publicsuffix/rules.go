@@ -3,10 +3,10 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version 19afb5 (Wed Apr 18 21:23:41 2018)"
+const defaultListVersion = "PSL version 81bcd1 (Fri Apr 20 01:10:22 2018)"
 
 func init() {
-	r := [8463]Rule{
+	r := [8478]Rule{
 		{1, "ac", 1, false},
 		{1, "com.ac", 2, false},
 		{1, "edu.ac", 2, false},
@@ -8081,6 +8081,11 @@ func init() {
 		{1, "hepforge.org", 2, true},
 		{1, "herokuapp.com", 2, true},
 		{1, "herokussl.com", 2, true},
+		{1, "myravendb.com", 2, true},
+		{1, "ravendb.community", 2, true},
+		{1, "ravendb.me", 2, true},
+		{1, "development.run", 2, true},
+		{1, "ravendb.run", 2, true},
 		{1, "moonscale.net", 2, true},
 		{1, "iki.fi", 2, true},
 		{1, "biz.at", 2, true},
@@ -8133,6 +8138,10 @@ func init() {
 		{1, "linkyard.cloud", 2, true},
 		{1, "linkyard-cloud.ch", 2, true},
 		{1, "we.bs", 2, true},
+		{1, "uklugs.org", 2, true},
+		{1, "glug.org.uk", 3, true},
+		{1, "lug.org.uk", 3, true},
+		{1, "lugs.org.uk", 3, true},
 		{1, "barsy.bg", 2, true},
 		{1, "barsyonline.com", 2, true},
 		{1, "barsy.de", 2, true},
@@ -8255,6 +8264,7 @@ func init() {
 		{1, "stage.nodeart.io", 3, true},
 		{1, "nodum.co", 2, true},
 		{1, "nodum.io", 2, true},
+		{1, "pcloud.host", 2, true},
 		{1, "nyc.mn", 2, true},
 		{1, "nom.ae", 2, true},
 		{1, "nom.ai", 2, true},
@@ -8299,6 +8309,7 @@ func init() {
 		{1, "operaunite.com", 2, true},
 		{1, "outsystemscloud.com", 2, true},
 		{1, "ownprovider.com", 2, true},
+		{1, "own.pm", 2, true},
 		{1, "ox.rs", 2, true},
 		{1, "oy.lc", 2, true},
 		{1, "pgfog.com", 2, true},
@@ -8373,6 +8384,7 @@ func init() {
 		{1, "apps.lair.io", 3, true},
 		{2, "stolos.io", 3, true},
 		{1, "spacekit.io", 2, true},
+		{1, "customer.speedpartner.de", 3, true},
 		{1, "stackspace.space", 2, true},
 		{1, "storj.farm", 2, true},
 		{1, "temp-dns.com", 2, true},
@@ -8453,6 +8465,9 @@ func init() {
 		{1, "wedeploy.sh", 2, true},
 		{1, "remotewd.com", 2, true},
 		{1, "wmflabs.org", 2, true},
+		{1, "xnbay.com", 2, true},
+		{1, "u2.xnbay.com", 3, true},
+		{1, "u2-local.xnbay.com", 3, true},
 		{1, "cistron.nl", 2, true},
 		{1, "demon.nl", 2, true},
 		{1, "xs4all.space", 2, true},
