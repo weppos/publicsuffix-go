@@ -81,12 +81,14 @@ type FindOptions struct {
 type List struct {
 	// rules is kept private because you should not access rules directly
 	// for lookup optimization the list will not be guaranteed to be a simple slice forever
-	rules []Rule
+	rules map[string]*Rule
 }
 
 // NewList creates a new empty list.
 func NewList() *List {
-	return &List{}
+	return &List{
+		rules: map[string]*Rule{},
+	}
 }
 
 // NewListFromString parses a string that represents a Public Suffix source
@@ -132,7 +134,7 @@ func (l *List) LoadFile(path string, options *ParserOption) ([]Rule, error) {
 // The list may be optimized internally for lookups, therefore the algorithm
 // will decide the best position for the new rule.
 func (l *List) AddRule(r *Rule) error {
-	l.rules = append(l.rules, *r)
+	l.rules[r.Value] = r
 	return nil
 }
 
@@ -195,43 +197,23 @@ Scanning:
 
 // Find and returns the most appropriate rule for the domain name.
 func (l *List) Find(name string, options *FindOptions) *Rule {
-	var bestRule *Rule
-
 	if options == nil {
 		options = DefaultFindOptions
 	}
 
-	for _, r := range l.selectRules(name, options) {
-		if r.Type == ExceptionType {
-			return &r
+	for {
+		rule, ok := l.rules[name]
+		if ok && (!options.IgnorePrivate || !rule.Private) {
+			return rule
 		}
-		if bestRule == nil || bestRule.Length < r.Length {
-			bestRule = &r
+		i := strings.IndexRune(name, '.')
+		if i < 0 {
+			break
 		}
-	}
-
-	if bestRule != nil {
-		return bestRule
+		name = name[i+1:]
 	}
 
 	return options.DefaultRule
-}
-
-func (l *List) selectRules(name string, options *FindOptions) []Rule {
-	var found []Rule
-
-	// In this phase the search is a simple sequential scan
-	for _, rule := range l.rules {
-		if !rule.Match(name) {
-			continue
-		}
-		if options.IgnorePrivate && rule.Private {
-			continue
-		}
-		found = append(found, rule)
-	}
-
-	return found
 }
 
 // NewRule parses the rule content, creates and returns a Rule.

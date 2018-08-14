@@ -11,6 +11,8 @@ import (
 	"context"
 	"fmt"
 	"go/format"
+	"io/ioutil"
+	"log"
 	"net/http"
 	"strings"
 	"text/template"
@@ -18,8 +20,6 @@ import (
 
 	"github.com/google/go-github/github"
 	"github.com/weppos/publicsuffix-go/publicsuffix"
-	"io/ioutil"
-	"log"
 )
 
 const (
@@ -39,7 +39,9 @@ func init() {
 		{ {{$r.Type}}, "{{$r.Value}}", {{$r.Length}}, {{$r.Private}} },
 		{{end}}
 	}
-	DefaultList.rules = r[:]
+	for i := range r {
+		DefaultList.AddRule(&r[i])
+	}
 }
 
 `
