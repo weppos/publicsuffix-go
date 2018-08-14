@@ -11,7 +11,6 @@ import (
 	"io"
 	"net/http/cookiejar"
 	"os"
-	"regexp"
 	"strings"
 
 	"golang.org/x/net/idna"
@@ -80,7 +79,6 @@ type FindOptions struct {
 // List represents a Public Suffix List.
 type List struct {
 	// rules is kept private because you should not access rules directly
-	// for lookup optimization the list will not be guaranteed to be a simple slice forever
 	rules map[string]*Rule
 }
 
@@ -208,12 +206,12 @@ func (l *List) Find(name string, options *FindOptions) *Rule {
 		}
 		i := strings.IndexRune(name, '.')
 		if i < 0 {
-			break
+			return options.DefaultRule
 		}
 		name = name[i+1:]
 	}
 
-	return options.DefaultRule
+	return nil
 }
 
 // NewRule parses the rule content, creates and returns a Rule.
@@ -291,36 +289,46 @@ func (r *Rule) Match(name string) bool {
 
 // Decompose takes a name as input and decomposes it into a tuple of <TRD+SLD, TLD>,
 // according to the rule definition and type.
-func (r *Rule) Decompose(name string) [2]string {
-	var parts []string
-
+func (r *Rule) Decompose(name string) (result [2]string) {
+	if r == DefaultRule {
+		i := strings.LastIndex(name, ".")
+		if i < 0 {
+			return
+		}
+		result[0], result[1] = name[:i], name[i+1:]
+		return
+	}
 	switch r.Type {
+	case NormalType:
+		name = strings.TrimSuffix(name, r.Value)
+		if len(name) == 0 {
+			return
+		}
+		result[0], result[1] = name[:len(name)-1], r.Value
 	case WildcardType:
-		parts = append([]string{`.*?`}, r.parts()...)
-	default:
-		parts = r.parts()
+		name := strings.TrimSuffix(name, r.Value)
+		if len(name) == 0 {
+			return
+		}
+		name = name[:len(name)-1]
+		i := strings.LastIndex(name, ".")
+		if i < 0 {
+			return
+		}
+		result[0], result[1] = name[:i], name[i+1:]+"."+r.Value
+	case ExceptionType:
+		i := strings.IndexRune(r.Value, '.')
+		if i < 0 {
+			return
+		}
+		suffix := r.Value[i+1:]
+		name = strings.TrimSuffix(name, suffix)
+		if len(name) == 0 {
+			return
+		}
+		result[0], result[1] = name[:len(name)-1], suffix
 	}
-
-	suffix := strings.Join(parts, `\.`)
-	re := regexp.MustCompile(fmt.Sprintf(`^(.+)\.(%s)$`, suffix))
-
-	matches := re.FindStringSubmatch(name)
-	if len(matches) < 3 {
-		return [2]string{"", ""}
-	}
-
-	return [2]string{matches[1], matches[2]}
-}
-
-func (r *Rule) parts() []string {
-	labels := Labels(r.Value)
-	if r.Type == ExceptionType {
-		return labels[1:]
-	}
-	if r.Type == WildcardType && r.Value == "" {
-		return []string{}
-	}
-	return labels
+	return
 }
 
 // Labels decomposes given domain name into labels,
@@ -414,7 +422,6 @@ func DomainFromListWithOptions(l *List, name string, options *FindOptions) (stri
 	if err != nil {
 		return "", err
 	}
-
 	return dn.SLD + "." + dn.TLD, nil
 }
 
@@ -440,12 +447,22 @@ func ParseFromListWithOptions(l *List, name string, options *FindOptions) (*Doma
 	}
 
 	r := l.Find(n, options)
-	if tld := r.Decompose(n)[1]; tld == "" {
+	parts := r.Decompose(n)
+	left, tld := parts[0], parts[1]
+	if tld == "" {
 		return nil, fmt.Errorf("%s is a suffix", n)
 	}
 
-	dn := &DomainName{Rule: r}
-	dn.TLD, dn.SLD, dn.TRD = decompose(r, n)
+	dn := &DomainName{
+		Rule: r,
+		TLD:  tld,
+	}
+	if i := strings.LastIndex(left, "."); i < 0 {
+		dn.SLD = left
+	} else {
+		dn.TRD = left[:i]
+		dn.SLD = left[i+1:]
+	}
 	return dn, nil
 }
 
@@ -453,29 +470,13 @@ func normalize(name string) (string, error) {
 	ret := strings.ToLower(name)
 
 	if ret == "" {
-		return "", fmt.Errorf("Name is blank")
+		return "", fmt.Errorf("name is blank")
 	}
 	if ret[0] == '.' {
-		return "", fmt.Errorf("Name %s starts with a dot", ret)
+		return "", fmt.Errorf("name %s starts with a dot", ret)
 	}
 
 	return ret, nil
-}
-
-func decompose(r *Rule, name string) (tld, sld, trd string) {
-	parts := r.Decompose(name)
-	left, tld := parts[0], parts[1]
-
-	dot := strings.LastIndex(left, ".")
-	if dot == -1 {
-		sld = left
-		trd = ""
-	} else {
-		sld = left[dot+1:]
-		trd = left[0:dot]
-	}
-
-	return
 }
 
 // ToASCII is a wrapper for idna.ToASCII.
