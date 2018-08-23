@@ -44,7 +44,7 @@ blogspot.com
 	testRules = []Rule{}
 	for _, rule := range rules {
 		if rule.Private == false {
-			testRules = append(testRules, rule)
+			testRules = append(testRules, *rule)
 		}
 	}
 	if want, got := 2, len(testRules); want != got {
@@ -55,7 +55,7 @@ blogspot.com
 	testRules = []Rule{}
 	for _, rule := range rules {
 		if rule.Private == true {
-			testRules = append(testRules, rule)
+			testRules = append(testRules, *rule)
 		}
 	}
 	if want, got := 1, len(testRules); want != got {
@@ -143,7 +143,7 @@ func TestNewListFromFile(t *testing.T) {
 	testRules = []Rule{}
 	for _, rule := range rules {
 		if rule.Private == false {
-			testRules = append(testRules, rule)
+			testRules = append(testRules, *rule)
 		}
 	}
 	if want, got := 2, len(testRules); want != got {
@@ -154,7 +154,7 @@ func TestNewListFromFile(t *testing.T) {
 	testRules = []Rule{}
 	for _, rule := range rules {
 		if rule.Private == true {
-			testRules = append(testRules, rule)
+			testRules = append(testRules, *rule)
 		}
 	}
 	if want, got := 1, len(testRules); want != got {
@@ -175,8 +175,10 @@ func TestListAddRule(t *testing.T) {
 	if list.Size() != 1 {
 		t.Fatalf("List should have 1 rule, got %v", list.Size())
 	}
-	if got := &list.rules[0]; !reflect.DeepEqual(rule, got) {
-		t.Fatalf("List[0] expected to be %v, got %v", rule, got)
+	for _, got := range list.rules {
+		if !reflect.DeepEqual(rule, got) {
+			t.Fatalf("List[0] expected to be %v, got %v", rule, got)
+		}
 	}
 }
 
