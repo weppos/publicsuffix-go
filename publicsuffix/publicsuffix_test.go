@@ -3,6 +3,8 @@ package publicsuffix
 import (
 	"reflect"
 	"testing"
+
+	xlib "golang.org/x/net/publicsuffix"
 )
 
 func TestNewListFromString(t *testing.T) {
@@ -438,4 +440,37 @@ func TestCookieJarList(t *testing.T) {
 			t.Errorf("CookieJarList.PublicSuffix(%v) = %v, want %v", input, output, suffix)
 		}
 	}
+}
+
+var benchmarkTestCases = map[string]string{
+	"example.com":                         "example.com",
+	"example.id.au":                       "example.id.au",
+	"www.ck":                              "www.ck",
+	"foo.bar.xn--55qx5d.cn":               "bar.xn--55qx5d.cn",
+	"a.b.c.minami.fukuoka.jp":             "c.minami.fukuoka.jp",
+	"posts-and-telecommunications.museum": "",
+	"www.example.pvt.k12.ma.us":           "example.pvt.k12.ma.us",
+	"many.lol":                            "many.lol",
+	"the.russian.for.moscow.is.xn--80adxhks": "is.xn--80adxhks",
+	"blah.blah.s3-us-west-1.amazonaws.com":   "blah.s3-us-west-1.amazonaws.com",
+	"thing.dyndns.org":                       "thing.dyndns.org",
+	"nosuchtld":                              "",
+}
+
+func benchmarkDomain(b *testing.B, domainFunc func(string) (string, error)) {
+	var got string
+	for i := 0; i < b.N; i++ {
+		for input := range benchmarkTestCases {
+			got, _ = domainFunc(input)
+		}
+	}
+	_ = got
+}
+
+func BenchmarkDomain(b *testing.B) {
+	benchmarkDomain(b, Domain)
+}
+
+func BenchmarkXNet(b *testing.B) {
+	benchmarkDomain(b, xlib.EffectiveTLDPlusOne)
 }
