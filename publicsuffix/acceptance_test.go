@@ -152,3 +152,58 @@ func TestIDNA(t *testing.T) {
 		}
 	}
 }
+
+func TestFindRuleIANA(t *testing.T) {
+	testCases := []struct {
+		input, want string
+	}{
+		// TLD with only 1 rule.
+		{"biz", "biz"},
+		{"input.biz", "biz"},
+		{"b.input.biz", "biz"},
+
+		// The relevant {kobe,kyoto}.jp rules are:
+		// jp
+		// *.kobe.jp
+		// !city.kobe.jp
+		// kyoto.jp
+		// ide.kyoto.jp
+		{"jp", "jp"},
+		{"kobe.jp", "jp"},
+		{"c.kobe.jp", "c.kobe.jp"},
+		{"b.c.kobe.jp", "c.kobe.jp"},
+		{"a.b.c.kobe.jp", "c.kobe.jp"},
+		{"city.kobe.jp", "kobe.jp"},
+		{"www.city.kobe.jp", "kobe.jp"},
+		{"kyoto.jp", "kyoto.jp"},
+		{"test.kyoto.jp", "kyoto.jp"},
+		{"ide.kyoto.jp", "ide.kyoto.jp"},
+		{"b.ide.kyoto.jp", "ide.kyoto.jp"},
+		{"a.b.ide.kyoto.jp", "ide.kyoto.jp"},
+
+		// Domain with a private public suffix should return the ICANN public suffix.
+		{"foo.compute-1.amazonaws.com", "com"},
+		// Domain equal to a private public suffix should return the ICANN public suffix.
+		{"cloudapp.net", "net"},
+	}
+
+	for _, tc := range testCases {
+		rule := DefaultList.Find(tc.input, &FindOptions{IgnorePrivate: true, DefaultRule: nil})
+
+		if rule == nil {
+			t.Errorf("TestFindRuleIANA(%v) nil rule", tc.input)
+			continue
+		}
+
+		suffix := rule.Decompose(tc.input)[1]
+		// If the TLD is empty, it means name is actually a suffix.
+		// In fact, decompose returns an array of empty strings in this case.
+		if suffix == "" {
+			suffix = tc.input
+		}
+
+		if suffix != tc.want {
+			t.Errorf("TestFindRuleIANA(%v) = %v, want %v", tc.input, suffix, tc.want)
+		}
+	}
+}

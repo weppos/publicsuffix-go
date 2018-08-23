@@ -207,6 +207,23 @@ com
 // io
 io
 
+// jp
+jp
+*.kawasaki.jp
+*.kitakyushu.jp
+*.kobe.jp
+*.nagoya.jp
+*.sapporo.jp
+*.sendai.jp
+*.yokohama.jp
+!city.kawasaki.jp
+!city.kitakyushu.jp
+!city.kobe.jp
+!city.nagoya.jp
+!city.sapporo.jp
+!city.sendai.jp
+!city.yokohama.jp
+
 // ===END ICANN DOMAINS===
 // ===BEGIN PRIVATE DOMAINS===
 
@@ -221,7 +238,7 @@ blogspot.com
 	p1.Private = true
 
 	testCases := []listFindTestCase{
-		// match IANA
+		// match standard
 		{"example.com", MustNewRule("com")},
 		{"foo.example.com", MustNewRule("com")},
 
@@ -242,6 +259,9 @@ blogspot.com
 		// match private
 		{"blogspot.com", p1},
 		{"foo.blogspot.com", p1},
+
+		// input is wildcard rule
+		{"kobe.jp", MustNewRule("jp")},
 	}
 
 	list, err := NewListFromString(src, nil)
