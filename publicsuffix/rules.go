@@ -8629,5 +8629,7 @@ func init() {
 		{1, "now.sh", 2, true},
 		{1, "zone.id", 2, true},
 	}
-	DefaultList.rules = r[:]
+	for i := range r {
+		DefaultList.AddRule(&r[i])
+	}
 }
