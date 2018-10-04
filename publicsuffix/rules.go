@@ -3,10 +3,10 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version 1422e8 (Tue Oct  2 17:35:18 2018)"
+const defaultListVersion = "PSL version 6f2b9e (Wed Oct  3 13:34:55 2018)"
 
 func init() {
-	r := [8622]Rule{
+	r := [8617]Rule{
 		{1, "ac", 1, false},
 		{1, "com.ac", 2, false},
 		{1, "edu.ac", 2, false},
@@ -6560,7 +6560,6 @@ func init() {
 		{1, "goldpoint", 1, false},
 		{1, "golf", 1, false},
 		{1, "goo", 1, false},
-		{1, "goodhands", 1, false},
 		{1, "goodyear", 1, false},
 		{1, "goog", 1, false},
 		{1, "google", 1, false},
@@ -6661,7 +6660,6 @@ func init() {
 		{1, "jetzt", 1, false},
 		{1, "jewelry", 1, false},
 		{1, "jio", 1, false},
-		{1, "jlc", 1, false},
 		{1, "jll", 1, false},
 		{1, "jmp", 1, false},
 		{1, "jnj", 1, false},
@@ -6876,7 +6874,6 @@ func init() {
 		{1, "ovh", 1, false},
 		{1, "page", 1, false},
 		{1, "panasonic", 1, false},
-		{1, "panerai", 1, false},
 		{1, "paris", 1, false},
 		{1, "pars", 1, false},
 		{1, "partners", 1, false},
@@ -7111,7 +7108,6 @@ func init() {
 		{1, "team", 1, false},
 		{1, "tech", 1, false},
 		{1, "technology", 1, false},
-		{1, "telecity", 1, false},
 		{1, "telefonica", 1, false},
 		{1, "temasek", 1, false},
 		{1, "tennis", 1, false},
@@ -7181,7 +7177,6 @@ func init() {
 		{1, "virgin", 1, false},
 		{1, "visa", 1, false},
 		{1, "vision", 1, false},
-		{1, "vista", 1, false},
 		{1, "vistaprint", 1, false},
 		{1, "viva", 1, false},
 		{1, "vivo", 1, false},
