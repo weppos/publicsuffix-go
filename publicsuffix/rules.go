@@ -3,10 +3,10 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version 6f2b9e (Wed Oct  3 13:34:55 2018)"
+const defaultListVersion = "PSL version c57186 (Sat Oct 27 12:25:44 2018)"
 
 func init() {
-	r := [8617]Rule{
+	r := [8630]Rule{
 		{1, "ac", 1, false},
 		{1, "com.ac", 2, false},
 		{1, "edu.ac", 2, false},
@@ -7439,6 +7439,8 @@ func init() {
 		{1, "potager.org", 2, true},
 		{1, "sweetpepper.org", 2, true},
 		{1, "myasustor.com", 2, true},
+		{1, "go-vip.co", 2, true},
+		{1, "wpcomstaging.com", 2, true},
 		{1, "myfritz.net", 2, true},
 		{2, "awdev.ca", 3, true},
 		{2, "advisor.ws", 3, true},
@@ -7557,6 +7559,8 @@ func init() {
 		{1, "debian.net", 2, true},
 		{1, "dedyn.io", 2, true},
 		{1, "dnshome.de", 2, true},
+		{1, "online.th", 2, true},
+		{1, "shop.th", 2, true},
 		{1, "drayddns.com", 2, true},
 		{1, "dreamhosters.com", 2, true},
 		{1, "mydrobo.com", 2, true},
@@ -8038,6 +8042,7 @@ func init() {
 		{1, "cloud.fedoraproject.org", 3, true},
 		{1, "app.os.fedoraproject.org", 4, true},
 		{1, "app.os.stg.fedoraproject.org", 5, true},
+		{1, "mydobiss.com", 2, true},
 		{1, "filegear.me", 2, true},
 		{1, "firebaseapp.com", 2, true},
 		{1, "flynnhub.com", 2, true},
@@ -8217,6 +8222,12 @@ func init() {
 		{1, "linkyard.cloud", 2, true},
 		{1, "linkyard-cloud.ch", 2, true},
 		{1, "we.bs", 2, true},
+		{1, "krasnik.pl", 2, true},
+		{1, "leczna.pl", 2, true},
+		{1, "lubartow.pl", 2, true},
+		{1, "lublin.pl", 2, true},
+		{1, "poniatowa.pl", 2, true},
+		{1, "swidnik.pl", 2, true},
 		{1, "uklugs.org", 2, true},
 		{1, "glug.org.uk", 3, true},
 		{1, "lug.org.uk", 3, true},
@@ -8465,6 +8476,7 @@ func init() {
 		{1, "protonet.io", 2, true},
 		{1, "chirurgiens-dentistes-en-france.fr", 2, true},
 		{1, "byen.site", 2, true},
+		{1, "instantcloud.cn", 2, true},
 		{1, "ras.ru", 2, true},
 		{1, "qa2.com", 2, true},
 		{1, "dev-myqnapcloud.com", 2, true},
@@ -8509,6 +8521,7 @@ func init() {
 		{1, "applinzi.com", 2, true},
 		{1, "sinaapp.com", 2, true},
 		{1, "vipsinaapp.com", 2, true},
+		{1, "siteleaf.net", 2, true},
 		{1, "bounty-full.com", 2, true},
 		{1, "alpha.bounty-full.com", 3, true},
 		{1, "beta.bounty-full.com", 3, true},
