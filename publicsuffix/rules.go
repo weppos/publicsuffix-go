@@ -3,10 +3,10 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version 5af964 (Thu Nov  8 22:28:01 2018)"
+const defaultListVersion = "PSL version 921a6f (Thu Dec 27 16:30:12 2018)"
 
 func init() {
-	r := [8639]Rule{
+	r := [8649]Rule{
 		{1, "ac", 1, false},
 		{1, "com.ac", 2, false},
 		{1, "edu.ac", 2, false},
@@ -7564,6 +7564,8 @@ func init() {
 		{1, "firm.dk", 2, true},
 		{1, "reg.dk", 2, true},
 		{1, "store.dk", 2, true},
+		{2, "dapps.earth", 3, true},
+		{2, "bzz.dapps.earth", 4, true},
 		{1, "debian.net", 2, true},
 		{1, "dedyn.io", 2, true},
 		{1, "dnshome.de", 2, true},
@@ -8078,6 +8080,8 @@ func init() {
 		{1, "ro.im", 2, true},
 		{1, "shop.ro", 2, true},
 		{1, "goip.de", 2, true},
+		{1, "run.app", 2, true},
+		{1, "a.run.app", 3, true},
 		{2, "0emm.com", 3, true},
 		{1, "appspot.com", 2, true},
 		{1, "blogspot.ae", 2, true},
@@ -8225,6 +8229,9 @@ func init() {
 		{1, "git-repos.de", 2, true},
 		{1, "lcube-server.de", 2, true},
 		{1, "svn-repos.de", 2, true},
+		{1, "leadpages.co", 2, true},
+		{1, "lpages.co", 2, true},
+		{1, "lpusercontent.com", 2, true},
 		{1, "app.lmpm.com", 3, true},
 		{1, "linkitools.space", 2, true},
 		{1, "linkyard.cloud", 2, true},
@@ -8564,6 +8571,9 @@ func init() {
 		{1, "gdynia.pl", 2, true},
 		{1, "med.pl", 2, true},
 		{1, "sopot.pl", 2, true},
+		{1, "telebit.app", 2, true},
+		{1, "telebit.io", 2, true},
+		{2, "telebit.xyz", 3, true},
 		{1, "gwiddle.co.uk", 3, true},
 		{1, "cust.dev.thingdust.io", 4, true},
 		{1, "cust.disrec.thingdust.io", 4, true},
