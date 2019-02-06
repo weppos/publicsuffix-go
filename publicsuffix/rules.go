@@ -3,10 +3,10 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version ce0d1a (Mon Jan 28 15:16:10 2019)"
+const defaultListVersion = "PSL version 5d3dfd (Tue Feb  5 11:27:35 2019)"
 
 func init() {
-	r := [8648]Rule{
+	r := [8676]Rule{
 		{1, "ac", 1, false},
 		{1, "com.ac", 2, false},
 		{1, "edu.ac", 2, false},
@@ -8034,6 +8034,7 @@ func init() {
 		{1, "vladimir.su", 2, true},
 		{1, "vologda.su", 2, true},
 		{1, "channelsdvr.net", 2, true},
+		{1, "fastly-terrarium.com", 2, true},
 		{1, "fastlylb.net", 2, true},
 		{1, "map.fastlylb.net", 3, true},
 		{1, "freetls.fastly.net", 3, true},
@@ -8053,6 +8054,12 @@ func init() {
 		{1, "app.os.stg.fedoraproject.org", 5, true},
 		{1, "mydobiss.com", 2, true},
 		{1, "filegear.me", 2, true},
+		{1, "filegear-au.me", 2, true},
+		{1, "filegear-de.me", 2, true},
+		{1, "filegear-gb.me", 2, true},
+		{1, "filegear-ie.me", 2, true},
+		{1, "filegear-jp.me", 2, true},
+		{1, "filegear-sg.me", 2, true},
 		{1, "firebaseapp.com", 2, true},
 		{1, "flynnhub.com", 2, true},
 		{1, "flynnhosting.net", 2, true},
@@ -8179,6 +8186,16 @@ func init() {
 		{1, "ravendb.run", 2, true},
 		{1, "moonscale.net", 2, true},
 		{1, "iki.fi", 2, true},
+		{1, "dyn-berlin.de", 2, true},
+		{1, "in-berlin.de", 2, true},
+		{1, "in-brb.de", 2, true},
+		{1, "in-butter.de", 2, true},
+		{1, "in-dsl.de", 2, true},
+		{1, "in-dsl.net", 2, true},
+		{1, "in-dsl.org", 2, true},
+		{1, "in-vpn.de", 2, true},
+		{1, "in-vpn.net", 2, true},
+		{1, "in-vpn.org", 2, true},
 		{1, "biz.at", 2, true},
 		{1, "info.at", 2, true},
 		{1, "info.cx", 2, true},
@@ -8231,6 +8248,13 @@ func init() {
 		{1, "leadpages.co", 2, true},
 		{1, "lpages.co", 2, true},
 		{1, "lpusercontent.com", 2, true},
+		{1, "co.business", 2, true},
+		{1, "co.education", 2, true},
+		{1, "co.events", 2, true},
+		{1, "co.financial", 2, true},
+		{1, "co.network", 2, true},
+		{1, "co.place", 2, true},
+		{1, "co.technology", 2, true},
 		{1, "app.lmpm.com", 3, true},
 		{1, "linkitools.space", 2, true},
 		{1, "linkyard.cloud", 2, true},
@@ -8547,9 +8571,12 @@ func init() {
 		{2, "stolos.io", 3, true},
 		{1, "spacekit.io", 2, true},
 		{1, "customer.speedpartner.de", 3, true},
+		{1, "api.stdlib.com", 3, true},
 		{1, "storj.farm", 2, true},
 		{1, "utwente.io", 2, true},
 		{1, "temp-dns.com", 2, true},
+		{1, "applicationcloud.io", 2, true},
+		{1, "scapp.io", 2, true},
 		{1, "diskstation.me", 2, true},
 		{1, "dscloud.biz", 2, true},
 		{1, "dscloud.me", 2, true},
@@ -8654,6 +8681,7 @@ func init() {
 		{1, "za.net", 2, true},
 		{1, "za.org", 2, true},
 		{1, "now.sh", 2, true},
+		{1, "bss.design", 2, true},
 		{1, "zone.id", 2, true},
 	}
 	for i := range r {
