@@ -3,10 +3,10 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version 5d3dfd (Tue Feb  5 11:27:35 2019)"
+const defaultListVersion = "PSL version 0e2a40 (Thu Feb 21 09:23:55 2019)"
 
 func init() {
-	r := [8676]Rule{
+	r := [8671]Rule{
 		{1, "ac", 1, false},
 		{1, "com.ac", 2, false},
 		{1, "edu.ac", 2, false},
@@ -6151,7 +6151,6 @@ func init() {
 		{1, "accountant", 1, false},
 		{1, "accountants", 1, false},
 		{1, "aco", 1, false},
-		{1, "active", 1, false},
 		{1, "actor", 1, false},
 		{1, "adac", 1, false},
 		{1, "ads", 1, false},
@@ -6252,7 +6251,6 @@ func init() {
 		{1, "bio", 1, false},
 		{1, "black", 1, false},
 		{1, "blackfriday", 1, false},
-		{1, "blanco", 1, false},
 		{1, "blockbuster", 1, false},
 		{1, "blog", 1, false},
 		{1, "bloomberg", 1, false},
@@ -6456,7 +6454,6 @@ func init() {
 		{1, "engineer", 1, false},
 		{1, "engineering", 1, false},
 		{1, "enterprises", 1, false},
-		{1, "epost", 1, false},
 		{1, "epson", 1, false},
 		{1, "equipment", 1, false},
 		{1, "ericsson", 1, false},
@@ -7064,7 +7061,6 @@ func init() {
 		{1, "sony", 1, false},
 		{1, "soy", 1, false},
 		{1, "space", 1, false},
-		{1, "spiegel", 1, false},
 		{1, "sport", 1, false},
 		{1, "spot", 1, false},
 		{1, "spreadbetting", 1, false},
@@ -7343,7 +7339,6 @@ func init() {
 		{1, "zara", 1, false},
 		{1, "zero", 1, false},
 		{1, "zip", 1, false},
-		{1, "zippo", 1, false},
 		{1, "zone", 1, false},
 		{1, "zuerich", 1, false},
 		{1, "cc.ua", 2, true},
