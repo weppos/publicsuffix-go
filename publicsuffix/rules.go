@@ -3,10 +3,10 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version e2e4e0 (Thu Mar 28 17:38:33 2019)"
+const defaultListVersion = "PSL version 826d76 (Fri Mar 29 07:56:08 2019)"
 
 func init() {
-	r := [8678]Rule{
+	r := [8682]Rule{
 		{1, "ac", 1, false},
 		{1, "com.ac", 2, false},
 		{1, "edu.ac", 2, false},
@@ -7499,6 +7499,7 @@ func init() {
 		{1, "c.la", 2, true},
 		{1, "certmgr.org", 2, true},
 		{1, "xenapponazure.com", 2, true},
+		{1, "discourse.group", 2, true},
 		{1, "virtueeldomein.nl", 2, true},
 		{1, "cleverapps.io", 2, true},
 		{1, "c66.me", 2, true},
@@ -8525,6 +8526,8 @@ func init() {
 		{1, "vaporcloud.io", 2, true},
 		{1, "rackmaze.com", 2, true},
 		{1, "rackmaze.net", 2, true},
+		{2, "on-rancher.cloud", 3, true},
+		{2, "on-rio.io", 3, true},
 		{1, "readthedocs.io", 2, true},
 		{1, "rhcloud.com", 2, true},
 		{1, "resindevice.io", 2, true},
@@ -8578,6 +8581,7 @@ func init() {
 		{1, "temp-dns.com", 2, true},
 		{1, "applicationcloud.io", 2, true},
 		{1, "scapp.io", 2, true},
+		{1, "syncloud.it", 2, true},
 		{1, "diskstation.me", 2, true},
 		{1, "dscloud.biz", 2, true},
 		{1, "dscloud.me", 2, true},
