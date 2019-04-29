@@ -33,12 +33,17 @@ package publicsuffix
 
 const defaultListVersion = "PSL version {{.VersionSHA}} ({{.VersionDate}})"
 
+func DefaultRules() [{{len .Rules}}]Rule {
+	return r
+}
+
+var r = [{{len .Rules}}]Rule{
+	{{range $r := .Rules}} \
+	{ {{$r.Type}}, "{{$r.Value}}", {{$r.Length}}, {{$r.Private}} },
+	{{end}}
+}
+
 func init() {
-	r := [{{len .Rules}}]Rule{
-		{{range $r := .Rules}} \
-		{ {{$r.Type}}, "{{$r.Value}}", {{$r.Length}}, {{$r.Private}} },
-		{{end}}
-	}
 	for i := range r {
 		DefaultList.AddRule(&r[i])
 	}
