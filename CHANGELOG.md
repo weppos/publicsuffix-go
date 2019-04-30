@@ -1,5 +1,11 @@
 # CHANGELOG
 
+
+#### master
+
+- FIXED: Add a DefaultRules() function that can be used to create a new list without modifying the default one (GH-141, GH-170). Thanks @guliyevemil1
+
+
 #### 0.4.0
 
 - CHANGED: gen tool now uses GitHub API instead of scraping GitHub UI (GH-93).
