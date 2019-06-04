@@ -3,7 +3,9 @@
 
 #### master
 
-- FIXED: Add a DefaultRules() function that can be used to create a new list without modifying the default one (GH-141, GH-170). Thanks @guliyevemil1
+- FIXED: Added a DefaultRules() function that can be used to create a new list without modifying the default one (GH-141, GH-170). Thanks @guliyevemil1
+
+- FIXED: Fixed nil pointer dereference when can't find a rule (GH-16) 
 
 - CHANGED: Removed unreachable code (GH-167)
 

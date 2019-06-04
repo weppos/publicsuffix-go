@@ -214,7 +214,7 @@ func (l *List) Find(name string, options *FindOptions) *Rule {
 
 		part = part[i+1:]
 	}
-	
+
 }
 
 // NewRule parses the rule content, creates and returns a Rule.
@@ -450,6 +450,10 @@ func ParseFromListWithOptions(l *List, name string, options *FindOptions) (*Doma
 	}
 
 	r := l.Find(n, options)
+	if r == nil {
+		return nil, fmt.Errorf("no rule matching name %s", name)
+	}
+
 	parts := r.Decompose(n)
 	left, tld := parts[0], parts[1]
 	if tld == "" {

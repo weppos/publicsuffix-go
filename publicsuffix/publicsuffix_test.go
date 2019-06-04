@@ -76,7 +76,7 @@ xn--l1acc
 
 	list, err := NewListFromString(src, nil)
 	if err != nil {
-		t.Fatalf("Parse returned an error: %v", err)
+		t.Fatalf("Parse returned error: %v", err)
 	}
 
 	if want, got := 2, list.Size(); want != got {
@@ -107,7 +107,7 @@ xn--l1acc
 
 	list, err := NewListFromString(src, &ParserOption{ASCIIEncoded: true})
 	if err != nil {
-		t.Fatalf("Parse returned an error: %v", err)
+		t.Fatalf("Parse returned error: %v", err)
 	}
 
 	if want, got := 2, list.Size(); want != got {
@@ -425,6 +425,59 @@ func TestLabels(t *testing.T) {
 	}
 }
 
+func TestParseFromListWithOptions_RuleFound(t *testing.T) {
+	list := NewList()
+	rule := MustNewRule("com")
+	_ = list.AddRule(rule)
+
+	input := "foobar.com"
+
+	got, err := ParseFromListWithOptions(list, "foobar.com", &FindOptions{IgnorePrivate: true})
+	if err != nil {
+		t.Fatalf("ParseFromListWithOptions(%v) error: %v", input, err)
+	}
+
+	want := &DomainName{TLD: "com", SLD: "foobar", Rule: rule}
+	if !reflect.DeepEqual(want, got) {
+		t.Errorf("ParseFromListWithOptions(%v) = %v, want %v", input, got, want)
+	}
+}
+
+func TestParseFromListWithOptions_RuleNotFoundDefaultNil(t *testing.T) {
+	list := NewList()
+	rule := MustNewRule("com")
+	_ = list.AddRule(rule)
+
+	input := "foobar.localdomain"
+
+	_, err := ParseFromListWithOptions(list, "foobar.localdomain", &FindOptions{IgnorePrivate: true})
+	if err == nil {
+		t.Fatalf("ParseFromListWithOptions(%v) should have returned error", input)
+	}
+
+	if want := "no rule matching name foobar.localdomain"; err.Error() != want {
+		t.Errorf("Error expected to be %v, got %v", want, err)
+	}
+}
+
+func TestParseFromListWithOptions_RuleNotFoundDefaultRule(t *testing.T) {
+	list := NewList()
+	rule := MustNewRule("com")
+	_ = list.AddRule(rule)
+
+	input := "foobar.localdomain"
+
+	got, err := ParseFromListWithOptions(list, "foobar.localdomain", &FindOptions{IgnorePrivate: true, DefaultRule: DefaultRule})
+	if err != nil {
+		t.Fatalf("ParseFromListWithOptions(%v) error: %v", input, err)
+	}
+
+	want := &DomainName{TLD: "localdomain", SLD: "foobar", Rule: DefaultRule}
+	if !reflect.DeepEqual(want, got) {
+		t.Errorf("ParseFromListWithOptions(%v) = %v, want %v", input, got, want)
+	}
+}
+
 func TestToASCII(t *testing.T) {
 	testCases := []string{
 		"example.com",
@@ -465,14 +518,14 @@ func TestCookieJarList(t *testing.T) {
 }
 
 var benchmarkTestCases = map[string]string{
-	"example.com":                         "example.com",
-	"example.id.au":                       "example.id.au",
-	"www.ck":                              "www.ck",
-	"foo.bar.xn--55qx5d.cn":               "bar.xn--55qx5d.cn",
-	"a.b.c.minami.fukuoka.jp":             "c.minami.fukuoka.jp",
-	"posts-and-telecommunications.museum": "",
-	"www.example.pvt.k12.ma.us":           "example.pvt.k12.ma.us",
-	"many.lol":                            "many.lol",
+	"example.com":                            "example.com",
+	"example.id.au":                          "example.id.au",
+	"www.ck":                                 "www.ck",
+	"foo.bar.xn--55qx5d.cn":                  "bar.xn--55qx5d.cn",
+	"a.b.c.minami.fukuoka.jp":                "c.minami.fukuoka.jp",
+	"posts-and-telecommunications.museum":    "",
+	"www.example.pvt.k12.ma.us":              "example.pvt.k12.ma.us",
+	"many.lol":                               "many.lol",
 	"the.russian.for.moscow.is.xn--80adxhks": "is.xn--80adxhks",
 	"blah.blah.s3-us-west-1.amazonaws.com":   "blah.s3-us-west-1.amazonaws.com",
 	"thing.dyndns.org":                       "thing.dyndns.org",
