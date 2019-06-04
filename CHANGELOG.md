@@ -1,7 +1,7 @@
 # CHANGELOG
 
 
-#### master
+#### 0.5.0
 
 - FIXED: Added a DefaultRules() function that can be used to create a new list without modifying the default one (GH-141, GH-170). Thanks @guliyevemil1
 
