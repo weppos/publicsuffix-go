@@ -214,8 +214,7 @@ func (l *List) Find(name string, options *FindOptions) *Rule {
 
 		part = part[i+1:]
 	}
-
-	return nil
+	
 }
 
 // NewRule parses the rule content, creates and returns a Rule.
