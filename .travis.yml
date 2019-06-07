@@ -17,5 +17,16 @@ install:
 script:
   - ./test.sh
 
+matrix:
+  include:
+    - go: "1.3"
+      env: NOCONTEXT=1
+    - go: "1.4"
+      env: NOCONTEXT=1
+    - go: "1.5"
+      env: NOCONTEXT=1
+    - go: "1.6"
+      env: NOCONTEXT=1
+
 after_success:
   - bash <(curl -s https://codecov.io/bash)
