@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version 9de806 (Tue Jun 25 10:35:29 2019)"
+const defaultListVersion = "PSL version a264f0 (Mon Jul  1 18:44:30 2019)"
 
-func DefaultRules() [8769]Rule {
+func DefaultRules() [8778]Rule {
 	return r
 }
 
-var r = [8769]Rule{
+var r = [8778]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -7527,6 +7527,7 @@ var r = [8769]Rule{
 	{1, "cloudcontrolled.com", 2, true},
 	{1, "cloudcontrolapp.com", 2, true},
 	{1, "cloudera.site", 2, true},
+	{1, "trycloudflare.com", 2, true},
 	{1, "workers.dev", 2, true},
 	{1, "wnext.app", 2, true},
 	{1, "co.ca", 2, true},
@@ -8205,6 +8206,8 @@ var r = [8769]Rule{
 	{1, "caa.li", 2, true},
 	{1, "ua.rs", 2, true},
 	{1, "conf.se", 2, true},
+	{1, "hs.zone", 2, true},
+	{1, "hs.run", 2, true},
 	{1, "hashbang.sh", 2, true},
 	{1, "hasura.app", 2, true},
 	{1, "hasura-app.io", 2, true},
@@ -8273,6 +8276,7 @@ var r = [8769]Rule{
 	{1, "ipifony.net", 2, true},
 	{1, "mein-iserv.de", 2, true},
 	{1, "test-iserv.de", 2, true},
+	{1, "iserv.dev", 2, true},
 	{1, "iobb.net", 2, true},
 	{1, "myjino.ru", 2, true},
 	{2, "hosting.myjino.ru", 4, true},
@@ -8515,12 +8519,14 @@ var r = [8769]Rule{
 	{1, "nym.by", 2, true},
 	{1, "nym.bz", 2, true},
 	{1, "nom.cl", 2, true},
+	{1, "nym.ec", 2, true},
 	{1, "nom.gd", 2, true},
 	{1, "nom.ge", 2, true},
 	{1, "nom.gl", 2, true},
 	{1, "nym.gr", 2, true},
 	{1, "nom.gt", 2, true},
 	{1, "nym.gy", 2, true},
+	{1, "nym.hk", 2, true},
 	{1, "nom.hn", 2, true},
 	{1, "nym.ie", 2, true},
 	{1, "nom.im", 2, true},
@@ -8588,6 +8594,8 @@ var r = [8769]Rule{
 	{1, "protonet.io", 2, true},
 	{1, "chirurgiens-dentistes-en-france.fr", 2, true},
 	{1, "byen.site", 2, true},
+	{1, "pubtls.org", 2, true},
+	{1, "qualifioapp.com", 2, true},
 	{1, "instantcloud.cn", 2, true},
 	{1, "ras.ru", 2, true},
 	{1, "qa2.com", 2, true},
@@ -8636,6 +8644,7 @@ var r = [8769]Rule{
 	{1, "pp.ua", 2, true},
 	{1, "shiftedit.io", 2, true},
 	{1, "myshopblocks.com", 2, true},
+	{1, "shopitsite.com", 2, true},
 	{1, "mo-siemens.io", 2, true},
 	{1, "1kapp.com", 2, true},
 	{1, "appchizi.com", 2, true},
