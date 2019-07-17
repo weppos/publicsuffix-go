@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version 8acaea (Tue Jul  9 20:31:18 2019)"
+const defaultListVersion = "PSL version 333c03 (Tue Jul 16 18:12:57 2019)"
 
-func DefaultRules() [8781]Rule {
+func DefaultRules() [8787]Rule {
 	return r
 }
 
-var r = [8781]Rule{
+var r = [8787]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -8225,11 +8225,13 @@ var r = [8781]Rule{
 	{1, "bpl.biz", 2, true},
 	{1, "orx.biz", 2, true},
 	{1, "ng.city", 2, true},
-	{1, "ng.ink", 2, true},
 	{1, "biz.gl", 2, true},
+	{1, "ng.ink", 2, true},
 	{1, "col.ng", 2, true},
+	{1, "firm.ng", 2, true},
 	{1, "gen.ng", 2, true},
 	{1, "ltd.ng", 2, true},
+	{1, "ng.school", 2, true},
 	{1, "sch.so", 2, true},
 	{1, "xn--hkkinen-5wa.fi", 2, true},
 	{2, "moonscale.io", 3, true},
@@ -8759,6 +8761,7 @@ var r = [8781]Rule{
 	{1, "v-info.info", 2, true},
 	{1, "voorloper.cloud", 2, true},
 	{1, "wafflecell.com", 2, true},
+	{2, "webhare.dev", 3, true},
 	{1, "wedeploy.io", 2, true},
 	{1, "wedeploy.me", 2, true},
 	{1, "wedeploy.sh", 2, true},
@@ -8771,6 +8774,9 @@ var r = [8781]Rule{
 	{1, "cistron.nl", 2, true},
 	{1, "demon.nl", 2, true},
 	{1, "xs4all.space", 2, true},
+	{1, "yandexcloud.net", 2, true},
+	{1, "storage.yandexcloud.net", 3, true},
+	{1, "website.yandexcloud.net", 3, true},
 	{1, "official.academy", 2, true},
 	{1, "yolasite.com", 2, true},
 	{1, "ybo.faith", 2, true},
