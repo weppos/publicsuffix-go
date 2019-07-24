@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version e8812f (Wed Jul 17 18:54:21 2019)"
+const defaultListVersion = "PSL version 68418a (Tue Jul 23 18:36:14 2019)"
 
-func DefaultRules() [8788]Rule {
+func DefaultRules() [8789]Rule {
 	return r
 }
 
-var r = [8788]Rule{
+var r = [8789]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -6118,6 +6118,7 @@ var r = [8788]Rule{
 	{1, "mil.za", 2, false},
 	{1, "net.za", 2, false},
 	{1, "ngo.za", 2, false},
+	{1, "nic.za", 2, false},
 	{1, "nis.za", 2, false},
 	{1, "nom.za", 2, false},
 	{1, "org.za", 2, false},
@@ -8643,8 +8644,6 @@ var r = [8788]Rule{
 	{1, "my-firewall.org", 2, true},
 	{1, "myfirewall.org", 2, true},
 	{1, "spdns.org", 2, true},
-	{2, "s5y.io", 3, true},
-	{2, "sensiosite.cloud", 3, true},
 	{1, "biz.ua", 2, true},
 	{1, "co.ua", 2, true},
 	{1, "pp.ua", 2, true},
@@ -8677,6 +8676,8 @@ var r = [8788]Rule{
 	{1, "temp-dns.com", 2, true},
 	{1, "applicationcloud.io", 2, true},
 	{1, "scapp.io", 2, true},
+	{2, "s5y.io", 3, true},
+	{2, "sensiosite.cloud", 3, true},
 	{1, "syncloud.it", 2, true},
 	{1, "diskstation.me", 2, true},
 	{1, "dscloud.biz", 2, true},
