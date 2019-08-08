@@ -1,10 +1,11 @@
 language: go
 
 go:
-  - "1.7"
   - "1.8"
   - "1.9"
   - "1.10"
+  - "1.11"
+  - "1.12"
   - tip
 
 install:
@@ -12,21 +13,6 @@ install:
 
 script:
   - ./test.sh
-
-matrix:
-  include:
-    - go: "1.3"
-      env: NOCONTEXT=1
-      install: go get ./publicsuffix
-    - go: "1.4"
-      env: NOCONTEXT=1
-      install: go get ./publicsuffix
-    - go: "1.5"
-      env: NOCONTEXT=1
-      install: go get ./publicsuffix
-    - go: "1.6"
-      env: NOCONTEXT=1
-      install: go get ./publicsuffix
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
