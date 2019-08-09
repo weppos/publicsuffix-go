@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version 38eb4c (Tue Aug  6 10:07:20 2019)"
+const defaultListVersion = "PSL version 9d0fbe (Thu Aug  8 18:41:53 2019)"
 
-func DefaultRules() [8791]Rule {
+func DefaultRules() [8787]Rule {
 	return r
 }
 
-var r = [8791]Rule{
+var r = [8787]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -6266,7 +6266,6 @@ var r = [8791]Rule{
 	{1, "blue", 1, false},
 	{1, "bms", 1, false},
 	{1, "bmw", 1, false},
-	{1, "bnl", 1, false},
 	{1, "bnpparibas", 1, false},
 	{1, "boats", 1, false},
 	{1, "boehringer", 1, false},
@@ -6618,7 +6617,6 @@ var r = [8791]Rule{
 	{1, "homes", 1, false},
 	{1, "homesense", 1, false},
 	{1, "honda", 1, false},
-	{1, "honeywell", 1, false},
 	{1, "horse", 1, false},
 	{1, "hospital", 1, false},
 	{1, "host", 1, false},
@@ -6658,7 +6656,6 @@ var r = [8791]Rule{
 	{1, "investments", 1, false},
 	{1, "ipiranga", 1, false},
 	{1, "irish", 1, false},
-	{1, "iselect", 1, false},
 	{1, "ismaili", 1, false},
 	{1, "ist", 1, false},
 	{1, "istanbul", 1, false},
@@ -7079,7 +7076,6 @@ var r = [8791]Rule{
 	{1, "stada", 1, false},
 	{1, "staples", 1, false},
 	{1, "star", 1, false},
-	{1, "starhub", 1, false},
 	{1, "statebank", 1, false},
 	{1, "statefarm", 1, false},
 	{1, "stc", 1, false},
