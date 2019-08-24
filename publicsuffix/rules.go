@@ -3,7 +3,7 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version 9d0fbe (Thu Aug  8 18:41:53 2019)"
+const defaultListVersion = "PSL version 5f6654 (Fri Aug 23 16:59:24 2019)"
 
 func DefaultRules() [8787]Rule {
 	return r
