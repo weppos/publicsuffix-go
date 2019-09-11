@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version 4912bd (Wed Sep  4 18:02:56 2019)"
+const defaultListVersion = "PSL version cc7eb7 (Tue Sep 10 16:45:48 2019)"
 
-func DefaultRules() [8787]Rule {
+func DefaultRules() [8785]Rule {
 	return r
 }
 
-var r = [8787]Rule{
+var r = [8785]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -6799,7 +6799,6 @@ var r = [8787]Rule{
 	{1, "mls", 1, false},
 	{1, "mma", 1, false},
 	{1, "mobile", 1, false},
-	{1, "mobily", 1, false},
 	{1, "moda", 1, false},
 	{1, "moe", 1, false},
 	{1, "moi", 1, false},
@@ -7297,7 +7296,6 @@ var r = [8787]Rule{
 	{1, "xn--mgba7c0bbn0a", 1, false},
 	{1, "xn--mgbaakc7dvf", 1, false},
 	{1, "xn--mgbab2bd", 1, false},
-	{1, "xn--mgbb9fbpob", 1, false},
 	{1, "xn--mgbca7dzdo", 1, false},
 	{1, "xn--mgbi4ecexp", 1, false},
 	{1, "xn--mgbt3dhd", 1, false},
