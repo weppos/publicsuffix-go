@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version cc7eb7 (Tue Sep 10 16:45:48 2019)"
+const defaultListVersion = "PSL version f649e6 (Thu Sep 19 18:08:53 2019)"
 
-func DefaultRules() [8785]Rule {
+func DefaultRules() [8788]Rule {
 	return r
 }
 
-var r = [8785]Rule{
+var r = [8788]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -6034,6 +6034,7 @@ var r = [8785]Rule{
 	{1, "xn--lgbbat1ad8j", 1, false},
 	{1, "xn--wgbh1c", 1, false},
 	{1, "xn--e1a4c", 1, false},
+	{1, "xn--mgbah1a3hjkrd", 1, false},
 	{1, "xn--node", 1, false},
 	{1, "xn--qxam", 1, false},
 	{1, "xn--j6w193g", 1, false},
@@ -7352,6 +7353,7 @@ var r = [8785]Rule{
 	{1, "barsy.ca", 2, true},
 	{2, "compute.estate", 3, true},
 	{2, "alces.network", 3, true},
+	{1, "altervista.org", 2, true},
 	{1, "alwaysdata.net", 2, true},
 	{1, "cloudfront.net", 2, true},
 	{2, "compute.amazonaws.com", 4, true},
@@ -8107,6 +8109,7 @@ var r = [8785]Rule{
 	{1, "githubusercontent.com", 2, true},
 	{1, "gitlab.io", 2, true},
 	{1, "glitch.me", 2, true},
+	{1, "lolipop.io", 2, true},
 	{1, "cloudapps.digital", 2, true},
 	{1, "london.cloudapps.digital", 3, true},
 	{1, "homeoffice.gov.uk", 3, true},
