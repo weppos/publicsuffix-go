@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version 2c6878 (Fri Nov 15 23:25:27 2019)"
+const defaultListVersion = "PSL version f02e4c (Wed Nov 20 17:45:42 2019)"
 
-func DefaultRules() [8794]Rule {
+func DefaultRules() [8787]Rule {
 	return r
 }
 
-var r = [8794]Rule{
+var r = [8787]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -6352,7 +6352,6 @@ var r = [8794]Rule{
 	{1, "chintai", 1, false},
 	{1, "christmas", 1, false},
 	{1, "chrome", 1, false},
-	{1, "chrysler", 1, false},
 	{1, "church", 1, false},
 	{1, "cipriani", 1, false},
 	{1, "circle", 1, false},
@@ -6446,7 +6445,6 @@ var r = [8794]Rule{
 	{1, "dnp", 1, false},
 	{1, "docs", 1, false},
 	{1, "doctor", 1, false},
-	{1, "dodge", 1, false},
 	{1, "dog", 1, false},
 	{1, "domains", 1, false},
 	{1, "dot", 1, false},
@@ -6710,7 +6708,6 @@ var r = [8794]Rule{
 	{1, "kuokgroup", 1, false},
 	{1, "kyoto", 1, false},
 	{1, "lacaixa", 1, false},
-	{1, "ladbrokes", 1, false},
 	{1, "lamborghini", 1, false},
 	{1, "lamer", 1, false},
 	{1, "lancaster", 1, false},
@@ -6815,7 +6812,6 @@ var r = [8794]Rule{
 	{1, "monash", 1, false},
 	{1, "money", 1, false},
 	{1, "monster", 1, false},
-	{1, "mopar", 1, false},
 	{1, "mormon", 1, false},
 	{1, "mortgage", 1, false},
 	{1, "moscow", 1, false},
@@ -7080,7 +7076,6 @@ var r = [8794]Rule{
 	{1, "spot", 1, false},
 	{1, "spreadbetting", 1, false},
 	{1, "srl", 1, false},
-	{1, "srt", 1, false},
 	{1, "stada", 1, false},
 	{1, "staples", 1, false},
 	{1, "star", 1, false},
@@ -7168,7 +7163,6 @@ var r = [8794]Rule{
 	{1, "tvs", 1, false},
 	{1, "ubank", 1, false},
 	{1, "ubs", 1, false},
-	{1, "uconnect", 1, false},
 	{1, "unicom", 1, false},
 	{1, "university", 1, false},
 	{1, "uno", 1, false},
@@ -7209,7 +7203,6 @@ var r = [8794]Rule{
 	{1, "walter", 1, false},
 	{1, "wang", 1, false},
 	{1, "wanggou", 1, false},
-	{1, "warman", 1, false},
 	{1, "watch", 1, false},
 	{1, "watches", 1, false},
 	{1, "weather", 1, false},
