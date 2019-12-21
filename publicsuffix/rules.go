@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version 8bd045 (Wed Dec 11 17:31:32 2019)"
+const defaultListVersion = "PSL version f37ead (Fri Dec 20 18:16:07 2019)"
 
-func DefaultRules() [8810]Rule {
+func DefaultRules() [8813]Rule {
 	return r
 }
 
-var r = [8810]Rule{
+var r = [8813]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -6190,6 +6190,7 @@ var r = [8810]Rule{
 	{1, "ally", 1, false},
 	{1, "alsace", 1, false},
 	{1, "alstom", 1, false},
+	{1, "amazon", 1, false},
 	{1, "americanexpress", 1, false},
 	{1, "americanfamily", 1, false},
 	{1, "amex", 1, false},
@@ -7259,6 +7260,7 @@ var r = [8810]Rule{
 	{1, "xn--c1avg", 1, false},
 	{1, "xn--c2br7g", 1, false},
 	{1, "xn--cck2b3b", 1, false},
+	{1, "xn--cckwcxetd", 1, false},
 	{1, "xn--cg4bki", 1, false},
 	{1, "xn--czr694b", 1, false},
 	{1, "xn--czrs0t", 1, false},
@@ -7282,6 +7284,7 @@ var r = [8810]Rule{
 	{1, "xn--imr513n", 1, false},
 	{1, "xn--io0a7i", 1, false},
 	{1, "xn--j1aef", 1, false},
+	{1, "xn--jlq480n2rg", 1, false},
 	{1, "xn--jlq61u9w7b", 1, false},
 	{1, "xn--jvr189m", 1, false},
 	{1, "xn--kcrx77d1x4a", 1, false},
