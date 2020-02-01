@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version d73f42 (Mon Jan  6 17:35:45 2020)"
+const defaultListVersion = "PSL version c5245c (Fri Jan 31 20:39:54 2020)"
 
-func DefaultRules() [8809]Rule {
+func DefaultRules() [8818]Rule {
 	return r
 }
 
-var r = [8809]Rule{
+var r = [8818]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -7508,6 +7508,7 @@ var r = [8809]Rule{
 	{1, "certmgr.org", 2, true},
 	{1, "xenapponazure.com", 2, true},
 	{1, "discourse.group", 2, true},
+	{1, "discourse.team", 2, true},
 	{1, "virtueeldomein.nl", 2, true},
 	{1, "cleverapps.io", 2, true},
 	{2, "lcl.dev", 3, true},
@@ -8064,6 +8065,7 @@ var r = [8809]Rule{
 	{1, "vladimir.su", 2, true},
 	{1, "vologda.su", 2, true},
 	{1, "channelsdvr.net", 2, true},
+	{1, "u.channelsdvr.net", 3, true},
 	{1, "fastly-terrarium.com", 2, true},
 	{1, "fastlylb.net", 2, true},
 	{1, "map.fastlylb.net", 3, true},
@@ -8618,6 +8620,7 @@ var r = [8809]Rule{
 	{1, "byen.site", 2, true},
 	{1, "pubtls.org", 2, true},
 	{1, "qualifioapp.com", 2, true},
+	{1, "qbuser.com", 2, true},
 	{1, "instantcloud.cn", 2, true},
 	{1, "ras.ru", 2, true},
 	{1, "qa2.com", 2, true},
@@ -8663,6 +8666,7 @@ var r = [8809]Rule{
 	{1, "my-firewall.org", 2, true},
 	{1, "myfirewall.org", 2, true},
 	{1, "spdns.org", 2, true},
+	{1, "senseering.net", 2, true},
 	{1, "biz.ua", 2, true},
 	{1, "co.ua", 2, true},
 	{1, "pp.ua", 2, true},
@@ -8790,6 +8794,11 @@ var r = [8809]Rule{
 	{1, "wedeploy.sh", 2, true},
 	{1, "remotewd.com", 2, true},
 	{1, "wmflabs.org", 2, true},
+	{1, "myforum.community", 2, true},
+	{1, "community-pro.de", 2, true},
+	{1, "diskussionsbereich.de", 2, true},
+	{1, "community-pro.net", 2, true},
+	{1, "meinforum.net", 2, true},
 	{1, "half.host", 2, true},
 	{1, "xnbay.com", 2, true},
 	{1, "u2.xnbay.com", 3, true},
