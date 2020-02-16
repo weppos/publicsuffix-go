@@ -1,7 +1,5 @@
 name: Tests
 on: [push, pull_request]
-env:
-  GO111MODULE: on
 
 jobs:
 
@@ -9,34 +7,48 @@ jobs:
     name: Build
     strategy:
       matrix:
-        go-version: [1.8, 1.13]
-        platform: [ubuntu-latest, windows-latest]
+        go-version:
+          - "1.8"
+          - "1.9"
+          - "1.10"
+          - "1.11"
+          - "1.12"
+          - "1.13"
+        platform: [ubuntu-latest]
     runs-on: ${{ matrix.platform }}
+    env:
+      GO111MODULE: on
     steps:
+
+    - name: Setup env
+      run: |
+        echo "::set-env name=GOPATH::$GITHUB_WORKSPACE"
+        echo "::set-env name=CURRENT_WORKSPACE::$GITHUB_WORKSPACE/src/github.com/${{ github.repository }}"
+        echo "::add-path::$GITHUB_WORKSPACE/bin"
 
     - name: Set up Go
       uses: actions/setup-go@v1
       with:
         go-version: ${{ matrix.go-version }}
-      id: go
 
     - name: Check out code into the Go module directory
       uses: actions/checkout@v2
+      with:
+        path: ${{ env.CURRENT_WORKSPACE }}
 
     - name: Get dependencies
-      run: go get -v -t -d ./...
+      run: go get -v ./...
+      working-directory: ${{ env.CURRENT_WORKSPACE }}
 
-    - name: List packages
-      run: go list ./...
+    - name: Run go vet
+      run: go vet ./...
+      working-directory: ${{ env.CURRENT_WORKSPACE }}
 
     - name: Run tests
-      run: |
-        echo "" > coverage.txt
+      run: ./test.sh
+      working-directory: ${{ env.CURRENT_WORKSPACE }}
 
-        for d in $(go list ./... | grep -v vendor); do
-            go test -v -race -coverprofile profile.out -covermode atomic "$d"
-            if [ -f profile.out ]; then
-                cat profile.out >> coverage.txt
-                rm profile.out
-            fi
-        done
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v1
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
