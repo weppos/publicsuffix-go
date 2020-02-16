@@ -22,8 +22,11 @@ const (
 	// tends to be fetched directly from the repo.
 	Version = "0.10.0"
 
-	NormalType    = 1
-	WildcardType  = 2
+	// NormalType represents a normal rule such as "com"
+	NormalType = 1
+	// WildcardType represents a wildcard rule such as "*.com"
+	WildcardType = 2
+	// ExceptionType represents an exception to a wildard rule
 	ExceptionType = 3
 
 	listTokenPrivateDomains = "===BEGIN PRIVATE DOMAINS==="
