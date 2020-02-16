@@ -28,7 +28,7 @@ jobs:
     - name: Check out code into the Go module directory
       uses: actions/checkout@v2
       with:
-        path: /home/runner/work/publicsuffix-go/publicsuffix-go/src/github.com/${{ github.repository }}
+        path: ${{ env.GOPATH }}/src/github.com/${{ github.repository }}
 
     - name: Debug
       run: |
