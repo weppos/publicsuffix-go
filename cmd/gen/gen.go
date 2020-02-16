@@ -7,7 +7,7 @@
 package main
 
 import (
-	"github.com/weppos/publicsuffix-go/publicsuffix/generator"
+	"github.com/weppos/publicsuffix-go/generator"
 )
 
 const (
