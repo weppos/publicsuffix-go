@@ -17,7 +17,7 @@ import (
 	"text/template"
 	"time"
 
-	"github.com/google/go-github/github/v28"
+	"github.com/google/go-github/v28/github"
 	"github.com/weppos/publicsuffix-go/publicsuffix"
 )
 
