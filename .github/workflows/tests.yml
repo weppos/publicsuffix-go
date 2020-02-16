@@ -26,24 +26,5 @@ jobs:
     - name: Get dependencies
       run: go get -v -t -d ./...
 
-    - name: Debug
-      run: |
-        pwd
-        echo ${HOME}
-        echo ${GITHUB_WORKSPACE}
-        echo ${GOPATH}
-        echo ${GOROOT}
-
     - name: Run tests
-      run: |
-        echo pwd
-        cd $GITHUB_WORKSPACE
-        echo "" > coverage.txt
-
-        for d in $(go list ./... | grep -v vendor); do
-            go test -v -race -coverprofile profile.out -covermode atomic "$d"
-            if [ -f profile.out ]; then
-                cat profile.out >> coverage.txt
-                rm profile.out
-            fi
-        done
+      run: go test -v -race -coverprofile coverage.txt -covermode atomic ./...
