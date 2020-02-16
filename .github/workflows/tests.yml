@@ -2,7 +2,6 @@ name: Tests
 on: [push, pull_request]
 env:
   GO111MODULE: on
-  GOPATH: $HOME
 
 jobs:
 
@@ -28,7 +27,7 @@ jobs:
       run: go get -v -t -d ./...
 
     - name: List packages
-      run: go list ./...
+      run: go list -f '{{.Dir}}' ./...
 
     - name: Run tests
       run: |
