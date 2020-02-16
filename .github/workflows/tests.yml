@@ -39,7 +39,11 @@ jobs:
         echo ${GOROOT}
 
     - name: Get dependencies
-      run: go get -v ./...
+      run: |
+        cd ${GITHUB_WORKSPACE}/src/github.com/${{ github.repository }}
+        go get -v ./...
 
     - name: Run tests
-      run: go test -v -race -coverprofile coverage.txt -covermode atomic ./...
+      run: |
+        cd cd ${GITHUB_WORKSPACE}/src/github.com/${{ github.repository }}
+        go test -v  ./...
