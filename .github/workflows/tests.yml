@@ -31,9 +31,12 @@ jobs:
         path: ${{ env.CURRENT_WORKSPACE }}
 
     - name: Get dependencies
-      run: |
-        cd ${CURRENT_WORKSPACE}
-        go get -v ./...
+      run: go get -v ./...
+      working-directory: ${CURRENT_WORKSPACE}
+
+    - name: Run go vet
+      run: go vet ./...
+      working-directory: ${CURRENT_WORKSPACE}
 
     - name: Run tests
       run: |
