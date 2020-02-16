@@ -14,17 +14,32 @@ jobs:
     runs-on: ${{ matrix.platform }}
     steps:
 
+    - name: setup env
+      run: |
+        echo "::set-env name=GOPATH::$(dirname $GITHUB_WORKSPACE)"
+        echo "::add-path::$(dirname $GITHUB_WORKSPACE)/bin"
+      shell: bash
+
     - name: Set up Go
-      uses: actions/setup-go@v2-beta
+      uses: actions/setup-go@v1
       with:
         go-version: ${{ matrix.go-version }}
       id: go
 
     - name: Check out code into the Go module directory
       uses: actions/checkout@v2
+      with:
+        ref: B8
+        path: src/github.com/${{ github.repository }}
 
     - name: Get dependencies
       run: go get -v -t -d ./...
+
+    - name: echo env
+      run: |
+        echo $(go env GOPATH)
+        echo $(go env GOROOT)
+        echo $PATH
 
     - name: Debug
       run: |
