@@ -16,8 +16,8 @@ jobs:
 
     - name: Setup env
       run: |
-        echo "::set-env name=GOPATH::$(dirname $GITHUB_WORKSPACE)"
-        echo "::add-path::$(dirname $GITHUB_WORKSPACE)/bin"
+        echo "::set-env name=GOPATH::$($GITHUB_WORKSPACE)"
+        echo "::add-path::$($GITHUB_WORKSPACE)/bin"
 
     - name: Set up Go
       uses: actions/setup-go@v1
@@ -28,7 +28,7 @@ jobs:
     - name: Check out code into the Go module directory
       uses: actions/checkout@v2
       with:
-        path: /home/runner/work/src/github.com/${{ github.repository }}
+        path: ${GITHUB_WORKSPACE}/src/github.com/${{ github.repository }}
 
     - name: Debug
       run: |
