@@ -2,6 +2,7 @@ name: Tests
 on: [push, pull_request]
 env:
   GO111MODULE: on
+  GOPATH: $HOME
 
 jobs:
 
