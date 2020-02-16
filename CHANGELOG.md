@@ -1,8 +1,8 @@
 # CHANGELOG
 
-## master
+## 0.11.0
 
-.
+- CHANGED: Definition updates.
 
 ## 0.10.0
 
