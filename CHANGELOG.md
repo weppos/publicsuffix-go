@@ -1,8 +1,8 @@
 # CHANGELOG
 
-## master
+## 0.14.0
 
-- CHANGED: Added go modules.
+- CHANGED: Added go modules (GH-240).
 
 ## 0.13.0
 
