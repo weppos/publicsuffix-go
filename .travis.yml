@@ -9,6 +9,10 @@ go:
   - "1.13"
   - tip
 
+env:
+  global:
+    - GO111MODULE=on
+
 install:
   - make get-deps
 
