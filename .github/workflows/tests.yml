@@ -28,7 +28,7 @@ jobs:
     - name: Check out code into the Go module directory
       uses: actions/checkout@v2
       with:
-        path: ${GITHUB_WORKSPACE}/src/github.com/${{ github.repository }}
+        path: ${{GITHUB_WORKSPACE}}/src/github.com/${{ github.repository }}
 
     - name: Debug
       run: |
