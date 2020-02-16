@@ -50,6 +50,8 @@ jobs:
 
     - name: Run tests
       run: |
+        echo pwd
+        cd $GITHUB_WORKSPACE
         echo "" > coverage.txt
 
         for d in $(go list ./... | grep -v vendor); do
