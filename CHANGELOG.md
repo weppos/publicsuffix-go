@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 0.12.0
+
+- CHANGED: Extracted generator into its own package.
+
 ## 0.11.0
 
 - CHANGED: Definition updates.
