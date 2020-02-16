@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## master
+
+- CHANGED: Added go modules.
+
 ## 0.13.0
 
 - CHANGED: Rollback changes of v0.12.0. It turns out it is actually causing more issues.
