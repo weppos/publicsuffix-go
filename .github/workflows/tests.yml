@@ -32,11 +32,11 @@ jobs:
 
     - name: Get dependencies
       run: go get -v ./...
-      working-directory: ${CURRENT_WORKSPACE}
+      working-directory: ${{ env.CURRENT_WORKSPACE }}
 
     - name: Run go vet
       run: go vet ./...
-      working-directory: ${CURRENT_WORKSPACE}
+      working-directory: ${{ env.CURRENT_WORKSPACE }}
 
     - name: Run tests
       run: |
