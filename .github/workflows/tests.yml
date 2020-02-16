@@ -45,5 +45,5 @@ jobs:
 
     - name: Run tests
       run: |
-        cd cd ${GITHUB_WORKSPACE}/src/github.com/${{ github.repository }}
+        cd ${GITHUB_WORKSPACE}/src/github.com/${{ github.repository }}
         go test -v  ./...
