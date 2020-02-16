@@ -26,9 +26,13 @@ jobs:
     - name: Get dependencies
       run: go get -v -t -d ./...
 
-    - name: List packages
+    - name: Debug
       run: |
-        go list -f '{{.Root}}' ./...
+        pwd
+        echo ${HOME}
+        echo ${GITHUB_WORKSPACE}
+        echo ${GOPATH}
+        echo ${GOROOT}
 
     - name: Run tests
       run: |
