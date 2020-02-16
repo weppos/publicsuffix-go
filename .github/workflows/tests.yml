@@ -17,6 +17,7 @@ jobs:
     - name: Setup env
       run: |
         echo "::set-env name=GOPATH::$GITHUB_WORKSPACE"
+        echo "::set-env name=CURRENT_WORKSPACE::$GITHUB_WORKSPACE/src/github.com/"
         echo "::add-path::$GITHUB_WORKSPACE/bin"
 
     - name: Set up Go
@@ -35,8 +36,7 @@ jobs:
         pwd
         echo ${HOME}
         echo ${GITHUB_WORKSPACE}
-        echo ${GOPATH}
-        echo ${GOROOT}
+        echo ${CURRENT_WORKSPACE}
 
     - name: Get dependencies
       run: |
