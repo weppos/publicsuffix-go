@@ -4,7 +4,7 @@ The package <tt>publicsuffix</tt> provides a Go domain name parser based on the 
 
 [![GoDoc](https://godoc.org/github.com/weppos/publicsuffix-go/publicsuffix?status.svg)](https://pkg.go.dev/github.com/weppos/publicsuffix-go/publicsuffix)
 [![Build Status](https://travis-ci.com/weppos/publicsuffix-go.svg?branch=master)](https://travis-ci.com/weppos/publicsuffix-go)
-![Tests](https://github.com/weppos/publicsuffix-go/workflows/Tests/badge.svg)
+[![Tests](https://github.com/weppos/publicsuffix-go/workflows/Tests/badge.svg)](https://github.com/weppos/publicsuffix-go/actions?query=workflow%3ATests)
 
 Currently, **publicsuffix-go requires Go version 1.8 or greater**. We do our best not to break older versions of Go if we don't have to, but due to tooling constraints, we don't always test older versions.
 
