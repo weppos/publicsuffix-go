@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version e7c3fe (Sun Mar 29 18:24:02 2020)"
+const defaultListVersion = "PSL version f71184 (Mon Mar 30 09:13:32 2020)"
 
-func DefaultRules() [8830]Rule {
+func DefaultRules() [8832]Rule {
 	return r
 }
 
-var r = [8830]Rule{
+var r = [8832]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -8807,6 +8807,8 @@ var r = [8830]Rule{
 	{1, "wedeploy.sh", 2, true},
 	{1, "remotewd.com", 2, true},
 	{1, "wmflabs.org", 2, true},
+	{1, "toolforge.org", 2, true},
+	{1, "wmcloud.org", 2, true},
 	{1, "myforum.community", 2, true},
 	{1, "community-pro.de", 2, true},
 	{1, "diskussionsbereich.de", 2, true},
