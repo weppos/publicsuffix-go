@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version f71184 (Mon Mar 30 09:13:32 2020)"
+const defaultListVersion = "PSL version 92af72 (Wed Apr  1 11:01:14 2020)"
 
-func DefaultRules() [8832]Rule {
+func DefaultRules() [8831]Rule {
 	return r
 }
 
-var r = [8832]Rule{
+var r = [8831]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -5836,7 +5836,6 @@ var r = [8832]Rule{
 	{1, "k12.or.us", 3, false},
 	{1, "k12.pa.us", 3, false},
 	{1, "k12.pr.us", 3, false},
-	{1, "k12.ri.us", 3, false},
 	{1, "k12.sc.us", 3, false},
 	{1, "k12.tn.us", 3, false},
 	{1, "k12.tx.us", 3, false},
@@ -8395,7 +8394,7 @@ var r = [8832]Rule{
 	{1, "meteorapp.com", 2, true},
 	{1, "eu.meteorapp.com", 3, true},
 	{1, "co.pl", 2, true},
-	{1, "azurecontainer.io", 2, true},
+	{2, "azurecontainer.io", 3, true},
 	{1, "azurewebsites.net", 2, true},
 	{1, "azure-mobile.net", 2, true},
 	{1, "cloudapp.net", 2, true},
