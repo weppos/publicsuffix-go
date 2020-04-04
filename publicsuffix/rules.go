@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version 893f30 (Thu Apr  2 18:51:32 2020)"
+const defaultListVersion = "PSL version 17ca52 (Sat Apr  4 03:29:28 2020)"
 
-func DefaultRules() [8830]Rule {
+func DefaultRules() [8842]Rule {
 	return r
 }
 
-var r = [8830]Rule{
+var r = [8842]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -8085,12 +8085,20 @@ var r = [8830]Rule{
 	{1, "global.ssl.fastly.net", 4, true},
 	{1, "fastpanel.direct", 2, true},
 	{1, "fastvps-server.com", 2, true},
+	{1, "myfast.space", 2, true},
+	{1, "myfast.host", 2, true},
+	{1, "fastvps.site", 2, true},
+	{1, "fastvps.host", 2, true},
 	{1, "fhapp.xyz", 2, true},
 	{1, "fedorainfracloud.org", 2, true},
 	{1, "fedorapeople.org", 2, true},
 	{1, "cloud.fedoraproject.org", 3, true},
 	{1, "app.os.fedoraproject.org", 4, true},
 	{1, "app.os.stg.fedoraproject.org", 5, true},
+	{1, "conn.uk", 2, true},
+	{1, "copro.uk", 2, true},
+	{1, "couk.me", 2, true},
+	{1, "ukco.me", 2, true},
 	{1, "mydobiss.com", 2, true},
 	{1, "filegear.me", 2, true},
 	{1, "filegear-au.me", 2, true},
@@ -8100,7 +8108,6 @@ var r = [8830]Rule{
 	{1, "filegear-jp.me", 2, true},
 	{1, "filegear-sg.me", 2, true},
 	{1, "firebaseapp.com", 2, true},
-	{1, "flynnhub.com", 2, true},
 	{1, "flynnhosting.net", 2, true},
 	{1, "0e.vc", 2, true},
 	{1, "freebox-os.com", 2, true},
@@ -8223,6 +8230,7 @@ var r = [8830]Rule{
 	{1, "publishproxy.com", 2, true},
 	{1, "withgoogle.com", 2, true},
 	{1, "withyoutube.com", 2, true},
+	{1, "graphox.us", 2, true},
 	{1, "awsmppl.com", 2, true},
 	{1, "fin.ci", 2, true},
 	{1, "free.hr", 2, true},
@@ -8618,6 +8626,9 @@ var r = [8830]Rule{
 	{1, "on-web.fr", 2, true},
 	{2, "platform.sh", 3, true},
 	{2, "platformsh.site", 3, true},
+	{1, "platter-app.com", 2, true},
+	{1, "platter-app.dev", 2, true},
+	{1, "platterp.us", 2, true},
 	{1, "dyn53.io", 2, true},
 	{1, "co.bn", 2, true},
 	{1, "xen.prgmr.com", 3, true},
@@ -8696,6 +8707,7 @@ var r = [8830]Rule{
 	{1, "static.land", 2, true},
 	{1, "dev.static.land", 3, true},
 	{1, "sites.static.land", 3, true},
+	{1, "playstation-cloud.com", 2, true},
 	{1, "apps.lair.io", 3, true},
 	{2, "stolos.io", 3, true},
 	{1, "spacekit.io", 2, true},
