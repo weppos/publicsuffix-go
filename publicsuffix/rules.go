@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version 5ef163 (Thu Apr  9 02:50:12 2020)"
+const defaultListVersion = "PSL version ff6fce (Thu Apr  9 16:23:49 2020)"
 
-func DefaultRules() [8844]Rule {
+func DefaultRules() [8850]Rule {
 	return r
 }
 
-var r = [8844]Rule{
+var r = [8850]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -178,6 +178,7 @@ var r = [8844]Rule{
 	{1, "co.at", 2, false},
 	{1, "gv.at", 2, false},
 	{1, "or.at", 2, false},
+	{1, "sth.ac.at", 3, false},
 	{1, "au", 1, false},
 	{1, "com.au", 2, false},
 	{1, "net.au", 2, false},
@@ -7577,6 +7578,7 @@ var r = [8844]Rule{
 	{1, "realm.cz", 2, true},
 	{2, "cryptonomic.net", 3, true},
 	{1, "cupcake.is", 2, true},
+	{1, "curv.dev", 2, true},
 	{2, "customer-oci.com", 3, true},
 	{2, "oci.customer-oci.com", 4, true},
 	{2, "ocp.customer-oci.com", 4, true},
@@ -7596,6 +7598,7 @@ var r = [8844]Rule{
 	{1, "firm.dk", 2, true},
 	{1, "reg.dk", 2, true},
 	{1, "store.dk", 2, true},
+	{1, "dyndns.dappnode.io", 3, true},
 	{2, "dapps.earth", 3, true},
 	{2, "bzz.dapps.earth", 4, true},
 	{1, "builtwithdark.com", 2, true},
@@ -7998,6 +8001,7 @@ var r = [8844]Rule{
 	{1, "twmail.org", 2, true},
 	{1, "mymailer.com.tw", 3, true},
 	{1, "url.tw", 2, true},
+	{1, "onfabrica.com", 2, true},
 	{1, "apps.fbsbx.com", 3, true},
 	{1, "ru.net", 2, true},
 	{1, "adygeya.ru", 2, true},
@@ -8821,6 +8825,8 @@ var r = [8844]Rule{
 	{1, "wmflabs.org", 2, true},
 	{1, "toolforge.org", 2, true},
 	{1, "wmcloud.org", 2, true},
+	{1, "panel.gg", 2, true},
+	{1, "daemon.panel.gg", 3, true},
 	{1, "myforum.community", 2, true},
 	{1, "community-pro.de", 2, true},
 	{1, "diskussionsbereich.de", 2, true},
