@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version c1d5b3 (Wed May  6 16:25:18 2020)"
+const defaultListVersion = "PSL version 3f0251 (Fri May 22 01:58:04 2020)"
 
-func DefaultRules() [8853]Rule {
+func DefaultRules() [8898]Rule {
 	return r
 }
 
-var r = [8853]Rule{
+var r = [8898]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -7615,6 +7615,7 @@ var r = [8853]Rule{
 	{1, "drud.io", 2, true},
 	{1, "drud.us", 2, true},
 	{1, "duckdns.org", 2, true},
+	{1, "bitbridge.net", 2, true},
 	{1, "dy.fi", 2, true},
 	{1, "tunk.org", 2, true},
 	{1, "dyndns-at-home.com", 2, true},
@@ -8113,6 +8114,9 @@ var r = [8853]Rule{
 	{1, "filegear-jp.me", 2, true},
 	{1, "filegear-sg.me", 2, true},
 	{1, "firebaseapp.com", 2, true},
+	{1, "fly.dev", 2, true},
+	{1, "edgeapp.net", 2, true},
+	{1, "shw.io", 2, true},
 	{1, "flynnhosting.net", 2, true},
 	{1, "0e.vc", 2, true},
 	{1, "freebox-os.com", 2, true},
@@ -8354,7 +8358,8 @@ var r = [8853]Rule{
 	{1, "linkyard.cloud", 2, true},
 	{1, "linkyard-cloud.ch", 2, true},
 	{1, "members.linode.com", 3, true},
-	{1, "nodebalancer.linode.com", 3, true},
+	{2, "nodebalancer.linode.com", 4, true},
+	{2, "linodeobjects.com", 3, true},
 	{1, "we.bs", 2, true},
 	{1, "loginline.app", 2, true},
 	{1, "loginline.dev", 2, true},
@@ -8817,6 +8822,46 @@ var r = [8853]Rule{
 	{1, "router.management", 2, true},
 	{1, "v-info.info", 2, true},
 	{1, "voorloper.cloud", 2, true},
+	{1, "neko.am", 2, true},
+	{1, "nyaa.am", 2, true},
+	{1, "be.ax", 2, true},
+	{1, "cat.ax", 2, true},
+	{1, "es.ax", 2, true},
+	{1, "eu.ax", 2, true},
+	{1, "gg.ax", 2, true},
+	{1, "mc.ax", 2, true},
+	{1, "us.ax", 2, true},
+	{1, "xy.ax", 2, true},
+	{1, "nl.ci", 2, true},
+	{1, "xx.gl", 2, true},
+	{1, "app.gp", 2, true},
+	{1, "blog.gt", 2, true},
+	{1, "de.gt", 2, true},
+	{1, "to.gt", 2, true},
+	{1, "be.gy", 2, true},
+	{1, "cc.hn", 2, true},
+	{1, "blog.kg", 2, true},
+	{1, "io.kg", 2, true},
+	{1, "jp.kg", 2, true},
+	{1, "tv.kg", 2, true},
+	{1, "uk.kg", 2, true},
+	{1, "us.kg", 2, true},
+	{1, "de.ls", 2, true},
+	{1, "at.md", 2, true},
+	{1, "de.md", 2, true},
+	{1, "jp.md", 2, true},
+	{1, "to.md", 2, true},
+	{1, "uwu.nu", 2, true},
+	{1, "indie.porn", 2, true},
+	{1, "vxl.sh", 2, true},
+	{1, "ch.tc", 2, true},
+	{1, "me.tc", 2, true},
+	{1, "we.tc", 2, true},
+	{1, "nyan.to", 2, true},
+	{1, "at.vg", 2, true},
+	{1, "blog.vu", 2, true},
+	{1, "dev.vu", 2, true},
+	{1, "me.vu", 2, true},
 	{1, "v.ua", 2, true},
 	{1, "wafflecell.com", 2, true},
 	{2, "webhare.dev", 3, true},
