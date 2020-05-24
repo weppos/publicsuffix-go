@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version 3f0251 (Fri May 22 01:58:04 2020)"
+const defaultListVersion = "PSL version 2b1ef1 (Fri May 22 16:21:02 2020)"
 
-func DefaultRules() [8898]Rule {
+func DefaultRules() [8907]Rule {
 	return r
 }
 
-var r = [8898]Rule{
+var r = [8907]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -7350,6 +7350,7 @@ var r = [8898]Rule{
 	{1, "cc.ua", 2, true},
 	{1, "inf.ua", 2, true},
 	{1, "ltd.ua", 2, true},
+	{1, "611.to", 2, true},
 	{1, "adobeaemcloud.com", 2, true},
 	{1, "adobeaemcloud.net", 2, true},
 	{2, "dev.adobeaemcloud.com", 4, true},
@@ -7357,6 +7358,7 @@ var r = [8898]Rule{
 	{1, "barsy.ca", 2, true},
 	{2, "compute.estate", 3, true},
 	{2, "alces.network", 3, true},
+	{1, "kasserver.com", 2, true},
 	{1, "altervista.org", 2, true},
 	{1, "alwaysdata.net", 2, true},
 	{1, "cloudfront.net", 2, true},
@@ -7460,7 +7462,9 @@ var r = [8898]Rule{
 	{1, "b-data.io", 2, true},
 	{1, "backplaneapp.io", 2, true},
 	{1, "balena-devices.com", 2, true},
+	{2, "banzai.cloud", 3, true},
 	{1, "app.banzaicloud.io", 3, true},
+	{2, "backyards.banzaicloud.io", 4, true},
 	{1, "betainabox.com", 2, true},
 	{1, "bnr.la", 2, true},
 	{1, "blackbaudcdn.net", 2, true},
@@ -8138,6 +8142,7 @@ var r = [8898]Rule{
 	{1, "gehirn.ne.jp", 3, true},
 	{1, "usercontent.jp", 2, true},
 	{1, "gentapps.com", 2, true},
+	{1, "gentlentapis.com", 2, true},
 	{1, "lab.ms", 2, true},
 	{1, "github.io", 2, true},
 	{1, "githubusercontent.com", 2, true},
@@ -8436,9 +8441,7 @@ var r = [8898]Rule{
 	{1, "of.work", 2, true},
 	{1, "to.work", 2, true},
 	{1, "nctu.me", 2, true},
-	{1, "bitballoon.com", 2, true},
 	{1, "netlify.app", 2, true},
-	{1, "netlify.com", 2, true},
 	{1, "4u.com", 2, true},
 	{1, "ngrok.io", 2, true},
 	{1, "nh-serv.co.uk", 3, true},
@@ -8621,6 +8624,7 @@ var r = [8898]Rule{
 	{1, "outsystemscloud.com", 2, true},
 	{1, "ownprovider.com", 2, true},
 	{1, "own.pm", 2, true},
+	{2, "owo.codes", 3, true},
 	{1, "ox.rs", 2, true},
 	{1, "oy.lc", 2, true},
 	{1, "pgfog.com", 2, true},
@@ -8641,6 +8645,8 @@ var r = [8898]Rule{
 	{1, "platter-app.com", 2, true},
 	{1, "platter-app.dev", 2, true},
 	{1, "platterp.us", 2, true},
+	{1, "pdns.page", 2, true},
+	{1, "plesk.page", 2, true},
 	{1, "dyn53.io", 2, true},
 	{1, "co.bn", 2, true},
 	{1, "xen.prgmr.com", 3, true},
@@ -8698,6 +8704,7 @@ var r = [8898]Rule{
 	{1, "my-firewall.org", 2, true},
 	{1, "myfirewall.org", 2, true},
 	{1, "spdns.org", 2, true},
+	{1, "seidat.net", 2, true},
 	{1, "senseering.net", 2, true},
 	{1, "biz.ua", 2, true},
 	{1, "co.ua", 2, true},
@@ -8819,6 +8826,9 @@ var r = [8898]Rule{
 	{1, "dnsupdate.info", 2, true},
 	{1, "lib.de.us", 3, true},
 	{1, "2038.io", 2, true},
+	{1, "vercel.app", 2, true},
+	{1, "vercel.dev", 2, true},
+	{1, "now.sh", 2, true},
 	{1, "router.management", 2, true},
 	{1, "v-info.info", 2, true},
 	{1, "voorloper.cloud", 2, true},
@@ -8902,7 +8912,6 @@ var r = [8898]Rule{
 	{1, "noho.st", 2, true},
 	{1, "za.net", 2, true},
 	{1, "za.org", 2, true},
-	{1, "now.sh", 2, true},
 	{1, "bss.design", 2, true},
 	{1, "basicserver.io", 2, true},
 	{1, "virtualserver.io", 2, true},
