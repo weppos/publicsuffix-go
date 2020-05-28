@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version dbe9da (Wed May 27 00:50:31 2020)"
+const defaultListVersion = "PSL version 2a183b (Wed May 27 16:59:42 2020)"
 
-func DefaultRules() [8914]Rule {
+func DefaultRules() [8913]Rule {
 	return r
 }
 
-var r = [8914]Rule{
+var r = [8913]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -6480,7 +6480,6 @@ var r = [8914]Rule{
 	{1, "erni", 1, false},
 	{1, "esq", 1, false},
 	{1, "estate", 1, false},
-	{1, "esurance", 1, false},
 	{1, "etisalat", 1, false},
 	{1, "eurovision", 1, false},
 	{1, "eus", 1, false},
