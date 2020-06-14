@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version fe4225 (Fri Jun  5 21:14:47 2020)"
+const defaultListVersion = "PSL version 2b8739 (Sat Jun 13 01:06:36 2020)"
 
-func DefaultRules() [8912]Rule {
+func DefaultRules() [8915]Rule {
 	return r
 }
 
-var r = [8912]Rule{
+var r = [8915]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -5659,7 +5659,6 @@ var r = [8912]Rule{
 	{1, "dn.ua", 2, false},
 	{1, "dnepropetrovsk.ua", 2, false},
 	{1, "dnipropetrovsk.ua", 2, false},
-	{1, "dominic.ua", 2, false},
 	{1, "donetsk.ua", 2, false},
 	{1, "dp.ua", 2, false},
 	{1, "if.ua", 2, false},
@@ -8091,12 +8090,11 @@ var r = [8912]Rule{
 	{1, "a.ssl.fastly.net", 4, true},
 	{1, "b.ssl.fastly.net", 4, true},
 	{1, "global.ssl.fastly.net", 4, true},
-	{1, "fastpanel.direct", 2, true},
 	{1, "fastvps-server.com", 2, true},
-	{1, "myfast.space", 2, true},
+	{1, "fastvps.host", 2, true},
 	{1, "myfast.host", 2, true},
 	{1, "fastvps.site", 2, true},
-	{1, "fastvps.host", 2, true},
+	{1, "myfast.space", 2, true},
 	{1, "fhapp.xyz", 2, true},
 	{1, "fedorainfracloud.org", 2, true},
 	{1, "fedorapeople.org", 2, true},
@@ -8128,6 +8126,7 @@ var r = [8912]Rule{
 	{1, "freebox-os.fr", 2, true},
 	{1, "freeboxos.fr", 2, true},
 	{1, "freedesktop.org", 2, true},
+	{1, "wien.funkfeuer.at", 3, true},
 	{2, "futurecms.at", 3, true},
 	{2, "ex.futurecms.at", 4, true},
 	{2, "in.futurecms.at", 4, true},
@@ -8145,6 +8144,7 @@ var r = [8912]Rule{
 	{1, "github.io", 2, true},
 	{1, "githubusercontent.com", 2, true},
 	{1, "gitlab.io", 2, true},
+	{1, "gitpage.si", 2, true},
 	{1, "glitch.me", 2, true},
 	{1, "lolipop.io", 2, true},
 	{1, "cloudapps.digital", 2, true},
@@ -8274,6 +8274,7 @@ var r = [8912]Rule{
 	{1, "ngo.ng", 2, true},
 	{1, "ng.school", 2, true},
 	{1, "sch.so", 2, true},
+	{1, "hostyhosting.io", 2, true},
 	{1, "xn--hkkinen-5wa.fi", 2, true},
 	{2, "moonscale.io", 3, true},
 	{1, "moonscale.net", 2, true},
@@ -8633,6 +8634,7 @@ var r = [8912]Rule{
 	{1, "oy.lc", 2, true},
 	{1, "pgfog.com", 2, true},
 	{1, "pagefrontapp.com", 2, true},
+	{1, "pagexl.com", 2, true},
 	{1, "art.pl", 2, true},
 	{1, "gliwice.pl", 2, true},
 	{1, "krakow.pl", 2, true},
@@ -8651,6 +8653,7 @@ var r = [8912]Rule{
 	{1, "platterp.us", 2, true},
 	{1, "pdns.page", 2, true},
 	{1, "plesk.page", 2, true},
+	{1, "pleskns.com", 2, true},
 	{1, "dyn53.io", 2, true},
 	{1, "co.bn", 2, true},
 	{1, "xen.prgmr.com", 3, true},
