@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version 1936f3 (Fri Jun 26 03:03:50 2020)"
+const defaultListVersion = "PSL version 011f11 (Sat Jun 27 17:01:45 2020)"
 
-func DefaultRules() [8914]Rule {
+func DefaultRules() [8911]Rule {
 	return r
 }
 
-var r = [8914]Rule{
+var r = [8911]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -6185,7 +6185,6 @@ var r = [8914]Rule{
 	{1, "agakhan", 1, false},
 	{1, "agency", 1, false},
 	{1, "aig", 1, false},
-	{1, "aigo", 1, false},
 	{1, "airbus", 1, false},
 	{1, "airforce", 1, false},
 	{1, "airtel", 1, false},
@@ -7288,7 +7287,6 @@ var r = [8914]Rule{
 	{1, "xn--jlq61u9w7b", 1, false},
 	{1, "xn--jvr189m", 1, false},
 	{1, "xn--kcrx77d1x4a", 1, false},
-	{1, "xn--kpu716f", 1, false},
 	{1, "xn--kput3i", 1, false},
 	{1, "xn--mgba3a3ejt", 1, false},
 	{1, "xn--mgba7c0bbn0a", 1, false},
@@ -7307,7 +7305,6 @@ var r = [8914]Rule{
 	{1, "xn--nyqy26a", 1, false},
 	{1, "xn--otu796d", 1, false},
 	{1, "xn--p1acf", 1, false},
-	{1, "xn--pbt977c", 1, false},
 	{1, "xn--pssy2u", 1, false},
 	{1, "xn--q9jyb4c", 1, false},
 	{1, "xn--qcka1pmc", 1, false},
