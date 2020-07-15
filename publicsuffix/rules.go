@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version 011f11 (Sat Jun 27 17:01:45 2020)"
+const defaultListVersion = "PSL version 501b12 (Tue Jul 14 10:42:49 2020)"
 
-func DefaultRules() [8911]Rule {
+func DefaultRules() [8929]Rule {
 	return r
 }
 
-var r = [8911]Rule{
+var r = [8929]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -8322,11 +8322,22 @@ var r = [8911]Rule{
 	{1, "test-iserv.de", 2, true},
 	{1, "iserv.dev", 2, true},
 	{1, "iobb.net", 2, true},
+	{1, "jele.cloud", 2, true},
+	{1, "jele.club", 2, true},
+	{1, "dopaas.com", 2, true},
 	{1, "hidora.com", 2, true},
+	{1, "jcloud.ik-server.com", 3, true},
 	{1, "demo.jelastic.com", 3, true},
 	{1, "j.scaleforce.com.cy", 4, true},
+	{1, "jele.host", 2, true},
 	{1, "mircloud.host", 2, true},
+	{1, "jele.io", 2, true},
+	{1, "cloudjiffy.net", 2, true},
 	{1, "jls-sto1.elastx.net", 3, true},
+	{1, "jelastic.saveincloud.net", 3, true},
+	{1, "jelastic.regruhosting.ru", 3, true},
+	{1, "jele.site", 2, true},
+	{1, "jelastic.team", 2, true},
 	{1, "j.layershift.co.uk", 4, true},
 	{1, "myjino.ru", 2, true},
 	{2, "hosting.myjino.ru", 4, true},
@@ -8422,6 +8433,7 @@ var r = [8911]Rule{
 	{1, "azurewebsites.net", 2, true},
 	{1, "azure-mobile.net", 2, true},
 	{1, "cloudapp.net", 2, true},
+	{1, "csx.cc", 2, true},
 	{1, "mozilla-iot.org", 2, true},
 	{1, "bmoattachments.org", 2, true},
 	{1, "net.ru", 2, true},
@@ -8619,6 +8631,7 @@ var r = [8911]Rule{
 	{1, "cya.gg", 2, true},
 	{1, "cloudycluster.net", 2, true},
 	{1, "nid.io", 2, true},
+	{1, "opensocial.site", 2, true},
 	{1, "opencraft.hosting", 2, true},
 	{1, "operaunite.com", 2, true},
 	{1, "skygearapp.com", 2, true},
@@ -8642,7 +8655,10 @@ var r = [8911]Rule{
 	{1, "mypep.link", 2, true},
 	{1, "perspecta.cloud", 2, true},
 	{1, "on-web.fr", 2, true},
-	{2, "platform.sh", 3, true},
+	{1, "bc.platform.sh", 3, true},
+	{1, "ent.platform.sh", 3, true},
+	{1, "eu.platform.sh", 3, true},
+	{1, "us.platform.sh", 3, true},
 	{2, "platformsh.site", 3, true},
 	{1, "platter-app.com", 2, true},
 	{1, "platter-app.dev", 2, true},
@@ -8883,6 +8899,7 @@ var r = [8911]Rule{
 	{1, "wedeploy.me", 2, true},
 	{1, "wedeploy.sh", 2, true},
 	{1, "remotewd.com", 2, true},
+	{1, "pages.wiardweb.com", 3, true},
 	{1, "wmflabs.org", 2, true},
 	{1, "toolforge.org", 2, true},
 	{1, "wmcloud.org", 2, true},
@@ -8921,6 +8938,7 @@ var r = [8911]Rule{
 	{1, "virtualserver.io", 2, true},
 	{1, "enterprisecloud.nu", 2, true},
 	{1, "mintere.site", 2, true},
+	{1, "wpenginepowered.com", 2, true},
 }
 
 func init() {
