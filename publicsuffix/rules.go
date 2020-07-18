@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version 228d86 (Wed Jul 15 15:10:08 2020)"
+const defaultListVersion = "PSL version 758c89 (Fri Jul 17 17:26:13 2020)"
 
-func DefaultRules() [8930]Rule {
+func DefaultRules() [8942]Rule {
 	return r
 }
 
-var r = [8930]Rule{
+var r = [8942]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -370,6 +370,7 @@ var r = [8930]Rule{
 	{1, "am.br", 2, false},
 	{1, "anani.br", 2, false},
 	{1, "aparecida.br", 2, false},
+	{1, "app.br", 2, false},
 	{1, "arq.br", 2, false},
 	{1, "art.br", 2, false},
 	{1, "ato.br", 2, false},
@@ -377,6 +378,7 @@ var r = [8930]Rule{
 	{1, "barueri.br", 2, false},
 	{1, "belem.br", 2, false},
 	{1, "bhz.br", 2, false},
+	{1, "bib.br", 2, false},
 	{1, "bio.br", 2, false},
 	{1, "blog.br", 2, false},
 	{1, "bmd.br", 2, false},
@@ -391,14 +393,19 @@ var r = [8930]Rule{
 	{1, "com.br", 2, false},
 	{1, "contagem.br", 2, false},
 	{1, "coop.br", 2, false},
+	{1, "coz.br", 2, false},
 	{1, "cri.br", 2, false},
 	{1, "cuiaba.br", 2, false},
 	{1, "curitiba.br", 2, false},
 	{1, "def.br", 2, false},
+	{1, "des.br", 2, false},
+	{1, "det.br", 2, false},
+	{1, "dev.br", 2, false},
 	{1, "ecn.br", 2, false},
 	{1, "eco.br", 2, false},
 	{1, "edu.br", 2, false},
 	{1, "emp.br", 2, false},
+	{1, "enf.br", 2, false},
 	{1, "eng.br", 2, false},
 	{1, "esp.br", 2, false},
 	{1, "etc.br", 2, false},
@@ -414,6 +421,7 @@ var r = [8930]Rule{
 	{1, "foz.br", 2, false},
 	{1, "fst.br", 2, false},
 	{1, "g12.br", 2, false},
+	{1, "geo.br", 2, false},
 	{1, "ggf.br", 2, false},
 	{1, "goiania.br", 2, false},
 	{1, "gov.br", 2, false},
@@ -456,6 +464,7 @@ var r = [8930]Rule{
 	{1, "jus.br", 2, false},
 	{1, "leg.br", 2, false},
 	{1, "lel.br", 2, false},
+	{1, "log.br", 2, false},
 	{1, "londrina.br", 2, false},
 	{1, "macapa.br", 2, false},
 	{1, "maceio.br", 2, false},
@@ -488,6 +497,7 @@ var r = [8930]Rule{
 	{1, "radio.br", 2, false},
 	{1, "rec.br", 2, false},
 	{1, "recife.br", 2, false},
+	{1, "rep.br", 2, false},
 	{1, "ribeirao.br", 2, false},
 	{1, "rio.br", 2, false},
 	{1, "riobranco.br", 2, false},
@@ -498,6 +508,7 @@ var r = [8930]Rule{
 	{1, "santoandre.br", 2, false},
 	{1, "saobernardo.br", 2, false},
 	{1, "saogonca.br", 2, false},
+	{1, "seg.br", 2, false},
 	{1, "sjc.br", 2, false},
 	{1, "slg.br", 2, false},
 	{1, "slz.br", 2, false},
@@ -505,6 +516,7 @@ var r = [8930]Rule{
 	{1, "srv.br", 2, false},
 	{1, "taxi.br", 2, false},
 	{1, "tc.br", 2, false},
+	{1, "tec.br", 2, false},
 	{1, "teo.br", 2, false},
 	{1, "the.br", 2, false},
 	{1, "tmp.br", 2, false},
