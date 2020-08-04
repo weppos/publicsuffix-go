@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version aba5ce (Wed Jul 29 17:25:04 2020)"
+const defaultListVersion = "PSL version 54eae6 (Mon Aug  3 22:45:01 2020)"
 
-func DefaultRules() [8942]Rule {
+func DefaultRules() [8951]Rule {
 	return r
 }
 
-var r = [8942]Rule{
+var r = [8951]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -8326,6 +8326,7 @@ var r = [8942]Rule{
 	{1, "sp.leg.br", 3, true},
 	{1, "to.leg.br", 3, true},
 	{1, "pixolino.com", 2, true},
+	{1, "na4u.ru", 2, true},
 	{1, "ipifony.net", 2, true},
 	{1, "mein-iserv.de", 2, true},
 	{1, "schulserver.de", 2, true},
@@ -8430,6 +8431,8 @@ var r = [8942]Rule{
 	{1, "mayfirst.info", 2, true},
 	{1, "mayfirst.org", 2, true},
 	{1, "hb.cldmail.ru", 3, true},
+	{1, "mcdir.ru", 2, true},
+	{1, "vps.mcdir.ru", 3, true},
 	{1, "miniserver.com", 2, true},
 	{1, "memset.net", 2, true},
 	{1, "cloud.metacentrum.cz", 3, true},
@@ -8654,6 +8657,10 @@ var r = [8942]Rule{
 	{1, "pgfog.com", 2, true},
 	{1, "pagefrontapp.com", 2, true},
 	{1, "pagexl.com", 2, true},
+	{1, "bar0.net", 2, true},
+	{1, "bar1.net", 2, true},
+	{1, "bar2.net", 2, true},
+	{1, "rdv.to", 2, true},
 	{1, "art.pl", 2, true},
 	{1, "gliwice.pl", 2, true},
 	{1, "krakow.pl", 2, true},
@@ -8804,6 +8811,8 @@ var r = [8942]Rule{
 	{1, "cust.disrec.thingdust.io", 4, true},
 	{1, "cust.prod.thingdust.io", 4, true},
 	{1, "cust.testing.thingdust.io", 4, true},
+	{2, "firenet.ch", 3, true},
+	{2, "svc.firenet.ch", 4, true},
 	{1, "arvo.network", 2, true},
 	{1, "azimuth.network", 2, true},
 	{1, "bloxcms.com", 2, true},
