@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version 54eae6 (Mon Aug  3 22:45:01 2020)"
+const defaultListVersion = "PSL version c7aec5 (Fri Aug 14 19:34:16 2020)"
 
-func DefaultRules() [8951]Rule {
+func DefaultRules() [8965]Rule {
 	return r
 }
 
-var r = [8951]Rule{
+var r = [8965]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -7362,6 +7362,9 @@ var r = [8951]Rule{
 	{2, "compute.estate", 3, true},
 	{2, "alces.network", 3, true},
 	{1, "kasserver.com", 2, true},
+	{2, "algorithmia.com", 3, true},
+	{3, "teams.algorithmia.com", 3, true},
+	{3, "test.algorithmia.com", 3, true},
 	{1, "altervista.org", 2, true},
 	{1, "alwaysdata.net", 2, true},
 	{1, "cloudfront.net", 2, true},
@@ -8155,6 +8158,7 @@ var r = [8951]Rule{
 	{1, "lolipop.io", 2, true},
 	{1, "cloudapps.digital", 2, true},
 	{1, "london.cloudapps.digital", 3, true},
+	{1, "pymnt.uk", 2, true},
 	{1, "homeoffice.gov.uk", 3, true},
 	{1, "ro.im", 2, true},
 	{1, "shop.ro", 2, true},
@@ -8452,6 +8456,16 @@ var r = [8951]Rule{
 	{1, "net.ru", 2, true},
 	{1, "org.ru", 2, true},
 	{1, "pp.ru", 2, true},
+	{1, "hostedpi.com", 2, true},
+	{1, "customer.mythic-beasts.com", 3, true},
+	{1, "lynx.mythic-beasts.com", 3, true},
+	{1, "ocelot.mythic-beasts.com", 3, true},
+	{1, "onza.mythic-beasts.com", 3, true},
+	{1, "sphinx.mythic-beasts.com", 3, true},
+	{1, "vs.mythic-beasts.com", 3, true},
+	{1, "x.mythic-beasts.com", 3, true},
+	{1, "yali.mythic-beasts.com", 3, true},
+	{1, "cust.retrosnub.co.uk", 4, true},
 	{1, "ui.nabu.casa", 3, true},
 	{1, "pony.club", 2, true},
 	{1, "of.fashion", 2, true},
