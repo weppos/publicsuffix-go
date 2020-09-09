@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version bd6f96 (Fri Aug 28 07:05:32 2020)"
+const defaultListVersion = "PSL version 255371 (Tue Sep  8 22:11:00 2020)"
 
-func DefaultRules() [8992]Rule {
+func DefaultRules() [8996]Rule {
 	return r
 }
 
-var r = [8992]Rule{
+var r = [8996]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -7556,6 +7556,7 @@ var r = [8992]Rule{
 	{1, "cloudcontrolled.com", 2, true},
 	{1, "cloudcontrolapp.com", 2, true},
 	{1, "cloudera.site", 2, true},
+	{1, "pages.dev", 2, true},
 	{1, "trycloudflare.com", 2, true},
 	{1, "workers.dev", 2, true},
 	{1, "wnext.app", 2, true},
@@ -8170,6 +8171,7 @@ var r = [8992]Rule{
 	{1, "github.io", 2, true},
 	{1, "githubusercontent.com", 2, true},
 	{1, "gitlab.io", 2, true},
+	{1, "gitapp.si", 2, true},
 	{1, "gitpage.si", 2, true},
 	{1, "glitch.me", 2, true},
 	{1, "lolipop.io", 2, true},
@@ -8999,9 +9001,11 @@ var r = [8992]Rule{
 	{1, "virtualserver.io", 2, true},
 	{1, "enterprisecloud.nu", 2, true},
 	{1, "mintere.site", 2, true},
+	{1, "cx.ua", 2, true},
 	{1, "wpenginepowered.com", 2, true},
 	{1, "impertrixcdn.com", 2, true},
 	{1, "impertrix.com", 2, true},
+	{1, "gsj.bz", 2, true},
 }
 
 func init() {
