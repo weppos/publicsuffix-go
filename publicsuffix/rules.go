@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version 414e57 (Wed Sep  9 20:10:10 2020)"
+const defaultListVersion = "PSL version 85624c (Fri Sep 25 00:47:16 2020)"
 
-func DefaultRules() [8995]Rule {
+func DefaultRules() [8998]Rule {
 	return r
 }
 
-var r = [8995]Rule{
+var r = [8998]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -728,14 +728,16 @@ var r = [8995]Rule{
 	{1, "sld.do", 2, false},
 	{1, "web.do", 2, false},
 	{1, "dz", 1, false},
+	{1, "art.dz", 2, false},
+	{1, "asso.dz", 2, false},
 	{1, "com.dz", 2, false},
+	{1, "edu.dz", 2, false},
+	{1, "gov.dz", 2, false},
 	{1, "org.dz", 2, false},
 	{1, "net.dz", 2, false},
-	{1, "gov.dz", 2, false},
-	{1, "edu.dz", 2, false},
-	{1, "asso.dz", 2, false},
 	{1, "pol.dz", 2, false},
-	{1, "art.dz", 2, false},
+	{1, "soc.dz", 2, false},
+	{1, "tm.dz", 2, false},
 	{1, "ec", 1, false},
 	{1, "com.ec", 2, false},
 	{1, "info.ec", 2, false},
@@ -9002,6 +9004,7 @@ var r = [8995]Rule{
 	{1, "mintere.site", 2, true},
 	{1, "cx.ua", 2, true},
 	{1, "wpenginepowered.com", 2, true},
+	{1, "js.wpenginepowered.com", 3, true},
 	{1, "impertrixcdn.com", 2, true},
 	{1, "impertrix.com", 2, true},
 	{1, "gsj.bz", 2, true},
