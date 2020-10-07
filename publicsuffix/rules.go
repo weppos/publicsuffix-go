@@ -3,7 +3,7 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version 8e4165 (Wed Sep 30 22:15:54 2020)"
+const defaultListVersion = "PSL version 40d5bd (Tue Oct  6 18:55:25 2020)"
 
 func DefaultRules() [9000]Rule {
 	return r
@@ -7221,7 +7221,6 @@ var r = [9000]Rule{
 	{1, "webcam", 1, false},
 	{1, "weber", 1, false},
 	{1, "website", 1, false},
-	{1, "wed", 1, false},
 	{1, "wedding", 1, false},
 	{1, "weibo", 1, false},
 	{1, "weir", 1, false},
@@ -8420,6 +8419,7 @@ var r = [9000]Rule{
 	{2, "nodebalancer.linode.com", 4, true},
 	{2, "linodeobjects.com", 3, true},
 	{1, "we.bs", 2, true},
+	{1, "localzone.xyz", 2, true},
 	{1, "loginline.app", 2, true},
 	{1, "loginline.dev", 2, true},
 	{1, "loginline.io", 2, true},
