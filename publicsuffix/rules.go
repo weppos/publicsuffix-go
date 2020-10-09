@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version 40d5bd (Tue Oct  6 18:55:25 2020)"
+const defaultListVersion = "PSL version 31df48 (Fri Oct  9 00:15:29 2020)"
 
-func DefaultRules() [9000]Rule {
+func DefaultRules() [9005]Rule {
 	return r
 }
 
-var r = [9000]Rule{
+var r = [9005]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -6677,7 +6677,6 @@ var r = [9000]Rule{
 	{1, "institute", 1, false},
 	{1, "insurance", 1, false},
 	{1, "insure", 1, false},
-	{1, "intel", 1, false},
 	{1, "international", 1, false},
 	{1, "intuit", 1, false},
 	{1, "investments", 1, false},
@@ -8959,6 +8958,12 @@ var r = [9000]Rule{
 	{1, "me.vu", 2, true},
 	{1, "v.ua", 2, true},
 	{1, "wafflecell.com", 2, true},
+	{1, "idnblogger.com", 2, true},
+	{1, "indowapblog.com", 2, true},
+	{1, "bloghp.id", 2, true},
+	{1, "wblog.id", 2, true},
+	{1, "wbq.me", 2, true},
+	{1, "fastblog.net", 2, true},
 	{2, "webhare.dev", 3, true},
 	{1, "wedeploy.io", 2, true},
 	{1, "wedeploy.me", 2, true},
