@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version bef892 (Tue Oct 13 13:56:31 2020)"
+const defaultListVersion = "PSL version a3929a (Tue Oct 27 21:11:05 2020)"
 
-func DefaultRules() [9073]Rule {
+func DefaultRules() [9076]Rule {
 	return r
 }
 
-var r = [9073]Rule{
+var r = [9076]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -7367,9 +7367,6 @@ var r = [9073]Rule{
 	{2, "compute.estate", 3, true},
 	{2, "alces.network", 3, true},
 	{1, "kasserver.com", 2, true},
-	{2, "algorithmia.com", 3, true},
-	{3, "teams.algorithmia.com", 3, true},
-	{3, "test.algorithmia.com", 3, true},
 	{1, "altervista.org", 2, true},
 	{1, "alwaysdata.net", 2, true},
 	{1, "cloudfront.net", 2, true},
@@ -8544,6 +8541,12 @@ var r = [9073]Rule{
 	{1, "azurewebsites.net", 2, true},
 	{1, "azure-mobile.net", 2, true},
 	{1, "cloudapp.net", 2, true},
+	{1, "azurestaticapps.net", 2, true},
+	{1, "centralus.azurestaticapps.net", 3, true},
+	{1, "eastasia.azurestaticapps.net", 3, true},
+	{1, "eastus2.azurestaticapps.net", 3, true},
+	{1, "westeurope.azurestaticapps.net", 3, true},
+	{1, "westus2.azurestaticapps.net", 3, true},
 	{1, "csx.cc", 2, true},
 	{1, "forte.id", 2, true},
 	{1, "mozilla-iot.org", 2, true},
