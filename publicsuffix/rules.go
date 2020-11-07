@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version ad981e (Wed Oct 28 19:25:41 2020)"
+const defaultListVersion = "PSL version 0d86a1 (Sat Nov  7 00:40:03 2020)"
 
-func DefaultRules() [9076]Rule {
+func DefaultRules() [9077]Rule {
 	return r
 }
 
-var r = [9076]Rule{
+var r = [9077]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -7533,7 +7533,6 @@ var r = [9076]Rule{
 	{1, "shop.ro", 2, true},
 	{1, "c.la", 2, true},
 	{1, "certmgr.org", 2, true},
-	{1, "xenapponazure.com", 2, true},
 	{1, "discourse.group", 2, true},
 	{1, "discourse.team", 2, true},
 	{1, "virtueeldomein.nl", 2, true},
@@ -7575,7 +7574,6 @@ var r = [9076]Rule{
 	{1, "cloudns.pro", 2, true},
 	{1, "cloudns.pw", 2, true},
 	{1, "cloudns.us", 2, true},
-	{1, "cloudeity.net", 2, true},
 	{1, "cnpy.gdn", 2, true},
 	{1, "co.nl", 2, true},
 	{1, "co.no", 2, true},
@@ -8131,6 +8129,7 @@ var r = [9076]Rule{
 	{1, "couk.me", 2, true},
 	{1, "ukco.me", 2, true},
 	{1, "mydobiss.com", 2, true},
+	{1, "fh-muenster.io", 2, true},
 	{1, "filegear.me", 2, true},
 	{1, "filegear-au.me", 2, true},
 	{1, "filegear-de.me", 2, true},
@@ -8291,6 +8290,7 @@ var r = [9076]Rule{
 	{1, "ravendb.me", 2, true},
 	{1, "development.run", 2, true},
 	{1, "ravendb.run", 2, true},
+	{1, "secaas.hk", 2, true},
 	{1, "bpl.biz", 2, true},
 	{1, "orx.biz", 2, true},
 	{1, "ng.city", 2, true},
@@ -8475,7 +8475,6 @@ var r = [9076]Rule{
 	{1, "co.place", 2, true},
 	{1, "co.technology", 2, true},
 	{1, "app.lmpm.com", 3, true},
-	{1, "linkitools.space", 2, true},
 	{1, "linkyard.cloud", 2, true},
 	{1, "linkyard-cloud.ch", 2, true},
 	{1, "members.linode.com", 3, true},
@@ -8494,7 +8493,6 @@ var r = [9076]Rule{
 	{1, "lublin.pl", 2, true},
 	{1, "poniatowa.pl", 2, true},
 	{1, "swidnik.pl", 2, true},
-	{1, "uklugs.org", 2, true},
 	{1, "glug.org.uk", 3, true},
 	{1, "lug.org.uk", 3, true},
 	{1, "lugs.org.uk", 3, true},
@@ -8567,16 +8565,19 @@ var r = [9076]Rule{
 	{1, "ui.nabu.casa", 3, true},
 	{1, "pony.club", 2, true},
 	{1, "of.fashion", 2, true},
-	{1, "on.fashion", 2, true},
-	{1, "of.football", 2, true},
 	{1, "in.london", 2, true},
 	{1, "of.london", 2, true},
+	{1, "from.marketing", 2, true},
+	{1, "with.marketing", 2, true},
 	{1, "for.men", 2, true},
+	{1, "repair.men", 2, true},
 	{1, "and.mom", 2, true},
 	{1, "for.mom", 2, true},
 	{1, "for.one", 2, true},
+	{1, "under.one", 2, true},
 	{1, "for.sale", 2, true},
-	{1, "of.work", 2, true},
+	{1, "that.win", 2, true},
+	{1, "from.work", 2, true},
 	{1, "to.work", 2, true},
 	{1, "nctu.me", 2, true},
 	{1, "netlify.app", 2, true},
@@ -8807,6 +8808,7 @@ var r = [9076]Rule{
 	{1, "chirurgiens-dentistes-en-france.fr", 2, true},
 	{1, "byen.site", 2, true},
 	{1, "pubtls.org", 2, true},
+	{1, "qoto.io", 2, true},
 	{1, "qualifioapp.com", 2, true},
 	{1, "qbuser.com", 2, true},
 	{1, "instantcloud.cn", 2, true},
@@ -8836,7 +8838,6 @@ var r = [9076]Rule{
 	{1, "devices.resinstaging.io", 3, true},
 	{1, "hzc.io", 2, true},
 	{1, "wellbeingzone.eu", 2, true},
-	{1, "ptplus.fit", 2, true},
 	{1, "wellbeingzone.co.uk", 3, true},
 	{1, "git-pages.rit.edu", 3, true},
 	{1, "sandcats.io", 2, true},
