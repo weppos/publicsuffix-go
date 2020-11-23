@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version 0d86a1 (Sat Nov  7 00:40:03 2020)"
+const defaultListVersion = "PSL version 011c42 (Sun Nov 22 10:19:25 2020)"
 
-func DefaultRules() [9077]Rule {
+func DefaultRules() [9085]Rule {
 	return r
 }
 
-var r = [9077]Rule{
+var r = [9085]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -6691,7 +6691,6 @@ var r = [9077]Rule{
 	{1, "jaguar", 1, false},
 	{1, "java", 1, false},
 	{1, "jcb", 1, false},
-	{1, "jcp", 1, false},
 	{1, "jeep", 1, false},
 	{1, "jetzt", 1, false},
 	{1, "jewelry", 1, false},
@@ -7476,6 +7475,7 @@ var r = [9077]Rule{
 	{1, "betainabox.com", 2, true},
 	{1, "bnr.la", 2, true},
 	{1, "blackbaudcdn.net", 2, true},
+	{1, "of.je", 2, true},
 	{1, "boomla.net", 2, true},
 	{1, "boxfuse.io", 2, true},
 	{1, "square7.ch", 2, true},
@@ -7931,6 +7931,7 @@ var r = [9077]Rule{
 	{1, "ddnss.org", 2, true},
 	{1, "definima.net", 2, true},
 	{1, "definima.io", 2, true},
+	{1, "ondigitalocean.app", 2, true},
 	{1, "bci.dnstrace.pro", 3, true},
 	{1, "ddnsfree.com", 2, true},
 	{1, "ddnsgeek.com", 2, true},
@@ -8370,6 +8371,9 @@ var r = [9077]Rule{
 	{1, "it1.eur.aruba.jenv-aruba.cloud", 5, true},
 	{1, "it1.jenv-aruba.cloud", 3, true},
 	{1, "it1-eur.jenv-arubabiz.cloud", 3, true},
+	{1, "oxa.cloud", 2, true},
+	{1, "tn.oxa.cloud", 3, true},
+	{1, "uk.oxa.cloud", 3, true},
 	{1, "primetel.cloud", 2, true},
 	{1, "uk.primetel.cloud", 3, true},
 	{1, "ca.reclaim.cloud", 3, true},
@@ -8440,6 +8444,7 @@ var r = [9077]Rule{
 	{1, "enscaled.sg", 2, true},
 	{1, "jele.site", 2, true},
 	{1, "jelastic.team", 2, true},
+	{1, "orangecloud.tn", 2, true},
 	{1, "j.layershift.co.uk", 4, true},
 	{1, "phx.enscaled.us", 3, true},
 	{1, "mircloud.us", 2, true},
@@ -8786,6 +8791,9 @@ var r = [9077]Rule{
 	{1, "gotpantheon.com", 2, true},
 	{1, "mypep.link", 2, true},
 	{1, "perspecta.cloud", 2, true},
+	{1, "lk3.ru", 2, true},
+	{1, "ra-ru.ru", 2, true},
+	{1, "zsew.ru", 2, true},
 	{1, "on-web.fr", 2, true},
 	{1, "bc.platform.sh", 3, true},
 	{1, "ent.platform.sh", 3, true},
@@ -9032,7 +9040,7 @@ var r = [9077]Rule{
 	{1, "wafflecell.com", 2, true},
 	{1, "idnblogger.com", 2, true},
 	{1, "indowapblog.com", 2, true},
-	{1, "bloghp.id", 2, true},
+	{1, "bloger.id", 2, true},
 	{1, "wblog.id", 2, true},
 	{1, "wbq.me", 2, true},
 	{1, "fastblog.net", 2, true},
