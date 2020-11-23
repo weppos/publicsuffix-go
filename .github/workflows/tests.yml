@@ -23,9 +23,9 @@ jobs:
 
     - name: Setup env
       run: |
-        echo "::set-env name=GOPATH::$GITHUB_WORKSPACE"
-        echo "::set-env name=CURRENT_WORKSPACE::$GITHUB_WORKSPACE/src/github.com/${{ github.repository }}"
-        echo "::add-path::$GITHUB_WORKSPACE/bin"
+        echo "GOPATH=$GITHUB_WORKSPACE" >> $GITHUB_ENV
+        echo "CURRENT_WORKSPACE=$GITHUB_WORKSPACE/src/github.com/${{ github.repository }}" >> $GITHUB_ENV
+        echo "$GITHUB_WORKSPACE/bin" >> $GITHUB_PATH
 
     - name: Set up Go
       uses: actions/setup-go@v1
