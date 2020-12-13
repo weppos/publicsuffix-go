@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version 011c42 (Sun Nov 22 10:19:25 2020)"
+const defaultListVersion = "PSL version 7dfbaf (Fri Dec 11 21:09:39 2020)"
 
-func DefaultRules() [9085]Rule {
+func DefaultRules() [9096]Rule {
 	return r
 }
 
-var r = [9085]Rule{
+var r = [9096]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -6359,7 +6359,6 @@ var r = [9085]Rule{
 	{1, "cbn", 1, false},
 	{1, "cbre", 1, false},
 	{1, "cbs", 1, false},
-	{1, "ceb", 1, false},
 	{1, "center", 1, false},
 	{1, "ceo", 1, false},
 	{1, "cern", 1, false},
@@ -6781,7 +6780,6 @@ var r = [9085]Rule{
 	{1, "ltd", 1, false},
 	{1, "ltda", 1, false},
 	{1, "lundbeck", 1, false},
-	{1, "lupin", 1, false},
 	{1, "luxe", 1, false},
 	{1, "luxury", 1, false},
 	{1, "macys", 1, false},
@@ -7059,7 +7057,6 @@ var r = [9085]Rule{
 	{1, "shouji", 1, false},
 	{1, "show", 1, false},
 	{1, "showtime", 1, false},
-	{1, "shriram", 1, false},
 	{1, "silk", 1, false},
 	{1, "sina", 1, false},
 	{1, "singles", 1, false},
@@ -7632,6 +7629,7 @@ var r = [9085]Rule{
 	{1, "online.th", 2, true},
 	{1, "shop.th", 2, true},
 	{1, "drayddns.com", 2, true},
+	{1, "shoparena.pl", 2, true},
 	{1, "dreamhosters.com", 2, true},
 	{1, "mydrobo.com", 2, true},
 	{1, "drud.io", 2, true},
@@ -8139,6 +8137,7 @@ var r = [9085]Rule{
 	{1, "filegear-jp.me", 2, true},
 	{1, "filegear-sg.me", 2, true},
 	{1, "firebaseapp.com", 2, true},
+	{1, "flap.id", 2, true},
 	{1, "fly.dev", 2, true},
 	{1, "edgeapp.net", 2, true},
 	{1, "shw.io", 2, true},
@@ -8292,18 +8291,16 @@ var r = [9085]Rule{
 	{1, "development.run", 2, true},
 	{1, "ravendb.run", 2, true},
 	{1, "secaas.hk", 2, true},
-	{1, "bpl.biz", 2, true},
 	{1, "orx.biz", 2, true},
-	{1, "ng.city", 2, true},
 	{1, "biz.gl", 2, true},
-	{1, "ng.ink", 2, true},
 	{1, "col.ng", 2, true},
 	{1, "firm.ng", 2, true},
 	{1, "gen.ng", 2, true},
 	{1, "ltd.ng", 2, true},
 	{1, "ngo.ng", 2, true},
-	{1, "ng.school", 2, true},
+	{1, "edu.scot", 2, true},
 	{1, "sch.so", 2, true},
+	{1, "org.yt", 2, true},
 	{1, "hostyhosting.io", 2, true},
 	{1, "xn--hkkinen-5wa.fi", 2, true},
 	{2, "moonscale.io", 3, true},
@@ -8465,6 +8462,8 @@ var r = [9085]Rule{
 	{1, "oya.to", 2, true},
 	{1, "co.krd", 2, true},
 	{1, "edu.krd", 2, true},
+	{1, "krellian.net", 2, true},
+	{1, "webthings.io", 2, true},
 	{1, "git-repos.de", 2, true},
 	{1, "lcube-server.de", 2, true},
 	{1, "svn-repos.de", 2, true},
@@ -8492,6 +8491,7 @@ var r = [9085]Rule{
 	{1, "loginline.io", 2, true},
 	{1, "loginline.services", 2, true},
 	{1, "loginline.site", 2, true},
+	{1, "lohmus.me", 2, true},
 	{1, "krasnik.pl", 2, true},
 	{1, "leczna.pl", 2, true},
 	{1, "lubartow.pl", 2, true},
@@ -8766,6 +8766,7 @@ var r = [9085]Rule{
 	{1, "nid.io", 2, true},
 	{1, "opensocial.site", 2, true},
 	{1, "opencraft.hosting", 2, true},
+	{1, "orsites.com", 2, true},
 	{1, "operaunite.com", 2, true},
 	{1, "skygearapp.com", 2, true},
 	{1, "outsystemscloud.com", 2, true},
@@ -9095,6 +9096,16 @@ var r = [9085]Rule{
 	{1, "impertrixcdn.com", 2, true},
 	{1, "impertrix.com", 2, true},
 	{1, "gsj.bz", 2, true},
+	{1, "xn--90amc.xn--p1acf", 2, true},
+	{1, "xn--j1aef.xn--p1acf", 2, true},
+	{1, "xn--j1ael8b.xn--p1acf", 2, true},
+	{1, "xn--h1ahn.xn--p1acf", 2, true},
+	{1, "xn--j1adp.xn--p1acf", 2, true},
+	{1, "xn--c1avg.xn--p1acf", 2, true},
+	{1, "xn--80aaa0cvac.xn--p1acf", 2, true},
+	{1, "xn--h1aliz.xn--p1acf", 2, true},
+	{1, "xn--90a1af.xn--p1acf", 2, true},
+	{1, "xn--41a.xn--p1acf", 2, true},
 }
 
 func init() {
