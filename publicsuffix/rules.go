@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version 6b67c6 (Wed Dec 23 23:20:29 2020)"
+const defaultListVersion = "PSL version b87090 (Fri Jan  8 13:09:18 2021)"
 
-func DefaultRules() [9105]Rule {
+func DefaultRules() [9107]Rule {
 	return r
 }
 
-var r = [9105]Rule{
+var r = [9107]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -8167,6 +8167,7 @@ var r = [9105]Rule{
 	{1, "gentlentapis.com", 2, true},
 	{1, "lab.ms", 2, true},
 	{1, "cdn-edges.net", 2, true},
+	{1, "ghost.io", 2, true},
 	{1, "github.io", 2, true},
 	{1, "githubusercontent.com", 2, true},
 	{1, "gitlab.io", 2, true},
@@ -8880,6 +8881,7 @@ var r = [9105]Rule{
 	{1, "pp.ua", 2, true},
 	{1, "shiftedit.io", 2, true},
 	{1, "myshopblocks.com", 2, true},
+	{1, "myshopify.com", 2, true},
 	{1, "shopitsite.com", 2, true},
 	{1, "shopware.store", 2, true},
 	{1, "mo-siemens.io", 2, true},
