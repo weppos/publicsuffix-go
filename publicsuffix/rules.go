@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version 6b67c6 (Wed Dec 23 23:20:29 2020)"
+const defaultListVersion = "PSL version 79df5b (Thu Jan 14 19:39:17 2021)"
 
-func DefaultRules() [9105]Rule {
+func DefaultRules() [9111]Rule {
 	return r
 }
 
-var r = [9105]Rule{
+var r = [9111]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -8138,6 +8138,7 @@ var r = [9105]Rule{
 	{1, "filegear-jp.me", 2, true},
 	{1, "filegear-sg.me", 2, true},
 	{1, "firebaseapp.com", 2, true},
+	{1, "fireweb.app", 2, true},
 	{1, "flap.id", 2, true},
 	{1, "fly.dev", 2, true},
 	{1, "edgeapp.net", 2, true},
@@ -8167,6 +8168,7 @@ var r = [9105]Rule{
 	{1, "gentlentapis.com", 2, true},
 	{1, "lab.ms", 2, true},
 	{1, "cdn-edges.net", 2, true},
+	{1, "ghost.io", 2, true},
 	{1, "github.io", 2, true},
 	{1, "githubusercontent.com", 2, true},
 	{1, "gitlab.io", 2, true},
@@ -8567,8 +8569,11 @@ var r = [9105]Rule{
 	{1, "pp.ru", 2, true},
 	{1, "hostedpi.com", 2, true},
 	{1, "customer.mythic-beasts.com", 3, true},
+	{1, "caracal.mythic-beasts.com", 3, true},
+	{1, "fentiger.mythic-beasts.com", 3, true},
 	{1, "lynx.mythic-beasts.com", 3, true},
 	{1, "ocelot.mythic-beasts.com", 3, true},
+	{1, "oncilla.mythic-beasts.com", 3, true},
 	{1, "onza.mythic-beasts.com", 3, true},
 	{1, "sphinx.mythic-beasts.com", 3, true},
 	{1, "vs.mythic-beasts.com", 3, true},
@@ -8880,6 +8885,7 @@ var r = [9105]Rule{
 	{1, "pp.ua", 2, true},
 	{1, "shiftedit.io", 2, true},
 	{1, "myshopblocks.com", 2, true},
+	{1, "myshopify.com", 2, true},
 	{1, "shopitsite.com", 2, true},
 	{1, "shopware.store", 2, true},
 	{1, "mo-siemens.io", 2, true},
