@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version f2cce8 (Thu Jan 21 11:57:05 2021)"
+const defaultListVersion = "PSL version 3c1add (Thu Jan 28 09:17:32 2021)"
 
-func DefaultRules() [9117]Rule {
+func DefaultRules() [9128]Rule {
 	return r
 }
 
-var r = [9117]Rule{
+var r = [9128]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -6059,6 +6059,7 @@ var r = [9117]Rule{
 	{1, "xn--y9a3aq", 1, false},
 	{1, "xn--54b7fta0cc", 1, false},
 	{1, "xn--90ae", 1, false},
+	{1, "xn--mgbcpq6gpa1a", 1, false},
 	{1, "xn--90ais", 1, false},
 	{1, "xn--fiqs8s", 1, false},
 	{1, "xn--fiqz9s", 1, false},
@@ -6097,6 +6098,7 @@ var r = [9117]Rule{
 	{1, "xn--mgbayh7gpa", 1, false},
 	{1, "xn--3e0b707e", 1, false},
 	{1, "xn--80ao21a", 1, false},
+	{1, "xn--q7ce6a", 1, false},
 	{1, "xn--fzc2c9e2c", 1, false},
 	{1, "xn--xkc2al3hye2a", 1, false},
 	{1, "xn--mgbc0a9azcg", 1, false},
@@ -7456,6 +7458,8 @@ var r = [9117]Rule{
 	{1, "t3l3p0rt.net", 2, true},
 	{1, "tele.amune.org", 3, true},
 	{1, "apigee.io", 2, true},
+	{1, "appspacehosted.com", 2, true},
+	{1, "appspaceusercontent.com", 2, true},
 	{1, "on-aptible.com", 2, true},
 	{1, "user.aseinet.ne.jp", 4, true},
 	{1, "gv.vc", 2, true},
@@ -7543,6 +7547,7 @@ var r = [9117]Rule{
 	{2, "lcl.dev", 3, true},
 	{2, "stg.dev", 3, true},
 	{1, "clic2000.net", 2, true},
+	{1, "clickrising.net", 2, true},
 	{1, "c66.me", 2, true},
 	{1, "cloud66.ws", 2, true},
 	{1, "cloud66.zone", 2, true},
@@ -8477,6 +8482,8 @@ var r = [9117]Rule{
 	{1, "uni5.net", 2, true},
 	{1, "knightpoint.systems", 2, true},
 	{1, "oya.to", 2, true},
+	{1, "kuleuven.cloud", 2, true},
+	{1, "ezproxy.kuleuven.be", 3, true},
 	{1, "co.krd", 2, true},
 	{1, "edu.krd", 2, true},
 	{1, "krellian.net", 2, true},
@@ -8790,6 +8797,8 @@ var r = [9117]Rule{
 	{1, "operaunite.com", 2, true},
 	{1, "skygearapp.com", 2, true},
 	{1, "outsystemscloud.com", 2, true},
+	{2, "webpaas.ovh.net", 4, true},
+	{2, "hosting.ovh.net", 4, true},
 	{1, "ownprovider.com", 2, true},
 	{1, "own.pm", 2, true},
 	{2, "owo.codes", 3, true},
@@ -8961,6 +8970,8 @@ var r = [9117]Rule{
 	{1, "arvo.network", 2, true},
 	{1, "azimuth.network", 2, true},
 	{1, "tlon.network", 2, true},
+	{1, "torproject.net", 2, true},
+	{1, "pages.torproject.net", 3, true},
 	{1, "bloxcms.com", 2, true},
 	{1, "townnews-staging.com", 2, true},
 	{1, "12hp.at", 2, true},
