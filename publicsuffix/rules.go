@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version 93011c (Mon Feb  8 20:18:12 2021)"
+const defaultListVersion = "PSL version 95f358 (Wed Feb 10 18:31:21 2021)"
 
-func DefaultRules() [9128]Rule {
+func DefaultRules() [9131]Rule {
 	return r
 }
 
-var r = [9128]Rule{
+var r = [9131]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -7400,6 +7400,7 @@ var r = [9128]Rule{
 	{1, "us-west-2.elasticbeanstalk.com", 3, true},
 	{2, "elb.amazonaws.com", 4, true},
 	{2, "elb.amazonaws.com.cn", 5, true},
+	{1, "awsglobalaccelerator.com", 2, true},
 	{1, "s3.amazonaws.com", 3, true},
 	{1, "s3-ap-northeast-1.amazonaws.com", 3, true},
 	{1, "s3-ap-northeast-2.amazonaws.com", 3, true},
@@ -8617,6 +8618,8 @@ var r = [9128]Rule{
 	{1, "ngrok.io", 2, true},
 	{1, "nh-serv.co.uk", 3, true},
 	{1, "nfshost.com", 2, true},
+	{1, "northflank.app", 2, true},
+	{1, "code.run", 2, true},
 	{1, "dnsking.ch", 2, true},
 	{1, "mypi.co", 2, true},
 	{1, "n4t.co", 2, true},
