@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version 93011c (Mon Feb  8 20:18:12 2021)"
+const defaultListVersion = "PSL version 38d119 (Thu Feb 11 20:34:25 2021)"
 
-func DefaultRules() [9128]Rule {
+func DefaultRules() [9134]Rule {
 	return r
 }
 
-var r = [9128]Rule{
+var r = [9134]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -7400,6 +7400,7 @@ var r = [9128]Rule{
 	{1, "us-west-2.elasticbeanstalk.com", 3, true},
 	{2, "elb.amazonaws.com", 4, true},
 	{2, "elb.amazonaws.com.cn", 5, true},
+	{1, "awsglobalaccelerator.com", 2, true},
 	{1, "s3.amazonaws.com", 3, true},
 	{1, "s3-ap-northeast-1.amazonaws.com", 3, true},
 	{1, "s3-ap-northeast-2.amazonaws.com", 3, true},
@@ -8026,6 +8027,7 @@ var r = [9128]Rule{
 	{1, "tr.eu.org", 3, true},
 	{1, "uk.eu.org", 3, true},
 	{1, "us.eu.org", 3, true},
+	{1, "eurodir.ru", 2, true},
 	{1, "eu-1.evennode.com", 3, true},
 	{1, "eu-2.evennode.com", 3, true},
 	{1, "eu-3.evennode.com", 3, true},
@@ -8553,7 +8555,9 @@ var r = [9128]Rule{
 	{1, "mayfirst.org", 2, true},
 	{1, "hb.cldmail.ru", 3, true},
 	{1, "mcpe.me", 2, true},
+	{1, "mcdir.me", 2, true},
 	{1, "mcdir.ru", 2, true},
+	{1, "mcpre.ru", 2, true},
 	{1, "vps.mcdir.ru", 3, true},
 	{1, "miniserver.com", 2, true},
 	{1, "memset.net", 2, true},
@@ -8617,6 +8621,8 @@ var r = [9128]Rule{
 	{1, "ngrok.io", 2, true},
 	{1, "nh-serv.co.uk", 3, true},
 	{1, "nfshost.com", 2, true},
+	{1, "northflank.app", 2, true},
+	{1, "code.run", 2, true},
 	{1, "dnsking.ch", 2, true},
 	{1, "mypi.co", 2, true},
 	{1, "n4t.co", 2, true},
