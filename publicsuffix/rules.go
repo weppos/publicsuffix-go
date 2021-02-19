@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version eee9fb (Tue Feb 16 16:45:45 2021)"
+const defaultListVersion = "PSL version fad56f (Thu Feb 18 20:10:12 2021)"
 
-func DefaultRules() [9134]Rule {
+func DefaultRules() [9136]Rule {
 	return r
 }
 
-var r = [9134]Rule{
+var r = [9136]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -4141,13 +4141,14 @@ var r = [9134]Rule{
 	{1, "edu.mx", 2, false},
 	{1, "net.mx", 2, false},
 	{1, "my", 1, false},
+	{1, "biz.my", 2, false},
 	{1, "com.my", 2, false},
-	{1, "net.my", 2, false},
-	{1, "org.my", 2, false},
-	{1, "gov.my", 2, false},
 	{1, "edu.my", 2, false},
+	{1, "gov.my", 2, false},
 	{1, "mil.my", 2, false},
 	{1, "name.my", 2, false},
+	{1, "net.my", 2, false},
+	{1, "org.my", 2, false},
 	{1, "mz", 1, false},
 	{1, "ac.mz", 2, false},
 	{1, "adv.mz", 2, false},
@@ -8117,6 +8118,7 @@ var r = [9134]Rule{
 	{1, "vologda.su", 2, true},
 	{1, "channelsdvr.net", 2, true},
 	{1, "u.channelsdvr.net", 3, true},
+	{1, "edgecompute.app", 2, true},
 	{1, "fastly-terrarium.com", 2, true},
 	{1, "fastlylb.net", 2, true},
 	{1, "map.fastlylb.net", 3, true},
