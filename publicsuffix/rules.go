@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version c565a9 (Tue Feb 23 18:40:14 2021)"
+const defaultListVersion = "PSL version fc1e9c (Tue Mar  2 23:30:42 2021)"
 
-func DefaultRules() [9137]Rule {
+func DefaultRules() [9142]Rule {
 	return r
 }
 
-var r = [9137]Rule{
+var r = [9142]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -7545,7 +7545,9 @@ var r = [9137]Rule{
 	{1, "virtueeldomein.nl", 2, true},
 	{1, "cleverapps.io", 2, true},
 	{2, "lcl.dev", 3, true},
+	{2, "lclstage.dev", 3, true},
 	{2, "stg.dev", 3, true},
+	{2, "stgstage.dev", 3, true},
 	{1, "clic2000.net", 2, true},
 	{1, "clickrising.net", 2, true},
 	{1, "c66.me", 2, true},
@@ -8858,6 +8860,7 @@ var r = [9137]Rule{
 	{1, "qoto.io", 2, true},
 	{1, "qualifioapp.com", 2, true},
 	{1, "qbuser.com", 2, true},
+	{1, "cloudsite.builders", 2, true},
 	{1, "instantcloud.cn", 2, true},
 	{1, "ras.ru", 2, true},
 	{1, "qa2.com", 2, true},
@@ -8892,6 +8895,7 @@ var r = [9137]Rule{
 	{1, "logoip.com", 2, true},
 	{1, "schokokeks.net", 2, true},
 	{1, "gov.scot", 2, true},
+	{1, "service.gov.scot", 3, true},
 	{1, "scrysec.com", 2, true},
 	{1, "firewall-gateway.com", 2, true},
 	{1, "firewall-gateway.de", 2, true},
@@ -8925,6 +8929,7 @@ var r = [9137]Rule{
 	{1, "beta.bounty-full.com", 3, true},
 	{1, "small-web.org", 2, true},
 	{1, "try-snowplow.com", 2, true},
+	{1, "srht.site", 2, true},
 	{1, "stackhero-network.com", 2, true},
 	{1, "static.land", 2, true},
 	{1, "dev.static.land", 3, true},
