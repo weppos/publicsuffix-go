@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version 63642f (Mon Mar 22 17:32:07 2021)"
+const defaultListVersion = "PSL version bd6997 (Wed Mar 24 15:18:58 2021)"
 
-func DefaultRules() [9149]Rule {
+func DefaultRules() [9153]Rule {
 	return r
 }
 
-var r = [9149]Rule{
+var r = [9153]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -8567,6 +8567,7 @@ var r = [9149]Rule{
 	{1, "mcdir.ru", 2, true},
 	{1, "mcpre.ru", 2, true},
 	{1, "vps.mcdir.ru", 3, true},
+	{1, "hra.health", 2, true},
 	{1, "miniserver.com", 2, true},
 	{1, "memset.net", 2, true},
 	{2, "cloud.metacentrum.cz", 4, true},
@@ -8822,6 +8823,7 @@ var r = [9149]Rule{
 	{1, "pgfog.com", 2, true},
 	{1, "pagefrontapp.com", 2, true},
 	{1, "pagexl.com", 2, true},
+	{2, "paywhirl.com", 3, true},
 	{1, "bar0.net", 2, true},
 	{1, "bar1.net", 2, true},
 	{1, "bar2.net", 2, true},
@@ -8919,6 +8921,8 @@ var r = [9149]Rule{
 	{1, "biz.ua", 2, true},
 	{1, "co.ua", 2, true},
 	{1, "pp.ua", 2, true},
+	{1, "shiftcrypto.dev", 2, true},
+	{1, "shiftcrypto.io", 2, true},
 	{1, "shiftedit.io", 2, true},
 	{1, "myshopblocks.com", 2, true},
 	{1, "myshopify.com", 2, true},
