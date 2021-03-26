@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version bd6997 (Wed Mar 24 15:18:58 2021)"
+const defaultListVersion = "PSL version 161070 (Thu Mar 25 15:25:34 2021)"
 
-func DefaultRules() [9153]Rule {
+func DefaultRules() [9156]Rule {
 	return r
 }
 
-var r = [9153]Rule{
+var r = [9156]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -8163,6 +8163,7 @@ var r = [9153]Rule{
 	{1, "edgeapp.net", 2, true},
 	{1, "shw.io", 2, true},
 	{1, "flynnhosting.net", 2, true},
+	{1, "forgeblocks.com", 2, true},
 	{1, "framer.app", 2, true},
 	{1, "framercanvas.com", 2, true},
 	{1, "0e.vc", 2, true},
@@ -8465,8 +8466,6 @@ var r = [9153]Rule{
 	{1, "nordeste-idc.saveincloud.net", 3, true},
 	{1, "j.scaleforce.net", 3, true},
 	{1, "jelastic.tsukaeru.net", 3, true},
-	{1, "atl.jelastic.vps-host.net", 4, true},
-	{1, "njs.jelastic.vps-host.net", 4, true},
 	{1, "unicloud.pl", 2, true},
 	{1, "mircloud.ru", 2, true},
 	{1, "jelastic.regruhosting.ru", 3, true},
@@ -9163,6 +9162,10 @@ var r = [9153]Rule{
 	{1, "xn--h1aliz.xn--p1acf", 2, true},
 	{1, "xn--90a1af.xn--p1acf", 2, true},
 	{1, "xn--41a.xn--p1acf", 2, true},
+	{1, "vps-host.net", 2, true},
+	{1, "atl.jelastic.vps-host.net", 4, true},
+	{1, "njs.jelastic.vps-host.net", 4, true},
+	{1, "ric.jelastic.vps-host.net", 4, true},
 }
 
 func init() {
