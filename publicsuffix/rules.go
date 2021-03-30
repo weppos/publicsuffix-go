@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version 3e224b (Sun Mar 28 04:21:55 2021)"
+const defaultListVersion = "PSL version 9f9c98 (Tue Mar 30 00:55:04 2021)"
 
-func DefaultRules() [9156]Rule {
+func DefaultRules() [9161]Rule {
 	return r
 }
 
-var r = [9156]Rule{
+var r = [9161]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -8164,8 +8164,10 @@ var r = [9156]Rule{
 	{1, "shw.io", 2, true},
 	{1, "flynnhosting.net", 2, true},
 	{1, "forgeblocks.com", 2, true},
+	{2, "id.forgerock.io", 4, true},
 	{1, "framer.app", 2, true},
 	{1, "framercanvas.com", 2, true},
+	{1, "ravpage.co.il", 3, true},
 	{1, "0e.vc", 2, true},
 	{1, "freebox-os.com", 2, true},
 	{1, "freeboxos.com", 2, true},
@@ -8561,6 +8563,7 @@ var r = [9156]Rule{
 	{1, "mayfirst.info", 2, true},
 	{1, "mayfirst.org", 2, true},
 	{1, "hb.cldmail.ru", 3, true},
+	{1, "mazeplay.com", 2, true},
 	{1, "mcpe.me", 2, true},
 	{1, "mcdir.me", 2, true},
 	{1, "mcdir.ru", 2, true},
@@ -8890,6 +8893,7 @@ var r = [9156]Rule{
 	{1, "app.render.com", 3, true},
 	{1, "onrender.com", 2, true},
 	{1, "repl.co", 2, true},
+	{1, "id.repl.co", 3, true},
 	{1, "repl.run", 2, true},
 	{1, "resindevice.io", 2, true},
 	{1, "devices.resinstaging.io", 3, true},
@@ -8998,6 +9002,7 @@ var r = [9156]Rule{
 	{1, "pages.torproject.net", 3, true},
 	{1, "bloxcms.com", 2, true},
 	{1, "townnews-staging.com", 2, true},
+	{1, "tbits.me", 2, true},
 	{1, "12hp.at", 2, true},
 	{1, "2ix.at", 2, true},
 	{1, "4lima.at", 2, true},
