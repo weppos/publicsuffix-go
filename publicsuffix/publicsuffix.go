@@ -227,15 +227,15 @@ func NewRule(content string) (*Rule, error) {
 	var rule *Rule
 	var value string
 
-	switch content[0:1] {
-	case "*": // wildcard
+	switch content[0] {
+	case '*': // wildcard
 		if content == "*" {
 			value = ""
 		} else {
 			value = content[2:]
 		}
 		rule = &Rule{Type: WildcardType, Value: value, Length: len(Labels(value)) + 1}
-	case "!": // exception
+	case '!': // exception
 		value = content[1:]
 		rule = &Rule{Type: ExceptionType, Value: value, Length: len(Labels(value))}
 	default: // normal
