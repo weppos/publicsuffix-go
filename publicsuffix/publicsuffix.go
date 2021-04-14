@@ -297,7 +297,7 @@ func (r *Rule) Match(name string) bool {
 // according to the rule definition and type.
 func (r *Rule) Decompose(name string) (result [2]string) {
 	if r == DefaultRule {
-		i := strings.LastIndex(name, ".")
+		i := strings.LastIndexByte(name, '.')
 		if i < 0 {
 			return
 		}
@@ -317,7 +317,7 @@ func (r *Rule) Decompose(name string) (result [2]string) {
 			return
 		}
 		name = name[:len(name)-1]
-		i := strings.LastIndex(name, ".")
+		i := strings.LastIndexByte(name, '.')
 		if i < 0 {
 			return
 		}
@@ -467,7 +467,7 @@ func ParseFromListWithOptions(l *List, name string, options *FindOptions) (*Doma
 		Rule: r,
 		TLD:  tld,
 	}
-	if i := strings.LastIndex(left, "."); i < 0 {
+	if i := strings.LastIndexByte(left, '.'); i < 0 {
 		dn.SLD = left
 	} else {
 		dn.TRD = left[:i]
