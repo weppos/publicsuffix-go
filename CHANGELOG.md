@@ -4,6 +4,8 @@
 
 - CHANGED: Dropped Go 1.8 from the list of supported versions. "math/bits" is an indirect dependency and it's only available since Go 1.9.
 
+- ENHANCEMENT: Improved performances by using rune instead of strings single char comparison (GH-484, GH-485)
+
 ## 0.14.0
 
 - CHANGED: Added go modules (GH-240).
