@@ -1,6 +1,8 @@
 # CHANGELOG
 
-## master
+## 0.15.0
+
+- CHANGED: Definition updates.
 
 - CHANGED: Dropped Go 1.8 from the list of supported versions. "math/bits" is an indirect dependency and it's only available since Go 1.9.
 
