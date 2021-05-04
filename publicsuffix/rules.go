@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version 65076b (Thu Apr 22 15:34:50 2021)"
+const defaultListVersion = "PSL version 9bea48 (Fri Apr 30 11:37:52 2021)"
 
-func DefaultRules() [9158]Rule {
+func DefaultRules() [9165]Rule {
 	return r
 }
 
-var r = [9158]Rule{
+var r = [9165]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -5484,8 +5484,10 @@ var r = [9158]Rule{
 	{1, "com.ss", 2, false},
 	{1, "edu.ss", 2, false},
 	{1, "gov.ss", 2, false},
+	{1, "me.ss", 2, false},
 	{1, "net.ss", 2, false},
 	{1, "org.ss", 2, false},
+	{1, "sch.ss", 2, false},
 	{1, "st", 1, false},
 	{1, "co.st", 2, false},
 	{1, "com.st", 2, false},
@@ -8190,8 +8192,10 @@ var r = [9158]Rule{
 	{1, "cdn-edges.net", 2, true},
 	{1, "ghost.io", 2, true},
 	{1, "gsj.bz", 2, true},
-	{1, "github.io", 2, true},
 	{1, "githubusercontent.com", 2, true},
+	{1, "github.dev", 2, true},
+	{1, "githubpreview.dev", 2, true},
+	{1, "github.io", 2, true},
 	{1, "gitlab.io", 2, true},
 	{1, "gitapp.si", 2, true},
 	{1, "gitpage.si", 2, true},
@@ -8628,6 +8632,8 @@ var r = [9158]Rule{
 	{1, "ngrok.io", 2, true},
 	{1, "nh-serv.co.uk", 3, true},
 	{1, "nfshost.com", 2, true},
+	{2, "developer.app", 3, true},
+	{1, "noop.app", 2, true},
 	{2, "northflank.app", 3, true},
 	{2, "code.run", 3, true},
 	{1, "noticeable.news", 2, true},
@@ -8862,8 +8868,8 @@ var r = [9158]Rule{
 	{1, "chirurgiens-dentistes-en-france.fr", 2, true},
 	{1, "byen.site", 2, true},
 	{1, "pubtls.org", 2, true},
-	{2, "pythonanywhere.com", 3, true},
-	{2, "eu.pythonanywhere.com", 4, true},
+	{1, "pythonanywhere.com", 2, true},
+	{1, "eu.pythonanywhere.com", 3, true},
 	{1, "qoto.io", 2, true},
 	{1, "qualifioapp.com", 2, true},
 	{1, "qbuser.com", 2, true},
@@ -8955,6 +8961,7 @@ var r = [9158]Rule{
 	{1, "static.land", 2, true},
 	{1, "dev.static.land", 3, true},
 	{1, "sites.static.land", 3, true},
+	{1, "storebase.store", 2, true},
 	{1, "vps-host.net", 2, true},
 	{1, "atl.jelastic.vps-host.net", 4, true},
 	{1, "njs.jelastic.vps-host.net", 4, true},
