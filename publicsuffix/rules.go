@@ -3,7 +3,7 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version b46130 (Tue May 11 15:43:16 2021)"
+const defaultListVersion = "PSL version cb0066 (Tue May 18 19:31:58 2021)"
 
 func DefaultRules() [9170]Rule {
 	return r
@@ -8163,7 +8163,7 @@ var r = [9170]Rule{
 	{1, "shw.io", 2, true},
 	{1, "flynnhosting.net", 2, true},
 	{1, "forgeblocks.com", 2, true},
-	{2, "id.forgerock.io", 4, true},
+	{1, "id.forgerock.io", 3, true},
 	{1, "framer.app", 2, true},
 	{1, "framercanvas.com", 2, true},
 	{1, "ravpage.co.il", 3, true},
