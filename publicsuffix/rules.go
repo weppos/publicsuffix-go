@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version b46130 (Tue May 11 15:43:16 2021)"
+const defaultListVersion = "PSL version c3378a (Wed May 19 19:13:07 2021)"
 
-func DefaultRules() [9170]Rule {
+func DefaultRules() [9168]Rule {
 	return r
 }
 
-var r = [9170]Rule{
+var r = [9168]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -8163,7 +8163,7 @@ var r = [9170]Rule{
 	{1, "shw.io", 2, true},
 	{1, "flynnhosting.net", 2, true},
 	{1, "forgeblocks.com", 2, true},
-	{2, "id.forgerock.io", 4, true},
+	{1, "id.forgerock.io", 3, true},
 	{1, "framer.app", 2, true},
 	{1, "framercanvas.com", 2, true},
 	{1, "ravpage.co.il", 3, true},
@@ -8848,8 +8848,6 @@ var r = [9170]Rule{
 	{1, "mypep.link", 2, true},
 	{1, "perspecta.cloud", 2, true},
 	{1, "lk3.ru", 2, true},
-	{1, "ra-ru.ru", 2, true},
-	{1, "zsew.ru", 2, true},
 	{1, "on-web.fr", 2, true},
 	{1, "bc.platform.sh", 3, true},
 	{1, "ent.platform.sh", 3, true},
