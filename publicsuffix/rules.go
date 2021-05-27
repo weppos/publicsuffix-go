@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version c3378a (Wed May 19 19:13:07 2021)"
+const defaultListVersion = "PSL version d1bd1d (Wed May 26 14:52:55 2021)"
 
-func DefaultRules() [9168]Rule {
+func DefaultRules() [9173]Rule {
 	return r
 }
 
-var r = [9168]Rule{
+var r = [9173]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -7470,6 +7470,7 @@ var r = [9168]Rule{
 	{1, "sweetpepper.org", 2, true},
 	{1, "myasustor.com", 2, true},
 	{1, "myfritz.net", 2, true},
+	{1, "onavstack.net", 2, true},
 	{2, "awdev.ca", 3, true},
 	{2, "advisor.ws", 3, true},
 	{1, "b-data.io", 2, true},
@@ -7482,6 +7483,7 @@ var r = [9168]Rule{
 	{1, "bnr.la", 2, true},
 	{1, "blackbaudcdn.net", 2, true},
 	{1, "of.je", 2, true},
+	{1, "bluebite.io", 2, true},
 	{1, "boomla.net", 2, true},
 	{1, "boutir.com", 2, true},
 	{1, "boxfuse.io", 2, true},
@@ -8166,6 +8168,7 @@ var r = [9168]Rule{
 	{1, "id.forgerock.io", 3, true},
 	{1, "framer.app", 2, true},
 	{1, "framercanvas.com", 2, true},
+	{2, "frusky.de", 3, true},
 	{1, "ravpage.co.il", 3, true},
 	{1, "0e.vc", 2, true},
 	{1, "freebox-os.com", 2, true},
@@ -8484,6 +8487,7 @@ var r = [9168]Rule{
 	{2, "landing.myjino.ru", 4, true},
 	{2, "spectrum.myjino.ru", 4, true},
 	{2, "vps.myjino.ru", 4, true},
+	{1, "jotelulu.cloud", 2, true},
 	{2, "triton.zone", 3, true},
 	{2, "cns.joyent.com", 4, true},
 	{1, "js.org", 2, true},
@@ -8961,6 +8965,7 @@ var r = [9168]Rule{
 	{1, "try-snowplow.com", 2, true},
 	{1, "srht.site", 2, true},
 	{1, "stackhero-network.com", 2, true},
+	{1, "novecore.site", 2, true},
 	{1, "static.land", 2, true},
 	{1, "dev.static.land", 3, true},
 	{1, "sites.static.land", 3, true},
