@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version 14a6c4 (Thu May 27 18:18:53 2021)"
+const defaultListVersion = "PSL version b157d3 (Wed Jun  2 22:52:43 2021)"
 
-func DefaultRules() [9172]Rule {
+func DefaultRules() [9178]Rule {
 	return r
 }
 
-var r = [9172]Rule{
+var r = [9178]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -7459,6 +7459,7 @@ var r = [9172]Rule{
 	{1, "apigee.io", 2, true},
 	{1, "appspacehosted.com", 2, true},
 	{1, "appspaceusercontent.com", 2, true},
+	{1, "appudo.net", 2, true},
 	{1, "on-aptible.com", 2, true},
 	{1, "user.aseinet.ne.jp", 4, true},
 	{1, "gv.vc", 2, true},
@@ -8866,6 +8867,10 @@ var r = [9172]Rule{
 	{1, "pleskns.com", 2, true},
 	{1, "dyn53.io", 2, true},
 	{1, "co.bn", 2, true},
+	{1, "postman-echo.com", 2, true},
+	{1, "pstmn.io", 2, true},
+	{1, "mock.pstmn.io", 3, true},
+	{1, "httpbin.org", 2, true},
 	{1, "xen.prgmr.com", 3, true},
 	{1, "priv.at", 2, true},
 	{1, "prvcy.page", 2, true},
@@ -8909,6 +8914,7 @@ var r = [9172]Rule{
 	{1, "hzc.io", 2, true},
 	{1, "wellbeingzone.eu", 2, true},
 	{1, "wellbeingzone.co.uk", 3, true},
+	{1, "adimo.co.uk", 3, true},
 	{1, "git-pages.rit.edu", 3, true},
 	{1, "xn--90amc.xn--p1acf", 2, true},
 	{1, "xn--j1aef.xn--p1acf", 2, true},
