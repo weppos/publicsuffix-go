@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version bc5d64 (Fri Jun  4 07:22:16 2021)"
+const defaultListVersion = "PSL version 5067df (Tue Jun 15 08:46:27 2021)"
 
-func DefaultRules() [9177]Rule {
+func DefaultRules() [9180]Rule {
 	return r
 }
 
-var r = [9177]Rule{
+var r = [9180]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -598,7 +598,6 @@ var r = [9177]Rule{
 	{2, "ck", 2, false},
 	{3, "www.ck", 2, false},
 	{1, "cl", 1, false},
-	{1, "aprendemas.cl", 2, false},
 	{1, "co.cl", 2, false},
 	{1, "gob.cl", 2, false},
 	{1, "gov.cl", 2, false},
@@ -7494,6 +7493,7 @@ var r = [9177]Rule{
 	{1, "square7.de", 2, true},
 	{1, "bplaced.net", 2, true},
 	{1, "square7.net", 2, true},
+	{1, "shop.brendly.rs", 3, true},
 	{1, "browsersafetymark.io", 2, true},
 	{1, "uk0.bigv.io", 3, true},
 	{1, "dh.bytemark.co.uk", 4, true},
@@ -7638,6 +7638,7 @@ var r = [9177]Rule{
 	{2, "bzz.dapps.earth", 4, true},
 	{1, "builtwithdark.com", 2, true},
 	{1, "edgestack.me", 2, true},
+	{1, "ddns5.com", 2, true},
 	{1, "debian.net", 2, true},
 	{1, "deno.dev", 2, true},
 	{1, "deno-staging.dev", 2, true},
@@ -8573,6 +8574,8 @@ var r = [9177]Rule{
 	{1, "mcdir.ru", 2, true},
 	{1, "mcpre.ru", 2, true},
 	{1, "vps.mcdir.ru", 3, true},
+	{1, "mediatech.by", 2, true},
+	{1, "mediatech.dev", 2, true},
 	{1, "hra.health", 2, true},
 	{1, "miniserver.com", 2, true},
 	{1, "memset.net", 2, true},
