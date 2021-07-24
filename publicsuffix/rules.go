@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version 156ca2 (Thu Jul 22 16:28:17 2021)"
+const defaultListVersion = "PSL version 27632a (Fri Jul 23 07:36:24 2021)"
 
-func DefaultRules() [9180]Rule {
+func DefaultRules() [9188]Rule {
 	return r
 }
 
-var r = [9180]Rule{
+var r = [9188]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -7469,6 +7469,7 @@ var r = [9180]Rule{
 	{1, "potager.org", 2, true},
 	{1, "sweetpepper.org", 2, true},
 	{1, "myasustor.com", 2, true},
+	{1, "cdn.prod.atlassian-dev.net", 4, true},
 	{1, "myfritz.net", 2, true},
 	{1, "onavstack.net", 2, true},
 	{2, "awdev.ca", 3, true},
@@ -7476,11 +7477,13 @@ var r = [9180]Rule{
 	{1, "b-data.io", 2, true},
 	{1, "backplaneapp.io", 2, true},
 	{1, "balena-devices.com", 2, true},
+	{1, "rs.ba", 2, true},
 	{2, "banzai.cloud", 3, true},
 	{1, "app.banzaicloud.io", 3, true},
 	{2, "backyards.banzaicloud.io", 4, true},
 	{1, "betainabox.com", 2, true},
 	{1, "bnr.la", 2, true},
+	{1, "bitbucket.io", 2, true},
 	{1, "blackbaudcdn.net", 2, true},
 	{1, "of.je", 2, true},
 	{1, "bluebite.io", 2, true},
@@ -7500,9 +7503,11 @@ var r = [9180]Rule{
 	{1, "vm.bytemark.co.uk", 4, true},
 	{1, "cafjs.com", 2, true},
 	{1, "mycd.eu", 2, true},
+	{1, "drr.ac", 2, true},
+	{1, "uwu.ai", 2, true},
 	{1, "carrd.co", 2, true},
 	{1, "crd.co", 2, true},
-	{1, "uwu.ai", 2, true},
+	{1, "ju.mp", 2, true},
 	{1, "ae.org", 2, true},
 	{1, "br.com", 2, true},
 	{1, "cn.com", 2, true},
@@ -7971,6 +7976,7 @@ var r = [9180]Rule{
 	{1, "e4.cz", 2, true},
 	{1, "en-root.fr", 2, true},
 	{1, "mytuleap.com", 2, true},
+	{1, "tuleap-partners.com", 2, true},
 	{1, "onred.one", 2, true},
 	{1, "staging.onred.one", 3, true},
 	{1, "service.one", 2, true},
@@ -8204,6 +8210,7 @@ var r = [9180]Rule{
 	{1, "gitapp.si", 2, true},
 	{1, "gitpage.si", 2, true},
 	{1, "glitch.me", 2, true},
+	{1, "nog.community", 2, true},
 	{1, "co.ro", 2, true},
 	{1, "shop.ro", 2, true},
 	{1, "lolipop.io", 2, true},
@@ -8916,6 +8923,7 @@ var r = [9180]Rule{
 	{1, "wellbeingzone.eu", 2, true},
 	{1, "wellbeingzone.co.uk", 3, true},
 	{1, "adimo.co.uk", 3, true},
+	{1, "itcouldbewor.se", 2, true},
 	{1, "git-pages.rit.edu", 3, true},
 	{1, "xn--90amc.xn--p1acf", 2, true},
 	{1, "xn--j1aef.xn--p1acf", 2, true},
@@ -8945,6 +8953,7 @@ var r = [9180]Rule{
 	{1, "myfirewall.org", 2, true},
 	{1, "spdns.org", 2, true},
 	{1, "seidat.net", 2, true},
+	{1, "sellfy.store", 2, true},
 	{1, "senseering.net", 2, true},
 	{1, "minisite.ms", 2, true},
 	{1, "magnet.page", 2, true},
@@ -9119,7 +9128,6 @@ var r = [9180]Rule{
 	{1, "de.md", 2, true},
 	{1, "jp.md", 2, true},
 	{1, "to.md", 2, true},
-	{1, "uwu.nu", 2, true},
 	{1, "indie.porn", 2, true},
 	{1, "vxl.sh", 2, true},
 	{1, "ch.tc", 2, true},
