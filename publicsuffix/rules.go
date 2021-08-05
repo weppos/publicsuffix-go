@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version ba7dc5 (Mon Jul 26 10:16:12 2021)"
+const defaultListVersion = "PSL version 99981f (Wed Aug  4 14:44:38 2021)"
 
-func DefaultRules() [9223]Rule {
+func DefaultRules() [9225]Rule {
 	return r
 }
 
-var r = [9223]Rule{
+var r = [9225]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -7981,6 +7981,8 @@ var r = [9223]Rule{
 	{1, "e4.cz", 2, true},
 	{1, "eero.online", 2, true},
 	{1, "eero-stage.online", 2, true},
+	{1, "elementor.cloud", 2, true},
+	{1, "elementor.cool", 2, true},
 	{1, "en-root.fr", 2, true},
 	{1, "mytuleap.com", 2, true},
 	{1, "tuleap-partners.com", 2, true},
