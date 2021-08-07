@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version 99981f (Wed Aug  4 14:44:38 2021)"
+const defaultListVersion = "PSL version 948cf0 (Fri Aug  6 07:09:36 2021)"
 
-func DefaultRules() [9225]Rule {
+func DefaultRules() [9174]Rule {
 	return r
 }
 
-var r = [9225]Rule{
+var r = [9174]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -8778,57 +8778,6 @@ var r = [9225]Rule{
 	{1, "nodum.io", 2, true},
 	{1, "pcloud.host", 2, true},
 	{1, "nyc.mn", 2, true},
-	{1, "nom.ae", 2, true},
-	{1, "nom.af", 2, true},
-	{1, "nom.ai", 2, true},
-	{1, "nom.al", 2, true},
-	{1, "nym.by", 2, true},
-	{1, "nom.bz", 2, true},
-	{1, "nym.bz", 2, true},
-	{1, "nom.cl", 2, true},
-	{1, "nym.ec", 2, true},
-	{1, "nom.gd", 2, true},
-	{1, "nom.ge", 2, true},
-	{1, "nom.gl", 2, true},
-	{1, "nym.gr", 2, true},
-	{1, "nom.gt", 2, true},
-	{1, "nym.gy", 2, true},
-	{1, "nym.hk", 2, true},
-	{1, "nom.hn", 2, true},
-	{1, "nym.ie", 2, true},
-	{1, "nom.im", 2, true},
-	{1, "nom.ke", 2, true},
-	{1, "nym.kz", 2, true},
-	{1, "nym.la", 2, true},
-	{1, "nym.lc", 2, true},
-	{1, "nom.li", 2, true},
-	{1, "nym.li", 2, true},
-	{1, "nym.lt", 2, true},
-	{1, "nym.lu", 2, true},
-	{1, "nom.lv", 2, true},
-	{1, "nym.me", 2, true},
-	{1, "nom.mk", 2, true},
-	{1, "nym.mn", 2, true},
-	{1, "nym.mx", 2, true},
-	{1, "nom.nu", 2, true},
-	{1, "nym.nz", 2, true},
-	{1, "nym.pe", 2, true},
-	{1, "nym.pt", 2, true},
-	{1, "nom.pw", 2, true},
-	{1, "nom.qa", 2, true},
-	{1, "nym.ro", 2, true},
-	{1, "nom.rs", 2, true},
-	{1, "nom.si", 2, true},
-	{1, "nym.sk", 2, true},
-	{1, "nom.st", 2, true},
-	{1, "nym.su", 2, true},
-	{1, "nym.sx", 2, true},
-	{1, "nom.tj", 2, true},
-	{1, "nym.tw", 2, true},
-	{1, "nom.ug", 2, true},
-	{1, "nom.uy", 2, true},
-	{1, "nom.vc", 2, true},
-	{1, "nom.vg", 2, true},
 	{1, "static.observableusercontent.com", 3, true},
 	{1, "cya.gg", 2, true},
 	{1, "omg.lol", 2, true},
