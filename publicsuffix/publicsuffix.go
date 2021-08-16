@@ -210,7 +210,7 @@ func (l *List) Find(name string, options *FindOptions) *Rule {
 			return rule
 		}
 
-		i := strings.IndexRune(part, '.')
+		i := strings.IndexByte(part, '.')
 		if i < 0 {
 			return options.DefaultRule
 		}
@@ -323,7 +323,7 @@ func (r *Rule) Decompose(name string) (result [2]string) {
 		}
 		result[0], result[1] = name[:i], name[i+1:]+"."+r.Value
 	case ExceptionType:
-		i := strings.IndexRune(r.Value, '.')
+		i := strings.IndexByte(r.Value, '.')
 		if i < 0 {
 			return
 		}
