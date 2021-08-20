@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version 948cf0 (Fri Aug  6 07:09:36 2021)"
+const defaultListVersion = "PSL version b2e931 (Fri Aug 20 04:48:42 2021)"
 
-func DefaultRules() [9174]Rule {
+func DefaultRules() [9178]Rule {
 	return r
 }
 
-var r = [9174]Rule{
+var r = [9178]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -6717,6 +6717,7 @@ var r = [9174]Rule{
 	{1, "kerryproperties", 1, false},
 	{1, "kfh", 1, false},
 	{1, "kia", 1, false},
+	{1, "kids", 1, false},
 	{1, "kim", 1, false},
 	{1, "kinder", 1, false},
 	{1, "kindle", 1, false},
@@ -7555,6 +7556,8 @@ var r = [9174]Rule{
 	{1, "discourse.team", 2, true},
 	{1, "virtueeldomein.nl", 2, true},
 	{1, "cleverapps.io", 2, true},
+	{1, "clerk.app", 2, true},
+	{1, "clerkstage.app", 2, true},
 	{2, "lcl.dev", 3, true},
 	{2, "lclstage.dev", 3, true},
 	{2, "stg.dev", 3, true},
@@ -8936,6 +8939,7 @@ var r = [9174]Rule{
 	{1, "alpha.bounty-full.com", 3, true},
 	{1, "beta.bounty-full.com", 3, true},
 	{1, "small-web.org", 2, true},
+	{1, "vp4.me", 2, true},
 	{1, "try-snowplow.com", 2, true},
 	{1, "srht.site", 2, true},
 	{1, "stackhero-network.com", 2, true},
