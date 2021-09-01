@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version d4e263 (Sat Aug 21 07:40:39 2021)"
+const defaultListVersion = "PSL version 6ea3f4 (Tue Aug 31 20:57:10 2021)"
 
-func DefaultRules() [9181]Rule {
+func DefaultRules() [9184]Rule {
 	return r
 }
 
-var r = [9181]Rule{
+var r = [9184]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -7481,6 +7481,7 @@ var r = [9181]Rule{
 	{1, "onavstack.net", 2, true},
 	{2, "awdev.ca", 3, true},
 	{2, "advisor.ws", 3, true},
+	{1, "ecommerce-shop.pl", 2, true},
 	{1, "b-data.io", 2, true},
 	{1, "backplaneapp.io", 2, true},
 	{1, "balena-devices.com", 2, true},
@@ -7984,6 +7985,9 @@ var r = [9181]Rule{
 	{1, "myddns.rocks", 2, true},
 	{1, "blogsite.xyz", 2, true},
 	{1, "dynv6.net", 2, true},
+	{1, "elluciancrmadvance.com", 2, true},
+	{1, "elluciancrmadvise.com", 2, true},
+	{1, "elluciancrmrecruit.com", 2, true},
 	{1, "e4.cz", 2, true},
 	{1, "eero.online", 2, true},
 	{1, "eero-stage.online", 2, true},
@@ -7995,8 +7999,6 @@ var r = [9181]Rule{
 	{1, "onred.one", 2, true},
 	{1, "staging.onred.one", 3, true},
 	{1, "service.one", 2, true},
-	{1, "enonic.io", 2, true},
-	{1, "customer.enonic.io", 3, true},
 	{1, "eu.org", 2, true},
 	{1, "al.eu.org", 3, true},
 	{1, "asso.eu.org", 3, true},
@@ -8348,6 +8350,7 @@ var r = [9181]Rule{
 	{1, "ravendb.me", 2, true},
 	{1, "development.run", 2, true},
 	{1, "ravendb.run", 2, true},
+	{1, "homesklep.pl", 2, true},
 	{1, "secaas.hk", 2, true},
 	{1, "orx.biz", 2, true},
 	{1, "biz.gl", 2, true},
