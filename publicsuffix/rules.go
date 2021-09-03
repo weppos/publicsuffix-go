@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version d4e263 (Sat Aug 21 07:40:39 2021)"
+const defaultListVersion = "PSL version 6327e9 (Thu Sep  2 22:11:39 2021)"
 
-func DefaultRules() [9181]Rule {
+func DefaultRules() [9193]Rule {
 	return r
 }
 
-var r = [9181]Rule{
+var r = [9193]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -7481,6 +7481,7 @@ var r = [9181]Rule{
 	{1, "onavstack.net", 2, true},
 	{2, "awdev.ca", 3, true},
 	{2, "advisor.ws", 3, true},
+	{1, "ecommerce-shop.pl", 2, true},
 	{1, "b-data.io", 2, true},
 	{1, "backplaneapp.io", 2, true},
 	{1, "balena-devices.com", 2, true},
@@ -7577,7 +7578,7 @@ var r = [9181]Rule{
 	{1, "cloudaccess.net", 2, true},
 	{1, "cloudcontrolled.com", 2, true},
 	{1, "cloudcontrolapp.com", 2, true},
-	{1, "cloudera.site", 2, true},
+	{2, "cloudera.site", 3, true},
 	{1, "pages.dev", 2, true},
 	{1, "trycloudflare.com", 2, true},
 	{1, "workers.dev", 2, true},
@@ -7659,6 +7660,8 @@ var r = [9181]Rule{
 	{1, "deno.dev", 2, true},
 	{1, "deno-staging.dev", 2, true},
 	{1, "dedyn.io", 2, true},
+	{2, "rss.my.id", 4, true},
+	{2, "diher.solutions", 3, true},
 	{1, "jozi.biz", 2, true},
 	{1, "dnshome.de", 2, true},
 	{1, "online.th", 2, true},
@@ -7984,6 +7987,9 @@ var r = [9181]Rule{
 	{1, "myddns.rocks", 2, true},
 	{1, "blogsite.xyz", 2, true},
 	{1, "dynv6.net", 2, true},
+	{1, "elluciancrmadvance.com", 2, true},
+	{1, "elluciancrmadvise.com", 2, true},
+	{1, "elluciancrmrecruit.com", 2, true},
 	{1, "e4.cz", 2, true},
 	{1, "eero.online", 2, true},
 	{1, "eero-stage.online", 2, true},
@@ -7995,8 +8001,6 @@ var r = [9181]Rule{
 	{1, "onred.one", 2, true},
 	{1, "staging.onred.one", 3, true},
 	{1, "service.one", 2, true},
-	{1, "enonic.io", 2, true},
-	{1, "customer.enonic.io", 3, true},
 	{1, "eu.org", 2, true},
 	{1, "al.eu.org", 3, true},
 	{1, "asso.eu.org", 3, true},
@@ -8340,6 +8344,7 @@ var r = [9181]Rule{
 	{1, "hashbang.sh", 2, true},
 	{1, "hasura.app", 2, true},
 	{1, "hasura-app.io", 2, true},
+	{1, "pages.it.hs-heilbronn.de", 4, true},
 	{1, "hepforge.org", 2, true},
 	{1, "herokuapp.com", 2, true},
 	{1, "herokussl.com", 2, true},
@@ -8348,6 +8353,7 @@ var r = [9181]Rule{
 	{1, "ravendb.me", 2, true},
 	{1, "development.run", 2, true},
 	{1, "ravendb.run", 2, true},
+	{1, "homesklep.pl", 2, true},
 	{1, "secaas.hk", 2, true},
 	{1, "orx.biz", 2, true},
 	{1, "biz.gl", 2, true},
@@ -8552,6 +8558,7 @@ var r = [9181]Rule{
 	{1, "loginline.io", 2, true},
 	{1, "loginline.services", 2, true},
 	{1, "loginline.site", 2, true},
+	{1, "servers.run", 2, true},
 	{1, "lohmus.me", 2, true},
 	{1, "krasnik.pl", 2, true},
 	{1, "leczna.pl", 2, true},
@@ -8581,6 +8588,7 @@ var r = [9181]Rule{
 	{1, "barsy.org", 2, true},
 	{1, "barsy.pro", 2, true},
 	{1, "barsy.pub", 2, true},
+	{1, "barsy.ro", 2, true},
 	{1, "barsy.shop", 2, true},
 	{1, "barsy.site", 2, true},
 	{1, "barsy.support", 2, true},
@@ -9007,6 +9015,7 @@ var r = [9181]Rule{
 	{1, "synology.me", 2, true},
 	{1, "vpnplus.to", 2, true},
 	{1, "direct.quickconnect.to", 3, true},
+	{1, "tabitorder.co.il", 3, true},
 	{1, "taifun-dns.de", 2, true},
 	{1, "gda.pl", 2, true},
 	{1, "gdansk.pl", 2, true},
@@ -9159,6 +9168,9 @@ var r = [9181]Rule{
 	{1, "diskussionsbereich.de", 2, true},
 	{1, "community-pro.net", 2, true},
 	{1, "meinforum.net", 2, true},
+	{1, "affinitylottery.org.uk", 3, true},
+	{1, "raffleentry.org.uk", 3, true},
+	{1, "weeklylottery.org.uk", 3, true},
 	{1, "wpenginepowered.com", 2, true},
 	{1, "js.wpenginepowered.com", 3, true},
 	{1, "wixsite.com", 2, true},
