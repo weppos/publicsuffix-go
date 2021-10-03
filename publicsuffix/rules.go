@@ -3,7 +3,7 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version e3fc75 (Wed Sep 22 08:23:47 2021)"
+const defaultListVersion = "PSL version 21ed03 (Fri Oct  1 15:30:09 2021)"
 
 func DefaultRules() [9191]Rule {
 	return r
@@ -6995,7 +6995,6 @@ var r = [9191]Rule{
 	{1, "ril", 1, false},
 	{1, "rio", 1, false},
 	{1, "rip", 1, false},
-	{1, "rmit", 1, false},
 	{1, "rocher", 1, false},
 	{1, "rocks", 1, false},
 	{1, "rodeo", 1, false},
@@ -7563,7 +7562,6 @@ var r = [9191]Rule{
 	{2, "lclstage.dev", 3, true},
 	{2, "stg.dev", 3, true},
 	{2, "stgstage.dev", 3, true},
-	{1, "clic2000.net", 2, true},
 	{1, "clickrising.net", 2, true},
 	{1, "c66.me", 2, true},
 	{1, "cloud66.ws", 2, true},
@@ -8253,6 +8251,7 @@ var r = [9191]Rule{
 	{2, "gateway.dev", 3, true},
 	{1, "cloud.goog", 2, true},
 	{1, "translate.goog", 2, true},
+	{2, "usercontent.goog", 3, true},
 	{1, "cloudfunctions.net", 2, true},
 	{1, "blogspot.ae", 2, true},
 	{1, "blogspot.al", 2, true},
@@ -8848,6 +8847,7 @@ var r = [9191]Rule{
 	{1, "pstmn.io", 2, true},
 	{1, "mock.pstmn.io", 3, true},
 	{1, "httpbin.org", 2, true},
+	{1, "prequalifyme.today", 2, true},
 	{1, "xen.prgmr.com", 3, true},
 	{1, "priv.at", 2, true},
 	{1, "prvcy.page", 2, true},
