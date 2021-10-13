@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version 29956a (Thu Oct  7 19:49:05 2021)"
+const defaultListVersion = "PSL version 0df64a (Tue Oct 12 11:25:54 2021)"
 
-func DefaultRules() [9190]Rule {
+func DefaultRules() [9192]Rule {
 	return r
 }
 
-var r = [9190]Rule{
+var r = [9192]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -6961,7 +6961,6 @@ var r = [9190]Rule{
 	{1, "qpon", 1, false},
 	{1, "quebec", 1, false},
 	{1, "quest", 1, false},
-	{1, "qvc", 1, false},
 	{1, "racing", 1, false},
 	{1, "radio", 1, false},
 	{1, "raid", 1, false},
@@ -8547,6 +8546,7 @@ var r = [9190]Rule{
 	{1, "members.linode.com", 3, true},
 	{2, "nodebalancer.linode.com", 4, true},
 	{2, "linodeobjects.com", 3, true},
+	{1, "ip.linodeusercontent.com", 3, true},
 	{1, "we.bs", 2, true},
 	{1, "localzone.xyz", 2, true},
 	{1, "loginline.app", 2, true},
@@ -9035,6 +9035,7 @@ var r = [9190]Rule{
 	{1, "reservd.dev.thingdust.io", 4, true},
 	{1, "reservd.disrec.thingdust.io", 4, true},
 	{1, "reservd.testing.thingdust.io", 4, true},
+	{1, "tickets.io", 2, true},
 	{1, "arvo.network", 2, true},
 	{1, "azimuth.network", 2, true},
 	{1, "tlon.network", 2, true},
@@ -9087,6 +9088,7 @@ var r = [9190]Rule{
 	{1, "inc.hk", 2, true},
 	{1, "virtualuser.de", 2, true},
 	{1, "virtual-user.de", 2, true},
+	{1, "upli.io", 2, true},
 	{1, "urown.cloud", 2, true},
 	{1, "dnsupdate.info", 2, true},
 	{1, "lib.de.us", 3, true},
