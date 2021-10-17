@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version 0df64a (Tue Oct 12 11:25:54 2021)"
+const defaultListVersion = "PSL version ff4958 (Sat Oct 16 16:32:08 2021)"
 
-func DefaultRules() [9192]Rule {
+func DefaultRules() [9200]Rule {
 	return r
 }
 
-var r = [9192]Rule{
+var r = [9200]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -688,6 +688,11 @@ var r = [9192]Rule{
 	{1, "gov.cu", 2, false},
 	{1, "inf.cu", 2, false},
 	{1, "cv", 1, false},
+	{1, "com.cv", 2, false},
+	{1, "edu.cv", 2, false},
+	{1, "int.cv", 2, false},
+	{1, "nome.cv", 2, false},
+	{1, "org.cv", 2, false},
 	{1, "cw", 1, false},
 	{1, "com.cw", 2, false},
 	{1, "edu.cw", 2, false},
@@ -7457,6 +7462,7 @@ var r = [9192]Rule{
 	{1, "t3l3p0rt.net", 2, true},
 	{1, "tele.amune.org", 3, true},
 	{1, "apigee.io", 2, true},
+	{1, "siiites.com", 2, true},
 	{1, "appspacehosted.com", 2, true},
 	{1, "appspaceusercontent.com", 2, true},
 	{1, "appudo.net", 2, true},
@@ -7994,7 +8000,6 @@ var r = [9192]Rule{
 	{1, "tuleap-partners.com", 2, true},
 	{1, "onred.one", 2, true},
 	{1, "staging.onred.one", 3, true},
-	{1, "service.one", 2, true},
 	{1, "eu.org", 2, true},
 	{1, "al.eu.org", 3, true},
 	{1, "asso.eu.org", 3, true},
@@ -8792,6 +8797,7 @@ var r = [9192]Rule{
 	{1, "omg.lol", 2, true},
 	{1, "cloudycluster.net", 2, true},
 	{1, "omniwe.site", 2, true},
+	{1, "service.one", 2, true},
 	{1, "nid.io", 2, true},
 	{1, "opensocial.site", 2, true},
 	{1, "opencraft.hosting", 2, true},
@@ -9014,6 +9020,8 @@ var r = [9192]Rule{
 	{1, "direct.quickconnect.to", 3, true},
 	{1, "tabitorder.co.il", 3, true},
 	{1, "taifun-dns.de", 2, true},
+	{1, "beta.tailscale.net", 3, true},
+	{1, "ts.net", 2, true},
 	{1, "gda.pl", 2, true},
 	{1, "gdansk.pl", 2, true},
 	{1, "gdynia.pl", 2, true},
