@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version 22a461 (Thu Oct 28 19:51:22 2021)"
+const defaultListVersion = "PSL version c492e2 (Tue Nov  9 17:35:31 2021)"
 
-func DefaultRules() [9196]Rule {
+func DefaultRules() [9197]Rule {
 	return r
 }
 
-var r = [9196]Rule{
+var r = [9197]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -7536,7 +7536,6 @@ var r = [9196]Rule{
 	{1, "za.bz", 2, true},
 	{1, "za.com", 2, true},
 	{1, "ar.com", 2, true},
-	{1, "gb.com", 2, true},
 	{1, "hu.com", 2, true},
 	{1, "kr.com", 2, true},
 	{1, "no.com", 2, true},
@@ -8180,6 +8179,8 @@ var r = [9196]Rule{
 	{1, "firebaseapp.com", 2, true},
 	{1, "fireweb.app", 2, true},
 	{1, "flap.id", 2, true},
+	{1, "onflashdrive.app", 2, true},
+	{1, "fldrv.com", 2, true},
 	{1, "fly.dev", 2, true},
 	{1, "edgeapp.net", 2, true},
 	{1, "shw.io", 2, true},
