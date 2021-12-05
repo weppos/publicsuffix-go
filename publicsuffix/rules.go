@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version 3c213a (Fri Nov 26 23:05:53 2021)"
+const defaultListVersion = "PSL version b9077a (Sun Dec  5 00:25:31 2021)"
 
-func DefaultRules() [9195]Rule {
+func DefaultRules() [9189]Rule {
 	return r
 }
 
-var r = [9195]Rule{
+var r = [9189]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -6213,7 +6213,6 @@ var r = [9195]Rule{
 	{1, "adult", 1, false},
 	{1, "aeg", 1, false},
 	{1, "aetna", 1, false},
-	{1, "afamilycompany", 1, false},
 	{1, "afl", 1, false},
 	{1, "africa", 1, false},
 	{1, "agakhan", 1, false},
@@ -6486,7 +6485,6 @@ var r = [9195]Rule{
 	{1, "drive", 1, false},
 	{1, "dtv", 1, false},
 	{1, "dubai", 1, false},
-	{1, "duck", 1, false},
 	{1, "dunlop", 1, false},
 	{1, "dupont", 1, false},
 	{1, "durban", 1, false},
@@ -6596,7 +6594,6 @@ var r = [9195]Rule{
 	{1, "gifts", 1, false},
 	{1, "gives", 1, false},
 	{1, "giving", 1, false},
-	{1, "glade", 1, false},
 	{1, "glass", 1, false},
 	{1, "gle", 1, false},
 	{1, "global", 1, false},
@@ -6886,7 +6883,6 @@ var r = [9195]Rule{
 	{1, "nyc", 1, false},
 	{1, "obi", 1, false},
 	{1, "observer", 1, false},
-	{1, "off", 1, false},
 	{1, "office", 1, false},
 	{1, "okinawa", 1, false},
 	{1, "olayan", 1, false},
@@ -6968,7 +6964,6 @@ var r = [9195]Rule{
 	{1, "quest", 1, false},
 	{1, "racing", 1, false},
 	{1, "radio", 1, false},
-	{1, "raid", 1, false},
 	{1, "read", 1, false},
 	{1, "realestate", 1, false},
 	{1, "realtor", 1, false},
@@ -7037,7 +7032,6 @@ var r = [9195]Rule{
 	{1, "schule", 1, false},
 	{1, "schwarz", 1, false},
 	{1, "science", 1, false},
-	{1, "scjohnson", 1, false},
 	{1, "scot", 1, false},
 	{1, "search", 1, false},
 	{1, "seat", 1, false},
