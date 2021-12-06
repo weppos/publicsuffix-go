@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version b9077a (Sun Dec  5 00:25:31 2021)"
+const defaultListVersion = "PSL version aa911f (Sun Dec  5 06:41:42 2021)"
 
-func DefaultRules() [9189]Rule {
+func DefaultRules() [9200]Rule {
 	return r
 }
 
-var r = [9189]Rule{
+var r = [9200]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -7481,6 +7481,16 @@ var r = [9189]Rule{
 	{2, "banzai.cloud", 3, true},
 	{1, "app.banzaicloud.io", 3, true},
 	{2, "backyards.banzaicloud.io", 4, true},
+	{1, "base.ec", 2, true},
+	{1, "official.ec", 2, true},
+	{1, "buyshop.jp", 2, true},
+	{1, "fashionstore.jp", 2, true},
+	{1, "handcrafted.jp", 2, true},
+	{1, "kawaiishop.jp", 2, true},
+	{1, "supersale.jp", 2, true},
+	{1, "theshop.jp", 2, true},
+	{1, "shopselect.net", 2, true},
+	{1, "base.shop", 2, true},
 	{1, "betainabox.com", 2, true},
 	{1, "bnr.la", 2, true},
 	{1, "bitbucket.io", 2, true},
@@ -8344,6 +8354,7 @@ var r = [9189]Rule{
 	{1, "ravendb.run", 2, true},
 	{1, "homesklep.pl", 2, true},
 	{1, "secaas.hk", 2, true},
+	{1, "hoplix.shop", 2, true},
 	{1, "orx.biz", 2, true},
 	{1, "biz.gl", 2, true},
 	{1, "col.ng", 2, true},
@@ -8513,6 +8524,7 @@ var r = [9189]Rule{
 	{1, "kinghost.net", 2, true},
 	{1, "uni5.net", 2, true},
 	{1, "knightpoint.systems", 2, true},
+	{1, "koobin.events", 2, true},
 	{1, "oya.to", 2, true},
 	{1, "kuleuven.cloud", 2, true},
 	{1, "ezproxy.kuleuven.be", 3, true},
@@ -8777,8 +8789,6 @@ var r = [9189]Rule{
 	{1, "webhop.me", 2, true},
 	{1, "zapto.org", 2, true},
 	{1, "stage.nodeart.io", 3, true},
-	{1, "nodum.co", 2, true},
-	{1, "nodum.io", 2, true},
 	{1, "pcloud.host", 2, true},
 	{1, "nyc.mn", 2, true},
 	{1, "static.observableusercontent.com", 3, true},
@@ -9016,7 +9026,8 @@ var r = [9189]Rule{
 	{1, "gdynia.pl", 2, true},
 	{1, "med.pl", 2, true},
 	{1, "sopot.pl", 2, true},
-	{1, "edugit.org", 2, true},
+	{1, "edugit.io", 2, true},
+	{1, "s3.teckids.org", 3, true},
 	{1, "telebit.app", 2, true},
 	{1, "telebit.io", 2, true},
 	{2, "telebit.xyz", 3, true},
