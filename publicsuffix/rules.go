@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version 2a2943 (Mon Dec 13 23:27:08 2021)"
+const defaultListVersion = "PSL version 888042 (Thu Jan 20 04:35:07 2022)"
 
-func DefaultRules() [9204]Rule {
+func DefaultRules() [9205]Rule {
 	return r
 }
 
-var r = [9204]Rule{
+var r = [9205]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -6771,7 +6771,6 @@ var r = [9204]Rule{
 	{1, "lipsy", 1, false},
 	{1, "live", 1, false},
 	{1, "living", 1, false},
-	{1, "lixil", 1, false},
 	{1, "llc", 1, false},
 	{1, "llp", 1, false},
 	{1, "loan", 1, false},
@@ -7602,6 +7601,7 @@ var r = [9204]Rule{
 	{1, "cloudns.pw", 2, true},
 	{1, "cloudns.us", 2, true},
 	{1, "cnpy.gdn", 2, true},
+	{1, "codeberg.page", 2, true},
 	{1, "co.nl", 2, true},
 	{1, "co.no", 2, true},
 	{1, "webhosting.be", 2, true},
@@ -9029,6 +9029,7 @@ var r = [9204]Rule{
 	{1, "gdynia.pl", 2, true},
 	{1, "med.pl", 2, true},
 	{1, "sopot.pl", 2, true},
+	{1, "site.tb-hosting.com", 3, true},
 	{1, "edugit.io", 2, true},
 	{1, "s3.teckids.org", 3, true},
 	{1, "telebit.app", 2, true},
