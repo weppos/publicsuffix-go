@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version 888042 (Thu Jan 20 04:35:07 2022)"
+const defaultListVersion = "PSL version b014d5 (Tue Feb  1 10:15:38 2022)"
 
-func DefaultRules() [9205]Rule {
+func DefaultRules() [9212]Rule {
 	return r
 }
 
-var r = [9205]Rule{
+var r = [9212]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -3395,11 +3395,10 @@ var r = [9205]Rule{
 	{1, "net.kw", 2, false},
 	{1, "org.kw", 2, false},
 	{1, "ky", 1, false},
-	{1, "edu.ky", 2, false},
-	{1, "gov.ky", 2, false},
 	{1, "com.ky", 2, false},
-	{1, "org.ky", 2, false},
+	{1, "edu.ky", 2, false},
 	{1, "net.ky", 2, false},
+	{1, "org.ky", 2, false},
 	{1, "kz", 1, false},
 	{1, "org.kz", 2, false},
 	{1, "edu.kz", 2, false},
@@ -8212,7 +8211,15 @@ var r = [9205]Rule{
 	{2, "ex.ortsinfo.at", 4, true},
 	{2, "kunden.ortsinfo.at", 4, true},
 	{2, "statics.cloud", 3, true},
+	{1, "independent-commission.uk", 2, true},
+	{1, "independent-inquest.uk", 2, true},
+	{1, "independent-inquiry.uk", 2, true},
+	{1, "independent-panel.uk", 2, true},
+	{1, "independent-review.uk", 2, true},
+	{1, "public-inquiry.uk", 2, true},
+	{1, "royal-commission.uk", 2, true},
 	{1, "service.gov.uk", 3, true},
+	{1, "api.gov.uk", 3, true},
 	{1, "gehirn.ne.jp", 3, true},
 	{1, "usercontent.jp", 2, true},
 	{1, "gentapps.com", 2, true},
