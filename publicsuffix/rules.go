@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version 888042 (Thu Jan 20 04:35:07 2022)"
+const defaultListVersion = "PSL version c7fe8d (Tue Feb 15 09:16:10 2022)"
 
-func DefaultRules() [9205]Rule {
+func DefaultRules() [9212]Rule {
 	return r
 }
 
-var r = [9205]Rule{
+var r = [9212]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -707,10 +707,9 @@ var r = [9205]Rule{
 	{1, "ekloges.cy", 2, false},
 	{1, "gov.cy", 2, false},
 	{1, "ltd.cy", 2, false},
-	{1, "name.cy", 2, false},
+	{1, "mil.cy", 2, false},
 	{1, "net.cy", 2, false},
 	{1, "org.cy", 2, false},
-	{1, "parliament.cy", 2, false},
 	{1, "press.cy", 2, false},
 	{1, "pro.cy", 2, false},
 	{1, "tm.cy", 2, false},
@@ -3395,11 +3394,10 @@ var r = [9205]Rule{
 	{1, "net.kw", 2, false},
 	{1, "org.kw", 2, false},
 	{1, "ky", 1, false},
-	{1, "edu.ky", 2, false},
-	{1, "gov.ky", 2, false},
 	{1, "com.ky", 2, false},
-	{1, "org.ky", 2, false},
+	{1, "edu.ky", 2, false},
 	{1, "net.ky", 2, false},
+	{1, "org.ky", 2, false},
 	{1, "kz", 1, false},
 	{1, "org.kz", 2, false},
 	{1, "edu.kz", 2, false},
@@ -6437,7 +6435,6 @@ var r = [9205]Rule{
 	{1, "crs", 1, false},
 	{1, "cruise", 1, false},
 	{1, "cruises", 1, false},
-	{1, "csc", 1, false},
 	{1, "cuisinella", 1, false},
 	{1, "cymru", 1, false},
 	{1, "cyou", 1, false},
@@ -7490,6 +7487,7 @@ var r = [9205]Rule{
 	{1, "theshop.jp", 2, true},
 	{1, "shopselect.net", 2, true},
 	{1, "base.shop", 2, true},
+	{2, "beget.app", 3, true},
 	{1, "betainabox.com", 2, true},
 	{1, "bnr.la", 2, true},
 	{1, "bitbucket.io", 2, true},
@@ -8212,7 +8210,15 @@ var r = [9205]Rule{
 	{2, "ex.ortsinfo.at", 4, true},
 	{2, "kunden.ortsinfo.at", 4, true},
 	{2, "statics.cloud", 3, true},
+	{1, "independent-commission.uk", 2, true},
+	{1, "independent-inquest.uk", 2, true},
+	{1, "independent-inquiry.uk", 2, true},
+	{1, "independent-panel.uk", 2, true},
+	{1, "independent-review.uk", 2, true},
+	{1, "public-inquiry.uk", 2, true},
+	{1, "royal-commission.uk", 2, true},
 	{1, "service.gov.uk", 3, true},
+	{1, "api.gov.uk", 3, true},
 	{1, "gehirn.ne.jp", 3, true},
 	{1, "usercontent.jp", 2, true},
 	{1, "gentapps.com", 2, true},
@@ -9152,6 +9158,7 @@ var r = [9205]Rule{
 	{1, "dev.vu", 2, true},
 	{1, "me.vu", 2, true},
 	{1, "v.ua", 2, true},
+	{2, "vultrobjects.com", 3, true},
 	{1, "wafflecell.com", 2, true},
 	{1, "idnblogger.com", 2, true},
 	{1, "indowapblog.com", 2, true},
