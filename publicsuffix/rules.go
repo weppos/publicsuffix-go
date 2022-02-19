@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version c7fe8d (Tue Feb 15 09:16:10 2022)"
+const defaultListVersion = "PSL version 2db6f4 (Sat Feb 19 03:52:44 2022)"
 
-func DefaultRules() [9212]Rule {
+func DefaultRules() [9215]Rule {
 	return r
 }
 
-var r = [9212]Rule{
+var r = [9215]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -6331,7 +6331,6 @@ var r = [9212]Rule{
 	{1, "broker", 1, false},
 	{1, "brother", 1, false},
 	{1, "brussels", 1, false},
-	{1, "budapest", 1, false},
 	{1, "bugatti", 1, false},
 	{1, "build", 1, false},
 	{1, "builders", 1, false},
@@ -7465,6 +7464,7 @@ var r = [9212]Rule{
 	{1, "sweetpepper.org", 2, true},
 	{1, "myasustor.com", 2, true},
 	{1, "cdn.prod.atlassian-dev.net", 4, true},
+	{1, "translated.page", 2, true},
 	{1, "myfritz.net", 2, true},
 	{1, "onavstack.net", 2, true},
 	{2, "awdev.ca", 3, true},
@@ -7659,6 +7659,8 @@ var r = [9212]Rule{
 	{1, "dedyn.io", 2, true},
 	{2, "rss.my.id", 4, true},
 	{2, "diher.solutions", 3, true},
+	{1, "discordsays.com", 2, true},
+	{1, "discordsez.com", 2, true},
 	{1, "jozi.biz", 2, true},
 	{1, "dnshome.de", 2, true},
 	{1, "online.th", 2, true},
@@ -8855,6 +8857,7 @@ var r = [9212]Rule{
 	{1, "plesk.page", 2, true},
 	{1, "pleskns.com", 2, true},
 	{1, "dyn53.io", 2, true},
+	{1, "onporter.run", 2, true},
 	{1, "co.bn", 2, true},
 	{1, "postman-echo.com", 2, true},
 	{1, "pstmn.io", 2, true},
