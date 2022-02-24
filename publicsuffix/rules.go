@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version c7fe8d (Tue Feb 15 09:16:10 2022)"
+const defaultListVersion = "PSL version bc5346 (Wed Feb 23 20:41:24 2022)"
 
-func DefaultRules() [9212]Rule {
+func DefaultRules() [9218]Rule {
 	return r
 }
 
-var r = [9212]Rule{
+var r = [9218]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -6331,7 +6331,6 @@ var r = [9212]Rule{
 	{1, "broker", 1, false},
 	{1, "brother", 1, false},
 	{1, "brussels", 1, false},
-	{1, "budapest", 1, false},
 	{1, "bugatti", 1, false},
 	{1, "build", 1, false},
 	{1, "builders", 1, false},
@@ -7465,6 +7464,7 @@ var r = [9212]Rule{
 	{1, "sweetpepper.org", 2, true},
 	{1, "myasustor.com", 2, true},
 	{1, "cdn.prod.atlassian-dev.net", 4, true},
+	{1, "translated.page", 2, true},
 	{1, "myfritz.net", 2, true},
 	{1, "onavstack.net", 2, true},
 	{2, "awdev.ca", 3, true},
@@ -7659,6 +7659,8 @@ var r = [9212]Rule{
 	{1, "dedyn.io", 2, true},
 	{2, "rss.my.id", 4, true},
 	{2, "diher.solutions", 3, true},
+	{1, "discordsays.com", 2, true},
+	{1, "discordsez.com", 2, true},
 	{1, "jozi.biz", 2, true},
 	{1, "dnshome.de", 2, true},
 	{1, "online.th", 2, true},
@@ -8528,6 +8530,7 @@ var r = [9212]Rule{
 	{1, "js.org", 2, true},
 	{1, "kaas.gg", 2, true},
 	{1, "khplay.nl", 2, true},
+	{1, "kapsi.fi", 2, true},
 	{1, "keymachine.de", 2, true},
 	{1, "kinghost.net", 2, true},
 	{1, "uni5.net", 2, true},
@@ -8855,6 +8858,7 @@ var r = [9212]Rule{
 	{1, "plesk.page", 2, true},
 	{1, "pleskns.com", 2, true},
 	{1, "dyn53.io", 2, true},
+	{1, "onporter.run", 2, true},
 	{1, "co.bn", 2, true},
 	{1, "postman-echo.com", 2, true},
 	{1, "pstmn.io", 2, true},
@@ -8908,6 +8912,7 @@ var r = [9212]Rule{
 	{1, "adimo.co.uk", 3, true},
 	{1, "itcouldbewor.se", 2, true},
 	{1, "git-pages.rit.edu", 3, true},
+	{1, "rocky.page", 2, true},
 	{1, "xn--90amc.xn--p1acf", 2, true},
 	{1, "xn--j1aef.xn--p1acf", 2, true},
 	{1, "xn--j1ael8b.xn--p1acf", 2, true},
@@ -9181,6 +9186,7 @@ var r = [9212]Rule{
 	{1, "wmcloud.org", 2, true},
 	{1, "panel.gg", 2, true},
 	{1, "daemon.panel.gg", 3, true},
+	{1, "messwithdns.com", 2, true},
 	{1, "woltlab-demo.com", 2, true},
 	{1, "myforum.community", 2, true},
 	{1, "community-pro.de", 2, true},
