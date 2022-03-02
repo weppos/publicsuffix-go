@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version 6ebb42 (Mon Feb 28 02:56:51 2022)"
+const defaultListVersion = "PSL version f65278 (Tue Mar  1 23:04:56 2022)"
 
-func DefaultRules() [9324]Rule {
+func DefaultRules() [9322]Rule {
 	return r
 }
 
-var r = [9324]Rule{
+var r = [9322]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -8166,8 +8166,6 @@ var r = [9324]Rule{
 	{1, "cloud.fedoraproject.org", 3, true},
 	{1, "app.os.fedoraproject.org", 4, true},
 	{1, "app.os.stg.fedoraproject.org", 5, true},
-	{1, "couk.me", 2, true},
-	{1, "ukco.me", 2, true},
 	{1, "conn.uk", 2, true},
 	{1, "copro.uk", 2, true},
 	{1, "hosp.uk", 2, true},
