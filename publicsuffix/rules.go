@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version 6ebb42 (Mon Feb 28 02:56:51 2022)"
+const defaultListVersion = "PSL version 68b67d (Fri Mar  4 20:55:11 2022)"
 
-func DefaultRules() [9324]Rule {
+func DefaultRules() [9326]Rule {
 	return r
 }
 
-var r = [9324]Rule{
+var r = [9326]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -7658,6 +7658,8 @@ var r = [9324]Rule{
 	{1, "deno.dev", 2, true},
 	{1, "deno-staging.dev", 2, true},
 	{1, "dedyn.io", 2, true},
+	{1, "deta.app", 2, true},
+	{1, "deta.dev", 2, true},
 	{2, "rss.my.id", 4, true},
 	{2, "diher.solutions", 3, true},
 	{1, "discordsays.com", 2, true},
@@ -8166,8 +8168,6 @@ var r = [9324]Rule{
 	{1, "cloud.fedoraproject.org", 3, true},
 	{1, "app.os.fedoraproject.org", 4, true},
 	{1, "app.os.stg.fedoraproject.org", 5, true},
-	{1, "couk.me", 2, true},
-	{1, "ukco.me", 2, true},
 	{1, "conn.uk", 2, true},
 	{1, "copro.uk", 2, true},
 	{1, "hosp.uk", 2, true},
@@ -9081,6 +9081,7 @@ var r = [9324]Rule{
 	{1, "try-snowplow.com", 2, true},
 	{1, "srht.site", 2, true},
 	{1, "stackhero-network.com", 2, true},
+	{1, "musician.io", 2, true},
 	{1, "novecore.site", 2, true},
 	{1, "static.land", 2, true},
 	{1, "dev.static.land", 3, true},
@@ -9215,6 +9216,7 @@ var r = [9324]Rule{
 	{1, "syno-ds.de", 2, true},
 	{1, "synology-diskstation.de", 2, true},
 	{1, "synology-ds.de", 2, true},
+	{1, "typedream.app", 2, true},
 	{1, "pro.typeform.com", 3, true},
 	{1, "uber.space", 2, true},
 	{2, "uberspace.de", 3, true},
