@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version 402d71 (Tue Mar 22 16:32:30 2022)"
+const defaultListVersion = "PSL version 11310a (Fri Mar 25 18:34:50 2022)"
 
-func DefaultRules() [9327]Rule {
+func DefaultRules() [9333]Rule {
 	return r
 }
 
-var r = [9327]Rule{
+var r = [9333]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -7358,6 +7358,9 @@ var r = [9327]Rule{
 	{1, "hlx.page", 2, true},
 	{1, "hlx3.page", 2, true},
 	{1, "beep.pl", 2, true},
+	{1, "airkitapps.com", 2, true},
+	{1, "airkitapps-au.com", 2, true},
+	{1, "airkitapps.eu", 2, true},
 	{1, "aivencloud.com", 2, true},
 	{1, "barsy.ca", 2, true},
 	{2, "compute.estate", 3, true},
@@ -7998,6 +8001,8 @@ var r = [9327]Rule{
 	{1, "en-root.fr", 2, true},
 	{1, "mytuleap.com", 2, true},
 	{1, "tuleap-partners.com", 2, true},
+	{1, "encr.app", 2, true},
+	{1, "encoreapi.com", 2, true},
 	{1, "onred.one", 2, true},
 	{1, "staging.onred.one", 3, true},
 	{1, "eu.encoway.cloud", 3, true},
@@ -8673,6 +8678,7 @@ var r = [9327]Rule{
 	{2, "linodeobjects.com", 3, true},
 	{1, "ip.linodeusercontent.com", 3, true},
 	{1, "we.bs", 2, true},
+	{2, "user.localcert.dev", 4, true},
 	{1, "localzone.xyz", 2, true},
 	{1, "loginline.app", 2, true},
 	{1, "loginline.dev", 2, true},
