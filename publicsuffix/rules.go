@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version fd5650 (Sun Mar 27 15:19:06 2022)"
+const defaultListVersion = "PSL version 70a6c2 (Thu Mar 31 12:46:45 2022)"
 
-func DefaultRules() [9333]Rule {
+func DefaultRules() [9334]Rule {
 	return r
 }
 
-var r = [9333]Rule{
+var r = [9334]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -9135,19 +9135,20 @@ var r = [9333]Rule{
 	{2, "s5y.io", 3, true},
 	{2, "sensiosite.cloud", 3, true},
 	{1, "syncloud.it", 2, true},
-	{1, "diskstation.me", 2, true},
 	{1, "dscloud.biz", 2, true},
-	{1, "dscloud.me", 2, true},
-	{1, "dscloud.mobi", 2, true},
+	{1, "direct.quickconnect.cn", 3, true},
 	{1, "dsmynas.com", 2, true},
-	{1, "dsmynas.net", 2, true},
-	{1, "dsmynas.org", 2, true},
 	{1, "familyds.com", 2, true},
-	{1, "familyds.net", 2, true},
-	{1, "familyds.org", 2, true},
+	{1, "diskstation.me", 2, true},
+	{1, "dscloud.me", 2, true},
 	{1, "i234.me", 2, true},
 	{1, "myds.me", 2, true},
 	{1, "synology.me", 2, true},
+	{1, "dscloud.mobi", 2, true},
+	{1, "dsmynas.net", 2, true},
+	{1, "familyds.net", 2, true},
+	{1, "dsmynas.org", 2, true},
+	{1, "familyds.org", 2, true},
 	{1, "vpnplus.to", 2, true},
 	{1, "direct.quickconnect.to", 3, true},
 	{1, "tabitorder.co.il", 3, true},
