@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version d17a65 (Wed May 18 19:44:47 2022)"
+const defaultListVersion = "PSL version 4f1786 (Sun Jul  3 15:53:00 2022)"
 
-func DefaultRules() [9368]Rule {
+func DefaultRules() [9374]Rule {
 	return r
 }
 
-var r = [9368]Rule{
+var r = [9374]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -8303,6 +8303,7 @@ var r = [9368]Rule{
 	{1, "kilo.jp", 2, true},
 	{1, "kuron.jp", 2, true},
 	{1, "littlestar.jp", 2, true},
+	{1, "lolipopmc.jp", 2, true},
 	{1, "lolitapunk.jp", 2, true},
 	{1, "lomo.jp", 2, true},
 	{1, "lovepop.jp", 2, true},
@@ -8492,6 +8493,8 @@ var r = [9368]Rule{
 	{2, "moonscale.io", 3, true},
 	{1, "moonscale.net", 2, true},
 	{1, "iki.fi", 2, true},
+	{1, "ibxos.it", 2, true},
+	{1, "iliadboxos.it", 2, true},
 	{1, "impertrixcdn.com", 2, true},
 	{1, "impertrix.com", 2, true},
 	{1, "smushcdn.com", 2, true},
@@ -8543,7 +8546,9 @@ var r = [9368]Rule{
 	{1, "na4u.ru", 2, true},
 	{1, "iopsys.se", 2, true},
 	{1, "ipifony.net", 2, true},
+	{1, "iservschule.de", 2, true},
 	{1, "mein-iserv.de", 2, true},
+	{1, "schulplattform.de", 2, true},
 	{1, "schulserver.de", 2, true},
 	{1, "test-iserv.de", 2, true},
 	{1, "iserv.dev", 2, true},
@@ -8736,6 +8741,7 @@ var r = [9368]Rule{
 	{1, "hra.health", 2, true},
 	{1, "miniserver.com", 2, true},
 	{1, "memset.net", 2, true},
+	{1, "messerli.app", 2, true},
 	{2, "cloud.metacentrum.cz", 4, true},
 	{1, "custom.metacentrum.cz", 3, true},
 	{1, "flt.cloud.muni.cz", 4, true},
@@ -9042,9 +9048,9 @@ var r = [9368]Rule{
 	{1, "xn--h1aliz.xn--p1acf", 2, true},
 	{1, "xn--90a1af.xn--p1acf", 2, true},
 	{1, "xn--41a.xn--p1acf", 2, true},
-	{1, "builder.code.com", 3, true},
-	{1, "dev-builder.code.com", 3, true},
-	{1, "stg-builder.code.com", 3, true},
+	{2, "builder.code.com", 4, true},
+	{2, "dev-builder.code.com", 4, true},
+	{2, "stg-builder.code.com", 4, true},
 	{1, "sandcats.io", 2, true},
 	{1, "logoip.de", 2, true},
 	{1, "logoip.com", 2, true},
