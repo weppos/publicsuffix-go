@@ -1,5 +1,9 @@
+name: PSL Update
+
 on:
   workflow_dispatch:
+  schedule:
+    - cron: '40 6 * * *'
 
 jobs:
   update:
@@ -13,4 +17,18 @@ jobs:
         with:
           go-version: "1.18"
 
-      - run: make gen
+      - name: Update PSL
+        run: make gen
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v4
+        with:
+          title: PSL auto-update
+          commit-message: Updated list from source
+          reviewers: weppos
+
+      - name: Check Pull Request
+        if: ${{ steps.cpr.outputs.pull-request-number }}
+        run: |
+          echo "Pull Request Number - ${{ steps.cpr.outputs.pull-request-number }}"
+          echo "Pull Request URL - ${{ steps.cpr.outputs.pull-request-url }}"
