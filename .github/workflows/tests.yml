@@ -54,5 +54,5 @@ jobs:
 
     - uses: codecov/codecov-action@v3
       with:
-        files: ./coverage.txt
+        files: ${{ env.CURRENT_WORKSPACE }}/coverage.txt
         verbose: true
