@@ -52,8 +52,8 @@ jobs:
       run: ./test.sh
       working-directory: ${{ env.CURRENT_WORKSPACE }}
 
-    - uses: actions/checkout@master
-    - uses: codecov/codecov-action@v3
-      with:
-        files: ./coverage.txt
-        verbose: true
+#    - uses: actions/checkout@master
+#    - uses: codecov/codecov-action@v3
+#      with:
+#        files: ./coverage.txt
+#        verbose: true
