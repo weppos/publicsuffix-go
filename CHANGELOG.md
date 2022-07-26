@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 0.20.0
+
+- CHANGED: Definition updates.
+
 ## 0.15.0
 
 - CHANGED: Definition updates.
