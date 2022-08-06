@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version be7688 (Thu Jul 28 15:22:16 2022)"
+const defaultListVersion = "PSL version 308823 (Fri Aug  5 19:56:40 2022)"
 
-func DefaultRules() [9374]Rule {
+func DefaultRules() [9403]Rule {
 	return r
 }
 
-var r = [9374]Rule{
+var r = [9403]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -1045,18 +1045,47 @@ var r = [9374]Rule{
 	{1, "tt.im", 2, false},
 	{1, "tv.im", 2, false},
 	{1, "in", 1, false},
-	{1, "co.in", 2, false},
-	{1, "firm.in", 2, false},
-	{1, "net.in", 2, false},
-	{1, "org.in", 2, false},
-	{1, "gen.in", 2, false},
-	{1, "ind.in", 2, false},
-	{1, "nic.in", 2, false},
+	{1, "5g.in", 2, false},
+	{1, "6g.in", 2, false},
 	{1, "ac.in", 2, false},
+	{1, "ai.in", 2, false},
+	{1, "am.in", 2, false},
+	{1, "bihar.in", 2, false},
+	{1, "biz.in", 2, false},
+	{1, "business.in", 2, false},
+	{1, "ca.in", 2, false},
+	{1, "cn.in", 2, false},
+	{1, "co.in", 2, false},
+	{1, "com.in", 2, false},
+	{1, "coop.in", 2, false},
+	{1, "cs.in", 2, false},
+	{1, "delhi.in", 2, false},
+	{1, "dr.in", 2, false},
 	{1, "edu.in", 2, false},
-	{1, "res.in", 2, false},
+	{1, "er.in", 2, false},
+	{1, "firm.in", 2, false},
+	{1, "gen.in", 2, false},
 	{1, "gov.in", 2, false},
+	{1, "gujarat.in", 2, false},
+	{1, "ind.in", 2, false},
+	{1, "info.in", 2, false},
+	{1, "int.in", 2, false},
+	{1, "internet.in", 2, false},
+	{1, "io.in", 2, false},
+	{1, "me.in", 2, false},
 	{1, "mil.in", 2, false},
+	{1, "net.in", 2, false},
+	{1, "nic.in", 2, false},
+	{1, "org.in", 2, false},
+	{1, "pg.in", 2, false},
+	{1, "post.in", 2, false},
+	{1, "pro.in", 2, false},
+	{1, "res.in", 2, false},
+	{1, "travel.in", 2, false},
+	{1, "tv.in", 2, false},
+	{1, "uk.in", 2, false},
+	{1, "up.in", 2, false},
+	{1, "us.in", 2, false},
 	{1, "info", 1, false},
 	{1, "int", 1, false},
 	{1, "eu.int", 2, false},
