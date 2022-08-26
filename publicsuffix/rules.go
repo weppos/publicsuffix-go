@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version 05be67 (Thu Aug 11 17:34:54 2022)"
+const defaultListVersion = "PSL version 4f29f1 (Thu Aug 25 13:52:26 2022)"
 
-func DefaultRules() [9408]Rule {
+func DefaultRules() [9416]Rule {
 	return r
 }
 
-var r = [9408]Rule{
+var r = [9416]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -7525,6 +7525,7 @@ var r = [9408]Rule{
 	{1, "theshop.jp", 2, true},
 	{1, "shopselect.net", 2, true},
 	{1, "base.shop", 2, true},
+	{1, "beagleboard.io", 2, true},
 	{2, "beget.app", 3, true},
 	{1, "betainabox.com", 2, true},
 	{1, "bnr.la", 2, true},
@@ -8028,6 +8029,8 @@ var r = [9408]Rule{
 	{1, "blogsite.xyz", 2, true},
 	{1, "dynv6.net", 2, true},
 	{1, "e4.cz", 2, true},
+	{1, "easypanel.app", 2, true},
+	{1, "easypanel.host", 2, true},
 	{1, "eero.online", 2, true},
 	{1, "eero-stage.online", 2, true},
 	{1, "elementor.cloud", 2, true},
@@ -8232,6 +8235,10 @@ var r = [9408]Rule{
 	{1, "id.forgerock.io", 3, true},
 	{1, "framer.app", 2, true},
 	{1, "framercanvas.com", 2, true},
+	{1, "framer.media", 2, true},
+	{1, "framer.photos", 2, true},
+	{1, "framer.website", 2, true},
+	{1, "framer.wiki", 2, true},
 	{2, "frusky.de", 3, true},
 	{1, "ravpage.co.il", 3, true},
 	{1, "0e.vc", 2, true},
@@ -9154,6 +9161,7 @@ var r = [9408]Rule{
 	{1, "beta.bounty-full.com", 3, true},
 	{1, "small-web.org", 2, true},
 	{1, "vp4.me", 2, true},
+	{1, "streamlitapp.com", 2, true},
 	{1, "try-snowplow.com", 2, true},
 	{1, "srht.site", 2, true},
 	{1, "stackhero-network.com", 2, true},
