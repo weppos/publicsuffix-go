@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version e5ff0c (Thu Sep 15 15:23:11 2022)"
+const defaultListVersion = "PSL version 7ba91b (Fri Sep 23 03:48:53 2022)"
 
-func DefaultRules() [9416]Rule {
+func DefaultRules() [9458]Rule {
 	return r
 }
 
-var r = [9416]Rule{
+var r = [9458]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -7484,6 +7484,48 @@ var r = [9416]Rule{
 	{1, "s3-website.eu-west-2.amazonaws.com", 4, true},
 	{1, "s3-website.eu-west-3.amazonaws.com", 4, true},
 	{1, "s3-website.us-east-2.amazonaws.com", 4, true},
+	{1, "vfs.cloud9.af-south-1.amazonaws.com", 5, true},
+	{1, "webview-assets.cloud9.af-south-1.amazonaws.com", 5, true},
+	{1, "vfs.cloud9.ap-east-1.amazonaws.com", 5, true},
+	{1, "webview-assets.cloud9.ap-east-1.amazonaws.com", 5, true},
+	{1, "vfs.cloud9.ap-northeast-1.amazonaws.com", 5, true},
+	{1, "webview-assets.cloud9.ap-northeast-1.amazonaws.com", 5, true},
+	{1, "vfs.cloud9.ap-northeast-2.amazonaws.com", 5, true},
+	{1, "webview-assets.cloud9.ap-northeast-2.amazonaws.com", 5, true},
+	{1, "vfs.cloud9.ap-northeast-3.amazonaws.com", 5, true},
+	{1, "webview-assets.cloud9.ap-northeast-3.amazonaws.com", 5, true},
+	{1, "vfs.cloud9.ap-south-1.amazonaws.com", 5, true},
+	{1, "webview-assets.cloud9.ap-south-1.amazonaws.com", 5, true},
+	{1, "vfs.cloud9.ap-southeast-1.amazonaws.com", 5, true},
+	{1, "webview-assets.cloud9.ap-southeast-1.amazonaws.com", 5, true},
+	{1, "vfs.cloud9.ap-southeast-2.amazonaws.com", 5, true},
+	{1, "webview-assets.cloud9.ap-southeast-2.amazonaws.com", 5, true},
+	{1, "vfs.cloud9.ca-central-1.amazonaws.com", 5, true},
+	{1, "webview-assets.cloud9.ca-central-1.amazonaws.com", 5, true},
+	{1, "vfs.cloud9.eu-central-1.amazonaws.com", 5, true},
+	{1, "webview-assets.cloud9.eu-central-1.amazonaws.com", 5, true},
+	{1, "vfs.cloud9.eu-north-1.amazonaws.com", 5, true},
+	{1, "webview-assets.cloud9.eu-north-1.amazonaws.com", 5, true},
+	{1, "vfs.cloud9.eu-south-1.amazonaws.com", 5, true},
+	{1, "webview-assets.cloud9.eu-south-1.amazonaws.com", 5, true},
+	{1, "vfs.cloud9.eu-west-1.amazonaws.com", 5, true},
+	{1, "webview-assets.cloud9.eu-west-1.amazonaws.com", 5, true},
+	{1, "vfs.cloud9.eu-west-2.amazonaws.com", 5, true},
+	{1, "webview-assets.cloud9.eu-west-2.amazonaws.com", 5, true},
+	{1, "vfs.cloud9.eu-west-3.amazonaws.com", 5, true},
+	{1, "webview-assets.cloud9.eu-west-3.amazonaws.com", 5, true},
+	{1, "vfs.cloud9.me-south-1.amazonaws.com", 5, true},
+	{1, "webview-assets.cloud9.me-south-1.amazonaws.com", 5, true},
+	{1, "vfs.cloud9.sa-east-1.amazonaws.com", 5, true},
+	{1, "webview-assets.cloud9.sa-east-1.amazonaws.com", 5, true},
+	{1, "vfs.cloud9.us-east-1.amazonaws.com", 5, true},
+	{1, "webview-assets.cloud9.us-east-1.amazonaws.com", 5, true},
+	{1, "vfs.cloud9.us-east-2.amazonaws.com", 5, true},
+	{1, "webview-assets.cloud9.us-east-2.amazonaws.com", 5, true},
+	{1, "vfs.cloud9.us-west-1.amazonaws.com", 5, true},
+	{1, "webview-assets.cloud9.us-west-1.amazonaws.com", 5, true},
+	{1, "vfs.cloud9.us-west-2.amazonaws.com", 5, true},
+	{1, "webview-assets.cloud9.us-west-2.amazonaws.com", 5, true},
 	{1, "t3l3p0rt.net", 2, true},
 	{1, "tele.amune.org", 3, true},
 	{1, "apigee.io", 2, true},
