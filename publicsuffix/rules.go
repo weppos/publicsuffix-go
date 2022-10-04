@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version 0c4bee (Tue Sep 27 20:37:42 2022)"
+const defaultListVersion = "PSL version 1f4f99 (Mon Oct  3 19:35:44 2022)"
 
-func DefaultRules() [9459]Rule {
+func DefaultRules() [9462]Rule {
 	return r
 }
 
-var r = [9459]Rule{
+var r = [9462]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -7385,6 +7385,7 @@ var r = [9459]Rule{
 	{1, "611.to", 2, true},
 	{1, "graphox.us", 2, true},
 	{2, "devcdnaccesso.com", 3, true},
+	{2, "on-acorn.io", 3, true},
 	{1, "adobeaemcloud.com", 2, true},
 	{2, "dev.adobeaemcloud.com", 4, true},
 	{1, "hlx.live", 2, true},
@@ -9110,6 +9111,8 @@ var r = [9459]Rule{
 	{1, "rhcloud.com", 2, true},
 	{1, "app.render.com", 3, true},
 	{1, "onrender.com", 2, true},
+	{1, "firewalledreplit.co", 2, true},
+	{1, "id.firewalledreplit.co", 3, true},
 	{1, "repl.co", 2, true},
 	{1, "id.repl.co", 3, true},
 	{1, "repl.run", 2, true},
