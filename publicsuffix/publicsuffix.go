@@ -540,5 +540,5 @@ func (l cookiejarList) PublicSuffix(domain string) string {
 
 // PublicSuffix implements cookiejar.String.
 func (cookiejarList) String() string {
-	return defaultListVersion
+	return ListVersion
 }

@@ -27,7 +27,7 @@ const (
 
 package publicsuffix
 
-const defaultListVersion = "PSL version {{.VersionSHA}} ({{.VersionDate}})"
+const ListVersion = "PSL version {{.VersionSHA}} ({{.VersionDate}})"
 
 func DefaultRules() [{{len .Rules}}]Rule {
 	return r
