@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version 6c9ebb (Tue Oct 11 15:28:18 2022)"
+const defaultListVersion = "PSL version 7c123f (Wed Oct 12 21:23:40 2022)"
 
-func DefaultRules() [9460]Rule {
+func DefaultRules() [9461]Rule {
 	return r
 }
 
-var r = [9460]Rule{
+var r = [9461]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -8241,6 +8241,7 @@ var r = [9460]Rule{
 	{1, "a.ssl.fastly.net", 4, true},
 	{1, "b.ssl.fastly.net", 4, true},
 	{1, "global.ssl.fastly.net", 4, true},
+	{2, "user.fm", 3, true},
 	{1, "fastvps-server.com", 2, true},
 	{1, "fastvps.host", 2, true},
 	{1, "myfast.host", 2, true},
