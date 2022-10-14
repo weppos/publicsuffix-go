@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version 7c123f (Wed Oct 12 21:23:40 2022)"
+const defaultListVersion = "PSL version 1aaeb2 (Thu Oct 13 20:08:22 2022)"
 
-func DefaultRules() [9461]Rule {
+func DefaultRules() [9464]Rule {
 	return r
 }
 
-var r = [9461]Rule{
+var r = [9464]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -8866,22 +8866,6 @@ var r = [9461]Rule{
 	{1, "yali.mythic-beasts.com", 3, true},
 	{1, "cust.retrosnub.co.uk", 4, true},
 	{1, "ui.nabu.casa", 3, true},
-	{1, "pony.club", 2, true},
-	{1, "of.fashion", 2, true},
-	{1, "in.london", 2, true},
-	{1, "of.london", 2, true},
-	{1, "from.marketing", 2, true},
-	{1, "with.marketing", 2, true},
-	{1, "for.men", 2, true},
-	{1, "repair.men", 2, true},
-	{1, "and.mom", 2, true},
-	{1, "for.mom", 2, true},
-	{1, "for.one", 2, true},
-	{1, "under.one", 2, true},
-	{1, "for.sale", 2, true},
-	{1, "that.win", 2, true},
-	{1, "from.work", 2, true},
-	{1, "to.work", 2, true},
 	{1, "cloud.nospamproxy.com", 3, true},
 	{1, "netlify.app", 2, true},
 	{1, "4u.com", 2, true},
@@ -9016,7 +9000,26 @@ var r = [9461]Rule{
 	{1, "omg.lol", 2, true},
 	{1, "cloudycluster.net", 2, true},
 	{1, "omniwe.site", 2, true},
+	{1, "123hjemmeside.dk", 2, true},
+	{1, "123hjemmeside.no", 2, true},
+	{1, "123homepage.it", 2, true},
+	{1, "123kotisivu.fi", 2, true},
+	{1, "123minsida.se", 2, true},
+	{1, "123miweb.es", 2, true},
+	{1, "123paginaweb.pt", 2, true},
+	{1, "123sait.ru", 2, true},
+	{1, "123siteweb.fr", 2, true},
+	{1, "123webseite.at", 2, true},
+	{1, "123webseite.de", 2, true},
+	{1, "123website.be", 2, true},
+	{1, "123website.ch", 2, true},
+	{1, "123website.lu", 2, true},
+	{1, "123website.nl", 2, true},
 	{1, "service.one", 2, true},
+	{1, "simplesite.com", 2, true},
+	{1, "simplesite.com.br", 3, true},
+	{1, "simplesite.gr", 2, true},
+	{1, "simplesite.pl", 2, true},
 	{1, "nid.io", 2, true},
 	{1, "opensocial.site", 2, true},
 	{1, "opencraft.hosting", 2, true},
