@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version 875ac0 (Wed Nov  2 16:11:06 2022)"
+const defaultListVersion = "PSL version 75af97 (Fri Nov  4 09:05:23 2022)"
 
-func DefaultRules() [9464]Rule {
+func DefaultRules() [9463]Rule {
 	return r
 }
 
-var r = [9464]Rule{
+var r = [9463]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -8554,7 +8554,6 @@ var r = [9464]Rule{
 	{1, "herokuapp.com", 2, true},
 	{1, "herokussl.com", 2, true},
 	{1, "ravendb.cloud", 2, true},
-	{1, "myravendb.com", 2, true},
 	{1, "ravendb.community", 2, true},
 	{1, "ravendb.me", 2, true},
 	{1, "development.run", 2, true},
