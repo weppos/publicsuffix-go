@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version e248cb (Tue Nov 15 18:02:38 2022)"
+const defaultListVersion = "PSL version cd56bd (Tue Nov 22 23:23:07 2022)"
 
-func DefaultRules() [9462]Rule {
+func DefaultRules() [9467]Rule {
 	return r
 }
 
-var r = [9462]Rule{
+var r = [9467]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -7658,8 +7658,11 @@ var r = [9462]Rule{
 	{1, "cloudcontrolled.com", 2, true},
 	{1, "cloudcontrolapp.com", 2, true},
 	{2, "cloudera.site", 3, true},
-	{1, "pages.dev", 2, true},
+	{1, "cf-ipfs.com", 2, true},
+	{1, "cloudflare-ipfs.com", 2, true},
 	{1, "trycloudflare.com", 2, true},
+	{1, "pages.dev", 2, true},
+	{1, "r2.dev", 2, true},
 	{1, "workers.dev", 2, true},
 	{1, "wnext.app", 2, true},
 	{1, "co.ca", 2, true},
@@ -9277,6 +9280,8 @@ var r = [9462]Rule{
 	{1, "vpnplus.to", 2, true},
 	{1, "direct.quickconnect.to", 3, true},
 	{1, "tabitorder.co.il", 3, true},
+	{1, "mytabit.co.il", 3, true},
+	{1, "mytabit.com", 2, true},
 	{1, "taifun-dns.de", 2, true},
 	{1, "beta.tailscale.net", 3, true},
 	{1, "ts.net", 2, true},
