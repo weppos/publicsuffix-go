@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version 40ac39 (Mon Jan 30 11:19:14 2023)"
+const defaultListVersion = "PSL version f15705 (Tue Jan 31 17:58:52 2023)"
 
-func DefaultRules() [9464]Rule {
+func DefaultRules() [9481]Rule {
 	return r
 }
 
-var r = [9464]Rule{
+var r = [9481]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -307,9 +307,26 @@ var r = [9464]Rule{
 	{1, "org.bi", 2, false},
 	{1, "biz", 1, false},
 	{1, "bj", 1, false},
-	{1, "asso.bj", 2, false},
-	{1, "barreau.bj", 2, false},
-	{1, "gouv.bj", 2, false},
+	{1, "africa.bj", 2, false},
+	{1, "agro.bj", 2, false},
+	{1, "architectes.bj", 2, false},
+	{1, "assur.bj", 2, false},
+	{1, "avocats.bj", 2, false},
+	{1, "co.bj", 2, false},
+	{1, "com.bj", 2, false},
+	{1, "eco.bj", 2, false},
+	{1, "econo.bj", 2, false},
+	{1, "edu.bj", 2, false},
+	{1, "info.bj", 2, false},
+	{1, "loisirs.bj", 2, false},
+	{1, "money.bj", 2, false},
+	{1, "net.bj", 2, false},
+	{1, "org.bj", 2, false},
+	{1, "ote.bj", 2, false},
+	{1, "resto.bj", 2, false},
+	{1, "restaurant.bj", 2, false},
+	{1, "tourism.bj", 2, false},
+	{1, "univ.bj", 2, false},
 	{1, "bm", 1, false},
 	{1, "com.bm", 2, false},
 	{1, "edu.bm", 2, false},
