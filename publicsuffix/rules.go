@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version f15705 (Tue Jan 31 17:58:52 2023)"
+const defaultListVersion = "PSL version 3c33ad (Wed Feb  8 01:14:39 2023)"
 
-func DefaultRules() [9481]Rule {
+func DefaultRules() [9490]Rule {
 	return r
 }
 
-var r = [9481]Rule{
+var r = [9490]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -7404,6 +7404,8 @@ var r = [9481]Rule{
 	{1, "adobeaemcloud.net", 2, true},
 	{1, "hlx.page", 2, true},
 	{1, "hlx3.page", 2, true},
+	{1, "adobeio-static.net", 2, true},
+	{1, "adobeioruntime.net", 2, true},
 	{1, "beep.pl", 2, true},
 	{1, "airkitapps.com", 2, true},
 	{1, "airkitapps-au.com", 2, true},
@@ -7561,6 +7563,7 @@ var r = [9481]Rule{
 	{1, "myasustor.com", 2, true},
 	{1, "cdn.prod.atlassian-dev.net", 4, true},
 	{1, "translated.page", 2, true},
+	{1, "autocode.dev", 2, true},
 	{1, "myfritz.net", 2, true},
 	{1, "onavstack.net", 2, true},
 	{2, "awdev.ca", 3, true},
@@ -7607,6 +7610,8 @@ var r = [9481]Rule{
 	{1, "vm.bytemark.co.uk", 4, true},
 	{1, "cafjs.com", 2, true},
 	{1, "mycd.eu", 2, true},
+	{1, "canva-apps.cn", 2, true},
+	{1, "canva-apps.com", 2, true},
 	{1, "drr.ac", 2, true},
 	{1, "uwu.ai", 2, true},
 	{1, "carrd.co", 2, true},
@@ -8249,6 +8254,7 @@ var r = [9481]Rule{
 	{1, "channelsdvr.net", 2, true},
 	{1, "u.channelsdvr.net", 3, true},
 	{1, "edgecompute.app", 2, true},
+	{1, "fastly-edge.com", 2, true},
 	{1, "fastly-terrarium.com", 2, true},
 	{1, "fastlylb.net", 2, true},
 	{1, "map.fastlylb.net", 3, true},
@@ -9226,6 +9232,9 @@ var r = [9481]Rule{
 	{1, "beta.bounty-full.com", 3, true},
 	{1, "small-web.org", 2, true},
 	{1, "vp4.me", 2, true},
+	{1, "snowflake.app", 2, true},
+	{1, "privatelink.snowflake.app", 3, true},
+	{1, "streamlit.app", 2, true},
 	{1, "streamlitapp.com", 2, true},
 	{1, "try-snowplow.com", 2, true},
 	{1, "srht.site", 2, true},
