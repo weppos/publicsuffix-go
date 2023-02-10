@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const defaultListVersion = "PSL version 4bb975 (Wed Feb  8 21:08:32 2023)"
+const defaultListVersion = "PSL version 9e8325 (Thu Feb  9 23:26:35 2023)"
 
-func DefaultRules() [9491]Rule {
+func DefaultRules() [9506]Rule {
 	return r
 }
 
-var r = [9491]Rule{
+var r = [9506]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -7411,6 +7411,21 @@ var r = [9491]Rule{
 	{1, "airkitapps-au.com", 2, true},
 	{1, "airkitapps.eu", 2, true},
 	{1, "aivencloud.com", 2, true},
+	{1, "akadns.net", 2, true},
+	{1, "akamai.net", 2, true},
+	{1, "akamai-staging.net", 2, true},
+	{1, "akamaiedge.net", 2, true},
+	{1, "akamaiedge-staging.net", 2, true},
+	{1, "akamaihd.net", 2, true},
+	{1, "akamaihd-staging.net", 2, true},
+	{1, "akamaiorigin.net", 2, true},
+	{1, "akamaiorigin-staging.net", 2, true},
+	{1, "akamaized.net", 2, true},
+	{1, "akamaized-staging.net", 2, true},
+	{1, "edgekey.net", 2, true},
+	{1, "edgekey-staging.net", 2, true},
+	{1, "edgesuite.net", 2, true},
+	{1, "edgesuite-staging.net", 2, true},
 	{1, "barsy.ca", 2, true},
 	{2, "compute.estate", 3, true},
 	{2, "alces.network", 3, true},
