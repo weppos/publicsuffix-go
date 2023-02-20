@@ -1,6 +1,6 @@
 module github.com/weppos/publicsuffix-go
 
-go 1.13
+go 1.16
 
 require (
 	github.com/weppos/publicsuffix-go/publicsuffix/generator v0.0.0-20220927085643-dc0d00c92642 // indirect

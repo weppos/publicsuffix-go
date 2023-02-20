@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 0.30.0
+
+- CHANGED: Dropped Go < 1.16 from the list of supported versions to fix "package embed is not in GOROOT". "embed" is an indirect dependency and it's only available since Go 1.16.
+
 ## 0.20.0
 
 - CHANGED: Definition updates.
@@ -36,7 +40,7 @@
 
 - FIXED: Added a DefaultRules() function that can be used to create a new list without modifying the default one (GH-141, GH-170). Thanks @guliyevemil1
 
-- FIXED: Fixed nil pointer dereference when can't find a rule (GH-16) 
+- FIXED: Fixed nil pointer dereference when can't find a rule (GH-16)
 
 - CHANGED: Removed unreachable code (GH-167)
 
