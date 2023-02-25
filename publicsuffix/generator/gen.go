@@ -17,7 +17,7 @@ import (
 	"text/template"
 	"time"
 
-	"github.com/google/go-github/github"
+	"github.com/google/go-github/v50/github"
 	"github.com/weppos/publicsuffix-go/publicsuffix"
 )
 
@@ -58,7 +58,7 @@ func cont(s string) string {
 	return strings.Replace(s, "\\\n", "", -1)
 }
 
-func extractHeadInfo() (sha string, datetime time.Time) {
+func extractHeadInfo() (sha string, datetime github.Timestamp) {
 	client := github.NewClient(nil)
 
 	commits, _, err := client.Repositories.ListCommits(context.Background(), "publicsuffix", "list", nil)
