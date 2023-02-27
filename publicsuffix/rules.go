@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version ab0530 (Wed Feb 22 17:27:14 2023)"
+const ListVersion = "PSL version 146263 (Mon Feb 27 00:11:28 2023)"
 
-func DefaultRules() [9507]Rule {
+func DefaultRules() [9554]Rule {
 	return r
 }
 
-var r = [9507]Rule{
+var r = [9554]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -9176,6 +9176,53 @@ var r = [9507]Rule{
 	{1, "xn--h1aliz.xn--p1acf", 2, true},
 	{1, "xn--90a1af.xn--p1acf", 2, true},
 	{1, "xn--41a.xn--p1acf", 2, true},
+	{1, "180r.com", 2, true},
+	{1, "dojin.com", 2, true},
+	{1, "sakuratan.com", 2, true},
+	{1, "sakuraweb.com", 2, true},
+	{1, "x0.com", 2, true},
+	{1, "2-d.jp", 2, true},
+	{1, "bona.jp", 2, true},
+	{1, "crap.jp", 2, true},
+	{1, "daynight.jp", 2, true},
+	{1, "eek.jp", 2, true},
+	{1, "flop.jp", 2, true},
+	{1, "halfmoon.jp", 2, true},
+	{1, "jeez.jp", 2, true},
+	{1, "matrix.jp", 2, true},
+	{1, "mimoza.jp", 2, true},
+	{1, "ivory.ne.jp", 3, true},
+	{1, "mail-box.ne.jp", 3, true},
+	{1, "mints.ne.jp", 3, true},
+	{1, "mokuren.ne.jp", 3, true},
+	{1, "opal.ne.jp", 3, true},
+	{1, "sakura.ne.jp", 3, true},
+	{1, "sumomo.ne.jp", 3, true},
+	{1, "topaz.ne.jp", 3, true},
+	{1, "netgamers.jp", 2, true},
+	{1, "nyanta.jp", 2, true},
+	{1, "o0o0.jp", 2, true},
+	{1, "rdy.jp", 2, true},
+	{1, "rgr.jp", 2, true},
+	{1, "rulez.jp", 2, true},
+	{1, "s3.isk01.sakurastorage.jp", 4, true},
+	{1, "s3.isk02.sakurastorage.jp", 4, true},
+	{1, "saloon.jp", 2, true},
+	{1, "sblo.jp", 2, true},
+	{1, "skr.jp", 2, true},
+	{1, "tank.jp", 2, true},
+	{1, "uh-oh.jp", 2, true},
+	{1, "undo.jp", 2, true},
+	{1, "rs.webaccel.jp", 3, true},
+	{1, "user.webaccel.jp", 3, true},
+	{1, "websozai.jp", 2, true},
+	{1, "xii.jp", 2, true},
+	{1, "squares.net", 2, true},
+	{1, "jpn.org", 2, true},
+	{1, "kirara.st", 2, true},
+	{1, "x0.to", 2, true},
+	{1, "from.tv", 2, true},
+	{1, "sakura.tv", 2, true},
 	{2, "builder.code.com", 4, true},
 	{2, "dev-builder.code.com", 4, true},
 	{2, "stg-builder.code.com", 4, true},
