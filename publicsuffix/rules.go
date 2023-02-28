@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version 146263 (Mon Feb 27 00:11:28 2023)"
+const ListVersion = "PSL version dd5a45 (Tue Feb 28 02:15:37 2023)"
 
-func DefaultRules() [9554]Rule {
+func DefaultRules() [9567]Rule {
 	return r
 }
 
-var r = [9554]Rule{
+var r = [9567]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -8609,6 +8609,7 @@ var r = [9554]Rule{
 	{1, "ngo.ng", 2, true},
 	{1, "edu.scot", 2, true},
 	{1, "sch.so", 2, true},
+	{1, "ie.ua", 2, true},
 	{1, "hostyhosting.io", 2, true},
 	{1, "xn--hkkinen-5wa.fi", 2, true},
 	{2, "moonscale.io", 3, true},
@@ -8908,7 +8909,19 @@ var r = [9554]Rule{
 	{1, "cloud.nospamproxy.com", 3, true},
 	{1, "netlify.app", 2, true},
 	{1, "4u.com", 2, true},
+	{1, "ngrok.app", 2, true},
+	{1, "ngrok-free.app", 2, true},
+	{1, "ngrok.dev", 2, true},
+	{1, "ngrok-free.dev", 2, true},
 	{1, "ngrok.io", 2, true},
+	{1, "ap.ngrok.io", 3, true},
+	{1, "au.ngrok.io", 3, true},
+	{1, "eu.ngrok.io", 3, true},
+	{1, "in.ngrok.io", 3, true},
+	{1, "jp.ngrok.io", 3, true},
+	{1, "sa.ngrok.io", 3, true},
+	{1, "us.ngrok.io", 3, true},
+	{1, "ngrok.pizza", 2, true},
 	{1, "nh-serv.co.uk", 3, true},
 	{1, "nfshost.com", 2, true},
 	{2, "developer.app", 3, true},
