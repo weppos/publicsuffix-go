@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version 86b4f5 (Wed May 10 12:13:59 2023)"
+const ListVersion = "PSL version 93caf9 (Wed Jun  7 16:57:30 2023)"
 
-func DefaultRules() [9029]Rule {
+func DefaultRules() [9024]Rule {
 	return r
 }
 
-var r = [9029]Rule{
+var r = [9024]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -5706,7 +5706,6 @@ var r = [9029]Rule{
 	{1, "org.zw", 2, false},
 	{1, "aaa", 1, false},
 	{1, "aarp", 1, false},
-	{1, "abarth", 1, false},
 	{1, "abb", 1, false},
 	{1, "abbott", 1, false},
 	{1, "abbvie", 1, false},
@@ -5733,7 +5732,6 @@ var r = [9029]Rule{
 	{1, "airforce", 1, false},
 	{1, "airtel", 1, false},
 	{1, "akdn", 1, false},
-	{1, "alfaromeo", 1, false},
 	{1, "alibaba", 1, false},
 	{1, "alipay", 1, false},
 	{1, "allfinanz", 1, false},
@@ -6038,7 +6036,6 @@ var r = [9029]Rule{
 	{1, "feedback", 1, false},
 	{1, "ferrari", 1, false},
 	{1, "ferrero", 1, false},
-	{1, "fiat", 1, false},
 	{1, "fidelity", 1, false},
 	{1, "fido", 1, false},
 	{1, "film", 1, false},
@@ -6245,7 +6242,6 @@ var r = [9029]Rule{
 	{1, "lamborghini", 1, false},
 	{1, "lamer", 1, false},
 	{1, "lancaster", 1, false},
-	{1, "lancia", 1, false},
 	{1, "land", 1, false},
 	{1, "landrover", 1, false},
 	{1, "lanxess", 1, false},
@@ -6308,7 +6304,6 @@ var r = [9029]Rule{
 	{1, "markets", 1, false},
 	{1, "marriott", 1, false},
 	{1, "marshalls", 1, false},
-	{1, "maserati", 1, false},
 	{1, "mattel", 1, false},
 	{1, "mba", 1, false},
 	{1, "mckinsey", 1, false},
