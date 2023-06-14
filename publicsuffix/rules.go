@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version c72a91 (Sat Jun 10 18:54:48 2023)"
+const ListVersion = "PSL version 9f978b (Tue Jun 13 17:21:17 2023)"
 
-func DefaultRules() [9024]Rule {
+func DefaultRules() [9027]Rule {
 	return r
 }
 
-var r = [9024]Rule{
+var r = [9027]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -5548,18 +5548,21 @@ var r = [9024]Rule{
 	{1, "net.vi", 2, false},
 	{1, "org.vi", 2, false},
 	{1, "vn", 1, false},
+	{1, "ac.vn", 2, false},
+	{1, "ai.vn", 2, false},
+	{1, "biz.vn", 2, false},
 	{1, "com.vn", 2, false},
-	{1, "net.vn", 2, false},
-	{1, "org.vn", 2, false},
 	{1, "edu.vn", 2, false},
 	{1, "gov.vn", 2, false},
-	{1, "int.vn", 2, false},
-	{1, "ac.vn", 2, false},
-	{1, "biz.vn", 2, false},
-	{1, "info.vn", 2, false},
-	{1, "name.vn", 2, false},
-	{1, "pro.vn", 2, false},
 	{1, "health.vn", 2, false},
+	{1, "id.vn", 2, false},
+	{1, "info.vn", 2, false},
+	{1, "int.vn", 2, false},
+	{1, "io.vn", 2, false},
+	{1, "name.vn", 2, false},
+	{1, "net.vn", 2, false},
+	{1, "org.vn", 2, false},
+	{1, "pro.vn", 2, false},
 	{1, "vu", 1, false},
 	{1, "com.vu", 2, false},
 	{1, "edu.vu", 2, false},
