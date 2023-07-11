@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 0.30.1
+
+- CHANGED: Definition updates.
+
+
 ## 0.30.0
 
 - CHANGED: Dropped Go < 1.16 from the list of supported versions to fix "package embed is not in GOROOT". "embed" is an indirect dependency and it's only available since Go 1.16.
