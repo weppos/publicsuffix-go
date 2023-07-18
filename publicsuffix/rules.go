@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version 311a23 (Sun Jul  9 08:28:48 2023)"
+const ListVersion = "PSL version f95b83 (Mon Jul 17 18:40:12 2023)"
 
-func DefaultRules() [9109]Rule {
+func DefaultRules() [9107]Rule {
 	return r
 }
 
-var r = [9109]Rule{
+var r = [9107]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -8218,7 +8218,6 @@ var r = [9109]Rule{
 	{1, "iobb.net", 2, true},
 	{1, "mel.cloudlets.com.au", 4, true},
 	{1, "cloud.interhostsolutions.be", 3, true},
-	{1, "users.scale.virtualcloud.com.br", 5, true},
 	{1, "mycloud.by", 2, true},
 	{1, "alp1.ae.flow.ch", 4, true},
 	{1, "appengine.flow.ch", 3, true},
@@ -8242,9 +8241,7 @@ var r = [9109]Rule{
 	{1, "de.trendhosting.cloud", 3, true},
 	{1, "jele.club", 2, true},
 	{1, "amscompute.com", 2, true},
-	{1, "clicketcloud.com", 2, true},
 	{1, "dopaas.com", 2, true},
-	{1, "hidora.com", 2, true},
 	{1, "paas.hosted-by-previder.com", 3, true},
 	{1, "rag-cloud.hosteur.com", 3, true},
 	{1, "rag-cloud-ch.hosteur.com", 3, true},
@@ -8892,6 +8889,7 @@ var r = [9109]Rule{
 	{1, "myspreadshop.se", 2, true},
 	{1, "myspreadshop.co.uk", 3, true},
 	{1, "api.stdlib.com", 3, true},
+	{1, "storipress.app", 2, true},
 	{1, "storj.farm", 2, true},
 	{1, "utwente.io", 2, true},
 	{1, "soc.srcf.net", 3, true},
