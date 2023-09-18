@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version e3a017 (Wed Sep 13 08:26:36 2023)"
+const ListVersion = "PSL version ac3ef0 (Mon Sep 18 03:55:59 2023)"
 
-func DefaultRules() [9104]Rule {
+func DefaultRules() [9106]Rule {
 	return r
 }
 
-var r = [9104]Rule{
+var r = [9106]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -9086,6 +9086,8 @@ var r = [9104]Rule{
 	{1, "js.wpenginepowered.com", 3, true},
 	{1, "wixsite.com", 2, true},
 	{1, "editorx.io", 2, true},
+	{1, "wixstudio.io", 2, true},
+	{1, "wix.run", 2, true},
 	{1, "half.host", 2, true},
 	{1, "xnbay.com", 2, true},
 	{1, "u2.xnbay.com", 3, true},
