@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version 1a4824 (Mon Sep 18 18:33:03 2023)"
+const ListVersion = "PSL version 4f5cba (Mon Sep 25 19:41:54 2023)"
 
-func DefaultRules() [9105]Rule {
+func DefaultRules() [9104]Rule {
 	return r
 }
 
-var r = [9105]Rule{
+var r = [9104]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -841,21 +841,10 @@ var r = [9105]Rule{
 	{1, "nom.fr", 2, false},
 	{1, "prd.fr", 2, false},
 	{1, "tm.fr", 2, false},
-	{1, "aeroport.fr", 2, false},
-	{1, "avocat.fr", 2, false},
 	{1, "avoues.fr", 2, false},
 	{1, "cci.fr", 2, false},
-	{1, "chambagri.fr", 2, false},
-	{1, "chirurgiens-dentistes.fr", 2, false},
-	{1, "experts-comptables.fr", 2, false},
-	{1, "geometre-expert.fr", 2, false},
 	{1, "greta.fr", 2, false},
 	{1, "huissier-justice.fr", 2, false},
-	{1, "medecin.fr", 2, false},
-	{1, "notaires.fr", 2, false},
-	{1, "pharmacien.fr", 2, false},
-	{1, "port.fr", 2, false},
-	{1, "veterinaire.fr", 2, false},
 	{1, "ga", 1, false},
 	{1, "gb", 1, false},
 	{1, "edu.gd", 2, false},
@@ -8841,6 +8830,16 @@ var r = [9105]Rule{
 	{1, "bounty-full.com", 2, true},
 	{1, "alpha.bounty-full.com", 3, true},
 	{1, "beta.bounty-full.com", 3, true},
+	{1, "aeroport.fr", 2, true},
+	{1, "avocat.fr", 2, true},
+	{1, "chambagri.fr", 2, true},
+	{1, "chirurgiens-dentistes.fr", 2, true},
+	{1, "experts-comptables.fr", 2, true},
+	{1, "medecin.fr", 2, true},
+	{1, "notaires.fr", 2, true},
+	{1, "pharmacien.fr", 2, true},
+	{1, "port.fr", 2, true},
+	{1, "veterinaire.fr", 2, true},
 	{1, "small-web.org", 2, true},
 	{1, "vp4.me", 2, true},
 	{1, "snowflake.app", 2, true},
