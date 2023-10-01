@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version 4f5cba (Mon Sep 25 19:41:54 2023)"
+const ListVersion = "PSL version 15d841 (Sun Oct  1 03:57:47 2023)"
 
-func DefaultRules() [9104]Rule {
+func DefaultRules() [9107]Rule {
 	return r
 }
 
-var r = [9104]Rule{
+var r = [9107]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -5203,6 +5203,7 @@ var r = [9104]Rule{
 	{1, "lg.ua", 2, false},
 	{1, "lt.ua", 2, false},
 	{1, "lugansk.ua", 2, false},
+	{1, "luhansk.ua", 2, false},
 	{1, "lutsk.ua", 2, false},
 	{1, "lv.ua", 2, false},
 	{1, "lviv.ua", 2, false},
@@ -5226,11 +5227,13 @@ var r = [9104]Rule{
 	{1, "ternopil.ua", 2, false},
 	{1, "uz.ua", 2, false},
 	{1, "uzhgorod.ua", 2, false},
+	{1, "uzhhorod.ua", 2, false},
 	{1, "vinnica.ua", 2, false},
 	{1, "vinnytsia.ua", 2, false},
 	{1, "vn.ua", 2, false},
 	{1, "volyn.ua", 2, false},
 	{1, "yalta.ua", 2, false},
+	{1, "zakarpattia.ua", 2, false},
 	{1, "zaporizhzhe.ua", 2, false},
 	{1, "zaporizhzhia.ua", 2, false},
 	{1, "zhitomir.ua", 2, false},
