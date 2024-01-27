@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version 883ced (Wed Jan 24 17:00:35 2024)"
+const ListVersion = "PSL version a7fad9 (Fri Jan 26 23:14:04 2024)"
 
-func DefaultRules() [9562]Rule {
+func DefaultRules() [9566]Rule {
 	return r
 }
 
-var r = [9562]Rule{
+var r = [9566]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -6892,8 +6892,10 @@ var r = [9562]Rule{
 	{1, "activetrail.biz", 2, true},
 	{1, "adobeaemcloud.com", 2, true},
 	{2, "dev.adobeaemcloud.com", 4, true},
+	{1, "aem.live", 2, true},
 	{1, "hlx.live", 2, true},
 	{1, "adobeaemcloud.net", 2, true},
+	{1, "aem.page", 2, true},
 	{1, "hlx.page", 2, true},
 	{1, "hlx3.page", 2, true},
 	{1, "adobeio-static.net", 2, true},
@@ -8173,7 +8175,6 @@ var r = [9562]Rule{
 	{1, "mymailer.com.tw", 3, true},
 	{1, "url.tw", 2, true},
 	{1, "onfabrica.com", 2, true},
-	{1, "apps.fbsbx.com", 3, true},
 	{1, "ru.net", 2, true},
 	{1, "adygeya.ru", 2, true},
 	{1, "bashkiria.ru", 2, true},
@@ -8840,6 +8841,8 @@ var r = [9562]Rule{
 	{1, "miniserver.com", 2, true},
 	{1, "memset.net", 2, true},
 	{1, "messerli.app", 2, true},
+	{1, "atmeta.com", 2, true},
+	{1, "apps.fbsbx.com", 3, true},
 	{2, "cloud.metacentrum.cz", 4, true},
 	{1, "custom.metacentrum.cz", 3, true},
 	{1, "flt.cloud.muni.cz", 4, true},
@@ -9221,6 +9224,7 @@ var r = [9562]Rule{
 	{2, "builder.code.com", 4, true},
 	{2, "dev-builder.code.com", 4, true},
 	{2, "stg-builder.code.com", 4, true},
+	{2, "001.test.code-builder-stg.platform.salesforce.com", 7, true},
 	{1, "sandcats.io", 2, true},
 	{1, "logoip.de", 2, true},
 	{1, "logoip.com", 2, true},
