@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version dedb54 (Fri Feb  2 05:05:02 2024)"
+const ListVersion = "PSL version 30b5e4 (Sun Feb  4 00:24:05 2024)"
 
-func DefaultRules() [9601]Rule {
+func DefaultRules() [9607]Rule {
 	return r
 }
 
-var r = [9601]Rule{
+var r = [9607]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -6889,6 +6889,8 @@ var r = [9601]Rule{
 	{1, "inf.ua", 2, true},
 	{1, "ltd.ua", 2, true},
 	{1, "611.to", 2, true},
+	{1, "a2hosted.com", 2, true},
+	{1, "cpserver.com", 2, true},
 	{1, "graphox.us", 2, true},
 	{2, "devcdnaccesso.com", 3, true},
 	{2, "on-acorn.io", 3, true},
@@ -9267,6 +9269,7 @@ var r = [9601]Rule{
 	{1, "fr-par-1.baremetal.scw.cloud", 4, true},
 	{1, "fr-par-2.baremetal.scw.cloud", 4, true},
 	{1, "nl-ams-1.baremetal.scw.cloud", 4, true},
+	{1, "cockpit.fr-par.scw.cloud", 4, true},
 	{1, "fnc.fr-par.scw.cloud", 4, true},
 	{1, "functions.fnc.fr-par.scw.cloud", 5, true},
 	{1, "k8s.fr-par.scw.cloud", 4, true},
@@ -9277,11 +9280,13 @@ var r = [9601]Rule{
 	{1, "priv.instances.scw.cloud", 4, true},
 	{1, "pub.instances.scw.cloud", 4, true},
 	{1, "k8s.scw.cloud", 3, true},
+	{1, "cockpit.nl-ams.scw.cloud", 4, true},
 	{1, "k8s.nl-ams.scw.cloud", 4, true},
 	{1, "nodes.k8s.nl-ams.scw.cloud", 5, true},
 	{1, "s3.nl-ams.scw.cloud", 4, true},
 	{1, "s3-website.nl-ams.scw.cloud", 4, true},
 	{1, "whm.nl-ams.scw.cloud", 4, true},
+	{1, "cockpit.pl-waw.scw.cloud", 4, true},
 	{1, "k8s.pl-waw.scw.cloud", 4, true},
 	{1, "nodes.k8s.pl-waw.scw.cloud", 5, true},
 	{1, "s3.pl-waw.scw.cloud", 4, true},
@@ -9607,6 +9612,7 @@ var r = [9601]Rule{
 	{1, "noho.st", 2, true},
 	{1, "za.net", 2, true},
 	{1, "za.org", 2, true},
+	{1, "zap.cloud", 2, true},
 	{1, "bss.design", 2, true},
 	{1, "basicserver.io", 2, true},
 	{1, "virtualserver.io", 2, true},
