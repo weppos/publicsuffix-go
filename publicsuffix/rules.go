@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version 30b5e4 (Sun Feb  4 00:24:05 2024)"
+const ListVersion = "PSL version 2fe831 (Tue Feb  6 04:22:31 2024)"
 
-func DefaultRules() [9607]Rule {
+func DefaultRules() [9611]Rule {
 	return r
 }
 
-var r = [9607]Rule{
+var r = [9611]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -7754,6 +7754,10 @@ var r = [9607]Rule{
 	{2, "oci.customer-oci.com", 4, true},
 	{2, "ocp.customer-oci.com", 4, true},
 	{2, "ocs.customer-oci.com", 4, true},
+	{1, "cyclic.app", 2, true},
+	{1, "cyclic.cloud", 2, true},
+	{1, "cyclic-app.com", 2, true},
+	{1, "cyclic.co.in", 3, true},
 	{1, "cyon.link", 2, true},
 	{1, "cyon.site", 2, true},
 	{1, "fnwk.site", 2, true},
