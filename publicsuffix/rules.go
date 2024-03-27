@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version d8a01c (Fri Mar  1 18:17:09 2024)"
+const ListVersion = "PSL version 572b5a (Wed Mar 27 03:18:22 2024)"
 
-func DefaultRules() [9669]Rule {
+func DefaultRules() [9673]Rule {
 	return r
 }
 
-var r = [9669]Rule{
+var r = [9673]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -6172,7 +6172,6 @@ var r = [9669]Rule{
 	{1, "gripe", 1, false},
 	{1, "grocery", 1, false},
 	{1, "group", 1, false},
-	{1, "guardian", 1, false},
 	{1, "gucci", 1, false},
 	{1, "guge", 1, false},
 	{1, "guide", 1, false},
@@ -7633,7 +7632,9 @@ var r = [9669]Rule{
 	{1, "cafjs.com", 2, true},
 	{1, "mycd.eu", 2, true},
 	{1, "canva-apps.cn", 2, true},
+	{2, "my.canvasite.cn", 4, true},
 	{1, "canva-apps.com", 2, true},
+	{2, "my.canva.site", 4, true},
 	{1, "drr.ac", 2, true},
 	{1, "uwu.ai", 2, true},
 	{1, "carrd.co", 2, true},
@@ -8491,6 +8492,7 @@ var r = [9669]Rule{
 	{1, "whitesnow.jp", 2, true},
 	{1, "zombie.jp", 2, true},
 	{1, "heteml.net", 2, true},
+	{1, "graphic.design", 2, true},
 	{1, "cloudapps.digital", 2, true},
 	{1, "london.cloudapps.digital", 3, true},
 	{1, "pymnt.uk", 2, true},
@@ -8685,6 +8687,7 @@ var r = [9669]Rule{
 	{1, "na4u.ru", 2, true},
 	{1, "iopsys.se", 2, true},
 	{1, "ipifony.net", 2, true},
+	{1, "ir.md", 2, true},
 	{1, "iservschule.de", 2, true},
 	{1, "mein-iserv.de", 2, true},
 	{1, "schulplattform.de", 2, true},
@@ -8888,7 +8891,7 @@ var r = [9669]Rule{
 	{1, "eu.meteorapp.com", 3, true},
 	{1, "co.pl", 2, true},
 	{2, "azurecontainer.io", 3, true},
-	{2, "cloudapp.azure.com", 4, true},
+	{1, "cloudapp.azure.com", 3, true},
 	{1, "azure-api.net", 2, true},
 	{1, "azureedge.net", 2, true},
 	{1, "azurefd.net", 2, true},
@@ -8954,6 +8957,7 @@ var r = [9669]Rule{
 	{1, "torun.pl", 2, true},
 	{1, "nh-serv.co.uk", 3, true},
 	{1, "nfshost.com", 2, true},
+	{1, "ipfs.nftstorage.link", 3, true},
 	{2, "developer.app", 3, true},
 	{1, "noop.app", 2, true},
 	{2, "northflank.app", 3, true},
