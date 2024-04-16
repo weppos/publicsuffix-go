@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version 53b3d9 (Wed Apr 10 13:48:55 2024)"
+const ListVersion = "PSL version 2524da (Mon Apr 15 12:33:37 2024)"
 
-func DefaultRules() [9730]Rule {
+func DefaultRules() [9691]Rule {
 	return r
 }
 
-var r = [9730]Rule{
+var r = [9691]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -8122,6 +8122,7 @@ var r = [9730]Rule{
 	{1, "definima.io", 2, true},
 	{1, "ondigitalocean.app", 2, true},
 	{2, "digitaloceanspaces.com", 3, true},
+	{1, "us.kg", 2, true},
 	{1, "bci.dnstrace.pro", 3, true},
 	{1, "ddnsfree.com", 2, true},
 	{1, "ddnsgeek.com", 2, true},
@@ -8822,6 +8823,8 @@ var r = [9730]Rule{
 	{2, "spectrum.myjino.ru", 4, true},
 	{2, "vps.myjino.ru", 4, true},
 	{1, "jotelulu.cloud", 2, true},
+	{1, "jouwweb.site", 2, true},
+	{1, "webadorsite.com", 2, true},
 	{2, "triton.zone", 3, true},
 	{2, "cns.joyent.com", 4, true},
 	{1, "js.org", 2, true},
@@ -9175,10 +9178,6 @@ var r = [9730]Rule{
 	{1, "pagexl.com", 2, true},
 	{2, "paywhirl.com", 3, true},
 	{2, "xmit.co", 3, true},
-	{1, "bar0.net", 2, true},
-	{1, "bar1.net", 2, true},
-	{1, "bar2.net", 2, true},
-	{1, "rdv.to", 2, true},
 	{1, "srv.us", 2, true},
 	{1, "gh.srv.us", 3, true},
 	{1, "gl.srv.us", 3, true},
@@ -9636,44 +9635,6 @@ var r = [9730]Rule{
 	{1, "router.management", 2, true},
 	{1, "v-info.info", 2, true},
 	{1, "voorloper.cloud", 2, true},
-	{1, "neko.am", 2, true},
-	{1, "nyaa.am", 2, true},
-	{1, "be.ax", 2, true},
-	{1, "cat.ax", 2, true},
-	{1, "es.ax", 2, true},
-	{1, "eu.ax", 2, true},
-	{1, "gg.ax", 2, true},
-	{1, "mc.ax", 2, true},
-	{1, "us.ax", 2, true},
-	{1, "xy.ax", 2, true},
-	{1, "nl.ci", 2, true},
-	{1, "xx.gl", 2, true},
-	{1, "app.gp", 2, true},
-	{1, "blog.gt", 2, true},
-	{1, "de.gt", 2, true},
-	{1, "to.gt", 2, true},
-	{1, "be.gy", 2, true},
-	{1, "cc.hn", 2, true},
-	{1, "io.kg", 2, true},
-	{1, "jp.kg", 2, true},
-	{1, "tv.kg", 2, true},
-	{1, "uk.kg", 2, true},
-	{1, "us.kg", 2, true},
-	{1, "de.ls", 2, true},
-	{1, "at.md", 2, true},
-	{1, "de.md", 2, true},
-	{1, "jp.md", 2, true},
-	{1, "to.md", 2, true},
-	{1, "indie.porn", 2, true},
-	{1, "vxl.sh", 2, true},
-	{1, "ch.tc", 2, true},
-	{1, "me.tc", 2, true},
-	{1, "we.tc", 2, true},
-	{1, "nyan.to", 2, true},
-	{1, "at.vg", 2, true},
-	{1, "blog.vu", 2, true},
-	{1, "dev.vu", 2, true},
-	{1, "me.vu", 2, true},
 	{1, "v.ua", 2, true},
 	{2, "vultrobjects.com", 3, true},
 	{1, "wafflecell.com", 2, true},
