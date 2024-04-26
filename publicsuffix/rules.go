@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version cf125e (Fri Apr 19 05:04:41 2024)"
+const ListVersion = "PSL version 041f08 (Fri Apr 19 10:44:49 2024)"
 
-func DefaultRules() [9690]Rule {
+func DefaultRules() [9693]Rule {
 	return r
 }
 
-var r = [9690]Rule{
+var r = [9693]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -9237,8 +9237,11 @@ var r = [9690]Rule{
 	{1, "qa2.com", 2, true},
 	{1, "qcx.io", 2, true},
 	{2, "sys.qcx.io", 4, true},
-	{1, "dev-myqnapcloud.com", 2, true},
+	{1, "myqnapcloud.cn", 2, true},
 	{1, "alpha-myqnapcloud.com", 2, true},
+	{1, "dev-myqnapcloud.com", 2, true},
+	{1, "mycloudnas.com", 2, true},
+	{1, "mynascloud.com", 2, true},
 	{1, "myqnapcloud.com", 2, true},
 	{2, "quipelements.com", 3, true},
 	{1, "vapor.cloud", 2, true},
