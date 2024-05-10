@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version 1cbd6e (Tue May  7 07:12:07 2024)"
+const ListVersion = "PSL version b26411 (Fri May 10 06:20:15 2024)"
 
-func DefaultRules() [9740]Rule {
+func DefaultRules() [9749]Rule {
 	return r
 }
 
-var r = [9740]Rule{
+var r = [9749]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -7727,7 +7727,10 @@ var r = [9740]Rule{
 	{1, "cx.ua", 2, true},
 	{1, "discourse.group", 2, true},
 	{1, "discourse.team", 2, true},
+	{1, "cleverapps.cc", 2, true},
+	{2, "services.clever-cloud.com", 4, true},
 	{1, "cleverapps.io", 2, true},
+	{1, "cleverapps.tech", 2, true},
 	{1, "clerk.app", 2, true},
 	{1, "clerkstage.app", 2, true},
 	{2, "lcl.dev", 3, true},
@@ -9056,6 +9059,7 @@ var r = [9740]Rule{
 	{2, "database.run", 3, true},
 	{2, "migration.run", 3, true},
 	{1, "noticeable.news", 2, true},
+	{1, "notion.site", 2, true},
 	{1, "dnsking.ch", 2, true},
 	{1, "mypi.co", 2, true},
 	{1, "n4t.co", 2, true},
@@ -9172,6 +9176,7 @@ var r = [9740]Rule{
 	{1, "pcloud.host", 2, true},
 	{1, "nyc.mn", 2, true},
 	{1, "prvcy.page", 2, true},
+	{1, "observablehq.cloud", 2, true},
 	{1, "static.observableusercontent.com", 3, true},
 	{1, "cya.gg", 2, true},
 	{1, "omg.lol", 2, true},
@@ -9677,6 +9682,8 @@ var r = [9740]Rule{
 	{1, "urown.cloud", 2, true},
 	{1, "dnsupdate.info", 2, true},
 	{1, "lib.de.us", 3, true},
+	{1, "express.val.run", 3, true},
+	{1, "web.val.run", 3, true},
 	{1, "2038.io", 2, true},
 	{1, "vercel.app", 2, true},
 	{1, "vercel.dev", 2, true},
@@ -9699,6 +9706,7 @@ var r = [9740]Rule{
 	{1, "wedeploy.me", 2, true},
 	{1, "wedeploy.sh", 2, true},
 	{1, "remotewd.com", 2, true},
+	{1, "box.ca", 2, true},
 	{1, "pages.wiardweb.com", 3, true},
 	{1, "wmflabs.org", 2, true},
 	{1, "toolforge.org", 2, true},
@@ -9746,6 +9754,7 @@ var r = [9740]Rule{
 	{1, "za.net", 2, true},
 	{1, "za.org", 2, true},
 	{1, "zap.cloud", 2, true},
+	{1, "zeabur.app", 2, true},
 	{1, "bss.design", 2, true},
 	{1, "basicserver.io", 2, true},
 	{1, "virtualserver.io", 2, true},
