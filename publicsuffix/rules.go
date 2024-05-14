@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version b26411 (Fri May 10 06:20:15 2024)"
+const ListVersion = "PSL version 0ed17e (Mon May 13 07:47:58 2024)"
 
-func DefaultRules() [9749]Rule {
+func DefaultRules() [9752]Rule {
 	return r
 }
 
-var r = [9749]Rule{
+var r = [9752]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -8272,6 +8272,8 @@ var r = [9749]Rule{
 	{1, "us-2.evennode.com", 3, true},
 	{1, "us-3.evennode.com", 3, true},
 	{1, "us-4.evennode.com", 3, true},
+	{1, "expo.app", 2, true},
+	{1, "staging.expo.app", 3, true},
 	{1, "twmail.cc", 2, true},
 	{1, "twmail.net", 2, true},
 	{1, "twmail.org", 2, true},
@@ -8585,6 +8587,7 @@ var r = [9749]Rule{
 	{1, "pymnt.uk", 2, true},
 	{1, "ro.im", 2, true},
 	{1, "goip.de", 2, true},
+	{2, "hosted.app", 3, true},
 	{2, "run.app", 3, true},
 	{1, "web.app", 2, true},
 	{2, "0emm.com", 3, true},
