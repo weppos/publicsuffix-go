@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version a35754 (Mon May 27 06:25:38 2024)"
+const ListVersion = "PSL version f0d146 (Mon May 27 14:57:53 2024)"
 
-func DefaultRules() [9752]Rule {
+func DefaultRules() [9754]Rule {
 	return r
 }
 
-var r = [9752]Rule{
+var r = [9754]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -8722,6 +8722,7 @@ var r = [9752]Rule{
 	{1, "sch.so", 2, true},
 	{1, "ie.ua", 2, true},
 	{1, "hostyhosting.io", 2, true},
+	{1, "hypernode.io", 2, true},
 	{1, "xn--hkkinen-5wa.fi", 2, true},
 	{2, "moonscale.io", 3, true},
 	{1, "moonscale.net", 2, true},
@@ -9716,6 +9717,11 @@ var r = [9752]Rule{
 	{1, "wmflabs.org", 2, true},
 	{1, "panel.gg", 2, true},
 	{1, "daemon.panel.gg", 3, true},
+	{1, "wixsite.com", 2, true},
+	{1, "wixstudio.com", 2, true},
+	{1, "editorx.io", 2, true},
+	{1, "wixstudio.io", 2, true},
+	{1, "wix.run", 2, true},
 	{1, "messwithdns.com", 2, true},
 	{1, "woltlab-demo.com", 2, true},
 	{1, "myforum.community", 2, true},
@@ -9728,10 +9734,6 @@ var r = [9752]Rule{
 	{1, "weeklylottery.org.uk", 3, true},
 	{1, "wpenginepowered.com", 2, true},
 	{1, "js.wpenginepowered.com", 3, true},
-	{1, "wixsite.com", 2, true},
-	{1, "editorx.io", 2, true},
-	{1, "wixstudio.io", 2, true},
-	{1, "wix.run", 2, true},
 	{1, "half.host", 2, true},
 	{1, "xnbay.com", 2, true},
 	{1, "u2.xnbay.com", 3, true},
