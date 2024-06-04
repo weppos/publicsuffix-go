@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version de747b (Fri May 31 15:59:49 2024)"
+const ListVersion = "PSL version 903a83 (Mon Jun  3 16:11:18 2024)"
 
-func DefaultRules() [9754]Rule {
+func DefaultRules() [9759]Rule {
 	return r
 }
 
-var r = [9754]Rule{
+var r = [9759]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -7755,6 +7755,11 @@ var r = [9754]Rule{
 	{1, "pages.dev", 2, true},
 	{1, "r2.dev", 2, true},
 	{1, "workers.dev", 2, true},
+	{1, "cdn.cloudflareanycast.net", 3, true},
+	{1, "cdn.cloudflarecn.net", 3, true},
+	{1, "cdn.cloudflareglobal.net", 3, true},
+	{1, "cloudflare.net", 2, true},
+	{1, "cdn.cloudflare.net", 3, true},
 	{1, "cust.cloudscale.ch", 3, true},
 	{1, "objects.lpg.cloudscale.ch", 4, true},
 	{1, "objects.rma.cloudscale.ch", 4, true},
