@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version 903a83 (Mon Jun  3 16:11:18 2024)"
+const ListVersion = "PSL version d694f8 (Mon Jun 10 20:06:28 2024)"
 
-func DefaultRules() [9759]Rule {
+func DefaultRules() [9771]Rule {
 	return r
 }
 
-var r = [9759]Rule{
+var r = [9771]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -8200,6 +8200,11 @@ var r = [9759]Rule{
 	{1, "easypanel.app", 2, true},
 	{1, "easypanel.host", 2, true},
 	{2, "ewp.live", 3, true},
+	{1, "twmail.cc", 2, true},
+	{1, "twmail.net", 2, true},
+	{1, "twmail.org", 2, true},
+	{1, "mymailer.com.tw", 3, true},
+	{1, "url.tw", 2, true},
 	{1, "at.emf.camp", 3, true},
 	{1, "rt.ht", 2, true},
 	{1, "elementor.cloud", 2, true},
@@ -8277,13 +8282,10 @@ var r = [9759]Rule{
 	{1, "us-2.evennode.com", 3, true},
 	{1, "us-3.evennode.com", 3, true},
 	{1, "us-4.evennode.com", 3, true},
+	{1, "relay.evervault.app", 3, true},
+	{1, "relay.evervault.dev", 3, true},
 	{1, "expo.app", 2, true},
 	{1, "staging.expo.app", 3, true},
-	{1, "twmail.cc", 2, true},
-	{1, "twmail.net", 2, true},
-	{1, "twmail.org", 2, true},
-	{1, "mymailer.com.tw", 3, true},
-	{1, "url.tw", 2, true},
 	{1, "onfabrica.com", 2, true},
 	{1, "ru.net", 2, true},
 	{1, "adygeya.ru", 2, true},
@@ -8703,6 +8705,7 @@ var r = [9759]Rule{
 	{1, "pages.it.hs-heilbronn.de", 4, true},
 	{1, "helioho.st", 2, true},
 	{1, "heliohost.us", 2, true},
+	{1, "heiyu.space", 2, true},
 	{1, "hepforge.org", 2, true},
 	{1, "herokuapp.com", 2, true},
 	{1, "herokussl.com", 2, true},
@@ -8946,12 +8949,15 @@ var r = [9759]Rule{
 	{1, "barsycenter.com", 2, true},
 	{1, "barsyonline.com", 2, true},
 	{1, "barsy.de", 2, true},
+	{1, "barsy.dev", 2, true},
 	{1, "barsy.eu", 2, true},
+	{1, "barsy.gr", 2, true},
 	{1, "barsy.in", 2, true},
 	{1, "barsy.info", 2, true},
 	{1, "barsy.io", 2, true},
 	{1, "barsy.me", 2, true},
 	{1, "barsy.menu", 2, true},
+	{1, "barsyonline.menu", 2, true},
 	{1, "barsy.mobi", 2, true},
 	{1, "barsy.net", 2, true},
 	{1, "barsy.online", 2, true},
@@ -8959,8 +8965,11 @@ var r = [9759]Rule{
 	{1, "barsy.pro", 2, true},
 	{1, "barsy.pub", 2, true},
 	{1, "barsy.ro", 2, true},
+	{1, "barsy.rs", 2, true},
 	{1, "barsy.shop", 2, true},
+	{1, "barsyonline.shop", 2, true},
 	{1, "barsy.site", 2, true},
+	{1, "barsy.store", 2, true},
 	{1, "barsy.support", 2, true},
 	{1, "barsy.uk", 2, true},
 	{1, "barsy.co.uk", 3, true},
@@ -9510,6 +9519,7 @@ var r = [9759]Rule{
 	{1, "streamlitapp.com", 2, true},
 	{1, "try-snowplow.com", 2, true},
 	{1, "srht.site", 2, true},
+	{1, "ind.mom", 2, true},
 	{1, "w-corp-staticblitz.com", 2, true},
 	{1, "w-credentialless-staticblitz.com", 2, true},
 	{1, "w-staticblitz.com", 2, true},
@@ -9525,6 +9535,8 @@ var r = [9759]Rule{
 	{1, "dev.static.land", 3, true},
 	{1, "sites.static.land", 3, true},
 	{1, "storebase.store", 2, true},
+	{1, "strapiapp.com", 2, true},
+	{1, "media.strapiapp.com", 3, true},
 	{1, "vps-host.net", 2, true},
 	{1, "atl.jelastic.vps-host.net", 4, true},
 	{1, "njs.jelastic.vps-host.net", 4, true},
