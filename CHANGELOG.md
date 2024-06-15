@@ -2,7 +2,7 @@
 
 ## main
 
-- CHANGED: Dropped Go < 1.19 from the list of supported versions.
+- CHANGED: Dropped Go < 1.21 from the list of supported versions.
 
 ## 0.30.2
 
