@@ -1,8 +1,9 @@
 # CHANGELOG
 
-## main
+## 0.40.0
 
 - CHANGED: Dropped Go < 1.21 from the list of supported versions.
+- CHANGED: Definition updates.
 
 ## 0.30.2
 
