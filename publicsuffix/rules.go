@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version 92c74a (Wed Jun 19 10:59:25 2024)"
+const ListVersion = "PSL version bc648f (Fri Jun 21 13:05:06 2024)"
 
-func DefaultRules() [9770]Rule {
+func DefaultRules() [9782]Rule {
 	return r
 }
 
-var r = [9770]Rule{
+var r = [9782]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -9044,6 +9044,7 @@ var r = [9770]Rule{
 	{1, "cust.retrosnub.co.uk", 4, true},
 	{1, "ui.nabu.casa", 3, true},
 	{1, "cloud.nospamproxy.com", 3, true},
+	{1, "netfy.app", 2, true},
 	{1, "netlify.app", 2, true},
 	{1, "4u.com", 2, true},
 	{1, "ngo.us", 2, true},
@@ -9191,6 +9192,7 @@ var r = [9770]Rule{
 	{1, "pcloud.host", 2, true},
 	{1, "nyc.mn", 2, true},
 	{1, "prvcy.page", 2, true},
+	{1, "obl.ong", 2, true},
 	{1, "observablehq.cloud", 2, true},
 	{1, "static.observableusercontent.com", 3, true},
 	{1, "cya.gg", 2, true},
@@ -9427,6 +9429,14 @@ var r = [9770]Rule{
 	{2, "dev-builder.code.com", 4, true},
 	{2, "stg-builder.code.com", 4, true},
 	{2, "001.test.code-builder-stg.platform.salesforce.com", 7, true},
+	{2, "d.crm.dev", 4, true},
+	{2, "w.crm.dev", 4, true},
+	{2, "wa.crm.dev", 4, true},
+	{2, "wb.crm.dev", 4, true},
+	{2, "wc.crm.dev", 4, true},
+	{2, "wd.crm.dev", 4, true},
+	{2, "we.crm.dev", 4, true},
+	{2, "wf.crm.dev", 4, true},
 	{1, "sandcats.io", 2, true},
 	{1, "logoip.com", 2, true},
 	{1, "logoip.de", 2, true},
@@ -9721,6 +9731,8 @@ var r = [9770]Rule{
 	{1, "hotelwithflight.com", 2, true},
 	{1, "reserve-online.com", 2, true},
 	{1, "reserve-online.net", 2, true},
+	{1, "wp2.host", 2, true},
+	{1, "wpsquared.site", 2, true},
 	{2, "wadl.top", 3, true},
 	{1, "wedeploy.io", 2, true},
 	{1, "wedeploy.me", 2, true},
