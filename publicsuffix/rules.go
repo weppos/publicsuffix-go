@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version bc648f (Fri Jun 21 13:05:06 2024)"
+const ListVersion = "PSL version 3b1b0d (Mon Jun 24 17:02:05 2024)"
 
-func DefaultRules() [9782]Rule {
+func DefaultRules() [9784]Rule {
 	return r
 }
 
-var r = [9782]Rule{
+var r = [9784]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -9300,6 +9300,8 @@ var r = [9782]Rule{
 	{1, "cloudsite.builders", 2, true},
 	{1, "myradweb.net", 2, true},
 	{1, "servername.us", 2, true},
+	{1, "myrdbx.io", 2, true},
+	{1, "site.rb-hosting.io", 3, true},
 	{1, "instances.spawn.cc", 3, true},
 	{1, "instantcloud.cn", 2, true},
 	{1, "ras.ru", 2, true},
