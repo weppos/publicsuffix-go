@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version 23218b (Thu Jun 27 22:26:15 2024)"
+const ListVersion = "PSL version afe95d (Sun Jun 30 00:08:12 2024)"
 
-func DefaultRules() [9783]Rule {
+func DefaultRules() [9784]Rule {
 	return r
 }
 
-var r = [9783]Rule{
+var r = [9784]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -7817,7 +7817,6 @@ var r = [9783]Rule{
 	{1, "feste-ip.net", 2, true},
 	{1, "knx-server.net", 2, true},
 	{1, "static-access.net", 2, true},
-	{2, "cprapid.com", 3, true},
 	{1, "realm.cz", 2, true},
 	{1, "on.crisp.email", 3, true},
 	{2, "cryptonomic.net", 3, true},
@@ -7875,6 +7874,7 @@ var r = [9783]Rule{
 	{1, "drayddns.com", 2, true},
 	{1, "shoparena.pl", 2, true},
 	{1, "dreamhosters.com", 2, true},
+	{1, "durumis.com", 2, true},
 	{1, "mydrobo.com", 2, true},
 	{1, "drud.io", 2, true},
 	{1, "drud.us", 2, true},
@@ -9272,9 +9272,6 @@ var r = [9783]Rule{
 	{1, "platter-app.com", 2, true},
 	{1, "platter-app.dev", 2, true},
 	{1, "platterp.us", 2, true},
-	{1, "pleskns.com", 2, true},
-	{1, "pdns.page", 2, true},
-	{1, "plesk.page", 2, true},
 	{1, "pley.games", 2, true},
 	{1, "dyn53.io", 2, true},
 	{1, "onporter.run", 2, true},
@@ -9732,7 +9729,11 @@ var r = [9783]Rule{
 	{1, "hotelwithflight.com", 2, true},
 	{1, "reserve-online.com", 2, true},
 	{1, "reserve-online.net", 2, true},
+	{1, "cprapid.com", 2, true},
+	{1, "pleskns.com", 2, true},
 	{1, "wp2.host", 2, true},
+	{1, "pdns.page", 2, true},
+	{1, "plesk.page", 2, true},
 	{1, "wpsquared.site", 2, true},
 	{2, "wadl.top", 3, true},
 	{1, "wedeploy.io", 2, true},
