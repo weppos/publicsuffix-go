@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version afe95d (Sun Jun 30 00:08:12 2024)"
+const ListVersion = "PSL version 12b354 (Thu Jul  4 11:26:56 2024)"
 
-func DefaultRules() [9784]Rule {
+func DefaultRules() [9791]Rule {
 	return r
 }
 
-var r = [9784]Rule{
+var r = [9791]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -7817,6 +7817,7 @@ var r = [9784]Rule{
 	{1, "feste-ip.net", 2, true},
 	{1, "knx-server.net", 2, true},
 	{1, "static-access.net", 2, true},
+	{1, "craft.me", 2, true},
 	{1, "realm.cz", 2, true},
 	{1, "on.crisp.email", 3, true},
 	{2, "cryptonomic.net", 3, true},
@@ -7826,6 +7827,7 @@ var r = [9784]Rule{
 	{2, "oci.customer-oci.com", 4, true},
 	{2, "ocp.customer-oci.com", 4, true},
 	{2, "ocs.customer-oci.com", 4, true},
+	{1, "cfolks.pl", 2, true},
 	{1, "cyclic.app", 2, true},
 	{1, "cyclic.cloud", 2, true},
 	{1, "cyclic-app.com", 2, true},
@@ -8700,6 +8702,12 @@ var r = [9784]Rule{
 	{1, "hashbang.sh", 2, true},
 	{1, "hasura.app", 2, true},
 	{1, "hasura-app.io", 2, true},
+	{1, "hatenablog.com", 2, true},
+	{1, "hatenadiary.com", 2, true},
+	{1, "hateblo.jp", 2, true},
+	{1, "hatenablog.jp", 2, true},
+	{1, "hatenadiary.jp", 2, true},
+	{1, "hatenadiary.org", 2, true},
 	{1, "pages.it.hs-heilbronn.de", 4, true},
 	{1, "helioho.st", 2, true},
 	{1, "heliohost.us", 2, true},
@@ -9315,7 +9323,6 @@ var r = [9784]Rule{
 	{1, "vaporcloud.io", 2, true},
 	{1, "rackmaze.com", 2, true},
 	{1, "rackmaze.net", 2, true},
-	{1, "g.vbrplsbx.io", 3, true},
 	{2, "on-rancher.cloud", 3, true},
 	{2, "on-k3s.io", 3, true},
 	{2, "on-rio.io", 3, true},
