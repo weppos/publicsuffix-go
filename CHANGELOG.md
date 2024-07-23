@@ -1,17 +1,25 @@
 # CHANGELOG
 
+## 0.40.2
+
+- CHANGED: Definition updates.
+
+
 ## 0.40.0
 
 - CHANGED: Dropped Go < 1.21 from the list of supported versions.
 - CHANGED: Definition updates.
 
+
 ## 0.30.2
 
 - CHANGED: Definition updates.
 
+
 ## 0.30.1
 
 - CHANGED: Definition updates.
+
 
 ## 0.30.0
 
@@ -19,9 +27,11 @@
 
 - CHANGED: Exported defaultListVersion as ListVersion (GH-334, GH-880)
 
+
 ## 0.20.0
 
 - CHANGED: Definition updates.
+
 
 ## 0.15.0
 
@@ -31,25 +41,31 @@
 
 - ENHANCEMENT: Improved performances by using rune instead of strings single char comparison (GH-484, GH-485)
 
+
 ## 0.14.0
 
 - CHANGED: Added go modules (GH-240).
+
 
 ## 0.13.0
 
 - CHANGED: Rollback changes of v0.12.0. It turns out it is actually causing more issues.
 
+
 ## 0.12.0
 
 - CHANGED: Extracted generator into its own package.
+
 
 ## 0.11.0
 
 - CHANGED: Definition updates.
 
+
 ## 0.10.0
 
 - ENHANCEMENT: Internal refactoring to use go gen when building definition list.
+
 
 ## 0.5.0
 
@@ -59,25 +75,30 @@
 
 - CHANGED: Removed unreachable code (GH-167)
 
+
 ## 0.4.0
 
 - CHANGED: Definition updates.
 
 - ENHANCEMENT: gen tool now uses GitHub API instead of scraping GitHub UI (GH-93).
 
+
 ## 0.3.2
 
 - CHANGED: Definition updates.
 
+
 ## 0.3.1
 
 - CHANGED: Definition updates.
+
 
 ## 0.3.0
 
 - CHANGED: Definition updates.
 
 - ENHANCEMENT: Changed internal representation of PSL rules to be A-label encoded, as well the public interface of the library to use ASCII-encoded names by default (GH-31, GH-40).
+
 
 ## 0.2.0
 
@@ -86,6 +107,7 @@
 - ENHANCEMENT: List.Select() is no longer exported. This was an experimental method and it's now kept private as the Find() implementation may change in the future.
 
 - ENHANCEMENT: List.Find() now returns a pointer to a Rule, and not a Rule. That's because Find() can actually return `nil` if the DefaultRule find option is set. This is useful if you need to avoid the fallback to the default rule "*".
+
 
 ## 0.1.0
 
