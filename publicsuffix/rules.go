@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version 798fc7 (Thu Jul 18 10:49:51 2024)"
+const ListVersion = "PSL version 963885 (Mon Jul 22 14:25:54 2024)"
 
-func DefaultRules() [9806]Rule {
+func DefaultRules() [9808]Rule {
 	return r
 }
 
-var r = [9806]Rule{
+var r = [9808]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -7734,7 +7734,6 @@ var r = [9806]Rule{
 	{1, "nz.basketball", 2, true},
 	{1, "radio.am", 2, true},
 	{1, "radio.fm", 2, true},
-	{1, "c.la", 2, true},
 	{1, "certmgr.org", 2, true},
 	{1, "cx.ua", 2, true},
 	{1, "discourse.group", 2, true},
@@ -9508,6 +9507,7 @@ var r = [9806]Rule{
 	{1, "sellfy.store", 2, true},
 	{1, "senseering.net", 2, true},
 	{1, "minisite.ms", 2, true},
+	{1, "servebolt.cloud", 2, true},
 	{1, "magnet.page", 2, true},
 	{1, "biz.ua", 2, true},
 	{1, "co.ua", 2, true},
@@ -9649,6 +9649,8 @@ var r = [9806]Rule{
 	{1, "gdynia.pl", 2, true},
 	{1, "med.pl", 2, true},
 	{1, "sopot.pl", 2, true},
+	{1, "p.tawk.email", 3, true},
+	{1, "p.tawkto.email", 3, true},
 	{1, "site.tb-hosting.com", 3, true},
 	{1, "edugit.io", 2, true},
 	{1, "s3.teckids.org", 3, true},
