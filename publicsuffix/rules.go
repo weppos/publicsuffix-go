@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version 37d2d6 (Tue Jul 30 08:08:08 2024)"
+const ListVersion = "PSL version 64b89a (Sun Aug  4 01:28:06 2024)"
 
-func DefaultRules() [9780]Rule {
+func DefaultRules() [9782]Rule {
 	return r
 }
 
-var r = [9780]Rule{
+var r = [9782]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -4550,20 +4550,22 @@ var r = [9780]Rule{
 	{1, "mil.ph", 2, false},
 	{1, "i.ph", 2, false},
 	{1, "pk", 1, false},
-	{1, "com.pk", 2, false},
-	{1, "net.pk", 2, false},
-	{1, "edu.pk", 2, false},
-	{1, "org.pk", 2, false},
-	{1, "fam.pk", 2, false},
+	{1, "ac.pk", 2, false},
 	{1, "biz.pk", 2, false},
-	{1, "web.pk", 2, false},
-	{1, "gov.pk", 2, false},
+	{1, "com.pk", 2, false},
+	{1, "edu.pk", 2, false},
+	{1, "fam.pk", 2, false},
+	{1, "gkp.pk", 2, false},
 	{1, "gob.pk", 2, false},
+	{1, "gog.pk", 2, false},
 	{1, "gok.pk", 2, false},
 	{1, "gon.pk", 2, false},
 	{1, "gop.pk", 2, false},
 	{1, "gos.pk", 2, false},
-	{1, "info.pk", 2, false},
+	{1, "gov.pk", 2, false},
+	{1, "net.pk", 2, false},
+	{1, "org.pk", 2, false},
+	{1, "web.pk", 2, false},
 	{1, "pl", 1, false},
 	{1, "com.pl", 2, false},
 	{1, "net.pl", 2, false},
