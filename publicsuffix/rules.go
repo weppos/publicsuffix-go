@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version 64b89a (Sun Aug  4 01:28:06 2024)"
+const ListVersion = "PSL version a68921 (Tue Aug  6 06:38:21 2024)"
 
-func DefaultRules() [9782]Rule {
+func DefaultRules() [9772]Rule {
 	return r
 }
 
-var r = [9782]Rule{
+var r = [9772]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -6890,7 +6890,6 @@ var r = [9782]Rule{
 	{1, "aaa.vodka", 2, true},
 	{1, "a2hosted.com", 2, true},
 	{1, "cpserver.com", 2, true},
-	{2, "devcdnaccesso.com", 3, true},
 	{2, "on-acorn.io", 3, true},
 	{1, "activetrail.biz", 2, true},
 	{1, "adaptable.app", 2, true},
@@ -7617,8 +7616,6 @@ var r = [9782]Rule{
 	{2, "private.repost.aws", 4, true},
 	{1, "eero.online", 2, true},
 	{1, "eero-stage.online", 2, true},
-	{1, "t3l3p0rt.net", 2, true},
-	{1, "tele.amune.org", 3, true},
 	{1, "apigee.io", 2, true},
 	{1, "panel.dev", 2, true},
 	{1, "siiites.com", 2, true},
@@ -7890,7 +7887,6 @@ var r = [9782]Rule{
 	{1, "drud.us", 2, true},
 	{1, "duckdns.org", 2, true},
 	{1, "bip.sh", 2, true},
-	{1, "bitbridge.net", 2, true},
 	{1, "dy.fi", 2, true},
 	{1, "tunk.org", 2, true},
 	{1, "dyndns.biz", 2, true},
@@ -9535,9 +9531,6 @@ var r = [9782]Rule{
 	{1, "stackit.zone", 2, true},
 	{1, "musician.io", 2, true},
 	{1, "novecore.site", 2, true},
-	{1, "static.land", 2, true},
-	{1, "dev.static.land", 3, true},
-	{1, "sites.static.land", 3, true},
 	{1, "storebase.store", 2, true},
 	{1, "strapiapp.com", 2, true},
 	{1, "media.strapiapp.com", 3, true},
@@ -9734,9 +9727,6 @@ var r = [9782]Rule{
 	{1, "plesk.page", 2, true},
 	{1, "wpsquared.site", 2, true},
 	{2, "wadl.top", 3, true},
-	{1, "wedeploy.io", 2, true},
-	{1, "wedeploy.me", 2, true},
-	{1, "wedeploy.sh", 2, true},
 	{1, "remotewd.com", 2, true},
 	{1, "box.ca", 2, true},
 	{1, "pages.wiardweb.com", 3, true},
