@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version 354f0d (Wed Aug 14 01:25:28 2024)"
+const ListVersion = "PSL version 30c3fc (Wed Aug 21 14:03:19 2024)"
 
-func DefaultRules() [9784]Rule {
+func DefaultRules() [9788]Rule {
 	return r
 }
 
-var r = [9784]Rule{
+var r = [9788]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -7672,7 +7672,6 @@ var r = [9784]Rule{
 	{1, "pages.gay", 2, true},
 	{1, "betainabox.com", 2, true},
 	{1, "bnr.la", 2, true},
-	{1, "bip.sh", 2, true},
 	{1, "bitbucket.io", 2, true},
 	{1, "blackbaudcdn.net", 2, true},
 	{1, "of.je", 2, true},
@@ -8194,7 +8193,6 @@ var r = [9784]Rule{
 	{1, "mywire.org", 2, true},
 	{1, "webredirect.org", 2, true},
 	{1, "myddns.rocks", 2, true},
-	{1, "blogsite.xyz", 2, true},
 	{1, "dynv6.net", 2, true},
 	{1, "e4.cz", 2, true},
 	{1, "easypanel.app", 2, true},
@@ -8978,6 +8976,10 @@ var r = [9784]Rule{
 	{1, "hb.cldmail.ru", 3, true},
 	{1, "mayfirst.info", 2, true},
 	{1, "mayfirst.org", 2, true},
+	{1, "matlab.cloud", 2, true},
+	{1, "modelscape.com", 2, true},
+	{1, "mwcloudnonprod.com", 2, true},
+	{1, "polyspace.com", 2, true},
 	{1, "mazeplay.com", 2, true},
 	{1, "mcdir.me", 2, true},
 	{1, "mcdir.ru", 2, true},
@@ -9022,7 +9024,10 @@ var r = [9784]Rule{
 	{1, "trafficmanager.net", 2, true},
 	{1, "blob.core.windows.net", 4, true},
 	{1, "servicebus.windows.net", 3, true},
+	{1, "routingthecloud.com", 2, true},
 	{1, "sn.mynetname.net", 3, true},
+	{1, "routingthecloud.net", 2, true},
+	{1, "routingthecloud.org", 2, true},
 	{1, "csx.cc", 2, true},
 	{1, "forte.id", 2, true},
 	{1, "modx.dev", 2, true},
@@ -9317,6 +9322,7 @@ var r = [9784]Rule{
 	{2, "on-k3s.io", 3, true},
 	{2, "on-rio.io", 3, true},
 	{1, "ravpage.co.il", 3, true},
+	{1, "readthedocs-hosted.com", 2, true},
 	{1, "readthedocs.io", 2, true},
 	{1, "rhcloud.com", 2, true},
 	{1, "instances.spawn.cc", 3, true},
@@ -9359,8 +9365,6 @@ var r = [9784]Rule{
 	{1, "resindevice.io", 2, true},
 	{1, "devices.resinstaging.io", 3, true},
 	{1, "hzc.io", 2, true},
-	{1, "wellbeingzone.eu", 2, true},
-	{1, "wellbeingzone.co.uk", 3, true},
 	{1, "adimo.co.uk", 3, true},
 	{1, "itcouldbewor.se", 2, true},
 	{1, "aus.basketball", 2, true},
@@ -9744,7 +9748,7 @@ var r = [9784]Rule{
 	{1, "toolforge.org", 2, true},
 	{1, "wmcloud.org", 2, true},
 	{1, "wmflabs.org", 2, true},
-	{2, "wdh.app", 3, true},
+	{1, "wdh.app", 2, true},
 	{1, "panel.gg", 2, true},
 	{1, "daemon.panel.gg", 3, true},
 	{1, "wixsite.com", 2, true},
