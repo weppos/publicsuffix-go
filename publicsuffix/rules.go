@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version fa153b (Mon Aug 26 14:44:10 2024)"
+const ListVersion = "PSL version 278648 (Mon Sep  2 09:42:45 2024)"
 
-func DefaultRules() [9788]Rule {
+func DefaultRules() [9790]Rule {
 	return r
 }
 
-var r = [9788]Rule{
+var r = [9790]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -9181,9 +9181,6 @@ var r = [9788]Rule{
 	{1, "ddnslive.com", 2, true},
 	{1, "myiphost.com", 2, true},
 	{1, "forumz.info", 2, true},
-	{1, "16-b.it", 2, true},
-	{1, "32-b.it", 2, true},
-	{1, "64-b.it", 2, true},
 	{1, "soundcast.me", 2, true},
 	{1, "tcp4.me", 2, true},
 	{1, "dnsup.net", 2, true},
@@ -9235,6 +9232,9 @@ var r = [9788]Rule{
 	{1, "is-local.org", 2, true},
 	{1, "opensocial.site", 2, true},
 	{1, "opencraft.hosting", 2, true},
+	{1, "16-b.it", 2, true},
+	{1, "32-b.it", 2, true},
+	{1, "64-b.it", 2, true},
 	{1, "orsites.com", 2, true},
 	{1, "operaunite.com", 2, true},
 	{1, "tech.orange", 2, true},
@@ -9749,6 +9749,8 @@ var r = [9788]Rule{
 	{1, "wmcloud.org", 2, true},
 	{1, "wmflabs.org", 2, true},
 	{1, "wdh.app", 2, true},
+	{1, "preview.wdh.app", 3, true},
+	{1, "t.hrsn.net", 3, true},
 	{1, "panel.gg", 2, true},
 	{1, "daemon.panel.gg", 3, true},
 	{1, "wixsite.com", 2, true},
