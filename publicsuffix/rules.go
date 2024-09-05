@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version 278648 (Mon Sep  2 09:42:45 2024)"
+const ListVersion = "PSL version 790a5a (Wed Sep  4 09:16:08 2024)"
 
-func DefaultRules() [9790]Rule {
+func DefaultRules() [9789]Rule {
 	return r
 }
 
-var r = [9790]Rule{
+var r = [9789]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -7879,8 +7879,8 @@ var r = [9790]Rule{
 	{1, "ondigitalocean.app", 2, true},
 	{2, "digitaloceanspaces.com", 3, true},
 	{1, "us.kg", 2, true},
-	{2, "rss.my.id", 4, true},
-	{2, "diher.solutions", 3, true},
+	{1, "rss.my.id", 3, true},
+	{1, "diher.solutions", 2, true},
 	{1, "discordsays.com", 2, true},
 	{1, "discordsez.com", 2, true},
 	{1, "jozi.biz", 2, true},
@@ -8389,7 +8389,6 @@ var r = [9790]Rule{
 	{1, "fh-muenster.io", 2, true},
 	{1, "filegear.me", 2, true},
 	{1, "firebaseapp.com", 2, true},
-	{1, "fireweb.app", 2, true},
 	{1, "flap.id", 2, true},
 	{1, "fldrv.com", 2, true},
 	{1, "flutterflow.app", 2, true},
