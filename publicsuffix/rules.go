@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version 39cdad (Fri Sep  6 06:36:52 2024)"
+const ListVersion = "PSL version 32c68c (Fri Sep  6 09:04:16 2024)"
 
-func DefaultRules() [9788]Rule {
+func DefaultRules() [9787]Rule {
 	return r
 }
 
-var r = [9788]Rule{
+var r = [9787]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -702,10 +702,12 @@ var r = [9788]Rule{
 	{1, "cu", 1, false},
 	{1, "com.cu", 2, false},
 	{1, "edu.cu", 2, false},
-	{1, "org.cu", 2, false},
-	{1, "net.cu", 2, false},
+	{1, "gob.cu", 2, false},
 	{1, "gov.cu", 2, false},
 	{1, "inf.cu", 2, false},
+	{1, "nat.cu", 2, false},
+	{1, "net.cu", 2, false},
+	{1, "org.cu", 2, false},
 	{1, "cv", 1, false},
 	{1, "com.cv", 2, false},
 	{1, "edu.cv", 2, false},
@@ -7837,8 +7839,6 @@ var r = [9788]Rule{
 	{1, "daplie.me", 2, true},
 	{1, "localhost.daplie.me", 3, true},
 	{1, "dyndns.dappnode.io", 3, true},
-	{2, "dapps.earth", 3, true},
-	{2, "bzz.dapps.earth", 4, true},
 	{1, "builtwithdark.com", 2, true},
 	{1, "darklang.io", 2, true},
 	{1, "demo.datadetect.com", 3, true},
@@ -8244,7 +8244,6 @@ var r = [9788]Rule{
 	{1, "lt.eu.org", 3, true},
 	{1, "lu.eu.org", 3, true},
 	{1, "lv.eu.org", 3, true},
-	{1, "mc.eu.org", 3, true},
 	{1, "me.eu.org", 3, true},
 	{1, "mk.eu.org", 3, true},
 	{1, "mt.eu.org", 3, true},
