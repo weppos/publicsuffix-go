@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version 32c68c (Fri Sep  6 09:04:16 2024)"
+const ListVersion = "PSL version 769cda (Mon Sep  9 09:54:03 2024)"
 
-func DefaultRules() [9787]Rule {
+func DefaultRules() [9778]Rule {
 	return r
 }
 
-var r = [9787]Rule{
+var r = [9778]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -7804,6 +7804,7 @@ var r = [9787]Rule{
 	{1, "co.no", 2, true},
 	{1, "webhosting.be", 2, true},
 	{1, "hosting-cluster.nl", 2, true},
+	{1, "ctfcloud.net", 2, true},
 	{1, "convex.site", 2, true},
 	{1, "ac.ru", 2, true},
 	{1, "edu.ru", 2, true},
@@ -8793,7 +8794,6 @@ var r = [9787]Rule{
 	{1, "iserv.dev", 2, true},
 	{1, "mel.cloudlets.com.au", 4, true},
 	{1, "cloud.interhostsolutions.be", 3, true},
-	{1, "mycloud.by", 2, true},
 	{1, "alp1.ae.flow.ch", 4, true},
 	{1, "appengine.flow.ch", 3, true},
 	{1, "es-1.axarnet.cloud", 3, true},
@@ -8815,7 +8815,6 @@ var r = [9787]Rule{
 	{1, "ch.trendhosting.cloud", 3, true},
 	{1, "de.trendhosting.cloud", 3, true},
 	{1, "jele.club", 2, true},
-	{1, "amscompute.com", 2, true},
 	{1, "dopaas.com", 2, true},
 	{1, "paas.hosted-by-previder.com", 3, true},
 	{1, "rag-cloud.hosteur.com", 3, true},
@@ -8823,10 +8822,8 @@ var r = [9787]Rule{
 	{1, "jcloud.ik-server.com", 3, true},
 	{1, "jcloud-ver-jpc.ik-server.com", 3, true},
 	{1, "demo.jelastic.com", 3, true},
-	{1, "kilatiron.com", 2, true},
 	{1, "paas.massivegrid.com", 3, true},
 	{1, "jed.wafaicloud.com", 3, true},
-	{1, "lon.wafaicloud.com", 3, true},
 	{1, "ryd.wafaicloud.com", 3, true},
 	{1, "j.scaleforce.com.cy", 4, true},
 	{1, "jelastic.dogado.eu", 3, true},
@@ -8838,18 +8835,14 @@ var r = [9787]Rule{
 	{1, "paas.beebyte.io", 3, true},
 	{1, "sekd1.beebyteapp.io", 3, true},
 	{1, "jele.io", 2, true},
-	{1, "cloud-fr1.unispace.io", 3, true},
 	{1, "jc.neen.it", 3, true},
-	{1, "cloud.jelastic.open.tim.it", 5, true},
 	{1, "jcloud.kz", 2, true},
-	{1, "upaas.kazteleport.kz", 3, true},
 	{1, "cloudjiffy.net", 2, true},
 	{1, "fra1-de.cloudjiffy.net", 3, true},
 	{1, "west1-us.cloudjiffy.net", 3, true},
 	{1, "jls-sto1.elastx.net", 3, true},
 	{1, "jls-sto2.elastx.net", 3, true},
 	{1, "jls-sto3.elastx.net", 3, true},
-	{1, "faststacks.net", 2, true},
 	{1, "fr-1.paas.massivegrid.net", 4, true},
 	{1, "lon-1.paas.massivegrid.net", 4, true},
 	{1, "lon-2.paas.massivegrid.net", 4, true},
@@ -8859,11 +8852,9 @@ var r = [9787]Rule{
 	{1, "jelastic.saveincloud.net", 3, true},
 	{1, "nordeste-idc.saveincloud.net", 3, true},
 	{1, "j.scaleforce.net", 3, true},
-	{1, "jelastic.tsukaeru.net", 3, true},
 	{1, "sdscloud.pl", 2, true},
 	{1, "unicloud.pl", 2, true},
 	{1, "mircloud.ru", 2, true},
-	{1, "jelastic.regruhosting.ru", 3, true},
 	{1, "enscaled.sg", 2, true},
 	{1, "jele.site", 2, true},
 	{1, "jelastic.team", 2, true},
