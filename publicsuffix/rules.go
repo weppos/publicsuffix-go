@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version 769cda (Mon Sep  9 09:54:03 2024)"
+const ListVersion = "PSL version fbcc4c (Tue Sep 10 12:41:13 2024)"
 
-func DefaultRules() [9778]Rule {
+func DefaultRules() [9775]Rule {
 	return r
 }
 
-var r = [9778]Rule{
+var r = [9775]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -9159,7 +9159,6 @@ var r = [9778]Rule{
 	{1, "mypi.co", 2, true},
 	{1, "n4t.co", 2, true},
 	{1, "001www.com", 2, true},
-	{1, "ddnslive.com", 2, true},
 	{1, "myiphost.com", 2, true},
 	{1, "forumz.info", 2, true},
 	{1, "soundcast.me", 2, true},
@@ -9175,8 +9174,6 @@ var r = [9778]Rule{
 	{1, "now-dns.top", 2, true},
 	{1, "ntdll.top", 2, true},
 	{1, "freeddns.us", 2, true},
-	{1, "crafting.xyz", 2, true},
-	{1, "zapto.xyz", 2, true},
 	{1, "nsupdate.info", 2, true},
 	{1, "nerdpol.ovh", 2, true},
 	{1, "nyc.mn", 2, true},
