@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version fbcc4c (Tue Sep 10 12:41:13 2024)"
+const ListVersion = "PSL version be34f9 (Wed Sep 11 16:11:15 2024)"
 
-func DefaultRules() [9775]Rule {
+func DefaultRules() [9777]Rule {
 	return r
 }
 
-var r = [9775]Rule{
+var r = [9777]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -8707,17 +8707,17 @@ var r = [9775]Rule{
 	{1, "orx.biz", 2, true},
 	{1, "biz.gl", 2, true},
 	{1, "biz.ng", 2, true},
+	{1, "co.biz.ng", 3, true},
+	{1, "dl.biz.ng", 3, true},
+	{1, "go.biz.ng", 3, true},
+	{1, "lg.biz.ng", 3, true},
+	{1, "on.biz.ng", 3, true},
 	{1, "col.ng", 2, true},
 	{1, "firm.ng", 2, true},
 	{1, "gen.ng", 2, true},
 	{1, "ltd.ng", 2, true},
 	{1, "ngo.ng", 2, true},
 	{1, "plc.ng", 2, true},
-	{1, "co.biz.ng", 3, true},
-	{1, "dl.biz.ng", 3, true},
-	{1, "go.biz.ng", 3, true},
-	{1, "lg.biz.ng", 3, true},
-	{1, "on.biz.ng", 3, true},
 	{1, "ie.ua", 2, true},
 	{1, "hostyhosting.io", 2, true},
 	{1, "hypernode.io", 2, true},
@@ -8782,6 +8782,7 @@ var r = [9775]Rule{
 	{1, "websitebuilder.online", 2, true},
 	{1, "app-ionos.space", 2, true},
 	{1, "iopsys.se", 2, true},
+	{2, "dweb.link", 3, true},
 	{1, "ipifony.net", 2, true},
 	{1, "ir.md", 2, true},
 	{1, "is-a-good.dev", 2, true},
@@ -9271,7 +9272,6 @@ var r = [9775]Rule{
 	{1, "prequalifyme.today", 2, true},
 	{1, "xen.prgmr.com", 3, true},
 	{1, "priv.at", 2, true},
-	{2, "dweb.link", 3, true},
 	{1, "protonet.io", 2, true},
 	{1, "chirurgiens-dentistes-en-france.fr", 2, true},
 	{1, "byen.site", 2, true},
@@ -9705,7 +9705,9 @@ var r = [9775]Rule{
 	{1, "express.val.run", 3, true},
 	{1, "web.val.run", 3, true},
 	{1, "vercel.app", 2, true},
+	{1, "v0.build", 2, true},
 	{1, "vercel.dev", 2, true},
+	{1, "vusercontent.net", 2, true},
 	{1, "now.sh", 2, true},
 	{1, "2038.io", 2, true},
 	{1, "router.management", 2, true},
