@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version 231540 (Tue Sep 17 13:38:29 2024)"
+const ListVersion = "PSL version 36aa83 (Thu Sep 19 09:25:16 2024)"
 
-func DefaultRules() [9779]Rule {
+func DefaultRules() [9776]Rule {
 	return r
 }
 
-var r = [9779]Rule{
+var r = [9776]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -7697,7 +7697,6 @@ var r = [9779]Rule{
 	{1, "dh.bytemark.co.uk", 4, true},
 	{1, "vm.bytemark.co.uk", 4, true},
 	{1, "cafjs.com", 2, true},
-	{1, "mycd.eu", 2, true},
 	{1, "canva-apps.cn", 2, true},
 	{2, "my.canvasite.cn", 4, true},
 	{1, "canva-apps.com", 2, true},
@@ -8679,6 +8678,11 @@ var r = [9779]Rule{
 	{1, "xn--hkkinen-5wa.fi", 2, true},
 	{1, "hs.run", 2, true},
 	{1, "hs.zone", 2, true},
+	{1, "wdh.app", 2, true},
+	{1, "preview.wdh.app", 3, true},
+	{1, "hrsn.dev", 2, true},
+	{1, "t.hrsn.dev", 3, true},
+	{1, "t.hrsn.net", 3, true},
 	{1, "hashbang.sh", 2, true},
 	{1, "hasura.app", 2, true},
 	{1, "hasura-app.io", 2, true},
@@ -8877,7 +8881,6 @@ var r = [9779]Rule{
 	{1, "js.org", 2, true},
 	{1, "kaas.gg", 2, true},
 	{1, "khplay.nl", 2, true},
-	{1, "ktistory.com", 2, true},
 	{1, "kapsi.fi", 2, true},
 	{1, "ezproxy.kuleuven.be", 3, true},
 	{1, "kuleuven.cloud", 2, true},
@@ -9584,8 +9587,6 @@ var r = [9779]Rule{
 	{1, "supabase.co", 2, true},
 	{1, "supabase.in", 2, true},
 	{1, "supabase.net", 2, true},
-	{2, "sensiosite.cloud", 3, true},
-	{2, "s5y.io", 3, true},
 	{1, "syncloud.it", 2, true},
 	{1, "dscloud.biz", 2, true},
 	{1, "direct.quickconnect.cn", 3, true},
@@ -9736,10 +9737,6 @@ var r = [9779]Rule{
 	{1, "toolforge.org", 2, true},
 	{1, "wmcloud.org", 2, true},
 	{1, "wmflabs.org", 2, true},
-	{1, "wdh.app", 2, true},
-	{1, "preview.wdh.app", 3, true},
-	{1, "t.hrsn.dev", 3, true},
-	{1, "t.hrsn.net", 3, true},
 	{1, "panel.gg", 2, true},
 	{1, "daemon.panel.gg", 3, true},
 	{1, "wixsite.com", 2, true},
