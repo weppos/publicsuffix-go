@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version 36aa83 (Thu Sep 19 09:25:16 2024)"
+const ListVersion = "PSL version 1d0611 (Wed Sep 25 14:22:42 2024)"
 
-func DefaultRules() [9776]Rule {
+func DefaultRules() [9779]Rule {
 	return r
 }
 
-var r = [9776]Rule{
+var r = [9779]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -8725,6 +8725,8 @@ var r = [9776]Rule{
 	{1, "plc.ng", 2, true},
 	{1, "ie.ua", 2, true},
 	{1, "hostyhosting.io", 2, true},
+	{1, "hf.space", 2, true},
+	{1, "static.hf.space", 3, true},
 	{1, "hypernode.io", 2, true},
 	{1, "iobb.net", 2, true},
 	{1, "co.cz", 2, true},
@@ -9491,6 +9493,7 @@ var r = [9776]Rule{
 	{1, "myshopblocks.com", 2, true},
 	{1, "myshopify.com", 2, true},
 	{1, "shopitsite.com", 2, true},
+	{1, "shopware.shop", 2, true},
 	{1, "shopware.store", 2, true},
 	{1, "mo-siemens.io", 2, true},
 	{1, "1kapp.com", 2, true},
@@ -9664,8 +9667,8 @@ var r = [9776]Rule{
 	{1, "lima.zone", 2, true},
 	{2, "transurl.be", 3, true},
 	{2, "transurl.eu", 3, true},
-	{2, "transurl.nl", 3, true},
 	{1, "site.transip.me", 3, true},
+	{2, "transurl.nl", 3, true},
 	{1, "tuxfamily.org", 2, true},
 	{1, "dd-dns.de", 2, true},
 	{1, "dray-dns.de", 2, true},
