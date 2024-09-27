@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version 1d0611 (Wed Sep 25 14:22:42 2024)"
+const ListVersion = "PSL version e0ec09 (Thu Sep 26 15:29:35 2024)"
 
-func DefaultRules() [9779]Rule {
+func DefaultRules() [9773]Rule {
 	return r
 }
 
-var r = [9779]Rule{
+var r = [9773]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -6003,7 +6003,6 @@ var r = [9779]Rule{
 	{1, "cuisinella", 1, false},
 	{1, "cymru", 1, false},
 	{1, "cyou", 1, false},
-	{1, "dabur", 1, false},
 	{1, "dad", 1, false},
 	{1, "dance", 1, false},
 	{1, "data", 1, false},
@@ -7734,7 +7733,6 @@ var r = [9779]Rule{
 	{1, "uk.net", 2, true},
 	{1, "ae.org", 2, true},
 	{1, "com.se", 2, true},
-	{1, "certmgr.org", 2, true},
 	{1, "cx.ua", 2, true},
 	{1, "discourse.group", 2, true},
 	{1, "discourse.team", 2, true},
@@ -7837,8 +7835,6 @@ var r = [9779]Rule{
 	{1, "firm.dk", 2, true},
 	{1, "reg.dk", 2, true},
 	{1, "store.dk", 2, true},
-	{1, "daplie.me", 2, true},
-	{1, "localhost.daplie.me", 3, true},
 	{1, "dyndns.dappnode.io", 3, true},
 	{1, "builtwithdark.com", 2, true},
 	{1, "darklang.io", 2, true},
@@ -9023,7 +9019,6 @@ var r = [9779]Rule{
 	{1, "routingthecloud.net", 2, true},
 	{1, "routingthecloud.org", 2, true},
 	{1, "csx.cc", 2, true},
-	{1, "forte.id", 2, true},
 	{1, "modx.dev", 2, true},
 	{1, "bmoattachments.org", 2, true},
 	{1, "net.ru", 2, true},
@@ -9268,7 +9263,6 @@ var r = [9779]Rule{
 	{1, "platter-app.dev", 2, true},
 	{1, "platterp.us", 2, true},
 	{1, "pley.games", 2, true},
-	{1, "dyn53.io", 2, true},
 	{1, "onporter.run", 2, true},
 	{1, "co.bn", 2, true},
 	{1, "postman-echo.com", 2, true},
