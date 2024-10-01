@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version e0ec09 (Thu Sep 26 15:29:35 2024)"
+const ListVersion = "PSL version 8a487b (Mon Sep 30 14:56:42 2024)"
 
-func DefaultRules() [9773]Rule {
+func DefaultRules() [9781]Rule {
 	return r
 }
 
-var r = [9773]Rule{
+var r = [9781]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -400,6 +400,7 @@ var r = [9773]Rule{
 	{1, "b.br", 2, false},
 	{1, "barueri.br", 2, false},
 	{1, "belem.br", 2, false},
+	{1, "bet.br", 2, false},
 	{1, "bhz.br", 2, false},
 	{1, "bib.br", 2, false},
 	{1, "bio.br", 2, false},
@@ -486,6 +487,7 @@ var r = [9773]Rule{
 	{1, "jor.br", 2, false},
 	{1, "jus.br", 2, false},
 	{1, "leg.br", 2, false},
+	{1, "leilao.br", 2, false},
 	{1, "lel.br", 2, false},
 	{1, "log.br", 2, false},
 	{1, "londrina.br", 2, false},
@@ -9019,6 +9021,12 @@ var r = [9773]Rule{
 	{1, "routingthecloud.net", 2, true},
 	{1, "routingthecloud.org", 2, true},
 	{1, "csx.cc", 2, true},
+	{1, "mydbserver.com", 2, true},
+	{1, "webspaceconfig.de", 2, true},
+	{1, "mittwald.info", 2, true},
+	{1, "mittwaldserver.info", 2, true},
+	{1, "typo3server.info", 2, true},
+	{1, "project.space", 2, true},
 	{1, "modx.dev", 2, true},
 	{1, "bmoattachments.org", 2, true},
 	{1, "net.ru", 2, true},
