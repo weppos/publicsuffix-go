@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version 2e5f21 (Wed Oct  2 07:23:14 2024)"
+const ListVersion = "PSL version 6ac920 (Tue Oct  8 13:45:53 2024)"
 
-func DefaultRules() [9778]Rule {
+func DefaultRules() [9796]Rule {
 	return r
 }
 
-var r = [9778]Rule{
+var r = [9796]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -6957,6 +6957,7 @@ var r = [9778]Rule{
 	{1, "execute-api.ap-southeast-2.amazonaws.com", 4, true},
 	{1, "execute-api.ap-southeast-3.amazonaws.com", 4, true},
 	{1, "execute-api.ap-southeast-4.amazonaws.com", 4, true},
+	{1, "execute-api.ap-southeast-5.amazonaws.com", 4, true},
 	{1, "execute-api.ca-central-1.amazonaws.com", 4, true},
 	{1, "execute-api.ca-west-1.amazonaws.com", 4, true},
 	{1, "execute-api.eu-central-1.amazonaws.com", 4, true},
@@ -7203,6 +7204,7 @@ var r = [9778]Rule{
 	{1, "s3-website.ap-south-1.amazonaws.com", 4, true},
 	{1, "s3.dualstack.ap-south-2.amazonaws.com", 5, true},
 	{1, "s3-accesspoint.dualstack.ap-south-2.amazonaws.com", 5, true},
+	{1, "s3-website.dualstack.ap-south-2.amazonaws.com", 5, true},
 	{1, "s3.ap-south-2.amazonaws.com", 4, true},
 	{1, "s3-accesspoint.ap-south-2.amazonaws.com", 4, true},
 	{1, "s3-object-lambda.ap-south-2.amazonaws.com", 4, true},
@@ -7223,16 +7225,26 @@ var r = [9778]Rule{
 	{1, "s3-website.ap-southeast-2.amazonaws.com", 4, true},
 	{1, "s3.dualstack.ap-southeast-3.amazonaws.com", 5, true},
 	{1, "s3-accesspoint.dualstack.ap-southeast-3.amazonaws.com", 5, true},
+	{1, "s3-website.dualstack.ap-southeast-3.amazonaws.com", 5, true},
 	{1, "s3.ap-southeast-3.amazonaws.com", 4, true},
 	{1, "s3-accesspoint.ap-southeast-3.amazonaws.com", 4, true},
 	{1, "s3-object-lambda.ap-southeast-3.amazonaws.com", 4, true},
 	{1, "s3-website.ap-southeast-3.amazonaws.com", 4, true},
 	{1, "s3.dualstack.ap-southeast-4.amazonaws.com", 5, true},
 	{1, "s3-accesspoint.dualstack.ap-southeast-4.amazonaws.com", 5, true},
+	{1, "s3-website.dualstack.ap-southeast-4.amazonaws.com", 5, true},
 	{1, "s3.ap-southeast-4.amazonaws.com", 4, true},
 	{1, "s3-accesspoint.ap-southeast-4.amazonaws.com", 4, true},
 	{1, "s3-object-lambda.ap-southeast-4.amazonaws.com", 4, true},
 	{1, "s3-website.ap-southeast-4.amazonaws.com", 4, true},
+	{1, "s3.dualstack.ap-southeast-5.amazonaws.com", 5, true},
+	{1, "s3-accesspoint.dualstack.ap-southeast-5.amazonaws.com", 5, true},
+	{1, "s3-website.dualstack.ap-southeast-5.amazonaws.com", 5, true},
+	{1, "s3.ap-southeast-5.amazonaws.com", 4, true},
+	{1, "s3-accesspoint.ap-southeast-5.amazonaws.com", 4, true},
+	{1, "s3-deprecated.ap-southeast-5.amazonaws.com", 4, true},
+	{1, "s3-object-lambda.ap-southeast-5.amazonaws.com", 4, true},
+	{1, "s3-website.ap-southeast-5.amazonaws.com", 4, true},
 	{1, "s3.dualstack.ca-central-1.amazonaws.com", 5, true},
 	{1, "s3-accesspoint.dualstack.ca-central-1.amazonaws.com", 5, true},
 	{1, "s3-accesspoint-fips.dualstack.ca-central-1.amazonaws.com", 5, true},
@@ -7253,6 +7265,7 @@ var r = [9778]Rule{
 	{1, "s3-accesspoint.ca-west-1.amazonaws.com", 4, true},
 	{1, "s3-accesspoint-fips.ca-west-1.amazonaws.com", 4, true},
 	{1, "s3-fips.ca-west-1.amazonaws.com", 4, true},
+	{1, "s3-object-lambda.ca-west-1.amazonaws.com", 4, true},
 	{1, "s3-website.ca-west-1.amazonaws.com", 4, true},
 	{1, "s3.dualstack.eu-central-1.amazonaws.com", 5, true},
 	{1, "s3-accesspoint.dualstack.eu-central-1.amazonaws.com", 5, true},
@@ -7263,6 +7276,7 @@ var r = [9778]Rule{
 	{1, "s3-website.eu-central-1.amazonaws.com", 4, true},
 	{1, "s3.dualstack.eu-central-2.amazonaws.com", 5, true},
 	{1, "s3-accesspoint.dualstack.eu-central-2.amazonaws.com", 5, true},
+	{1, "s3-website.dualstack.eu-central-2.amazonaws.com", 5, true},
 	{1, "s3.eu-central-2.amazonaws.com", 4, true},
 	{1, "s3-accesspoint.eu-central-2.amazonaws.com", 4, true},
 	{1, "s3-object-lambda.eu-central-2.amazonaws.com", 4, true},
@@ -7282,6 +7296,7 @@ var r = [9778]Rule{
 	{1, "s3-website.eu-south-1.amazonaws.com", 4, true},
 	{1, "s3.dualstack.eu-south-2.amazonaws.com", 5, true},
 	{1, "s3-accesspoint.dualstack.eu-south-2.amazonaws.com", 5, true},
+	{1, "s3-website.dualstack.eu-south-2.amazonaws.com", 5, true},
 	{1, "s3.eu-south-2.amazonaws.com", 4, true},
 	{1, "s3-accesspoint.eu-south-2.amazonaws.com", 4, true},
 	{1, "s3-object-lambda.eu-south-2.amazonaws.com", 4, true},
@@ -7309,12 +7324,14 @@ var r = [9778]Rule{
 	{1, "s3-website.eu-west-3.amazonaws.com", 4, true},
 	{1, "s3.dualstack.il-central-1.amazonaws.com", 5, true},
 	{1, "s3-accesspoint.dualstack.il-central-1.amazonaws.com", 5, true},
+	{1, "s3-website.dualstack.il-central-1.amazonaws.com", 5, true},
 	{1, "s3.il-central-1.amazonaws.com", 4, true},
 	{1, "s3-accesspoint.il-central-1.amazonaws.com", 4, true},
 	{1, "s3-object-lambda.il-central-1.amazonaws.com", 4, true},
 	{1, "s3-website.il-central-1.amazonaws.com", 4, true},
 	{1, "s3.dualstack.me-central-1.amazonaws.com", 5, true},
 	{1, "s3-accesspoint.dualstack.me-central-1.amazonaws.com", 5, true},
+	{1, "s3-website.dualstack.me-central-1.amazonaws.com", 5, true},
 	{1, "s3.me-central-1.amazonaws.com", 4, true},
 	{1, "s3-accesspoint.me-central-1.amazonaws.com", 4, true},
 	{1, "s3-object-lambda.me-central-1.amazonaws.com", 4, true},
@@ -7383,6 +7400,7 @@ var r = [9778]Rule{
 	{1, "s3-accesspoint.dualstack.us-east-2.amazonaws.com", 5, true},
 	{1, "s3-accesspoint-fips.dualstack.us-east-2.amazonaws.com", 5, true},
 	{1, "s3-fips.dualstack.us-east-2.amazonaws.com", 5, true},
+	{1, "s3-website.dualstack.us-east-2.amazonaws.com", 5, true},
 	{1, "s3.us-east-2.amazonaws.com", 4, true},
 	{1, "s3-accesspoint.us-east-2.amazonaws.com", 4, true},
 	{1, "s3-accesspoint-fips.us-east-2.amazonaws.com", 4, true},
