@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version 6ac920 (Tue Oct  8 13:45:53 2024)"
+const ListVersion = "PSL version 76ad20 (Thu Oct 10 06:43:34 2024)"
 
-func DefaultRules() [9796]Rule {
+func DefaultRules() [9794]Rule {
 	return r
 }
 
-var r = [9796]Rule{
+var r = [9794]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -7656,6 +7656,7 @@ var r = [9796]Rule{
 	{1, "appudo.net", 2, true},
 	{1, "on-aptible.com", 2, true},
 	{1, "f5.si", 2, true},
+	{1, "arvanedge.ir", 2, true},
 	{1, "user.aseinet.ne.jp", 4, true},
 	{1, "gv.vc", 2, true},
 	{1, "d.gv.vc", 3, true},
@@ -8270,10 +8271,8 @@ var r = [9796]Rule{
 	{1, "nl.eu.org", 3, true},
 	{1, "no.eu.org", 3, true},
 	{1, "nz.eu.org", 3, true},
-	{1, "paris.eu.org", 3, true},
 	{1, "pl.eu.org", 3, true},
 	{1, "pt.eu.org", 3, true},
-	{1, "q-a.eu.org", 3, true},
 	{1, "ro.eu.org", 3, true},
 	{1, "ru.eu.org", 3, true},
 	{1, "se.eu.org", 3, true},
@@ -8649,7 +8648,6 @@ var r = [9796]Rule{
 	{1, "blogspot.lu", 2, true},
 	{1, "blogspot.md", 2, true},
 	{1, "blogspot.mk", 2, true},
-	{1, "blogspot.mr", 2, true},
 	{1, "blogspot.com.mt", 3, true},
 	{1, "blogspot.mx", 2, true},
 	{1, "blogspot.my", 2, true},
