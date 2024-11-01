@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version 435e07 (Fri Oct 25 15:47:44 2024)"
+const ListVersion = "PSL version a4a387 (Thu Oct 31 15:18:37 2024)"
 
-func DefaultRules() [9775]Rule {
+func DefaultRules() [9780]Rule {
 	return r
 }
 
-var r = [9775]Rule{
+var r = [9780]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -174,6 +174,7 @@ var r = [9775]Rule{
 	{1, "tur.ar", 2, false},
 	{1, "arpa", 1, false},
 	{1, "e164.arpa", 2, false},
+	{1, "home.arpa", 2, false},
 	{1, "in-addr.arpa", 2, false},
 	{1, "ip6.arpa", 2, false},
 	{1, "iris.arpa", 2, false},
@@ -7769,10 +7770,12 @@ var r = [9775]Rule{
 	{1, "cloudns.cl", 2, true},
 	{1, "cloudns.club", 2, true},
 	{1, "dnsabr.com", 2, true},
+	{1, "ip-ddns.com", 2, true},
 	{1, "cloudns.cx", 2, true},
 	{1, "cloudns.eu", 2, true},
 	{1, "cloudns.in", 2, true},
 	{1, "cloudns.info", 2, true},
+	{1, "ddns-ip.net", 2, true},
 	{1, "dns-cloud.net", 2, true},
 	{1, "dns-dynamic.net", 2, true},
 	{1, "cloudns.nz", 2, true},
@@ -8674,6 +8677,7 @@ var r = [9775]Rule{
 	{1, "cloudapps.digital", 2, true},
 	{1, "london.cloudapps.digital", 3, true},
 	{1, "gov.nl", 2, true},
+	{1, "grafana-dev.net", 2, true},
 	{1, "grayjayleagues.com", 2, true},
 	{1, "xn--gnstigbestellen-zvb.de", 2, true},
 	{1, "xn--gnstigliefern-wob.de", 2, true},
@@ -9622,6 +9626,7 @@ var r = [9775]Rule{
 	{1, "gdynia.pl", 2, true},
 	{1, "med.pl", 2, true},
 	{1, "sopot.pl", 2, true},
+	{1, "taveusercontent.com", 2, true},
 	{1, "p.tawk.email", 3, true},
 	{1, "p.tawkto.email", 3, true},
 	{1, "site.tb-hosting.com", 3, true},
