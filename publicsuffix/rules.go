@@ -3,7 +3,7 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version 2733c1 (Fri Nov  8 10:45:25 2024)"
+const ListVersion = "PSL version ca9b29 (Mon Nov 11 20:32:00 2024)"
 
 func DefaultRules() [9777]Rule {
 	return r
@@ -580,6 +580,7 @@ var r = [9777]Rule{
 	{1, "com.by", 2, false},
 	{1, "of.by", 2, false},
 	{1, "bz", 1, false},
+	{1, "co.bz", 2, false},
 	{1, "com.bz", 2, false},
 	{1, "net.bz", 2, false},
 	{1, "org.bz", 2, false},
@@ -8458,7 +8459,6 @@ var r = [9777]Rule{
 	{1, "cdn-edges.net", 2, true},
 	{1, "localcert.net", 2, true},
 	{1, "localhostcert.net", 2, true},
-	{1, "corpnet.work", 2, true},
 	{1, "gsj.bz", 2, true},
 	{1, "githubusercontent.com", 2, true},
 	{1, "githubpreview.dev", 2, true},
