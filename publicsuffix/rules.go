@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version ca9b29 (Mon Nov 11 20:32:00 2024)"
+const ListVersion = "PSL version c5a2c6 (Tue Nov 12 14:53:01 2024)"
 
-func DefaultRules() [9777]Rule {
+func DefaultRules() [9784]Rule {
 	return r
 }
 
-var r = [9777]Rule{
+var r = [9784]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -8695,6 +8695,7 @@ var r = [9777]Rule{
 	{1, "hatenadiary.jp", 2, true},
 	{1, "hatenadiary.org", 2, true},
 	{1, "pages.it.hs-heilbronn.de", 4, true},
+	{1, "pages-research.it.hs-heilbronn.de", 4, true},
 	{1, "heiyu.space", 2, true},
 	{1, "helioho.st", 2, true},
 	{1, "heliohost.us", 2, true},
@@ -8922,6 +8923,12 @@ var r = [9777]Rule{
 	{1, "filegear-sg.me", 2, true},
 	{1, "ggff.net", 2, true},
 	{2, "user.localcert.dev", 4, true},
+	{1, "lodz.pl", 2, true},
+	{1, "pabianice.pl", 2, true},
+	{1, "plock.pl", 2, true},
+	{1, "sieradz.pl", 2, true},
+	{1, "skierniewice.pl", 2, true},
+	{1, "zgierz.pl", 2, true},
 	{1, "loginline.app", 2, true},
 	{1, "loginline.dev", 2, true},
 	{1, "loginline.io", 2, true},
