@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version c5a2c6 (Tue Nov 12 14:53:01 2024)"
+const ListVersion = "PSL version b00d15 (Mon Nov 18 15:30:38 2024)"
 
-func DefaultRules() [9784]Rule {
+func DefaultRules() [9778]Rule {
 	return r
 }
 
-var r = [9784]Rule{
+var r = [9778]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -18,7 +18,6 @@ var r = [9784]Rule{
 	{1, "mil.ac", 2, false},
 	{1, "org.ac", 2, false},
 	{1, "ad", 1, false},
-	{1, "nom.ad", 2, false},
 	{1, "ae", 1, false},
 	{1, "co.ae", 2, false},
 	{1, "net.ae", 2, false},
@@ -197,7 +196,6 @@ var r = [9784]Rule{
 	{1, "gov.au", 2, false},
 	{1, "asn.au", 2, false},
 	{1, "id.au", 2, false},
-	{1, "info.au", 2, false},
 	{1, "conf.au", 2, false},
 	{1, "oz.au", 2, false},
 	{1, "act.au", 2, false},
@@ -1135,12 +1133,6 @@ var r = [9784]Rule{
 	{1, "xn--mgba3a4f16a.ir", 2, false},
 	{1, "xn--mgba3a4fra.ir", 2, false},
 	{1, "is", 1, false},
-	{1, "net.is", 2, false},
-	{1, "com.is", 2, false},
-	{1, "edu.is", 2, false},
-	{1, "gov.is", 2, false},
-	{1, "org.is", 2, false},
-	{1, "int.is", 2, false},
 	{1, "it", 1, false},
 	{1, "gov.it", 2, false},
 	{1, "edu.it", 2, false},
@@ -8702,6 +8694,8 @@ var r = [9784]Rule{
 	{1, "hepforge.org", 2, true},
 	{1, "herokuapp.com", 2, true},
 	{1, "herokussl.com", 2, true},
+	{1, "heyflow.page", 2, true},
+	{1, "heyflow.site", 2, true},
 	{1, "ravendb.cloud", 2, true},
 	{1, "ravendb.community", 2, true},
 	{1, "development.run", 2, true},
