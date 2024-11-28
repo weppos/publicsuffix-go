@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version bf32ba (Tue Nov 26 09:06:13 2024)"
+const ListVersion = "PSL version e1b160 (Wed Nov 27 21:57:04 2024)"
 
-func DefaultRules() [9772]Rule {
+func DefaultRules() [9777]Rule {
 	return r
 }
 
-var r = [9772]Rule{
+var r = [9777]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -792,15 +792,20 @@ var r = [9772]Rule{
 	{1, "org.ee", 2, false},
 	{1, "fie.ee", 2, false},
 	{1, "eg", 1, false},
+	{1, "ac.eg", 2, false},
 	{1, "com.eg", 2, false},
 	{1, "edu.eg", 2, false},
 	{1, "eun.eg", 2, false},
 	{1, "gov.eg", 2, false},
+	{1, "info.eg", 2, false},
+	{1, "me.eg", 2, false},
 	{1, "mil.eg", 2, false},
 	{1, "name.eg", 2, false},
 	{1, "net.eg", 2, false},
 	{1, "org.eg", 2, false},
 	{1, "sci.eg", 2, false},
+	{1, "sport.eg", 2, false},
+	{1, "tv.eg", 2, false},
 	{2, "er", 2, false},
 	{1, "es", 1, false},
 	{1, "com.es", 2, false},
@@ -5126,19 +5131,16 @@ var r = [9772]Rule{
 	{1, "pro.tt", 2, false},
 	{1, "tv", 1, false},
 	{1, "tw", 1, false},
-	{1, "edu.tw", 2, false},
-	{1, "gov.tw", 2, false},
-	{1, "mil.tw", 2, false},
+	{1, "club.tw", 2, false},
 	{1, "com.tw", 2, false},
+	{1, "ebiz.tw", 2, false},
+	{1, "edu.tw", 2, false},
+	{1, "game.tw", 2, false},
+	{1, "gov.tw", 2, false},
+	{1, "idv.tw", 2, false},
+	{1, "mil.tw", 2, false},
 	{1, "net.tw", 2, false},
 	{1, "org.tw", 2, false},
-	{1, "idv.tw", 2, false},
-	{1, "game.tw", 2, false},
-	{1, "ebiz.tw", 2, false},
-	{1, "club.tw", 2, false},
-	{1, "xn--zf0ao64a.tw", 2, false},
-	{1, "xn--uc0atv.tw", 2, false},
-	{1, "xn--czrw28b.tw", 2, false},
 	{1, "tz", 1, false},
 	{1, "ac.tz", 2, false},
 	{1, "co.tz", 2, false},
@@ -9364,6 +9366,9 @@ var r = [9772]Rule{
 	{1, "nz.basketball", 2, true},
 	{1, "git-pages.rit.edu", 3, true},
 	{1, "rocky.page", 2, true},
+	{1, "rub.de", 2, true},
+	{1, "ruhr-uni-bochum.de", 2, true},
+	{1, "io.noc.ruhr-uni-bochum.de", 4, true},
 	{1, "xn--90amc.xn--p1acf", 2, true},
 	{1, "xn--j1aef.xn--p1acf", 2, true},
 	{1, "xn--j1ael8b.xn--p1acf", 2, true},
