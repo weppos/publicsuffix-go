@@ -3,7 +3,7 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version 70df5f (Fri Nov 29 07:26:57 2024)"
+const ListVersion = "PSL version a12cce (Mon Dec  2 11:32:17 2024)"
 
 func DefaultRules() [9776]Rule {
 	return r
@@ -9048,6 +9048,7 @@ var r = [9776]Rule{
 	{1, "cust.retrosnub.co.uk", 4, true},
 	{1, "ui.nabu.casa", 3, true},
 	{1, "cloud.nospamproxy.com", 3, true},
+	{1, "o365.cloud.nospamproxy.com", 4, true},
 	{1, "netfy.app", 2, true},
 	{1, "netlify.app", 2, true},
 	{1, "4u.com", 2, true},
@@ -9704,7 +9705,6 @@ var r = [9776]Rule{
 	{1, "org.yt", 2, true},
 	{1, "rs.ba", 2, true},
 	{1, "bielsko.pl", 2, true},
-	{1, "upli.io", 2, true},
 	{1, "urown.cloud", 2, true},
 	{1, "dnsupdate.info", 2, true},
 	{1, "us.org", 2, true},
