@@ -1,4 +1,4 @@
-// +build ignore
+//go:build ignore
 
 // gen downloads an updated version of the PSL list and compiles it into go code.
 //
@@ -7,6 +7,11 @@
 package main
 
 import (
+	"context"
+	"fmt"
+	"os"
+	"os/signal"
+
 	"github.com/weppos/publicsuffix-go/publicsuffix/generator"
 )
 
@@ -16,7 +21,14 @@ const (
 )
 
 func main() {
+	ctx, cancel := signal.NotifyContext(context.Background(), os.Interrupt)
+	defer cancel()
+
 	g := generator.NewGenerator()
 	g.Verbose = true
-	g.Write(filename)
+	err := g.Write(ctx, filename)
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error: %v\n", err)
+		os.Exit(1)
+	}
 }
