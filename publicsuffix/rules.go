@@ -3,7 +3,7 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version a12cce (Mon Dec  2 11:32:17 2024)"
+const ListVersion = "PSL version 7e9bf7 (Wed Dec  4 10:24:48 2024)"
 
 func DefaultRules() [9776]Rule {
 	return r
@@ -8395,7 +8395,7 @@ var r = [9776]Rule{
 	{1, "framer.photos", 2, true},
 	{1, "framer.website", 2, true},
 	{1, "framer.wiki", 2, true},
-	{1, "0e.vc", 2, true},
+	{2, "0e.vc", 3, true},
 	{1, "freebox-os.com", 2, true},
 	{1, "freeboxos.com", 2, true},
 	{1, "fbx-os.fr", 2, true},
