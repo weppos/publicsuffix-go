@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version d94154 (Fri Dec  6 15:16:53 2024)"
+const ListVersion = "PSL version d3ca4d (Mon Dec  9 13:09:59 2024)"
 
-func DefaultRules() [9776]Rule {
+func DefaultRules() [9777]Rule {
 	return r
 }
 
-var r = [9776]Rule{
+var r = [9777]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -7816,7 +7816,6 @@ var r = [9776]Rule{
 	{1, "gov.ru", 2, true},
 	{1, "int.ru", 2, true},
 	{1, "mil.ru", 2, true},
-	{1, "test.ru", 2, true},
 	{1, "dyn.cosidns.de", 3, true},
 	{1, "dnsupdater.de", 2, true},
 	{1, "dynamisches-dns.de", 2, true},
@@ -8382,6 +8381,7 @@ var r = [9776]Rule{
 	{1, "filegear.me", 2, true},
 	{1, "firebaseapp.com", 2, true},
 	{1, "fldrv.com", 2, true},
+	{1, "on-fleek.app", 2, true},
 	{1, "flutterflow.app", 2, true},
 	{1, "fly.dev", 2, true},
 	{1, "shw.io", 2, true},
@@ -8445,8 +8445,6 @@ var r = [9776]Rule{
 	{1, "gentlentapis.com", 2, true},
 	{1, "lab.ms", 2, true},
 	{1, "cdn-edges.net", 2, true},
-	{1, "localcert.net", 2, true},
-	{1, "localhostcert.net", 2, true},
 	{1, "gsj.bz", 2, true},
 	{1, "githubusercontent.com", 2, true},
 	{1, "githubpreview.dev", 2, true},
@@ -8913,6 +8911,8 @@ var r = [9776]Rule{
 	{1, "filegear-sg.me", 2, true},
 	{1, "ggff.net", 2, true},
 	{2, "user.localcert.dev", 4, true},
+	{1, "localcert.net", 2, true},
+	{1, "localhostcert.net", 2, true},
 	{1, "lodz.pl", 2, true},
 	{1, "pabianice.pl", 2, true},
 	{1, "plock.pl", 2, true},
@@ -9049,6 +9049,7 @@ var r = [9776]Rule{
 	{1, "ui.nabu.casa", 3, true},
 	{1, "cloud.nospamproxy.com", 3, true},
 	{1, "o365.cloud.nospamproxy.com", 4, true},
+	{1, "netlib.re", 2, true},
 	{1, "netfy.app", 2, true},
 	{1, "netlify.app", 2, true},
 	{1, "4u.com", 2, true},
