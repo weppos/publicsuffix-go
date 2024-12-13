@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version 6cebd5 (Thu Dec 12 06:46:49 2024)"
+const ListVersion = "PSL version 54119e (Thu Dec 12 15:28:30 2024)"
 
-func DefaultRules() [9698]Rule {
+func DefaultRules() [9700]Rule {
 	return r
 }
 
-var r = [9698]Rule{
+var r = [9700]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -226,6 +226,7 @@ var r = [9698]Rule{
 	{1, "ax", 1, false},
 	{1, "az", 1, false},
 	{1, "biz.az", 2, false},
+	{1, "co.az", 2, false},
 	{1, "com.az", 2, false},
 	{1, "edu.az", 2, false},
 	{1, "gov.az", 2, false},
@@ -570,7 +571,10 @@ var r = [9698]Rule{
 	{1, "org.bt", 2, false},
 	{1, "bv", 1, false},
 	{1, "bw", 1, false},
+	{1, "ac.bw", 2, false},
 	{1, "co.bw", 2, false},
+	{1, "gov.bw", 2, false},
+	{1, "net.bw", 2, false},
 	{1, "org.bw", 2, false},
 	{1, "by", 1, false},
 	{1, "gov.by", 2, false},
@@ -8813,7 +8817,6 @@ var r = [9698]Rule{
 	{1, "leadpages.co", 2, true},
 	{1, "lpages.co", 2, true},
 	{1, "lpusercontent.com", 2, true},
-	{1, "lelux.site", 2, true},
 	{1, "libp2p.direct", 2, true},
 	{1, "runcontainers.dev", 2, true},
 	{1, "co.business", 2, true},
@@ -9419,7 +9422,6 @@ var r = [9698]Rule{
 	{1, "pp.ua", 2, true},
 	{1, "as.sh.cn", 3, true},
 	{1, "sheezy.games", 2, true},
-	{1, "shiftedit.io", 2, true},
 	{1, "myshopblocks.com", 2, true},
 	{1, "myshopify.com", 2, true},
 	{1, "shopitsite.com", 2, true},
