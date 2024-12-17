@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version 0660ae (Sun Dec 15 19:57:59 2024)"
+const ListVersion = "PSL version bc9a4e (Mon Dec 16 22:50:52 2024)"
 
-func DefaultRules() [9699]Rule {
+func DefaultRules() [9695]Rule {
 	return r
 }
 
-var r = [9699]Rule{
+var r = [9695]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -8442,7 +8442,6 @@ var r = [9699]Rule{
 	{1, "usercontent.jp", 2, true},
 	{1, "gentapps.com", 2, true},
 	{1, "gentlentapis.com", 2, true},
-	{1, "lab.ms", 2, true},
 	{1, "cdn-edges.net", 2, true},
 	{1, "gsj.bz", 2, true},
 	{1, "githubusercontent.com", 2, true},
@@ -9094,8 +9093,6 @@ var r = [9699]Rule{
 	{1, "notion.site", 2, true},
 	{1, "dnsking.ch", 2, true},
 	{1, "mypi.co", 2, true},
-	{1, "n4t.co", 2, true},
-	{1, "001www.com", 2, true},
 	{1, "myiphost.com", 2, true},
 	{1, "forumz.info", 2, true},
 	{1, "soundcast.me", 2, true},
@@ -9108,7 +9105,6 @@ var r = [9699]Rule{
 	{1, "dynserv.org", 2, true},
 	{1, "now-dns.org", 2, true},
 	{1, "x443.pw", 2, true},
-	{1, "now-dns.top", 2, true},
 	{1, "ntdll.top", 2, true},
 	{1, "freeddns.us", 2, true},
 	{1, "nsupdate.info", 2, true},
