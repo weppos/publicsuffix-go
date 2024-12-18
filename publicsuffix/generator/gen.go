@@ -7,9 +7,10 @@ package generator
 import (
 	"bytes"
 	"context"
+	"encoding/json"
 	"fmt"
 	"go/format"
-	"io/ioutil"
+	"io"
 	"log"
 	"net/http"
 	"os"
@@ -17,7 +18,6 @@ import (
 	"text/template"
 	"time"
 
-	"github.com/google/go-github/v50/github"
 	"github.com/weppos/publicsuffix-go/publicsuffix"
 )
 
@@ -48,9 +48,7 @@ func init() {
 `
 )
 
-var (
-	listTmpl = template.Must(template.New("list").Parse(cont(list)))
-)
+var listTmpl = template.Must(template.New("list").Parse(cont(list)))
 
 // https://github.com/golang/go/issues/9969
 // Requires go1.6
@@ -58,16 +56,61 @@ func cont(s string) string {
 	return strings.Replace(s, "\\\n", "", -1)
 }
 
-func extractHeadInfo() (sha string, datetime github.Timestamp) {
-	client := github.NewClient(nil)
+type headInfo struct {
+	SHA      string
+	Datetime time.Time
+}
 
-	commits, _, err := client.Repositories.ListCommits(context.Background(), "publicsuffix", "list", nil)
+type githubNodes struct {
+	SHA    string       `json:"sha"`
+	Commit githubCommit `json:"commit"`
+}
+
+type githubCommit struct {
+	Commiter githubCommitter `json:"committer"`
+}
+
+type githubCommitter struct {
+	Date time.Time `json:"date"`
+}
+
+func extractHeadInfo(ctx context.Context) (*headInfo, error) {
+	req, err := http.NewRequestWithContext(ctx, "GET", "https://api.github.com/repos/publicsuffix/list/commits", nil)
 	if err != nil {
-		log.Fatal(err)
+		return nil, fmt.Errorf("http.NewRequestWithContext: %w", err)
+	}
+	req.Header.Set("Accept", "application/vnd.github+json")
+	req.Header.Set("X-Github-Api-Version", "2022-11-28")
+
+	resp, err := http.DefaultClient.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("http.DefaultClient.Do: %w", err)
+	}
+	defer resp.Body.Close()
+
+	respString, err := io.ReadAll(resp.Body)
+	if err != nil {
+		return nil, fmt.Errorf("io.ReadAll: %w", err)
 	}
 
-	lastCommit := commits[0]
-	return lastCommit.GetSHA(), lastCommit.GetCommit().GetCommitter().GetDate()
+	if resp.StatusCode != http.StatusOK {
+		return nil, fmt.Errorf("unexpected status code: %d %s", resp.StatusCode, respString)
+	}
+
+	var respBody []githubNodes
+	err = json.Unmarshal(respString, &respBody)
+	if err != nil {
+		return nil, fmt.Errorf("json.Unmarshal %s: %w", respBody, err)
+	}
+
+	if len(respBody) == 0 {
+		return nil, fmt.Errorf("no nodes found")
+	}
+
+	return &headInfo{
+		SHA:      respBody[0].SHA,
+		Datetime: respBody[0].Commit.Commiter.Date,
+	}, nil
 }
 
 // Generator represents a generator.
@@ -84,19 +127,19 @@ func NewGenerator() *Generator {
 }
 
 // Write ...
-func (g *Generator) Write(filename string) error {
-	content, err := g.generate()
+func (g *Generator) Write(ctx context.Context, filename string) error {
+	content, err := g.generate(ctx)
 	if err != nil {
 		return err
 	}
 
 	g.log("Writing %v...\n", filename)
-	return ioutil.WriteFile(filename, content, 0644)
+	return os.WriteFile(filename, content, 0o644)
 }
 
 // Print ...
-func (g *Generator) Print() error {
-	content, err := g.generate()
+func (g *Generator) Print(ctx context.Context) error {
+	content, err := g.generate(ctx)
 	if err != nil {
 		return err
 	}
@@ -106,15 +149,26 @@ func (g *Generator) Print() error {
 }
 
 // Generate downloads an updated version of the PSL list and compiles it into go code.
-func (g *Generator) generate() ([]byte, error) {
+func (g *Generator) generate(ctx context.Context) ([]byte, error) {
 	g.log("Fetching PSL version...\n")
-	sha, datetime := extractHeadInfo()
-
-	g.log("Downloading PSL %s...\n", sha[:6])
-	resp, err := http.Get(fmt.Sprintf("https://raw.githubusercontent.com/publicsuffix/list/%s/public_suffix_list.dat", sha))
+	headInfo, err := extractHeadInfo(ctx)
 	if err != nil {
 		return nil, err
 	}
+
+	g.log("Downloading PSL %s...\n", headInfo.SHA[:6])
+	reqURL := fmt.Sprintf("https://raw.githubusercontent.com/publicsuffix/list/%s/public_suffix_list.dat", headInfo.SHA)
+
+	req, err := http.NewRequestWithContext(ctx, http.MethodGet, reqURL, nil)
+	if err != nil {
+		return nil, err
+	}
+
+	resp, err := http.DefaultClient.Do(req)
+	if err != nil {
+		return nil, err
+	}
+
 	defer resp.Body.Close()
 
 	list := publicsuffix.NewList()
@@ -128,8 +182,8 @@ func (g *Generator) generate() ([]byte, error) {
 		VersionDate string
 		Rules       []publicsuffix.Rule
 	}{
-		sha[:6],
-		datetime.Format(time.ANSIC),
+		headInfo.SHA[:6],
+		headInfo.Datetime.Format(time.ANSIC),
 		rules,
 	}
 
@@ -149,13 +203,4 @@ func (g *Generator) log(format string, v ...interface{}) {
 	}
 
 	log.Printf(format, v...)
-}
-
-func (g *Generator) fatal(message string) {
-	if !g.Verbose {
-		fmt.Println(message)
-		os.Exit(1)
-	}
-
-	log.Fatal(message)
 }
