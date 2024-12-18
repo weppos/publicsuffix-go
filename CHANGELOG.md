@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## main
+
+- CHANGED: Removed dependency from go-github (GH-1067)
+
+
 ## 0.40.2
 
 - CHANGED: Definition updates.
