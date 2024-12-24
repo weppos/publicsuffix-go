@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version 9e89e8 (Fri Dec 20 13:01:16 2024)"
+const ListVersion = "PSL version eaebba (Tue Dec 24 01:21:31 2024)"
 
-func DefaultRules() [9695]Rule {
+func DefaultRules() [9691]Rule {
 	return r
 }
 
-var r = [9695]Rule{
+var r = [9691]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -7888,8 +7888,6 @@ var r = [9695]Rule{
 	{1, "dreamhosters.com", 2, true},
 	{1, "durumis.com", 2, true},
 	{1, "mydrobo.com", 2, true},
-	{1, "drud.io", 2, true},
-	{1, "drud.us", 2, true},
 	{1, "duckdns.org", 2, true},
 	{1, "dy.fi", 2, true},
 	{1, "tunk.org", 2, true},
@@ -9190,7 +9188,6 @@ var r = [9695]Rule{
 	{1, "us.platform.sh", 3, true},
 	{2, "platformsh.site", 3, true},
 	{2, "tst.site", 3, true},
-	{1, "platter-app.com", 2, true},
 	{1, "platter-app.dev", 2, true},
 	{1, "platterp.us", 2, true},
 	{1, "pley.games", 2, true},
@@ -9451,7 +9448,6 @@ var r = [9695]Rule{
 	{1, "srht.site", 2, true},
 	{1, "apps.lair.io", 3, true},
 	{2, "stolos.io", 3, true},
-	{1, "spacekit.io", 2, true},
 	{1, "ind.mom", 2, true},
 	{1, "customer.speedpartner.de", 3, true},
 	{1, "myspreadshop.at", 2, true},
