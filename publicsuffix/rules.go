@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version 9e89e8 (Fri Dec 20 13:01:16 2024)"
+const ListVersion = "PSL version f229d7 (Tue Dec 24 13:56:06 2024)"
 
-func DefaultRules() [9695]Rule {
+func DefaultRules() [9693]Rule {
 	return r
 }
 
-var r = [9695]Rule{
+var r = [9693]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -4564,7 +4564,6 @@ var r = [9695]Rule{
 	{1, "gob.pk", 2, false},
 	{1, "gog.pk", 2, false},
 	{1, "gok.pk", 2, false},
-	{1, "gon.pk", 2, false},
 	{1, "gop.pk", 2, false},
 	{1, "gos.pk", 2, false},
 	{1, "gov.pk", 2, false},
@@ -7831,7 +7830,6 @@ var r = [9695]Rule{
 	{1, "realm.cz", 2, true},
 	{1, "on.crisp.email", 3, true},
 	{2, "cryptonomic.net", 3, true},
-	{1, "curv.dev", 2, true},
 	{1, "cfolks.pl", 2, true},
 	{1, "cyon.link", 2, true},
 	{1, "cyon.site", 2, true},
@@ -7875,8 +7873,6 @@ var r = [9695]Rule{
 	{1, "ondigitalocean.app", 2, true},
 	{2, "digitaloceanspaces.com", 3, true},
 	{1, "us.kg", 2, true},
-	{1, "rss.my.id", 3, true},
-	{1, "diher.solutions", 2, true},
 	{1, "discordsays.com", 2, true},
 	{1, "discordsez.com", 2, true},
 	{1, "jozi.biz", 2, true},
@@ -7888,8 +7884,6 @@ var r = [9695]Rule{
 	{1, "dreamhosters.com", 2, true},
 	{1, "durumis.com", 2, true},
 	{1, "mydrobo.com", 2, true},
-	{1, "drud.io", 2, true},
-	{1, "drud.us", 2, true},
 	{1, "duckdns.org", 2, true},
 	{1, "dy.fi", 2, true},
 	{1, "tunk.org", 2, true},
@@ -8698,6 +8692,12 @@ var r = [9695]Rule{
 	{1, "to.leg.br", 3, true},
 	{1, "pixolino.com", 2, true},
 	{1, "na4u.ru", 2, true},
+	{1, "botdash.app", 2, true},
+	{1, "botdash.dev", 2, true},
+	{1, "botdash.gg", 2, true},
+	{1, "botdash.net", 2, true},
+	{1, "botda.sh", 2, true},
+	{1, "botdash.xyz", 2, true},
 	{1, "apps-1and1.com", 2, true},
 	{1, "live-website.com", 2, true},
 	{1, "apps-1and1.net", 2, true},
@@ -9190,7 +9190,6 @@ var r = [9695]Rule{
 	{1, "us.platform.sh", 3, true},
 	{2, "platformsh.site", 3, true},
 	{2, "tst.site", 3, true},
-	{1, "platter-app.com", 2, true},
 	{1, "platter-app.dev", 2, true},
 	{1, "platterp.us", 2, true},
 	{1, "pley.games", 2, true},
@@ -9451,7 +9450,6 @@ var r = [9695]Rule{
 	{1, "srht.site", 2, true},
 	{1, "apps.lair.io", 3, true},
 	{2, "stolos.io", 3, true},
-	{1, "spacekit.io", 2, true},
 	{1, "ind.mom", 2, true},
 	{1, "customer.speedpartner.de", 3, true},
 	{1, "myspreadshop.at", 2, true},
