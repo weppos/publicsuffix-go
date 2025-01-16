@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version f229d7 (Tue Dec 24 13:56:06 2024)"
+const ListVersion = "PSL version b067df (Fri Jan 10 10:28:45 2025)"
 
-func DefaultRules() [9693]Rule {
+func DefaultRules() [9707]Rule {
 	return r
 }
 
-var r = [9693]Rule{
+var r = [9707]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -5523,6 +5523,7 @@ var r = [9693]Rule{
 	{1, "tec.ve", 2, false},
 	{1, "web.ve", 2, false},
 	{1, "vg", 1, false},
+	{1, "edu.vg", 2, false},
 	{1, "vi", 1, false},
 	{1, "co.vi", 2, false},
 	{1, "com.vi", 2, false},
@@ -7502,6 +7503,7 @@ var r = [9693]Rule{
 	{1, "studio.ap-southeast-3.sagemaker.aws", 4, true},
 	{1, "studio.ca-central-1.sagemaker.aws", 4, true},
 	{1, "studio.eu-central-1.sagemaker.aws", 4, true},
+	{1, "studio.eu-central-2.sagemaker.aws", 4, true},
 	{1, "studio.eu-north-1.sagemaker.aws", 4, true},
 	{1, "studio.eu-south-1.sagemaker.aws", 4, true},
 	{1, "studio.eu-south-2.sagemaker.aws", 4, true},
@@ -7633,6 +7635,15 @@ var r = [9693]Rule{
 	{2, "elb.amazonaws.com", 4, true},
 	{1, "awsglobalaccelerator.com", 2, true},
 	{2, "private.repost.aws", 4, true},
+	{1, "transfer-webapp.ap-northeast-1.on.aws", 4, true},
+	{1, "transfer-webapp.ap-southeast-1.on.aws", 4, true},
+	{1, "transfer-webapp.ap-southeast-2.on.aws", 4, true},
+	{1, "transfer-webapp.eu-central-1.on.aws", 4, true},
+	{1, "transfer-webapp.eu-north-1.on.aws", 4, true},
+	{1, "transfer-webapp.eu-west-1.on.aws", 4, true},
+	{1, "transfer-webapp.us-east-1.on.aws", 4, true},
+	{1, "transfer-webapp.us-east-2.on.aws", 4, true},
+	{1, "transfer-webapp.us-west-2.on.aws", 4, true},
 	{1, "eero.online", 2, true},
 	{1, "eero-stage.online", 2, true},
 	{1, "apigee.io", 2, true},
@@ -7783,6 +7794,7 @@ var r = [9693]Rule{
 	{1, "cloudaccess.host", 2, true},
 	{1, "freesite.host", 2, true},
 	{1, "cloudaccess.net", 2, true},
+	{1, "cloudbeesusercontent.io", 2, true},
 	{2, "cloudera.site", 3, true},
 	{1, "cf-ipfs.com", 2, true},
 	{1, "cloudflare-ipfs.com", 2, true},
@@ -8584,11 +8596,6 @@ var r = [9693]Rule{
 	{1, "grayjayleagues.com", 2, true},
 	{1, "xn--gnstigbestellen-zvb.de", 2, true},
 	{1, "xn--gnstigliefern-wob.de", 2, true},
-	{1, "fin.ci", 2, true},
-	{1, "free.hr", 2, true},
-	{1, "caa.li", 2, true},
-	{1, "ua.rs", 2, true},
-	{1, "conf.se", 2, true},
 	{1, "xn--hkkinen-5wa.fi", 2, true},
 	{1, "hrsn.dev", 2, true},
 	{1, "hashbang.sh", 2, true},
@@ -8815,6 +8822,8 @@ var r = [9693]Rule{
 	{1, "leadpages.co", 2, true},
 	{1, "lpages.co", 2, true},
 	{1, "lpusercontent.com", 2, true},
+	{1, "liara.run", 2, true},
+	{1, "iran.liara.run", 3, true},
 	{1, "libp2p.direct", 2, true},
 	{1, "runcontainers.dev", 2, true},
 	{1, "co.business", 2, true},
@@ -9203,6 +9212,11 @@ var r = [9693]Rule{
 	{1, "xen.prgmr.com", 3, true},
 	{1, "priv.at", 2, true},
 	{1, "protonet.io", 2, true},
+	{1, "sub.psl.hrsn.dev", 4, true},
+	{2, "wc.psl.hrsn.dev", 5, true},
+	{3, "ignored.wc.psl.hrsn.dev", 5, true},
+	{2, "sub.wc.psl.hrsn.dev", 6, true},
+	{3, "ignored.sub.wc.psl.hrsn.dev", 6, true},
 	{1, "chirurgiens-dentistes-en-france.fr", 2, true},
 	{1, "byen.site", 2, true},
 	{1, "pubtls.org", 2, true},
