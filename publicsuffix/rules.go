@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version 2aa65d (Sat Jan 25 15:41:00 2025)"
+const ListVersion = "PSL version 5421ee (Fri Jan 31 07:02:08 2025)"
 
-func DefaultRules() [9719]Rule {
+func DefaultRules() [9725]Rule {
 	return r
 }
 
-var r = [9719]Rule{
+var r = [9725]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -7711,6 +7711,9 @@ var r = [9719]Rule{
 	{1, "square7.de", 2, true},
 	{1, "bplaced.net", 2, true},
 	{1, "square7.net", 2, true},
+	{1, "brave.app", 2, true},
+	{2, "s.brave.app", 4, true},
+	{1, "brave.io", 2, true},
 	{2, "s.brave.io", 4, true},
 	{1, "shop.brendly.hr", 3, true},
 	{1, "shop.brendly.rs", 3, true},
@@ -8855,6 +8858,8 @@ var r = [9719]Rule{
 	{2, "user.localcert.dev", 4, true},
 	{1, "localcert.net", 2, true},
 	{1, "localhostcert.net", 2, true},
+	{1, "localtonet.com", 2, true},
+	{2, "localto.net", 3, true},
 	{1, "lodz.pl", 2, true},
 	{1, "pabianice.pl", 2, true},
 	{1, "plock.pl", 2, true},
@@ -9642,6 +9647,7 @@ var r = [9719]Rule{
 	{1, "unison-services.cloud", 2, true},
 	{1, "virtual-user.de", 2, true},
 	{1, "virtualuser.de", 2, true},
+	{1, "obj.ag", 2, true},
 	{1, "name.pm", 2, true},
 	{1, "sch.tf", 2, true},
 	{1, "biz.wf", 2, true},
