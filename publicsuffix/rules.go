@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version 23f7ef (Thu Feb 27 07:53:18 2025)"
+const ListVersion = "PSL version 902085 (Fri Feb 28 19:18:36 2025)"
 
-func DefaultRules() [9735]Rule {
+func DefaultRules() [9734]Rule {
 	return r
 }
 
-var r = [9735]Rule{
+var r = [9734]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -6266,7 +6266,6 @@ var r = [9735]Rule{
 	{1, "kaufen", 1, false},
 	{1, "kddi", 1, false},
 	{1, "kerryhotels", 1, false},
-	{1, "kerrylogistics", 1, false},
 	{1, "kerryproperties", 1, false},
 	{1, "kfh", 1, false},
 	{1, "kia", 1, false},
@@ -6316,7 +6315,6 @@ var r = [9735]Rule{
 	{1, "limo", 1, false},
 	{1, "lincoln", 1, false},
 	{1, "link", 1, false},
-	{1, "lipsy", 1, false},
 	{1, "live", 1, false},
 	{1, "living", 1, false},
 	{1, "llc", 1, false},
@@ -9692,6 +9690,7 @@ var r = [9735]Rule{
 	{1, "wp2.host", 2, true},
 	{1, "pdns.page", 2, true},
 	{1, "plesk.page", 2, true},
+	{1, "cpanel.site", 2, true},
 	{1, "wpsquared.site", 2, true},
 	{2, "wadl.top", 3, true},
 	{1, "remotewd.com", 2, true},
