@@ -3,6 +3,8 @@
 ## main
 
 - CHANGED: Removed dependency from go-github (GH-1067)
+- CHANGED: Supported minimum version is now Go 1.23.
+- CHANGED: Definition updates.
 
 
 ## 0.40.2
@@ -12,7 +14,7 @@
 
 ## 0.40.0
 
-- CHANGED: Dropped Go < 1.21 from the list of supported versions.
+- CHANGED: Supported minimum version is now Go 1.21.
 - CHANGED: Definition updates.
 
 
