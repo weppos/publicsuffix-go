@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version 76dbfc (Thu Mar  6 21:52:52 2025)"
+const ListVersion = "PSL version aa7c5d (Fri Mar 14 13:41:10 2025)"
 
-func DefaultRules() [9737]Rule {
+func DefaultRules() [9745]Rule {
 	return r
 }
 
-var r = [9737]Rule{
+var r = [9745]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -3417,11 +3417,15 @@ var r = [9737]Rule{
 	{1, "tra.kp", 2, false},
 	{1, "kr", 1, false},
 	{1, "ac.kr", 2, false},
+	{1, "ai.kr", 2, false},
 	{1, "co.kr", 2, false},
 	{1, "es.kr", 2, false},
 	{1, "go.kr", 2, false},
 	{1, "hs.kr", 2, false},
+	{1, "io.kr", 2, false},
+	{1, "it.kr", 2, false},
 	{1, "kg.kr", 2, false},
+	{1, "me.kr", 2, false},
 	{1, "mil.kr", 2, false},
 	{1, "ms.kr", 2, false},
 	{1, "ne.kr", 2, false},
@@ -8729,7 +8733,9 @@ var r = [9737]Rule{
 	{1, "websitebuilder.online", 2, true},
 	{1, "app-ionos.space", 2, true},
 	{1, "iopsys.se", 2, true},
+	{2, "inbrowser.dev", 3, true},
 	{2, "dweb.link", 3, true},
+	{2, "inbrowser.link", 3, true},
 	{1, "ipifony.net", 2, true},
 	{1, "ir.md", 2, true},
 	{1, "is-a-good.dev", 2, true},
@@ -9234,6 +9240,8 @@ var r = [9737]Rule{
 	{1, "prequalifyme.today", 2, true},
 	{1, "xen.prgmr.com", 3, true},
 	{1, "priv.at", 2, true},
+	{1, "c01.kr", 2, true},
+	{1, "eliv-dns.kr", 2, true},
 	{1, "protonet.io", 2, true},
 	{1, "sub.psl.hrsn.dev", 4, true},
 	{2, "wc.psl.hrsn.dev", 5, true},
