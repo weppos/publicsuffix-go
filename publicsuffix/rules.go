@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version 76dbfc (Thu Mar  6 21:52:52 2025)"
+const ListVersion = "PSL version 1daef5 (Thu Apr 10 15:10:51 2025)"
 
-func DefaultRules() [9737]Rule {
+func DefaultRules() [9756]Rule {
 	return r
 }
 
-var r = [9737]Rule{
+var r = [9756]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -3417,11 +3417,15 @@ var r = [9737]Rule{
 	{1, "tra.kp", 2, false},
 	{1, "kr", 1, false},
 	{1, "ac.kr", 2, false},
+	{1, "ai.kr", 2, false},
 	{1, "co.kr", 2, false},
 	{1, "es.kr", 2, false},
 	{1, "go.kr", 2, false},
 	{1, "hs.kr", 2, false},
+	{1, "io.kr", 2, false},
+	{1, "it.kr", 2, false},
 	{1, "kg.kr", 2, false},
+	{1, "me.kr", 2, false},
 	{1, "mil.kr", 2, false},
 	{1, "ms.kr", 2, false},
 	{1, "ne.kr", 2, false},
@@ -6988,6 +6992,7 @@ var r = [9737]Rule{
 	{1, "auth.ap-southeast-2.amazoncognito.com", 4, true},
 	{1, "auth.ap-southeast-3.amazoncognito.com", 4, true},
 	{1, "auth.ap-southeast-4.amazoncognito.com", 4, true},
+	{1, "auth.ap-southeast-5.amazoncognito.com", 4, true},
 	{1, "auth.ca-central-1.amazoncognito.com", 4, true},
 	{1, "auth.ca-west-1.amazoncognito.com", 4, true},
 	{1, "auth.eu-central-1.amazoncognito.com", 4, true},
@@ -7006,6 +7011,7 @@ var r = [9737]Rule{
 	{1, "auth-fips.us-east-1.amazoncognito.com", 4, true},
 	{1, "auth.us-east-2.amazoncognito.com", 4, true},
 	{1, "auth-fips.us-east-2.amazoncognito.com", 4, true},
+	{1, "auth-fips.us-gov-east-1.amazoncognito.com", 4, true},
 	{1, "auth-fips.us-gov-west-1.amazoncognito.com", 4, true},
 	{1, "auth.us-west-1.amazoncognito.com", 4, true},
 	{1, "auth-fips.us-west-1.amazoncognito.com", 4, true},
@@ -7545,6 +7551,8 @@ var r = [9737]Rule{
 	{1, "analytics-gateway.us-east-1.amazonaws.com", 4, true},
 	{1, "analytics-gateway.us-east-2.amazonaws.com", 4, true},
 	{1, "analytics-gateway.us-west-2.amazonaws.com", 4, true},
+	{1, "appwrite.global", 2, true},
+	{2, "appwrite.run", 3, true},
 	{1, "amplifyapp.com", 2, true},
 	{2, "awsapprunner.com", 3, true},
 	{1, "webview-assets.aws-cloud9.af-south-1.amazonaws.com", 5, true},
@@ -7836,6 +7844,8 @@ var r = [9737]Rule{
 	{1, "preview.csb.app", 3, true},
 	{1, "co.nl", 2, true},
 	{1, "co.no", 2, true},
+	{1, "devinapps.com", 2, true},
+	{1, "staging.devinapps.com", 3, true},
 	{1, "webhosting.be", 2, true},
 	{1, "hosting-cluster.nl", 2, true},
 	{1, "ctfcloud.net", 2, true},
@@ -7902,6 +7912,7 @@ var r = [9737]Rule{
 	{1, "ondigitalocean.app", 2, true},
 	{2, "digitaloceanspaces.com", 3, true},
 	{1, "us.kg", 2, true},
+	{1, "dpdns.org", 2, true},
 	{1, "discordsays.com", 2, true},
 	{1, "discordsez.com", 2, true},
 	{1, "jozi.biz", 2, true},
@@ -8400,6 +8411,7 @@ var r = [9737]Rule{
 	{1, "app.os.stg.fedoraproject.org", 5, true},
 	{1, "mydobiss.com", 2, true},
 	{1, "fh-muenster.io", 2, true},
+	{1, "figma.site", 2, true},
 	{1, "filegear.me", 2, true},
 	{1, "firebaseapp.com", 2, true},
 	{1, "fldrv.com", 2, true},
@@ -8729,7 +8741,9 @@ var r = [9737]Rule{
 	{1, "websitebuilder.online", 2, true},
 	{1, "app-ionos.space", 2, true},
 	{1, "iopsys.se", 2, true},
+	{2, "inbrowser.dev", 3, true},
 	{2, "dweb.link", 3, true},
+	{2, "inbrowser.link", 3, true},
 	{1, "ipifony.net", 2, true},
 	{1, "ir.md", 2, true},
 	{1, "is-a-good.dev", 2, true},
@@ -9234,6 +9248,8 @@ var r = [9737]Rule{
 	{1, "prequalifyme.today", 2, true},
 	{1, "xen.prgmr.com", 3, true},
 	{1, "priv.at", 2, true},
+	{1, "c01.kr", 2, true},
+	{1, "eliv-dns.kr", 2, true},
 	{1, "protonet.io", 2, true},
 	{1, "sub.psl.hrsn.dev", 4, true},
 	{2, "wc.psl.hrsn.dev", 5, true},
@@ -9532,6 +9548,8 @@ var r = [9737]Rule{
 	{1, "researched.cx", 2, true},
 	{1, "tests.cx", 2, true},
 	{1, "surveys.so", 2, true},
+	{1, "ipfs.storacha.link", 3, true},
+	{1, "ipfs.w3s.link", 3, true},
 	{1, "storebase.store", 2, true},
 	{1, "storipress.app", 2, true},
 	{1, "storj.farm", 2, true},
@@ -9675,7 +9693,6 @@ var r = [9737]Rule{
 	{1, "vusercontent.net", 2, true},
 	{1, "now.sh", 2, true},
 	{1, "2038.io", 2, true},
-	{1, "router.management", 2, true},
 	{1, "v-info.info", 2, true},
 	{1, "deus-canvas.com", 2, true},
 	{1, "voorloper.cloud", 2, true},
@@ -9703,6 +9720,8 @@ var r = [9737]Rule{
 	{1, "wmcloud.org", 2, true},
 	{1, "wmflabs.org", 2, true},
 	{1, "wdh.app", 2, true},
+	{1, "windsurf.app", 2, true},
+	{1, "windsurf.build", 2, true},
 	{1, "panel.gg", 2, true},
 	{1, "daemon.panel.gg", 3, true},
 	{1, "wixsite.com", 2, true},
