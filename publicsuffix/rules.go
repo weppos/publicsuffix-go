@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version 38015c (Fri May  2 07:54:14 2025)"
+const ListVersion = "PSL version 0c4a8d (Thu May  8 00:52:07 2025)"
 
-func DefaultRules() [9766]Rule {
+func DefaultRules() [9760]Rule {
 	return r
 }
 
-var r = [9766]Rule{
+var r = [9760]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -8631,7 +8631,6 @@ var r = [9766]Rule{
 	{1, "xn--gnstigbestellen-zvb.de", 2, true},
 	{1, "xn--gnstigliefern-wob.de", 2, true},
 	{1, "xn--hkkinen-5wa.fi", 2, true},
-	{1, "hrsn.dev", 2, true},
 	{1, "hashbang.sh", 2, true},
 	{1, "hasura.app", 2, true},
 	{1, "hasura-app.io", 2, true},
@@ -8881,7 +8880,6 @@ var r = [9766]Rule{
 	{1, "ggff.net", 2, true},
 	{2, "user.localcert.dev", 4, true},
 	{1, "localcert.net", 2, true},
-	{1, "localhostcert.net", 2, true},
 	{1, "localtonet.com", 2, true},
 	{2, "localto.net", 3, true},
 	{1, "lodz.pl", 2, true},
@@ -9261,11 +9259,6 @@ var r = [9766]Rule{
 	{1, "vki.kr", 2, true},
 	{1, "dev.project-study.com", 3, true},
 	{1, "protonet.io", 2, true},
-	{1, "sub.psl.hrsn.dev", 4, true},
-	{2, "wc.psl.hrsn.dev", 5, true},
-	{3, "ignored.wc.psl.hrsn.dev", 5, true},
-	{2, "sub.wc.psl.hrsn.dev", 6, true},
-	{3, "ignored.sub.wc.psl.hrsn.dev", 6, true},
 	{1, "chirurgiens-dentistes-en-france.fr", 2, true},
 	{1, "byen.site", 2, true},
 	{1, "pubtls.org", 2, true},
@@ -9730,6 +9723,7 @@ var r = [9766]Rule{
 	{1, "wmcloud.org", 2, true},
 	{1, "wmflabs.org", 2, true},
 	{1, "wdh.app", 2, true},
+	{1, "hrsn.dev", 2, true},
 	{1, "windsurf.app", 2, true},
 	{1, "windsurf.build", 2, true},
 	{1, "panel.gg", 2, true},
