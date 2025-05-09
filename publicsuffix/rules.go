@@ -3,7 +3,7 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version 0c4a8d (Thu May  8 00:52:07 2025)"
+const ListVersion = "PSL version 0f5146 (Thu May  8 11:10:47 2025)"
 
 func DefaultRules() [9760]Rule {
 	return r
@@ -7550,8 +7550,6 @@ var r = [9760]Rule{
 	{1, "analytics-gateway.us-east-1.amazonaws.com", 4, true},
 	{1, "analytics-gateway.us-east-2.amazonaws.com", 4, true},
 	{1, "analytics-gateway.us-west-2.amazonaws.com", 4, true},
-	{1, "appwrite.global", 2, true},
-	{2, "appwrite.run", 3, true},
 	{1, "amplifyapp.com", 2, true},
 	{2, "awsapprunner.com", 3, true},
 	{1, "webview-assets.aws-cloud9.af-south-1.amazonaws.com", 5, true},
@@ -7669,6 +7667,8 @@ var r = [9760]Rule{
 	{1, "appspacehosted.com", 2, true},
 	{1, "appspaceusercontent.com", 2, true},
 	{1, "appudo.net", 2, true},
+	{1, "appwrite.global", 2, true},
+	{2, "appwrite.run", 3, true},
 	{1, "on-aptible.com", 2, true},
 	{1, "f5.si", 2, true},
 	{1, "arvanedge.ir", 2, true},
