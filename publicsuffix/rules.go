@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version 029ca4 (Tue May 20 07:29:04 2025)"
+const ListVersion = "PSL version 76b8e3 (Thu May 22 06:01:51 2025)"
 
-func DefaultRules() [9802]Rule {
+func DefaultRules() [9807]Rule {
 	return r
 }
 
-var r = [9802]Rule{
+var r = [9807]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -7851,7 +7851,6 @@ var r = [9802]Rule{
 	{1, "cloudns.us", 2, true},
 	{1, "c66.me", 2, true},
 	{1, "cloud66.ws", 2, true},
-	{1, "cloud66.zone", 2, true},
 	{1, "jdevcloud.com", 2, true},
 	{1, "wpdevcloud.com", 2, true},
 	{1, "cloudaccess.host", 2, true},
@@ -8284,8 +8283,11 @@ var r = [9802]Rule{
 	{1, "mytuleap.com", 2, true},
 	{1, "tuleap-partners.com", 2, true},
 	{1, "encr.app", 2, true},
+	{1, "frontend.encr.app", 3, true},
 	{1, "encoreapi.com", 2, true},
 	{1, "lp.dev", 2, true},
+	{1, "api.lp.dev", 3, true},
+	{1, "objects.lp.dev", 3, true},
 	{1, "eu.encoway.cloud", 3, true},
 	{1, "eu.org", 2, true},
 	{1, "al.eu.org", 3, true},
@@ -8526,6 +8528,7 @@ var r = [9802]Rule{
 	{1, "gentlentapis.com", 2, true},
 	{1, "cdn-edges.net", 2, true},
 	{1, "gsj.bz", 2, true},
+	{1, "github.app", 2, true},
 	{1, "githubusercontent.com", 2, true},
 	{1, "githubpreview.dev", 2, true},
 	{1, "github.io", 2, true},
@@ -8799,6 +8802,7 @@ var r = [9802]Rule{
 	{1, "schulserver.de", 2, true},
 	{1, "test-iserv.de", 2, true},
 	{1, "iserv.dev", 2, true},
+	{1, "iserv.host", 2, true},
 	{1, "mel.cloudlets.com.au", 4, true},
 	{1, "cloud.interhostsolutions.be", 3, true},
 	{1, "alp1.ae.flow.ch", 4, true},
@@ -9296,6 +9300,7 @@ var r = [9802]Rule{
 	{1, "xen.prgmr.com", 3, true},
 	{1, "priv.at", 2, true},
 	{1, "c01.kr", 2, true},
+	{1, "eliv-cdn.kr", 2, true},
 	{1, "eliv-dns.kr", 2, true},
 	{1, "mmv.kr", 2, true},
 	{1, "vki.kr", 2, true},
