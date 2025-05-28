@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version 89800d (Mon May 26 11:00:35 2025)"
+const ListVersion = "PSL version ae6d71 (Tue May 27 18:04:20 2025)"
 
-func DefaultRules() [9815]Rule {
+func DefaultRules() [9817]Rule {
 	return r
 }
 
-var r = [9815]Rule{
+var r = [9817]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -1077,6 +1077,7 @@ var r = [9815]Rule{
 	{1, "co.id", 2, false},
 	{1, "desa.id", 2, false},
 	{1, "go.id", 2, false},
+	{1, "kop.id", 2, false},
 	{1, "mil.id", 2, false},
 	{1, "my.id", 2, false},
 	{1, "net.id", 2, false},
@@ -8806,6 +8807,7 @@ var r = [9815]Rule{
 	{1, "is-a.dev", 2, true},
 	{1, "iservschule.de", 2, true},
 	{1, "mein-iserv.de", 2, true},
+	{1, "schuldock.de", 2, true},
 	{1, "schulplattform.de", 2, true},
 	{1, "schulserver.de", 2, true},
 	{1, "test-iserv.de", 2, true},
