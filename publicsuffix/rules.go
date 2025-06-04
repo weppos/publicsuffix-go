@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version c79207 (Mon Jun  2 07:53:32 2025)"
+const ListVersion = "PSL version f50ae8 (Wed Jun  4 06:21:44 2025)"
 
-func DefaultRules() [9817]Rule {
+func DefaultRules() [9819]Rule {
 	return r
 }
 
-var r = [9817]Rule{
+var r = [9819]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -8992,6 +8992,7 @@ var r = [9817]Rule{
 	{1, "barsy.uk", 2, true},
 	{1, "barsy.co.uk", 3, true},
 	{1, "barsyonline.co.uk", 3, true},
+	{2, "lutrausercontent.com", 3, true},
 	{1, "luyani.app", 2, true},
 	{1, "luyani.net", 2, true},
 	{2, "magentosite.cloud", 3, true},
@@ -9751,6 +9752,7 @@ var r = [9817]Rule{
 	{1, "v0.build", 2, true},
 	{1, "vercel.dev", 2, true},
 	{1, "vusercontent.net", 2, true},
+	{1, "vercel.run", 2, true},
 	{1, "now.sh", 2, true},
 	{1, "2038.io", 2, true},
 	{1, "v-info.info", 2, true},
