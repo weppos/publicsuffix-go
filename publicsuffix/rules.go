@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version 8d4a15 (Sat Jun  7 22:00:51 2025)"
+const ListVersion = "PSL version 9f9c18 (Tue Jun 10 05:42:56 2025)"
 
-func DefaultRules() [9822]Rule {
+func DefaultRules() [9827]Rule {
 	return r
 }
 
-var r = [9822]Rule{
+var r = [9827]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -9569,6 +9569,11 @@ var r = [9822]Rule{
 	{1, "srht.site", 2, true},
 	{1, "apps.lair.io", 3, true},
 	{2, "stolos.io", 3, true},
+	{1, "4.at", 2, true},
+	{1, "my.at", 2, true},
+	{1, "my.de", 2, true},
+	{2, "nxa.eu", 3, true},
+	{1, "nx.gw", 2, true},
 	{1, "customer.speedpartner.de", 3, true},
 	{1, "myspreadshop.at", 2, true},
 	{1, "myspreadshop.com.au", 3, true},
