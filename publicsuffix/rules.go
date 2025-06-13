@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version 9f9c18 (Tue Jun 10 05:42:56 2025)"
+const ListVersion = "PSL version a01fe5 (Thu Jun 12 21:09:47 2025)"
 
-func DefaultRules() [9827]Rule {
+func DefaultRules() [9828]Rule {
 	return r
 }
 
-var r = [9827]Rule{
+var r = [9828]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -6952,9 +6952,10 @@ var r = [9827]Rule{
 	{1, "aem.live", 2, true},
 	{1, "hlx.live", 2, true},
 	{1, "adobeaemcloud.net", 2, true},
+	{1, "aem.network", 2, true},
 	{1, "aem.page", 2, true},
 	{1, "hlx.page", 2, true},
-	{1, "hlx3.page", 2, true},
+	{1, "aem.reviews", 2, true},
 	{1, "adobeio-static.net", 2, true},
 	{1, "adobeioruntime.net", 2, true},
 	{1, "africa.com", 2, true},
