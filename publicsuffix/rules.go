@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version 2141aa (Mon Jun 16 09:44:52 2025)"
+const ListVersion = "PSL version 9ae551 (Thu Jun 26 12:43:15 2025)"
 
-func DefaultRules() [9829]Rule {
+func DefaultRules() [9850]Rule {
 	return r
 }
 
-var r = [9829]Rule{
+var r = [9850]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -9487,27 +9487,48 @@ var r = [9829]Rule{
 	{1, "fr-par-2.baremetal.scw.cloud", 4, true},
 	{1, "nl-ams-1.baremetal.scw.cloud", 4, true},
 	{1, "cockpit.fr-par.scw.cloud", 4, true},
+	{1, "ddl.fr-par.scw.cloud", 4, true},
+	{1, "dtwh.fr-par.scw.cloud", 4, true},
 	{1, "fnc.fr-par.scw.cloud", 4, true},
 	{1, "functions.fnc.fr-par.scw.cloud", 5, true},
+	{1, "ifr.fr-par.scw.cloud", 4, true},
 	{1, "k8s.fr-par.scw.cloud", 4, true},
 	{1, "nodes.k8s.fr-par.scw.cloud", 5, true},
+	{1, "kafk.fr-par.scw.cloud", 4, true},
+	{1, "mgdb.fr-par.scw.cloud", 4, true},
+	{1, "rdb.fr-par.scw.cloud", 4, true},
 	{1, "s3.fr-par.scw.cloud", 4, true},
 	{1, "s3-website.fr-par.scw.cloud", 4, true},
+	{1, "scbl.fr-par.scw.cloud", 4, true},
 	{1, "whm.fr-par.scw.cloud", 4, true},
 	{1, "priv.instances.scw.cloud", 4, true},
 	{1, "pub.instances.scw.cloud", 4, true},
 	{1, "k8s.scw.cloud", 3, true},
 	{1, "cockpit.nl-ams.scw.cloud", 4, true},
+	{1, "ddl.nl-ams.scw.cloud", 4, true},
+	{1, "dtwh.nl-ams.scw.cloud", 4, true},
+	{1, "ifr.nl-ams.scw.cloud", 4, true},
 	{1, "k8s.nl-ams.scw.cloud", 4, true},
 	{1, "nodes.k8s.nl-ams.scw.cloud", 5, true},
+	{1, "kafk.nl-ams.scw.cloud", 4, true},
+	{1, "mgdb.nl-ams.scw.cloud", 4, true},
+	{1, "rdb.nl-ams.scw.cloud", 4, true},
 	{1, "s3.nl-ams.scw.cloud", 4, true},
 	{1, "s3-website.nl-ams.scw.cloud", 4, true},
+	{1, "scbl.nl-ams.scw.cloud", 4, true},
 	{1, "whm.nl-ams.scw.cloud", 4, true},
 	{1, "cockpit.pl-waw.scw.cloud", 4, true},
+	{1, "ddl.pl-waw.scw.cloud", 4, true},
+	{1, "dtwh.pl-waw.scw.cloud", 4, true},
+	{1, "ifr.pl-waw.scw.cloud", 4, true},
 	{1, "k8s.pl-waw.scw.cloud", 4, true},
 	{1, "nodes.k8s.pl-waw.scw.cloud", 5, true},
+	{1, "kafk.pl-waw.scw.cloud", 4, true},
+	{1, "mgdb.pl-waw.scw.cloud", 4, true},
+	{1, "rdb.pl-waw.scw.cloud", 4, true},
 	{1, "s3.pl-waw.scw.cloud", 4, true},
 	{1, "s3-website.pl-waw.scw.cloud", 4, true},
+	{1, "scbl.pl-waw.scw.cloud", 4, true},
 	{1, "scalebook.scw.cloud", 3, true},
 	{1, "smartlabeling.scw.cloud", 3, true},
 	{1, "dedibox.fr", 2, true},
