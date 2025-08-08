@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version 758d5d (Fri Aug  1 18:47:30 2025)"
+const ListVersion = "PSL version 596a44 (Fri Aug  8 06:46:09 2025)"
 
-func DefaultRules() [9916]Rule {
+func DefaultRules() [9917]Rule {
 	return r
 }
 
-var r = [9916]Rule{
+var r = [9917]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -8772,13 +8772,14 @@ var r = [9916]Rule{
 	{1, "ravendb.community", 2, true},
 	{1, "development.run", 2, true},
 	{1, "ravendb.run", 2, true},
+	{1, "hidns.co", 2, true},
+	{1, "hidns.vip", 2, true},
 	{1, "homesklep.pl", 2, true},
 	{2, "kin.one", 3, true},
 	{2, "id.pub", 3, true},
 	{2, "kin.pub", 3, true},
 	{1, "hoplix.shop", 2, true},
 	{1, "orx.biz", 2, true},
-	{1, "biz.gl", 2, true},
 	{1, "biz.ng", 2, true},
 	{1, "co.biz.ng", 3, true},
 	{1, "dl.biz.ng", 3, true},
