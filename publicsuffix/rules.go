@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version 568a83 (Mon Aug 11 08:16:19 2025)"
+const ListVersion = "PSL version 2d435a (Wed Aug 13 06:41:49 2025)"
 
-func DefaultRules() [9917]Rule {
+func DefaultRules() [9923]Rule {
 	return r
 }
 
-var r = [9917]Rule{
+var r = [9923]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -8016,6 +8016,7 @@ var r = [9917]Rule{
 	{2, "raw.icp0.io", 4, true},
 	{1, "icp1.io", 2, true},
 	{2, "raw.icp1.io", 4, true},
+	{2, "icp.net", 3, true},
 	{1, "caffeine.site", 2, true},
 	{1, "dfirma.pl", 2, true},
 	{1, "dkonto.pl", 2, true},
@@ -9404,6 +9405,8 @@ var r = [9917]Rule{
 	{1, "qoto.io", 2, true},
 	{1, "qualifioapp.com", 2, true},
 	{1, "ladesk.com", 2, true},
+	{2, "qualyhqpartner.com", 3, true},
+	{2, "qualyhqportal.com", 3, true},
 	{1, "qbuser.com", 2, true},
 	{2, "quipelements.com", 3, true},
 	{1, "vapor.cloud", 2, true},
@@ -9747,6 +9750,8 @@ var r = [9917]Rule{
 	{1, "mytabit.co.il", 3, true},
 	{1, "tabitorder.co.il", 3, true},
 	{1, "taifun-dns.de", 2, true},
+	{1, "erp.dev", 2, true},
+	{1, "web.erp.dev", 3, true},
 	{1, "ts.net", 2, true},
 	{2, "c.ts.net", 4, true},
 	{1, "gda.pl", 2, true},
@@ -9927,6 +9932,7 @@ var r = [9917]Rule{
 	{1, "virtualserver.io", 2, true},
 	{1, "enterprisecloud.nu", 2, true},
 	{1, "zone.id", 2, true},
+	{1, "zabc.net", 2, true},
 }
 
 func init() {
