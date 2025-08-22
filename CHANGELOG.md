@@ -1,6 +1,7 @@
 # CHANGELOG
 
-## main
+
+## 0.50.0
 
 - CHANGED: Removed dependency from go-github (GH-1067)
 - CHANGED: Supported minimum version is now Go 1.23.
