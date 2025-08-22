@@ -1,3 +1,4 @@
+---
 name: PSL Update
 
 on:
@@ -8,8 +9,8 @@ on:
 jobs:
   update:
     runs-on: ubuntu-latest
-    steps:
 
+    steps:
       - uses: actions/checkout@v5
 
       - name: Set up Go

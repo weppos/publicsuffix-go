@@ -1,3 +1,4 @@
+---
 name: Tests
 
 on:
@@ -12,40 +13,39 @@ jobs:
         go-version:
           - "1.23"
           - "1.24"
-        platform: [ubuntu-latest]
+          - "1.25"
+    runs-on: ubuntu-latest
 
-    runs-on: ${{ matrix.platform }}
     steps:
+      - name: Setup env
+        run: |
+          echo "GOPATH=$GITHUB_WORKSPACE" >> $GITHUB_ENV
+          echo "CURRENT_WORKSPACE=$GITHUB_WORKSPACE/src/github.com/${{ github.repository }}" >> $GITHUB_ENV
+          echo "$GITHUB_WORKSPACE/bin" >> $GITHUB_PATH
 
-    - name: Setup env
-      run: |
-        echo "GOPATH=$GITHUB_WORKSPACE" >> $GITHUB_ENV
-        echo "CURRENT_WORKSPACE=$GITHUB_WORKSPACE/src/github.com/${{ github.repository }}" >> $GITHUB_ENV
-        echo "$GITHUB_WORKSPACE/bin" >> $GITHUB_PATH
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: ${{ matrix.go-version }}
 
-    - name: Set up Go
-      uses: actions/setup-go@v5
-      with:
-        go-version: ${{ matrix.go-version }}
+      - name: Check out code into the Go module directory
+        uses: actions/checkout@v5
+        with:
+          path: ${{ env.CURRENT_WORKSPACE }}
 
-    - name: Check out code into the Go module directory
-      uses: actions/checkout@v5
-      with:
-        path: ${{ env.CURRENT_WORKSPACE }}
+      - name: Get dependencies
+        run: go get -v ./...
+        working-directory: ${{ env.CURRENT_WORKSPACE }}
 
-    - name: Get dependencies
-      run: go get -v ./...
-      working-directory: ${{ env.CURRENT_WORKSPACE }}
+      - name: Run go vet
+        run: go vet ./...
+        working-directory: ${{ env.CURRENT_WORKSPACE }}
 
-    - name: Run go vet
-      run: go vet ./...
-      working-directory: ${{ env.CURRENT_WORKSPACE }}
+      - name: Run tests
+        run: ./test.sh
+        working-directory: ${{ env.CURRENT_WORKSPACE }}
 
-    - name: Run tests
-      run: ./test.sh
-      working-directory: ${{ env.CURRENT_WORKSPACE }}
-
-    - uses: codecov/codecov-action@v5
-      with:
-        files: ${{ env.CURRENT_WORKSPACE }}/coverage.txt
-        verbose: true
+      - uses: codecov/codecov-action@v5
+        with:
+          files: ${{ env.CURRENT_WORKSPACE }}/coverage.txt
+          verbose: true
