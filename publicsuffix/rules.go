@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version 410395 (Thu Aug 28 09:02:52 2025)"
+const ListVersion = "PSL version a81860 (Thu Sep  4 10:39:20 2025)"
 
-func DefaultRules() [9933]Rule {
+func DefaultRules() [9934]Rule {
 	return r
 }
 
-var r = [9933]Rule{
+var r = [9934]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -5476,7 +5476,6 @@ var r = [9933]Rule{
 	{1, "cc.mo.us", 3, false},
 	{1, "lib.mo.us", 3, false},
 	{1, "cc.ms.us", 3, false},
-	{1, "lib.ms.us", 3, false},
 	{1, "cc.mt.us", 3, false},
 	{1, "lib.mt.us", 3, false},
 	{1, "cc.nc.us", 3, false},
@@ -7830,6 +7829,7 @@ var r = [9933]Rule{
 	{2, "s.brave.app", 4, true},
 	{1, "brave.io", 2, true},
 	{2, "s.brave.io", 4, true},
+	{1, "shop.brendly.ba", 3, true},
 	{1, "shop.brendly.hr", 3, true},
 	{1, "shop.brendly.rs", 3, true},
 	{1, "browsersafetymark.io", 2, true},
@@ -8748,6 +8748,7 @@ var r = [9933]Rule{
 	{1, "grayjayleagues.com", 2, true},
 	{1, "xn--gnstigbestellen-zvb.de", 2, true},
 	{1, "xn--gnstigliefern-wob.de", 2, true},
+	{1, "hackclub.app", 2, true},
 	{1, "xn--hkkinen-5wa.fi", 2, true},
 	{1, "hashbang.sh", 2, true},
 	{1, "hasura.app", 2, true},
