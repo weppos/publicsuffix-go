@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version 4a97ad (Thu Sep 18 10:47:37 2025)"
+const ListVersion = "PSL version 6defc0 (Tue Sep 23 13:06:49 2025)"
 
-func DefaultRules() [9935]Rule {
+func DefaultRules() [9934]Rule {
 	return r
 }
 
-var r = [9935]Rule{
+var r = [9934]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -6961,9 +6961,6 @@ var r = [9935]Rule{
 	{1, "adobeioruntime.net", 2, true},
 	{1, "africa.com", 2, true},
 	{1, "beep.pl", 2, true},
-	{1, "airkitapps.com", 2, true},
-	{1, "airkitapps-au.com", 2, true},
-	{1, "airkitapps.eu", 2, true},
 	{1, "aiven.app", 2, true},
 	{1, "aivencloud.com", 2, true},
 	{1, "akadns.net", 2, true},
@@ -9394,6 +9391,7 @@ var r = [9935]Rule{
 	{1, "vki.kr", 2, true},
 	{1, "dev.project-study.com", 3, true},
 	{1, "protonet.io", 2, true},
+	{1, "e.id", 2, true},
 	{1, "chirurgiens-dentistes-en-france.fr", 2, true},
 	{1, "byen.site", 2, true},
 	{1, "pubtls.org", 2, true},
@@ -9777,6 +9775,7 @@ var r = [9935]Rule{
 	{1, "telebit.app", 2, true},
 	{1, "telebit.io", 2, true},
 	{2, "telebit.xyz", 3, true},
+	{1, "teleport.sh", 2, true},
 	{2, "firenet.ch", 3, true},
 	{2, "svc.firenet.ch", 4, true},
 	{1, "reservd.com", 2, true},
