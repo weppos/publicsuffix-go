@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version 6defc0 (Tue Sep 23 13:06:49 2025)"
+const ListVersion = "PSL version 2af0ea (Mon Sep 29 06:16:38 2025)"
 
-func DefaultRules() [9934]Rule {
+func DefaultRules() [9941]Rule {
 	return r
 }
 
-var r = [9934]Rule{
+var r = [9941]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -7841,6 +7841,8 @@ var r = [9934]Rule{
 	{1, "canva-apps.cn", 2, true},
 	{1, "my.canvasite.cn", 3, true},
 	{1, "canva-apps.com", 2, true},
+	{1, "rice-labs.com", 2, true},
+	{1, "canva.run", 2, true},
 	{1, "my.canva.site", 3, true},
 	{1, "drr.ac", 2, true},
 	{1, "uwu.ai", 2, true},
@@ -8983,6 +8985,9 @@ var r = [9934]Rule{
 	{1, "leadpages.co", 2, true},
 	{1, "lpages.co", 2, true},
 	{1, "lpusercontent.com", 2, true},
+	{1, "leapcell.app", 2, true},
+	{1, "leapcell.dev", 2, true},
+	{1, "leapcell.online", 2, true},
 	{1, "liara.run", 2, true},
 	{1, "iran.liara.run", 3, true},
 	{1, "libp2p.direct", 2, true},
@@ -9693,6 +9698,7 @@ var r = [9934]Rule{
 	{1, "w-corp-staticblitz.com", 2, true},
 	{1, "w-credentialless-staticblitz.com", 2, true},
 	{1, "w-staticblitz.com", 2, true},
+	{1, "bolt.host", 2, true},
 	{1, "stackhero-network.com", 2, true},
 	{1, "runs.onstackit.cloud", 3, true},
 	{1, "stackit.gg", 2, true},
@@ -9917,6 +9923,7 @@ var r = [9934]Rule{
 	{1, "weeklylottery.org.uk", 3, true},
 	{1, "wpenginepowered.com", 2, true},
 	{1, "js.wpenginepowered.com", 3, true},
+	{2, "xenonconnect.de", 3, true},
 	{1, "half.host", 2, true},
 	{1, "xnbay.com", 2, true},
 	{1, "u2.xnbay.com", 3, true},
