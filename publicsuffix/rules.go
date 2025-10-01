@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version 2af0ea (Mon Sep 29 06:16:38 2025)"
+const ListVersion = "PSL version 07f088 (Mon Sep 29 08:45:27 2025)"
 
-func DefaultRules() [9941]Rule {
+func DefaultRules() [9943]Rule {
 	return r
 }
 
-var r = [9941]Rule{
+var r = [9943]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -7895,10 +7895,12 @@ var r = [9941]Rule{
 	{1, "cloudns.be", 2, true},
 	{1, "cloud-ip.biz", 2, true},
 	{1, "cloudns.biz", 2, true},
+	{1, "cloud-ip.cc", 2, true},
 	{1, "cloudns.cc", 2, true},
 	{1, "cloudns.ch", 2, true},
 	{1, "cloudns.cl", 2, true},
 	{1, "cloudns.club", 2, true},
+	{1, "abrdns.com", 2, true},
 	{1, "dnsabr.com", 2, true},
 	{1, "ip-ddns.com", 2, true},
 	{1, "cloudns.cx", 2, true},
