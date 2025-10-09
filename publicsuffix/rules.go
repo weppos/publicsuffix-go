@@ -3,7 +3,7 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version 067315 (Wed Oct  1 18:52:03 2025)"
+const ListVersion = "PSL version ee7dec (Wed Oct  8 12:46:18 2025)"
 
 func DefaultRules() [9943]Rule {
 	return r
@@ -8871,7 +8871,6 @@ var r = [9943]Rule{
 	{1, "ipifony.net", 2, true},
 	{1, "ir.md", 2, true},
 	{1, "is-a-good.dev", 2, true},
-	{1, "is-a.dev", 2, true},
 	{1, "iservschule.de", 2, true},
 	{1, "mein-iserv.de", 2, true},
 	{1, "schuldock.de", 2, true},
@@ -9011,7 +9010,6 @@ var r = [9943]Rule{
 	{1, "filegear-sg.me", 2, true},
 	{1, "ggff.net", 2, true},
 	{2, "user.localcert.dev", 4, true},
-	{1, "localcert.net", 2, true},
 	{1, "localtonet.com", 2, true},
 	{2, "localto.net", 3, true},
 	{1, "lodz.pl", 2, true},
@@ -9904,6 +9902,8 @@ var r = [9943]Rule{
 	{1, "hrsn.au", 2, true},
 	{1, "vps.hrsn.au", 3, true},
 	{1, "hrsn.dev", 2, true},
+	{1, "is-a.dev", 2, true},
+	{1, "localcert.net", 2, true},
 	{1, "windsurf.app", 2, true},
 	{1, "windsurf.build", 2, true},
 	{1, "panel.gg", 2, true},
