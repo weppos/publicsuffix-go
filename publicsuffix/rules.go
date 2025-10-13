@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version ee7dec (Wed Oct  8 12:46:18 2025)"
+const ListVersion = "PSL version 797d16 (Mon Oct 13 06:24:10 2025)"
 
-func DefaultRules() [9943]Rule {
+func DefaultRules() [9946]Rule {
 	return r
 }
 
-var r = [9943]Rule{
+var r = [9946]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -7841,6 +7841,8 @@ var r = [9943]Rule{
 	{1, "canva-apps.cn", 2, true},
 	{1, "my.canvasite.cn", 3, true},
 	{1, "canva-apps.com", 2, true},
+	{1, "canva-hosted-embed.com", 2, true},
+	{1, "canvacode.com", 2, true},
 	{1, "rice-labs.com", 2, true},
 	{1, "canva.run", 2, true},
 	{1, "my.canva.site", 3, true},
@@ -8021,6 +8023,7 @@ var r = [9943]Rule{
 	{2, "raw.icp1.io", 4, true},
 	{2, "icp.net", 3, true},
 	{1, "caffeine.site", 2, true},
+	{1, "caffeine.xyz", 2, true},
 	{1, "dfirma.pl", 2, true},
 	{1, "dkonto.pl", 2, true},
 	{1, "you2.pl", 2, true},
