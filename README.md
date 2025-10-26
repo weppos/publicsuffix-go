@@ -2,8 +2,8 @@
 
 The package <tt>publicsuffix</tt> provides a Go domain name parser based on the [Public Suffix List](http://publicsuffix.org/).
 
-[![Tests](https://github.com/nerdlem/publicsuffix-go/workflows/Tests/badge.svg)](https://github.com/nerdlem/publicsuffix-go/actions?query=workflow%3ATests)
-[![GoDoc](https://godoc.org/github.com/nerdlem/publicsuffix-go/publicsuffix?status.svg)](https://pkg.go.dev/github.com/nerdlem/publicsuffix-go/publicsuffix)
+[![Tests](https://github.com/weppos/publicsuffix-go/workflows/Tests/badge.svg)](https://github.com/weppos/publicsuffix-go/actions?query=workflow%3ATests)
+[![GoDoc](https://godoc.org/github.com/weppos/publicsuffix-go/publicsuffix?status.svg)](https://pkg.go.dev/github.com/weppos/publicsuffix-go/publicsuffix)
 
 Currently, **publicsuffix-go requires Go version 1.21 or greater**. We do our best not to break older versions of Go if we don't have to, but due to tooling constraints, we don't always test older versions.
 
@@ -125,7 +125,7 @@ Although the PSL list has been traditionally U-label encoded, this library follo
 
 Passing Unicode names to the library may either result in error or unexpected behaviors.
 
-If you are interested in the details of this decision, you can read the full discussion [here](https://github.com/nerdlem/publicsuffix-go/issues/31).
+If you are interested in the details of this decision, you can read the full discussion [here](https://github.com/weppos/publicsuffix-go/issues/31).
 
 
 ## Differences with `golang.org/x/net/publicsuffix`
