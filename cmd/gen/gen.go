@@ -12,7 +12,7 @@ import (
 	"os"
 	"os/signal"
 
-	"github.com/weppos/publicsuffix-go/publicsuffix/generator"
+	"github.com/nerdlem/publicsuffix-go/publicsuffix/generator"
 )
 
 const (

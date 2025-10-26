@@ -3,7 +3,7 @@ package publicsuffix_test
 import (
 	"testing"
 
-	wpsl "github.com/weppos/publicsuffix-go/net/publicsuffix"
+	wpsl "github.com/nerdlem/publicsuffix-go/net/publicsuffix"
 	xpsl "golang.org/x/net/publicsuffix"
 )
 

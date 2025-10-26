@@ -79,6 +79,10 @@ type FindOptions struct {
 	DefaultRule *Rule
 }
 
+// IteratorFunc represents the signature of a function that allows iteration
+// through a List
+type IteratorFunc func(string, Rule) bool
+
 // List represents a Public Suffix List.
 type List struct {
 	// rules is kept private because you should not access rules directly
@@ -218,6 +222,17 @@ func (l *List) Find(name string, options *FindOptions) *Rule {
 		part = part[i+1:]
 	}
 
+}
+
+// Iterate allows for traversal of a List. Useful for introspection
+// and other use cases that intend to take action on the List structure
+// itself.
+func (l *List) Iterate(f IteratorFunc) {
+	for k, r := range l.rules {
+		if !f(k, *r) {
+			break
+		}
+	}
 }
 
 // NewRule parses the rule content, creates and returns a Rule.

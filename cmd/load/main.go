@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/weppos/publicsuffix-go/publicsuffix"
+	"github.com/nerdlem/publicsuffix-go/publicsuffix"
 )
 
 func main() {
