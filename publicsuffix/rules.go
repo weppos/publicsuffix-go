@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version c280d0 (Fri Oct 24 20:45:46 2025)"
+const ListVersion = "PSL version 30f4f4 (Sun Oct 26 13:55:48 2025)"
 
-func DefaultRules() [9950]Rule {
+func DefaultRules() [9963]Rule {
 	return r
 }
 
-var r = [9950]Rule{
+var r = [9963]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -256,7 +256,21 @@ var r = [9950]Rule{
 	{1, "org.bb", 2, false},
 	{1, "store.bb", 2, false},
 	{1, "tv.bb", 2, false},
-	{2, "bd", 2, false},
+	{1, "bd", 1, false},
+	{1, "ac.bd", 2, false},
+	{1, "ai.bd", 2, false},
+	{1, "co.bd", 2, false},
+	{1, "com.bd", 2, false},
+	{1, "edu.bd", 2, false},
+	{1, "gov.bd", 2, false},
+	{1, "id.bd", 2, false},
+	{1, "info.bd", 2, false},
+	{1, "it.bd", 2, false},
+	{1, "mil.bd", 2, false},
+	{1, "net.bd", 2, false},
+	{1, "org.bd", 2, false},
+	{1, "sch.bd", 2, false},
+	{1, "tv.bd", 2, false},
 	{1, "be", 1, false},
 	{1, "ac.be", 2, false},
 	{1, "bf", 1, false},
@@ -6092,7 +6106,6 @@ var r = [9950]Rule{
 	{1, "drive", 1, false},
 	{1, "dtv", 1, false},
 	{1, "dubai", 1, false},
-	{1, "dunlop", 1, false},
 	{1, "dupont", 1, false},
 	{1, "durban", 1, false},
 	{1, "dvag", 1, false},
