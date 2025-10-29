@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version 30f4f4 (Sun Oct 26 13:55:48 2025)"
+const ListVersion = "PSL version edb46e (Tue Oct 28 19:12:55 2025)"
 
-func DefaultRules() [9963]Rule {
+func DefaultRules() [9968]Rule {
 	return r
 }
 
-var r = [9963]Rule{
+var r = [9968]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -5586,6 +5586,7 @@ var r = [9963]Rule{
 	{1, "firm.ve", 2, false},
 	{1, "gob.ve", 2, false},
 	{1, "gov.ve", 2, false},
+	{1, "ia.ve", 2, false},
 	{1, "info.ve", 2, false},
 	{1, "int.ve", 2, false},
 	{1, "mil.ve", 2, false},
@@ -7942,6 +7943,7 @@ var r = [9963]Rule{
 	{1, "cloudaccess.net", 2, true},
 	{1, "cloudbeesusercontent.io", 2, true},
 	{2, "cloudera.site", 3, true},
+	{1, "cloudflare.app", 2, true},
 	{1, "cf-ipfs.com", 2, true},
 	{1, "cloudflare-ipfs.com", 2, true},
 	{1, "trycloudflare.com", 2, true},
@@ -8618,6 +8620,7 @@ var r = [9963]Rule{
 	{1, "gentlentapis.com", 2, true},
 	{1, "cdn-edges.net", 2, true},
 	{1, "gsj.bz", 2, true},
+	{1, "gitbook.io", 2, true},
 	{1, "github.app", 2, true},
 	{1, "githubusercontent.com", 2, true},
 	{1, "githubpreview.dev", 2, true},
@@ -9728,6 +9731,7 @@ var r = [9963]Rule{
 	{1, "musician.io", 2, true},
 	{1, "novecore.site", 2, true},
 	{1, "api.stdlib.com", 3, true},
+	{1, "statichost.page", 2, true},
 	{1, "feedback.ac", 2, true},
 	{1, "forms.ac", 2, true},
 	{1, "assessments.cx", 2, true},
@@ -9796,6 +9800,7 @@ var r = [9963]Rule{
 	{1, "p.tawkto.email", 3, true},
 	{1, "tche.br", 2, true},
 	{1, "site.tb-hosting.com", 3, true},
+	{1, "directwp.eu", 2, true},
 	{1, "edugit.io", 2, true},
 	{1, "s3.teckids.org", 3, true},
 	{1, "telebit.app", 2, true},
