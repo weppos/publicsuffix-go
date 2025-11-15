@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version 1ecde4 (Tue Nov 11 16:10:36 2025)"
+const ListVersion = "PSL version 64ba16 (Fri Nov 14 10:08:00 2025)"
 
-func DefaultRules() [10045]Rule {
+func DefaultRules() [10049]Rule {
 	return r
 }
 
-var r = [10045]Rule{
+var r = [10049]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -8442,6 +8442,8 @@ var r = [10045]Rule{
 	{1, "rt.ht", 2, true},
 	{1, "elementor.cloud", 2, true},
 	{1, "elementor.cool", 2, true},
+	{1, "emergent.cloud", 2, true},
+	{1, "emergent.host", 2, true},
 	{1, "en-root.fr", 2, true},
 	{1, "mytuleap.com", 2, true},
 	{1, "tuleap-partners.com", 2, true},
@@ -9252,6 +9254,7 @@ var r = [10045]Rule{
 	{1, "cust.retrosnub.co.uk", 4, true},
 	{1, "ui.nabu.casa", 3, true},
 	{1, "needle.run", 2, true},
+	{1, "co.site", 2, true},
 	{1, "cloud.nospamproxy.com", 3, true},
 	{1, "o365.cloud.nospamproxy.com", 4, true},
 	{1, "netlib.re", 2, true},
@@ -9946,6 +9949,7 @@ var r = [10045]Rule{
 	{1, "ltd.hk", 2, true},
 	{1, "hk.org", 2, true},
 	{1, "it.com", 2, true},
+	{1, "umso.co", 2, true},
 	{1, "unison-services.cloud", 2, true},
 	{1, "virtual-user.de", 2, true},
 	{1, "virtualuser.de", 2, true},
