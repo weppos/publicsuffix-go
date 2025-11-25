@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version cd0dea (Mon Nov 17 16:46:06 2025)"
+const ListVersion = "PSL version 565e9d (Mon Nov 24 09:12:26 2025)"
 
-func DefaultRules() [10048]Rule {
+func DefaultRules() [10051]Rule {
 	return r
 }
 
-var r = [10048]Rule{
+var r = [10051]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -1105,6 +1105,7 @@ var r = [10048]Rule{
 	{1, "ponpes.id", 2, false},
 	{1, "sch.id", 2, false},
 	{1, "web.id", 2, false},
+	{1, "xn--9tfky.id", 2, false},
 	{1, "ie", 1, false},
 	{1, "gov.ie", 2, false},
 	{1, "il", 1, false},
@@ -8841,6 +8842,7 @@ var r = [10048]Rule{
 	{1, "gov.nl", 2, true},
 	{1, "grafana-dev.net", 2, true},
 	{1, "grayjayleagues.com", 2, true},
+	{1, "grebedoc.dev", 2, true},
 	{1, "xn--gnstigbestellen-zvb.de", 2, true},
 	{1, "xn--gnstigliefern-wob.de", 2, true},
 	{1, "hackclub.app", 2, true},
@@ -10038,6 +10040,7 @@ var r = [10048]Rule{
 	{1, "cistron.nl", 2, true},
 	{1, "demon.nl", 2, true},
 	{1, "xs4all.space", 2, true},
+	{1, "xtooldevice.com", 2, true},
 	{1, "yandexcloud.net", 2, true},
 	{1, "storage.yandexcloud.net", 3, true},
 	{1, "website.yandexcloud.net", 3, true},
