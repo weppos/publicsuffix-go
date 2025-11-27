@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version 565e9d (Mon Nov 24 09:12:26 2025)"
+const ListVersion = "PSL version 7456e9 (Wed Nov 26 08:20:21 2025)"
 
-func DefaultRules() [10051]Rule {
+func DefaultRules() [10058]Rule {
 	return r
 }
 
-var r = [10051]Rule{
+var r = [10058]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -7904,6 +7904,8 @@ var r = [10051]Rule{
 	{1, "square7.net", 2, true},
 	{1, "brave.app", 2, true},
 	{2, "s.brave.app", 4, true},
+	{1, "brave.dev", 2, true},
+	{2, "s.brave.dev", 4, true},
 	{1, "brave.io", 2, true},
 	{2, "s.brave.io", 4, true},
 	{1, "shop.brendly.ba", 3, true},
@@ -8680,6 +8682,8 @@ var r = [10051]Rule{
 	{2, "ex.ortsinfo.at", 4, true},
 	{2, "kunden.ortsinfo.at", 4, true},
 	{2, "statics.cloud", 3, true},
+	{1, "gadget.app", 2, true},
+	{1, "gadget.host", 2, true},
 	{1, "aliases121.com", 2, true},
 	{1, "campaign.gov.uk", 3, true},
 	{1, "service.gov.uk", 3, true},
@@ -9219,8 +9223,12 @@ var r = [10051]Rule{
 	{1, "azurewebsites.net", 2, true},
 	{1, "cloudapp.net", 2, true},
 	{1, "trafficmanager.net", 2, true},
+	{1, "servicebus.usgovcloudapi.net", 3, true},
+	{1, "usgovcloudapp.net", 2, true},
 	{1, "blob.core.windows.net", 4, true},
 	{1, "servicebus.windows.net", 3, true},
+	{1, "azure-api.us", 2, true},
+	{1, "azurewebsites.us", 2, true},
 	{1, "routingthecloud.com", 2, true},
 	{1, "sn.mynetname.net", 3, true},
 	{1, "routingthecloud.net", 2, true},
@@ -9398,7 +9406,6 @@ var r = [10051]Rule{
 	{1, "nerdpol.ovh", 2, true},
 	{1, "nyc.mn", 2, true},
 	{1, "prvcy.page", 2, true},
-	{1, "obl.ong", 2, true},
 	{1, "observablehq.cloud", 2, true},
 	{1, "static.observableusercontent.com", 3, true},
 	{1, "omg.lol", 2, true},
