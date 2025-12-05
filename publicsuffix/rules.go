@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version d3567d (Thu Nov 27 13:27:47 2025)"
+const ListVersion = "PSL version ea600e (Thu Dec  4 07:50:00 2025)"
 
-func DefaultRules() [10059]Rule {
+func DefaultRules() [10061]Rule {
 	return r
 }
 
-var r = [10059]Rule{
+var r = [10061]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -8448,6 +8448,7 @@ var r = [10059]Rule{
 	{1, "elementor.cloud", 2, true},
 	{1, "elementor.cool", 2, true},
 	{1, "emergent.cloud", 2, true},
+	{1, "preview.emergentagent.com", 3, true},
 	{1, "emergent.host", 2, true},
 	{1, "en-root.fr", 2, true},
 	{1, "mytuleap.com", 2, true},
@@ -9477,7 +9478,6 @@ var r = [10059]Rule{
 	{1, "srv.us", 2, true},
 	{1, "gh.srv.us", 3, true},
 	{1, "gl.srv.us", 3, true},
-	{1, "lk3.ru", 2, true},
 	{1, "mypep.link", 2, true},
 	{1, "perspecta.cloud", 2, true},
 	{1, "support.site", 2, true},
@@ -9550,6 +9550,8 @@ var r = [10059]Rule{
 	{1, "readthedocs.io", 2, true},
 	{1, "rhcloud.com", 2, true},
 	{1, "instances.spawn.cc", 3, true},
+	{2, "clusters.rdpa.co", 4, true},
+	{2, "srvrless.rdpa.co", 4, true},
 	{1, "onrender.com", 2, true},
 	{1, "app.render.com", 3, true},
 	{1, "replit.app", 2, true},
