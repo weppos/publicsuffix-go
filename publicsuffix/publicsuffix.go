@@ -28,6 +28,8 @@ const (
 	WildcardType = 2
 	// ExceptionType represents an exception to a wildard rule
 	ExceptionType = 3
+	// FlatType represents a flat rule such as "@nhs.uk" where both the domain and subdomains are registrable
+	FlatType = 4
 
 	listTokenPrivateDomains = "===BEGIN PRIVATE DOMAINS==="
 	listTokenComment        = "//"
@@ -164,7 +166,7 @@ Scanning:
 
 		// skip blank lines
 		case line == "":
-			break
+			continue
 
 		// include private domains or stop scanner
 		case strings.Contains(line, listTokenPrivateDomains):
@@ -175,7 +177,7 @@ Scanning:
 
 		// skip comments
 		case strings.HasPrefix(line, listTokenComment):
-			break
+			continue
 
 		default:
 			var rule *Rule
@@ -253,6 +255,9 @@ func NewRule(content string) (*Rule, error) {
 	case '!': // exception
 		value = content[1:]
 		rule = &Rule{Type: ExceptionType, Value: value, Length: len(Labels(value))}
+	case '@': // flat - both domain and subdomains are registrable
+		value = content[1:]
+		rule = &Rule{Type: FlatType, Value: value, Length: len(Labels(value))}
 	default: // normal
 		value = content
 		rule = &Rule{Type: NormalType, Value: value, Length: len(Labels(value))}
@@ -348,6 +353,19 @@ func (r *Rule) Decompose(name string) (result [2]string) {
 			return
 		}
 		result[0], result[1] = name[:len(name)-1], suffix
+	case FlatType:
+		// For flat rules, both the domain itself and its subdomains are registrable
+		// If exact match, treat it as a registrable domain
+		if name == r.Value {
+			result[0], result[1] = "", r.Value
+			return
+		}
+		// For subdomains, treat each subdomain as registrable
+		if strings.HasSuffix(name, "."+r.Value) {
+			name = strings.TrimSuffix(name, "."+r.Value)
+			result[0], result[1] = "", name
+			return
+		}
 	}
 	return
 }

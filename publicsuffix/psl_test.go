@@ -28,9 +28,9 @@ func TestPsl(t *testing.T) {
 		line := scanner.Text()
 		switch {
 		case line == "":
-			break
+			continue
 		case strings.HasPrefix(line, "//"):
-			break
+			continue
 		default:
 			xy := strings.Split(line, " ")
 			tc := pslTestCase{}

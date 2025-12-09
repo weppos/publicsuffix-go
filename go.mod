@@ -1,4 +1,4 @@
-module github.com/weppos/publicsuffix-go
+module github.com/nerdlem/publicsuffix-go
 
 go 1.24.0
 

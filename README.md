@@ -115,6 +115,63 @@ publicsuffix.DomainFromListWithOptions(list, "google.blogspot.com", nil)
 // blogspot.com
 ```
 
+## Flat Rules (@-prefix)
+
+This library supports "flat" rules using the `@` prefix. Flat rules treat both a domain and all its subdomains as independent registrable domains, rather than the standard hierarchical PSL behavior.
+
+### Motivation
+
+The standard PSL is hierarchical: for a domain like `nhs.uk`, you either:
+- Treat `nhs.uk` as a public suffix (so `foo.nhs.uk` is registrable, but `nhs.uk` itself is not)
+- Use `!nhs.uk` exception rule (makes `nhs.uk` registrable, but `foo.nhs.uk` maps to parent `nhs.uk`)
+
+Flat rules allow BOTH `nhs.uk` AND `foo.nhs.uk` to be treated as separate registrable domains.
+
+### Syntax
+
+Add `@` prefix to domain in PSL private rules file:
+
+```
+@nhs.uk
+```
+
+### Behavior
+
+For rule `@nhs.uk`:
+
+| Input Domain      | Registrable Domain | Public Suffix |
+|-------------------|-------------------|---------------|
+| nhs.uk            | nhs.uk            | (none)        |
+| foo.nhs.uk        | foo               | (none)        |
+| bar.nhs.uk        | bar               | (none)        |
+| baz.foo.nhs.uk    | baz.foo           | (none)        |
+
+### Usage Example
+
+```go
+list := publicsuffix.NewList()
+rule, _ := publicsuffix.NewRule("@nhs.uk")
+list.AddRule(rule)
+
+result := list.Find("foo.nhs.uk", publicsuffix.DefaultFindOptions)
+decomposed := result.Decompose("foo.nhs.uk")
+// decomposed[0] = ""
+// decomposed[1] = "foo" (the registrable domain)
+```
+
+Or load from file:
+
+```go
+list, _ := publicsuffix.NewListFromFile("psl.dat", options)
+list.LoadFile("flat-rules.txt", options)
+```
+
+### Use Cases
+
+- Domains that operate both as a registrable domain AND as a namespace for subdomains
+- Special organizational TLDs (like `.nhs.uk`, `.gov.uk`, etc.)
+- Testing and development scenarios
+
 ## IDN domains, A-labels and U-labels
 
 [A-label and U-label](https://tools.ietf.org/html/rfc5890#section-2.3.2.1) are two different ways to represent IDN domain names. These two encodings are also known as ASCII (A-label) or Pynucode vs Unicode (U-label). Conversions between U-labels and A-labels are performed according to the ["Punycode" specification](https://tools.ietf.org/html/rfc3492), adding or removing the ACE prefix as needed.
