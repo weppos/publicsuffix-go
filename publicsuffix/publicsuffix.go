@@ -355,15 +355,17 @@ func (r *Rule) Decompose(name string) (result [2]string) {
 		result[0], result[1] = name[:len(name)-1], suffix
 	case FlatType:
 		// For flat rules, both the domain itself and its subdomains are registrable
-		// If exact match, treat it as a registrable domain
+		// Return the full domain as registrable (left) with empty public suffix (right)
+		// This makes them independent registrable domains without a public suffix
 		if name == r.Value {
-			result[0], result[1] = "", r.Value
+			// Exact match: nhs.uk -> "nhs.uk", ""
+			result[0], result[1] = r.Value, ""
 			return
 		}
-		// For subdomains, treat each subdomain as registrable
+		// For subdomains, return the full subdomain as registrable
 		if strings.HasSuffix(name, "."+r.Value) {
-			name = strings.TrimSuffix(name, "."+r.Value)
-			result[0], result[1] = "", name
+			// foo.nhs.uk -> "foo.nhs.uk", ""
+			result[0], result[1] = name, ""
 			return
 		}
 	}
@@ -487,6 +489,21 @@ func ParseFromListWithOptions(l *List, name string, options *FindOptions) (*Doma
 
 	parts := r.Decompose(n)
 	left, tld := parts[0], parts[1]
+
+	// For flat rules, the entire domain is registrable with no public suffix
+	// In this case, left contains the full domain and tld is empty
+	if r.Type == FlatType {
+		if left == "" {
+			return nil, fmt.Errorf("%s is a suffix", n)
+		}
+		// For flat rules: the full domain is the SLD, TLD is empty
+		return &DomainName{
+			Rule: r,
+			TLD:  "",
+			SLD:  left,
+		}, nil
+	}
+
 	if tld == "" {
 		return nil, fmt.Errorf("%s is a suffix", n)
 	}
