@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version 388317 (Mon Dec 15 23:04:49 2025)"
+const ListVersion = "PSL version 44bf7a (Thu Dec 18 00:40:30 2025)"
 
-func DefaultRules() [10065]Rule {
+func DefaultRules() [10069]Rule {
 	return r
 }
 
-var r = [10065]Rule{
+var r = [10069]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -1006,6 +1006,9 @@ var r = [10065]Rule{
 	{1, "gov.gy", 2, false},
 	{1, "net.gy", 2, false},
 	{1, "org.gy", 2, false},
+	{1, "onhercules.app", 2, false},
+	{1, "hercules-app.com", 2, false},
+	{1, "hercules-dev.com", 2, false},
 	{1, "hk", 1, false},
 	{1, "com.hk", 2, false},
 	{1, "edu.hk", 2, false},
@@ -8127,6 +8130,9 @@ var r = [10065]Rule{
 	{1, "discordsays.com", 2, true},
 	{1, "discordsez.com", 2, true},
 	{1, "jozi.biz", 2, true},
+	{1, "ccwu.cc", 2, true},
+	{1, "cc.cd", 2, true},
+	{1, "us.ci", 2, true},
 	{1, "de5.net", 2, true},
 	{1, "dnshome.de", 2, true},
 	{1, "online.th", 2, true},
@@ -8453,7 +8459,6 @@ var r = [10065]Rule{
 	{1, "emergent.cloud", 2, true},
 	{1, "preview.emergentagent.com", 3, true},
 	{1, "emergent.host", 2, true},
-	{1, "en-root.fr", 2, true},
 	{1, "mytuleap.com", 2, true},
 	{1, "tuleap-partners.com", 2, true},
 	{1, "encr.app", 2, true},
@@ -8640,9 +8645,8 @@ var r = [10065]Rule{
 	{1, "fldrv.com", 2, true},
 	{1, "on-fleek.app", 2, true},
 	{1, "flutterflow.app", 2, true},
+	{1, "sprites.app", 2, true},
 	{1, "fly.dev", 2, true},
-	{1, "shw.io", 2, true},
-	{1, "edgeapp.net", 2, true},
 	{1, "forgeblocks.com", 2, true},
 	{1, "id.forgerock.io", 3, true},
 	{1, "e2b.app", 2, true},
@@ -9179,6 +9183,8 @@ var r = [10065]Rule{
 	{1, "luyani.app", 2, true},
 	{1, "luyani.net", 2, true},
 	{2, "magentosite.cloud", 3, true},
+	{1, "magicpatterns.app", 2, true},
+	{1, "magicpatternsapp.com", 2, true},
 	{1, "hb.cldmail.ru", 3, true},
 	{1, "matlab.cloud", 2, true},
 	{1, "modelscape.com", 2, true},
@@ -9492,8 +9498,6 @@ var r = [10065]Rule{
 	{1, "us.platform.sh", 3, true},
 	{2, "platformsh.site", 3, true},
 	{2, "tst.site", 3, true},
-	{1, "platter-app.dev", 2, true},
-	{1, "platterp.us", 2, true},
 	{1, "pley.games", 2, true},
 	{1, "onporter.run", 2, true},
 	{1, "co.bn", 2, true},
@@ -9511,6 +9515,7 @@ var r = [10065]Rule{
 	{1, "vki.kr", 2, true},
 	{1, "dev.project-study.com", 3, true},
 	{1, "protonet.io", 2, true},
+	{1, "platter-app.dev", 2, true},
 	{1, "e.id", 2, true},
 	{1, "chirurgiens-dentistes-en-france.fr", 2, true},
 	{1, "byen.site", 2, true},
@@ -9840,7 +9845,6 @@ var r = [10065]Rule{
 	{1, "ipfs.storacha.link", 3, true},
 	{1, "ipfs.w3s.link", 3, true},
 	{1, "storebase.store", 2, true},
-	{1, "storipress.app", 2, true},
 	{1, "storj.farm", 2, true},
 	{1, "strapiapp.com", 2, true},
 	{1, "media.strapiapp.com", 3, true},
