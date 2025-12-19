@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version 44bf7a (Thu Dec 18 00:40:30 2025)"
+const ListVersion = "PSL version 461e4b (Thu Dec 18 20:41:03 2025)"
 
-func DefaultRules() [10069]Rule {
+func DefaultRules() [10086]Rule {
 	return r
 }
 
-var r = [10069]Rule{
+var r = [10086]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -7850,10 +7850,26 @@ var r = [10069]Rule{
 	{1, "apigee.io", 2, true},
 	{1, "panel.dev", 2, true},
 	{1, "siiites.com", 2, true},
+	{1, "int.apple", 2, true},
+	{2, "cloud.int.apple", 4, true},
+	{2, "r.cloud.int.apple", 5, true},
+	{2, "ap-north-1.r.cloud.int.apple", 6, true},
+	{2, "ap-south-1.r.cloud.int.apple", 6, true},
+	{2, "ap-south-2.r.cloud.int.apple", 6, true},
+	{2, "eu-central-1.r.cloud.int.apple", 6, true},
+	{2, "eu-north-1.r.cloud.int.apple", 6, true},
+	{2, "us-central-1.r.cloud.int.apple", 6, true},
+	{2, "us-central-2.r.cloud.int.apple", 6, true},
+	{2, "us-east-1.r.cloud.int.apple", 6, true},
+	{2, "us-east-2.r.cloud.int.apple", 6, true},
+	{2, "us-west-1.r.cloud.int.apple", 6, true},
+	{2, "us-west-2.r.cloud.int.apple", 6, true},
+	{2, "us-west-3.r.cloud.int.apple", 6, true},
 	{1, "appspacehosted.com", 2, true},
 	{1, "appspaceusercontent.com", 2, true},
 	{1, "appudo.net", 2, true},
 	{1, "appwrite.global", 2, true},
+	{1, "appwrite.network", 2, true},
 	{2, "appwrite.run", 3, true},
 	{1, "on-aptible.com", 2, true},
 	{1, "f5.si", 2, true},
@@ -8919,6 +8935,7 @@ var r = [10069]Rule{
 	{1, "wpmucdn.com", 2, true},
 	{1, "tempurl.host", 2, true},
 	{1, "wpmudev.host", 2, true},
+	{1, "indevs.in", 2, true},
 	{1, "dyn-berlin.de", 2, true},
 	{1, "in-berlin.de", 2, true},
 	{1, "in-brb.de", 2, true},
