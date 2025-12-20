@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version 461e4b (Thu Dec 18 20:41:03 2025)"
+const ListVersion = "PSL version 3be833 (Fri Dec 19 18:38:40 2025)"
 
-func DefaultRules() [10086]Rule {
+func DefaultRules() [10087]Rule {
 	return r
 }
 
-var r = [10086]Rule{
+var r = [10087]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -7847,6 +7847,7 @@ var r = [10086]Rule{
 	{1, "transfer-webapp.cn-northwest-1.on.amazonwebservices.com.cn", 6, true},
 	{1, "eero.online", 2, true},
 	{1, "eero-stage.online", 2, true},
+	{1, "antagonist.cloud", 2, true},
 	{1, "apigee.io", 2, true},
 	{1, "panel.dev", 2, true},
 	{1, "siiites.com", 2, true},
@@ -8663,8 +8664,6 @@ var r = [10086]Rule{
 	{1, "flutterflow.app", 2, true},
 	{1, "sprites.app", 2, true},
 	{1, "fly.dev", 2, true},
-	{1, "forgeblocks.com", 2, true},
-	{1, "id.forgerock.io", 3, true},
 	{1, "e2b.app", 2, true},
 	{1, "framer.ai", 2, true},
 	{1, "framer.app", 2, true},
@@ -9506,6 +9505,8 @@ var r = [10086]Rule{
 	{1, "gl.srv.us", 3, true},
 	{1, "mypep.link", 2, true},
 	{1, "perspecta.cloud", 2, true},
+	{1, "forgeblocks.com", 2, true},
+	{1, "id.forgerock.io", 3, true},
 	{1, "support.site", 2, true},
 	{1, "on-web.fr", 2, true},
 	{2, "upsun.app", 3, true},
