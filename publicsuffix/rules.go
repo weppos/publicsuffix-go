@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version 3be833 (Fri Dec 19 18:38:40 2025)"
+const ListVersion = "PSL version a08140 (Sun Dec 21 00:34:31 2025)"
 
-func DefaultRules() [10087]Rule {
+func DefaultRules() [10089]Rule {
 	return r
 }
 
-var r = [10087]Rule{
+var r = [10089]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -8929,6 +8929,7 @@ var r = [10087]Rule{
 	{1, "iki.fi", 2, true},
 	{1, "ibxos.it", 2, true},
 	{1, "iliadboxos.it", 2, true},
+	{1, "imagine-proxy.work", 2, true},
 	{1, "smushcdn.com", 2, true},
 	{1, "wphostedmail.com", 2, true},
 	{1, "wpmucdn.com", 2, true},
@@ -9431,7 +9432,6 @@ var r = [10087]Rule{
 	{1, "freeddns.us", 2, true},
 	{1, "nsupdate.info", 2, true},
 	{1, "nerdpol.ovh", 2, true},
-	{1, "nyc.mn", 2, true},
 	{1, "prvcy.page", 2, true},
 	{1, "observablehq.cloud", 2, true},
 	{1, "static.observableusercontent.com", 3, true},
@@ -9537,6 +9537,8 @@ var r = [10087]Rule{
 	{1, "e.id", 2, true},
 	{1, "chirurgiens-dentistes-en-france.fr", 2, true},
 	{1, "byen.site", 2, true},
+	{1, "nyc.mn", 2, true},
+	{2, "cn.st", 3, true},
 	{1, "pubtls.org", 2, true},
 	{1, "pythonanywhere.com", 2, true},
 	{1, "eu.pythonanywhere.com", 3, true},
