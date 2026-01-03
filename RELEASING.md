@@ -66,8 +66,7 @@ This document describes the steps to release a new version of PublicSuffix for G
 6. **Commit the new version**
 
    ```shell
-   git add publicsuffix/publicsuffix.go CHANGELOG.md go.mod go.sum
-   git commit -m "Release $VERSION"
+   git commit -am "Release $VERSION"
    ```
 
 7. **Create a signed tag**
