@@ -36,10 +36,12 @@ This document describes the steps to release a new version of PublicSuffix for G
 
 3. **Update the changelog** with the new version
 
-   Edit `CHANGELOG.md` and add a new section for the release:
+   Edit `CHANGELOG.md` and add a new section for the release following the [Common Changelog](https://common-changelog.org/) format (see [CONTRIBUTING.md](CONTRIBUTING.md) for details):
 
    ```markdown
-   ## X.Y.Z
+   ## X.Y.Z - YYYY-MM-DD
+
+   ### Changed
 
    - Description of changes
    ```
