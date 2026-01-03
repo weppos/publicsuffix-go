@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version 0f491e (Mon Dec 22 11:45:20 2025)"
+const ListVersion = "PSL version 1ef6d3 (Sun Dec 28 14:57:34 2025)"
 
-func DefaultRules() [10092]Rule {
+func DefaultRules() [10098]Rule {
 	return r
 }
 
-var r = [10092]Rule{
+var r = [10098]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -8874,6 +8874,7 @@ var r = [10092]Rule{
 	{1, "grebedoc.dev", 2, true},
 	{1, "xn--gnstigbestellen-zvb.de", 2, true},
 	{1, "xn--gnstigliefern-wob.de", 2, true},
+	{1, "gv.uy", 2, true},
 	{1, "hackclub.app", 2, true},
 	{1, "xn--hkkinen-5wa.fi", 2, true},
 	{1, "hashbang.sh", 2, true},
@@ -9922,6 +9923,11 @@ var r = [10092]Rule{
 	{1, "tche.br", 2, true},
 	{1, "site.tb-hosting.com", 3, true},
 	{1, "directwp.eu", 2, true},
+	{1, "ec.cc", 2, true},
+	{1, "eu.cc", 2, true},
+	{1, "gu.cc", 2, true},
+	{1, "uk.cc", 2, true},
+	{1, "us.cc", 2, true},
 	{1, "edugit.io", 2, true},
 	{1, "s3.teckids.org", 3, true},
 	{1, "telebit.app", 2, true},
