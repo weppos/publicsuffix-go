@@ -53,13 +53,13 @@ Use lowercase for `<type>`. Capitalize the first letter of `<subject>` (sentence
 ### Examples
 
 ```bash
-feat(parser): add support for wildcard exceptions
+feat(parser): Add support for wildcard exceptions
 
-fix(domain): handle empty labels correctly
+fix(domain): Handle empty labels correctly
 
-docs: update usage examples in README
+docs: Update usage examples in README
 
-refactor(list): simplify rule lookup logic
+refactor(list): Simplify rule lookup logic
 ```
 
 ### Breaking Changes
@@ -67,7 +67,7 @@ refactor(list): simplify rule lookup logic
 Add `BREAKING CHANGE:` in the footer:
 
 ```
-feat(domain): change Parse return signature
+feat(domain): Change Parse return signature
 
 BREAKING CHANGE: Parse now returns error instead of panic.
 Update code to handle returned errors.
