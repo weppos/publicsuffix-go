@@ -15,8 +15,6 @@ Thank you for your interest in contributing to PublicSuffix for Go!
 
 We follow the [Conventional Commits](https://www.conventionalcommits.org/) specification for commit messages.
 
-We follow the [Common Changelog](https://common-changelog.org/) format for changelog entries.
-
 ### Format
 
 ```
@@ -72,6 +70,10 @@ feat(domain): Change Parse return signature
 BREAKING CHANGE: Parse now returns error instead of panic.
 Update code to handle returned errors.
 ```
+
+## Changelog
+
+We follow the [Common Changelog](https://common-changelog.org/) format for changelog entries.
 
 ## Testing
 
