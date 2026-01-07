@@ -222,29 +222,24 @@ No. `PublicSuffix` comes with a bundled list. It does not make any HTTP requests
 - **FQDN** (Fully Qualified Domain Name): A complete domain name that includes the hostname, domain, and top-level domain, ending with a trailing dot. The format is `[hostname].[domain].[tld].` (e.g., `www.mozilla.org.`).
 
 
-## Documentation and support
-
-### Documentation
+## Documentation
 
 Library documentation is available at https://pkg.go.dev/github.com/weppos/publicsuffix-go/publicsuffix.
-
-### Bug reports and contributions
-
-- **Bug Tracker**: https://github.com/weppos/publicsuffix-go/issues
-- **Code Repository**: https://github.com/weppos/publicsuffix-go
-
-Contributions are welcome! Please include tests and/or feature coverage for every patch, and create a topic branch for every separate change you make.
-
 
 ## Security and vulnerability reporting
 
 For full information and details about our security policy, please visit [`SECURITY.md`](SECURITY.md).
 
+## Contributing
+
+- **Bug Tracker**: https://github.com/weppos/publicsuffix-go/issues
+- **Code Repository**: https://github.com/weppos/publicsuffix-go
+
+Contributions are welcome! Please feel free to submit issues and pull requests. See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ## Changelog
 
 See [CHANGELOG.md](CHANGELOG.md) for details.
-
 
 ## License
 
