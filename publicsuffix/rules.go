@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version 1ef6d3 (Sun Dec 28 14:57:34 2025)"
+const ListVersion = "PSL version c31f9a (Wed Jan  7 12:06:08 2026)"
 
-func DefaultRules() [10098]Rule {
+func DefaultRules() [10083]Rule {
 	return r
 }
 
-var r = [10098]Rule{
+var r = [10083]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -1006,9 +1006,6 @@ var r = [10098]Rule{
 	{1, "gov.gy", 2, false},
 	{1, "net.gy", 2, false},
 	{1, "org.gy", 2, false},
-	{1, "onhercules.app", 2, false},
-	{1, "hercules-app.com", 2, false},
-	{1, "hercules-dev.com", 2, false},
 	{1, "hk", 1, false},
 	{1, "com.hk", 2, false},
 	{1, "edu.hk", 2, false},
@@ -5055,7 +5052,6 @@ var r = [10098]Rule{
 	{1, "edu.sn", 2, false},
 	{1, "gouv.sn", 2, false},
 	{1, "org.sn", 2, false},
-	{1, "perso.sn", 2, false},
 	{1, "univ.sn", 2, false},
 	{1, "so", 1, false},
 	{1, "com.so", 2, false},
@@ -7886,10 +7882,8 @@ var r = [10098]Rule{
 	{1, "sweetpepper.org", 2, true},
 	{1, "myasustor.com", 2, true},
 	{1, "cdn.prod.atlassian-dev.net", 4, true},
-	{1, "translated.page", 2, true},
 	{1, "myfritz.link", 2, true},
 	{1, "myfritz.net", 2, true},
-	{1, "onavstack.net", 2, true},
 	{2, "awdev.ca", 3, true},
 	{2, "advisor.ws", 3, true},
 	{1, "ecommerce-shop.pl", 2, true},
@@ -8123,6 +8117,8 @@ var r = [10098]Rule{
 	{1, "dedyn.io", 2, true},
 	{1, "deta.app", 2, true},
 	{1, "deta.dev", 2, true},
+	{1, "deuxfleurs.eu", 2, true},
+	{1, "deuxfleurs.page", 2, true},
 	{2, "at.ply.gg", 4, true},
 	{1, "d6.ply.gg", 3, true},
 	{1, "joinmc.link", 2, true},
@@ -8892,6 +8888,9 @@ var r = [10098]Rule{
 	{1, "helioho.st", 2, true},
 	{1, "heliohost.us", 2, true},
 	{1, "hepforge.org", 2, true},
+	{1, "onhercules.app", 2, true},
+	{1, "hercules-app.com", 2, true},
+	{1, "hercules-dev.com", 2, true},
 	{1, "herokuapp.com", 2, true},
 	{1, "heyflow.page", 2, true},
 	{1, "heyflow.site", 2, true},
@@ -8937,7 +8936,6 @@ var r = [10098]Rule{
 	{1, "wpmucdn.com", 2, true},
 	{1, "tempurl.host", 2, true},
 	{1, "wpmudev.host", 2, true},
-	{1, "indevs.in", 2, true},
 	{1, "dyn-berlin.de", 2, true},
 	{1, "in-berlin.de", 2, true},
 	{1, "in-brb.de", 2, true},
@@ -9486,7 +9484,6 @@ var r = [10098]Rule{
 	{1, "can.re", 2, true},
 	{1, "authgear-staging.com", 2, true},
 	{1, "authgearapps.com", 2, true},
-	{1, "skygearapp.com", 2, true},
 	{1, "outsystemscloud.com", 2, true},
 	{2, "hosting.ovh.net", 4, true},
 	{2, "webpaas.ovh.net", 4, true},
@@ -9851,6 +9848,7 @@ var r = [10098]Rule{
 	{1, "stackit.rocks", 2, true},
 	{1, "stackit.run", 2, true},
 	{1, "stackit.zone", 2, true},
+	{1, "indevs.in", 2, true},
 	{1, "musician.io", 2, true},
 	{1, "novecore.site", 2, true},
 	{1, "api.stdlib.com", 3, true},
@@ -9977,19 +9975,6 @@ var r = [10098]Rule{
 	{2, "transurl.nl", 3, true},
 	{1, "tunnelmole.net", 2, true},
 	{1, "tuxfamily.org", 2, true},
-	{1, "dd-dns.de", 2, true},
-	{1, "dray-dns.de", 2, true},
-	{1, "draydns.de", 2, true},
-	{1, "dyn-vpn.de", 2, true},
-	{1, "dynvpn.de", 2, true},
-	{1, "mein-vigor.de", 2, true},
-	{1, "my-vigor.de", 2, true},
-	{1, "my-wan.de", 2, true},
-	{1, "syno-ds.de", 2, true},
-	{1, "synology-diskstation.de", 2, true},
-	{1, "synology-ds.de", 2, true},
-	{1, "diskstation.eu", 2, true},
-	{1, "diskstation.org", 2, true},
 	{1, "typedream.app", 2, true},
 	{1, "pro.typeform.com", 3, true},
 	{1, "uber.space", 2, true},
