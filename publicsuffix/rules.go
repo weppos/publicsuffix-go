@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version 6e5697 (Fri Jan  9 13:51:29 2026)"
+const ListVersion = "PSL version 3fe97e (Tue Jan 13 11:09:54 2026)"
 
-func DefaultRules() [10085]Rule {
+func DefaultRules() [10087]Rule {
 	return r
 }
 
-var r = [10085]Rule{
+var r = [10087]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -10048,6 +10048,8 @@ var r = [10085]Rule{
 	{1, "windsurf.build", 2, true},
 	{1, "panel.gg", 2, true},
 	{1, "daemon.panel.gg", 3, true},
+	{1, "base44.app", 2, true},
+	{1, "base44-sandbox.com", 2, true},
 	{1, "wixsite.com", 2, true},
 	{1, "wixstudio.com", 2, true},
 	{1, "editorx.io", 2, true},
