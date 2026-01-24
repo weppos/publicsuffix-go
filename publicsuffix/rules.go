@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version d372af (Tue Jan 20 07:55:29 2026)"
+const ListVersion = "PSL version 2bb8b0 (Fri Jan 23 19:21:09 2026)"
 
-func DefaultRules() [10090]Rule {
+func DefaultRules() [10096]Rule {
 	return r
 }
 
-var r = [10090]Rule{
+var r = [10096]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -7979,6 +7979,7 @@ var r = [10090]Rule{
 	{1, "ae.org", 2, true},
 	{1, "com.se", 2, true},
 	{1, "cx.ua", 2, true},
+	{1, "discourse.diy", 2, true},
 	{1, "discourse.group", 2, true},
 	{1, "discourse.team", 2, true},
 	{1, "clerk.app", 2, true},
@@ -8067,6 +8068,7 @@ var r = [10090]Rule{
 	{1, "gov.ru", 2, true},
 	{1, "int.ru", 2, true},
 	{1, "mil.ru", 2, true},
+	{1, "corespeed.app", 2, true},
 	{1, "dyn.cosidns.de", 3, true},
 	{1, "dnsupdater.de", 2, true},
 	{1, "dynamisches-dns.de", 2, true},
@@ -9110,6 +9112,8 @@ var r = [10090]Rule{
 	{1, "krellian.net", 2, true},
 	{1, "oya.to", 2, true},
 	{1, "co.de", 2, true},
+	{1, "shiptoday.app", 2, true},
+	{1, "shiptoday.build", 2, true},
 	{1, "laravel.cloud", 2, true},
 	{1, "on-forge.com", 2, true},
 	{1, "on-vapor.com", 2, true},
@@ -9268,6 +9272,8 @@ var r = [10090]Rule{
 	{1, "same-app.com", 2, true},
 	{1, "same-preview.com", 2, true},
 	{1, "csx.cc", 2, true},
+	{1, "miren.app", 2, true},
+	{1, "miren.systems", 2, true},
 	{1, "mydbserver.com", 2, true},
 	{1, "webspaceconfig.de", 2, true},
 	{1, "mittwald.info", 2, true},
