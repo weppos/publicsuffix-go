@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version 2bb8b0 (Fri Jan 23 19:21:09 2026)"
+const ListVersion = "PSL version 6c4092 (Sun Jan 25 06:43:43 2026)"
 
-func DefaultRules() [10096]Rule {
+func DefaultRules() [10101]Rule {
 	return r
 }
 
-var r = [10096]Rule{
+var r = [10101]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -7076,6 +7076,7 @@ var r = [10096]Rule{
 	{1, "auth-fips.us-west-1.amazoncognito.com", 4, true},
 	{1, "auth.us-west-2.amazoncognito.com", 4, true},
 	{1, "auth-fips.us-west-2.amazoncognito.com", 4, true},
+	{1, "auth.cognito-idp.eusc-de-east-1.on.amazonwebservices.eu", 6, true},
 	{2, "compute.amazonaws.com.cn", 5, true},
 	{2, "compute.amazonaws.com", 4, true},
 	{2, "compute-1.amazonaws.com", 4, true},
@@ -7545,6 +7546,7 @@ var r = [10096]Rule{
 	{1, "s3-accesspoint.dualstack.us-gov-east-1.amazonaws.com", 5, true},
 	{1, "s3-accesspoint-fips.dualstack.us-gov-east-1.amazonaws.com", 5, true},
 	{1, "s3-fips.dualstack.us-gov-east-1.amazonaws.com", 5, true},
+	{1, "s3-website.dualstack.us-gov-east-1.amazonaws.com", 5, true},
 	{1, "s3.us-gov-east-1.amazonaws.com", 4, true},
 	{1, "s3-accesspoint.us-gov-east-1.amazonaws.com", 4, true},
 	{1, "s3-accesspoint-fips.us-gov-east-1.amazonaws.com", 4, true},
@@ -7555,6 +7557,7 @@ var r = [10096]Rule{
 	{1, "s3-accesspoint.dualstack.us-gov-west-1.amazonaws.com", 5, true},
 	{1, "s3-accesspoint-fips.dualstack.us-gov-west-1.amazonaws.com", 5, true},
 	{1, "s3-fips.dualstack.us-gov-west-1.amazonaws.com", 5, true},
+	{1, "s3-website.dualstack.us-gov-west-1.amazonaws.com", 5, true},
 	{1, "s3.us-gov-west-1.amazonaws.com", 4, true},
 	{1, "s3-accesspoint.us-gov-west-1.amazonaws.com", 4, true},
 	{1, "s3-accesspoint-fips.us-gov-west-1.amazonaws.com", 4, true},
@@ -7818,6 +7821,7 @@ var r = [10096]Rule{
 	{1, "transfer-webapp.ap-southeast-3.on.aws", 4, true},
 	{1, "transfer-webapp.ap-southeast-4.on.aws", 4, true},
 	{1, "transfer-webapp.ap-southeast-5.on.aws", 4, true},
+	{1, "transfer-webapp.ap-southeast-7.on.aws", 4, true},
 	{1, "transfer-webapp.ca-central-1.on.aws", 4, true},
 	{1, "transfer-webapp.ca-west-1.on.aws", 4, true},
 	{1, "transfer-webapp.eu-central-1.on.aws", 4, true},
@@ -7831,6 +7835,7 @@ var r = [10096]Rule{
 	{1, "transfer-webapp.il-central-1.on.aws", 4, true},
 	{1, "transfer-webapp.me-central-1.on.aws", 4, true},
 	{1, "transfer-webapp.me-south-1.on.aws", 4, true},
+	{1, "transfer-webapp.mx-central-1.on.aws", 4, true},
 	{1, "transfer-webapp.sa-east-1.on.aws", 4, true},
 	{1, "transfer-webapp.us-east-1.on.aws", 4, true},
 	{1, "transfer-webapp.us-east-2.on.aws", 4, true},
