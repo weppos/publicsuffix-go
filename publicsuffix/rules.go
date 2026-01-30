@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version 6c4092 (Sun Jan 25 06:43:43 2026)"
+const ListVersion = "PSL version b3b679 (Thu Jan 29 19:28:48 2026)"
 
-func DefaultRules() [10101]Rule {
+func DefaultRules() [10119]Rule {
 	return r
 }
 
-var r = [10101]Rule{
+var r = [10119]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -9105,6 +9105,10 @@ var r = [10101]Rule{
 	{1, "kapsi.fi", 2, true},
 	{1, "ezproxy.kuleuven.be", 3, true},
 	{1, "kuleuven.cloud", 2, true},
+	{1, "keenetic.io", 2, true},
+	{1, "keenetic.link", 2, true},
+	{1, "keenetic.name", 2, true},
+	{1, "keenetic.pro", 2, true},
 	{1, "ae.kg", 2, true},
 	{1, "keymachine.de", 2, true},
 	{1, "kiloapps.ai", 2, true},
@@ -9708,7 +9712,20 @@ var r = [10101]Rule{
 	{2, "dev-builder.code.com", 4, true},
 	{2, "stg-builder.code.com", 4, true},
 	{2, "001.test.code-builder-stg.platform.salesforce.com", 7, true},
+	{2, "aa.crm.dev", 4, true},
+	{2, "ab.crm.dev", 4, true},
+	{2, "ac.crm.dev", 4, true},
+	{2, "ad.crm.dev", 4, true},
+	{2, "ae.crm.dev", 4, true},
+	{2, "af.crm.dev", 4, true},
+	{2, "ci.crm.dev", 4, true},
 	{2, "d.crm.dev", 4, true},
+	{2, "pa.crm.dev", 4, true},
+	{2, "pb.crm.dev", 4, true},
+	{2, "pc.crm.dev", 4, true},
+	{2, "pd.crm.dev", 4, true},
+	{2, "pe.crm.dev", 4, true},
+	{2, "pf.crm.dev", 4, true},
 	{2, "w.crm.dev", 4, true},
 	{2, "wa.crm.dev", 4, true},
 	{2, "wb.crm.dev", 4, true},
@@ -9824,6 +9841,7 @@ var r = [10101]Rule{
 	{1, "streamlitapp.com", 2, true},
 	{1, "try-snowplow.com", 2, true},
 	{1, "mafelo.net", 2, true},
+	{1, "sol.site", 2, true},
 	{1, "playstation-cloud.com", 2, true},
 	{1, "srht.site", 2, true},
 	{1, "apps.lair.io", 3, true},
