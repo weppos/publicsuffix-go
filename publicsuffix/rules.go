@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version b3b679 (Thu Jan 29 19:28:48 2026)"
+const ListVersion = "PSL version 1b31eb (Tue Feb  3 00:26:50 2026)"
 
-func DefaultRules() [10119]Rule {
+func DefaultRules() [10122]Rule {
 	return r
 }
 
-var r = [10119]Rule{
+var r = [10122]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -6948,9 +6948,6 @@ var r = [10119]Rule{
 	{1, "poznan.pl", 2, true},
 	{1, "wroc.pl", 2, true},
 	{1, "zakopane.pl", 2, true},
-	{1, "12chars.dev", 2, true},
-	{1, "12chars.it", 2, true},
-	{1, "12chars.pro", 2, true},
 	{1, "cc.ua", 2, true},
 	{1, "inf.ua", 2, true},
 	{1, "ltd.ua", 2, true},
@@ -9269,8 +9266,14 @@ var r = [10119]Rule{
 	{1, "cloudapp.net", 2, true},
 	{1, "trafficmanager.net", 2, true},
 	{1, "servicebus.usgovcloudapi.net", 3, true},
+	{1, "blob.core.usgovcloudapi.net", 4, true},
+	{1, "file.core.usgovcloudapi.net", 4, true},
+	{1, "web.core.usgovcloudapi.net", 4, true},
 	{1, "usgovcloudapp.net", 2, true},
+	{1, "usgovtrafficmanager.net", 2, true},
 	{1, "blob.core.windows.net", 4, true},
+	{1, "file.core.windows.net", 4, true},
+	{1, "web.core.windows.net", 4, true},
 	{1, "servicebus.windows.net", 3, true},
 	{1, "azure-api.us", 2, true},
 	{1, "azurewebsites.us", 2, true},
