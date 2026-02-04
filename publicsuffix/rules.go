@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version 1b31eb (Tue Feb  3 00:26:50 2026)"
+const ListVersion = "PSL version 861415 (Tue Feb  3 15:35:25 2026)"
 
-func DefaultRules() [10122]Rule {
+func DefaultRules() [10121]Rule {
 	return r
 }
 
-var r = [10122]Rule{
+var r = [10121]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -9094,7 +9094,6 @@ var r = [10122]Rule{
 	{1, "us1-plenit.com", 2, true},
 	{1, "webadorsite.com", 2, true},
 	{1, "jouwweb.site", 2, true},
-	{2, "cns.joyent.com", 4, true},
 	{2, "triton.zone", 3, true},
 	{1, "js.org", 2, true},
 	{1, "kaas.gg", 2, true},
@@ -9265,10 +9264,10 @@ var r = [10122]Rule{
 	{1, "azurewebsites.net", 2, true},
 	{1, "cloudapp.net", 2, true},
 	{1, "trafficmanager.net", 2, true},
-	{1, "servicebus.usgovcloudapi.net", 3, true},
 	{1, "blob.core.usgovcloudapi.net", 4, true},
 	{1, "file.core.usgovcloudapi.net", 4, true},
 	{1, "web.core.usgovcloudapi.net", 4, true},
+	{1, "servicebus.usgovcloudapi.net", 3, true},
 	{1, "usgovcloudapp.net", 2, true},
 	{1, "usgovtrafficmanager.net", 2, true},
 	{1, "blob.core.windows.net", 4, true},
