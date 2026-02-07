@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version 861415 (Tue Feb  3 15:35:25 2026)"
+const ListVersion = "PSL version d6c92f (Fri Feb  6 07:36:33 2026)"
 
-func DefaultRules() [10121]Rule {
+func DefaultRules() [10133]Rule {
 	return r
 }
 
-var r = [10121]Rule{
+var r = [10133]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -8445,20 +8445,32 @@ var r = [10121]Rule{
 	{1, "stuff-4-sale.us", 2, true},
 	{1, "dyndns.ws", 2, true},
 	{1, "mypets.ws", 2, true},
+	{1, "1cooldns.com", 2, true},
+	{1, "bumbleshrimp.com", 2, true},
 	{1, "ddnsfree.com", 2, true},
 	{1, "ddnsgeek.com", 2, true},
+	{1, "ddnsguru.com", 2, true},
+	{1, "dynuddns.com", 2, true},
+	{1, "dynuhosting.com", 2, true},
 	{1, "giize.com", 2, true},
 	{1, "gleeze.com", 2, true},
 	{1, "kozow.com", 2, true},
 	{1, "loseyourip.com", 2, true},
 	{1, "ooguy.com", 2, true},
+	{1, "pivohosting.com", 2, true},
 	{1, "theworkpc.com", 2, true},
+	{1, "wiredbladehosting.com", 2, true},
 	{1, "casacam.net", 2, true},
 	{1, "dynu.net", 2, true},
+	{1, "dynuddns.net", 2, true},
+	{1, "mysynology.net", 2, true},
+	{1, "opik.net", 2, true},
+	{1, "spryt.net", 2, true},
 	{1, "accesscam.org", 2, true},
 	{1, "camdvr.org", 2, true},
 	{1, "freeddns.org", 2, true},
 	{1, "mywire.org", 2, true},
+	{1, "roxa.org", 2, true},
 	{1, "webredirect.org", 2, true},
 	{1, "myddns.rocks", 2, true},
 	{1, "dynv6.net", 2, true},
