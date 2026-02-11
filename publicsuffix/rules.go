@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version 3abb84 (Sat Feb  7 17:36:45 2026)"
+const ListVersion = "PSL version 7b922f (Tue Feb 10 13:35:17 2026)"
 
-func DefaultRules() [10132]Rule {
+func DefaultRules() [10134]Rule {
 	return r
 }
 
-var r = [10132]Rule{
+var r = [10134]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -5653,6 +5653,7 @@ var r = [10132]Rule{
 	{1, "hatinh.vn", 2, false},
 	{1, "haugiang.vn", 2, false},
 	{1, "hoabinh.vn", 2, false},
+	{1, "hue.vn", 2, false},
 	{1, "hungyen.vn", 2, false},
 	{1, "khanhhoa.vn", 2, false},
 	{1, "kiengiang.vn", 2, false},
@@ -8118,6 +8119,7 @@ var r = [10132]Rule{
 	{1, "deno.dev", 2, true},
 	{1, "deno-staging.dev", 2, true},
 	{1, "deno.net", 2, true},
+	{1, "sandbox.deno.net", 3, true},
 	{1, "dedyn.io", 2, true},
 	{1, "deta.app", 2, true},
 	{1, "deta.dev", 2, true},
