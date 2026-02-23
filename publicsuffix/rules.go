@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version dfc780 (Wed Feb 18 20:59:05 2026)"
+const ListVersion = "PSL version 35aa65 (Sun Feb 22 12:29:33 2026)"
 
-func DefaultRules() [10139]Rule {
+func DefaultRules() [10142]Rule {
 	return r
 }
 
-var r = [10139]Rule{
+var r = [10142]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -7903,6 +7903,7 @@ var r = [10139]Rule{
 	{1, "beagleboard.io", 2, true},
 	{1, "bearblog.dev", 2, true},
 	{2, "beget.app", 3, true},
+	{2, "begetcdn.cloud", 3, true},
 	{1, "pages.gay", 2, true},
 	{1, "bnr.la", 2, true},
 	{1, "bitbucket.io", 2, true},
@@ -10098,6 +10099,8 @@ var r = [10139]Rule{
 	{1, "localcert.net", 2, true},
 	{1, "windsurf.app", 2, true},
 	{1, "windsurf.build", 2, true},
+	{1, "drive-platform.com", 2, true},
+	{1, "drive-platform.io", 2, true},
 	{1, "panel.gg", 2, true},
 	{1, "daemon.panel.gg", 3, true},
 	{1, "base44.app", 2, true},
