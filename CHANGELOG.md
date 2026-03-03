@@ -1,6 +1,13 @@
 # Changelog
 
 
+## 0.50.3 - 2026-03-03
+
+### Changed
+
+- Definition updates.
+
+
 ## 0.50.2 - 2026-01-03
 
 ### Changed
