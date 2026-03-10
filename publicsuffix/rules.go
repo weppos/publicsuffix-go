@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version a76212 (Fri Mar  6 02:20:26 2026)"
+const ListVersion = "PSL version 3c5eb8 (Mon Mar  9 08:23:59 2026)"
 
-func DefaultRules() [10153]Rule {
+func DefaultRules() [10155]Rule {
 	return r
 }
 
-var r = [10153]Rule{
+var r = [10155]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -8580,7 +8580,9 @@ var r = [10153]Rule{
 	{1, "relay.evervault.app", 3, true},
 	{1, "relay.evervault.dev", 3, true},
 	{1, "expo.app", 2, true},
+	{1, "on.expo.app", 3, true},
 	{1, "staging.expo.app", 3, true},
+	{1, "on.staging.expo.app", 4, true},
 	{1, "onfabrica.com", 2, true},
 	{1, "ru.net", 2, true},
 	{1, "adygeya.ru", 2, true},
@@ -9123,7 +9125,6 @@ var r = [10153]Rule{
 	{1, "us1-plenit.com", 2, true},
 	{1, "webadorsite.com", 2, true},
 	{1, "jouwweb.site", 2, true},
-	{2, "triton.zone", 3, true},
 	{1, "js.org", 2, true},
 	{1, "kaas.gg", 2, true},
 	{1, "khplay.nl", 2, true},
@@ -10039,6 +10040,7 @@ var r = [10153]Rule{
 	{2, "transurl.eu", 3, true},
 	{1, "site.transip.me", 3, true},
 	{2, "transurl.nl", 3, true},
+	{2, "triton.zone", 3, true},
 	{1, "tunnelmole.net", 2, true},
 	{1, "tuxfamily.org", 2, true},
 	{1, "typedream.app", 2, true},
