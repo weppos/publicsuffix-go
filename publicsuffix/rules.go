@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version 3c5eb8 (Mon Mar  9 08:23:59 2026)"
+const ListVersion = "PSL version 951f84 (Tue Mar 17 08:50:32 2026)"
 
-func DefaultRules() [10155]Rule {
+func DefaultRules() [10156]Rule {
 	return r
 }
 
-var r = [10155]Rule{
+var r = [10156]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -8579,6 +8579,7 @@ var r = [10155]Rule{
 	{1, "us-4.evennode.com", 3, true},
 	{1, "relay.evervault.app", 3, true},
 	{1, "relay.evervault.dev", 3, true},
+	{1, "exe.xyz", 2, true},
 	{1, "expo.app", 2, true},
 	{1, "on.expo.app", 3, true},
 	{1, "staging.expo.app", 3, true},
