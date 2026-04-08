@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version d333b7 (Thu Mar 26 14:47:30 2026)"
+const ListVersion = "PSL version 6eaf1b (Tue Apr  7 13:26:15 2026)"
 
-func DefaultRules() [10156]Rule {
+func DefaultRules() [10161]Rule {
 	return r
 }
 
-var r = [10156]Rule{
+var r = [10161]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -7852,6 +7852,7 @@ var r = [10156]Rule{
 	{1, "transfer-webapp.cn-northwest-1.on.amazonwebservices.com.cn", 6, true},
 	{1, "eero.online", 2, true},
 	{1, "eero-stage.online", 2, true},
+	{1, "opentunnel.xyz", 2, true},
 	{1, "antagonist.cloud", 2, true},
 	{1, "apigee.io", 2, true},
 	{1, "panel.dev", 2, true},
@@ -8687,6 +8688,7 @@ var r = [10156]Rule{
 	{1, "app.os.stg.fedoraproject.org", 5, true},
 	{1, "mydobiss.com", 2, true},
 	{1, "fh-muenster.io", 2, true},
+	{1, "payload.dev", 2, true},
 	{1, "figma.site", 2, true},
 	{1, "figma-gov.site", 2, true},
 	{1, "preview.site", 2, true},
@@ -8940,6 +8942,7 @@ var r = [10156]Rule{
 	{2, "kin.one", 3, true},
 	{2, "id.pub", 3, true},
 	{2, "kin.pub", 3, true},
+	{1, "seprox.hooc.me", 3, true},
 	{1, "hoplix.shop", 2, true},
 	{1, "orx.biz", 2, true},
 	{1, "biz.ng", 2, true},
@@ -9556,6 +9559,7 @@ var r = [10156]Rule{
 	{1, "gh.srv.us", 3, true},
 	{1, "gl.srv.us", 3, true},
 	{1, "mypep.link", 2, true},
+	{1, "pplx.app", 2, true},
 	{1, "perspecta.cloud", 2, true},
 	{1, "forgeblocks.com", 2, true},
 	{1, "id.forgerock.io", 3, true},
@@ -9916,6 +9920,7 @@ var r = [10156]Rule{
 	{1, "stackit.rocks", 2, true},
 	{1, "stackit.run", 2, true},
 	{1, "stackit.zone", 2, true},
+	{1, "sryze.cc", 2, true},
 	{1, "indevs.in", 2, true},
 	{1, "musician.io", 2, true},
 	{1, "novecore.site", 2, true},
