@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version 990747 (Wed Apr  8 15:00:46 2026)"
+const ListVersion = "PSL version 8f9e04 (Fri Apr 10 20:27:34 2026)"
 
-func DefaultRules() [10160]Rule {
+func DefaultRules() [10197]Rule {
 	return r
 }
 
-var r = [10160]Rule{
+var r = [10197]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -8132,6 +8132,7 @@ var r = [10160]Rule{
 	{1, "deno-staging.dev", 2, true},
 	{1, "deno.net", 2, true},
 	{1, "sandbox.deno.net", 3, true},
+	{1, "deployagent.com", 2, true},
 	{1, "dedyn.io", 2, true},
 	{1, "deta.app", 2, true},
 	{1, "deta.dev", 2, true},
@@ -9130,6 +9131,15 @@ var r = [10160]Rule{
 	{1, "webadorsite.com", 2, true},
 	{1, "jouwweb.site", 2, true},
 	{1, "js.org", 2, true},
+	{1, "elastic.k2.cloud", 3, true},
+	{1, "lb.ru-msk.k2.cloud", 4, true},
+	{1, "s3.ru-msk.k2.cloud", 4, true},
+	{1, "website.ru-msk.k2.cloud", 4, true},
+	{1, "lb.ru-spb.k2.cloud", 4, true},
+	{1, "s3.ru-spb.k2.cloud", 4, true},
+	{1, "website.ru-spb.k2.cloud", 4, true},
+	{1, "s3.k2.cloud", 3, true},
+	{1, "website.k2.cloud", 3, true},
 	{1, "kaas.gg", 2, true},
 	{1, "khplay.nl", 2, true},
 	{1, "kapsi.fi", 2, true},
@@ -9468,6 +9478,31 @@ var r = [10160]Rule{
 	{2, "code.run", 3, true},
 	{2, "database.run", 3, true},
 	{2, "migration.run", 3, true},
+	{1, "aberdeen.wa.us", 3, true},
+	{1, "bainbridge-isl.wa.us", 3, true},
+	{1, "bellevue.wa.us", 3, true},
+	{1, "bremerton.wa.us", 3, true},
+	{1, "centralia.wa.us", 3, true},
+	{1, "chehalis.wa.us", 3, true},
+	{1, "forks.wa.us", 3, true},
+	{1, "gig-harbor.wa.us", 3, true},
+	{1, "hoquiam.wa.us", 3, true},
+	{1, "keyport.wa.us", 3, true},
+	{1, "kingston.wa.us", 3, true},
+	{1, "olympia.wa.us", 3, true},
+	{1, "port-angeles.wa.us", 3, true},
+	{1, "port-ludlow.wa.us", 3, true},
+	{1, "port-orchard.wa.us", 3, true},
+	{1, "port-townsend.wa.us", 3, true},
+	{1, "poulsbo.wa.us", 3, true},
+	{1, "redmond.wa.us", 3, true},
+	{1, "renton.wa.us", 3, true},
+	{1, "sea.wa.us", 3, true},
+	{1, "seattle.wa.us", 3, true},
+	{1, "sequim.wa.us", 3, true},
+	{1, "shelton.wa.us", 3, true},
+	{1, "silverdale.wa.us", 3, true},
+	{1, "yarrow-point.wa.us", 3, true},
 	{1, "noticeable.news", 2, true},
 	{1, "notion.site", 2, true},
 	{1, "dnsking.ch", 2, true},
@@ -10084,6 +10119,8 @@ var r = [10160]Rule{
 	{1, "v-info.info", 2, true},
 	{1, "vistablog.ir", 2, true},
 	{1, "deus-canvas.com", 2, true},
+	{1, "vivenushop.com", 2, true},
+	{1, "vivenushop.dev", 2, true},
 	{1, "voorloper.cloud", 2, true},
 	{2, "vultrobjects.com", 3, true},
 	{1, "wafflecell.com", 2, true},
