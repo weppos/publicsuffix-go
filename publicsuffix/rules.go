@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version d793eb (Mon Apr 20 06:37:57 2026)"
+const ListVersion = "PSL version 2cb079 (Fri Apr 24 06:48:03 2026)"
 
-func DefaultRules() [10196]Rule {
+func DefaultRules() [10203]Rule {
 	return r
 }
 
-var r = [10196]Rule{
+var r = [10203]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -7891,6 +7891,9 @@ var r = [10196]Rule{
 	{1, "potager.org", 2, true},
 	{1, "sweetpepper.org", 2, true},
 	{1, "myasustor.com", 2, true},
+	{2, "atlassian-3p.com", 3, true},
+	{2, "atlassian-3p-us-gov-mod.com", 3, true},
+	{2, "atlassian-isolated-3p.com", 3, true},
 	{1, "cdn.prod.atlassian-dev.net", 4, true},
 	{1, "myfritz.link", 2, true},
 	{1, "myfritz.net", 2, true},
@@ -8134,6 +8137,8 @@ var r = [10196]Rule{
 	{1, "deno.net", 2, true},
 	{1, "sandbox.deno.net", 3, true},
 	{1, "deployagent.com", 2, true},
+	{1, "piebox.site", 2, true},
+	{1, "deployagent.space", 2, true},
 	{1, "dedyn.io", 2, true},
 	{1, "deta.app", 2, true},
 	{1, "deta.dev", 2, true},
@@ -8588,6 +8593,7 @@ var r = [10196]Rule{
 	{1, "staging.expo.app", 3, true},
 	{1, "on.staging.expo.app", 4, true},
 	{1, "onfabrica.com", 2, true},
+	{1, "fspages.org", 2, true},
 	{1, "ru.net", 2, true},
 	{1, "adygeya.ru", 2, true},
 	{1, "bashkiria.ru", 2, true},
@@ -9279,6 +9285,7 @@ var r = [10196]Rule{
 	{1, "messerli.app", 2, true},
 	{1, "atmeta.com", 2, true},
 	{1, "apps.fbsbx.com", 3, true},
+	{2, "metaaiusercontent.com", 3, true},
 	{2, "cloud.metacentrum.cz", 4, true},
 	{1, "custom.metacentrum.cz", 3, true},
 	{1, "flt.cloud.muni.cz", 4, true},
