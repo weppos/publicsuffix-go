@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version d1e2f6 (Wed May  6 07:18:26 2026)"
+const ListVersion = "PSL version ee780b (Thu May  7 00:57:06 2026)"
 
-func DefaultRules() [10205]Rule {
+func DefaultRules() [10207]Rule {
 	return r
 }
 
-var r = [10205]Rule{
+var r = [10207]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -10208,6 +10208,8 @@ var r = [10205]Rule{
 	{1, "zap.cloud", 2, true},
 	{1, "zeabur.app", 2, true},
 	{2, "zerops.app", 3, true},
+	{1, "prg1-zerops.zone", 2, true},
+	{2, "zerops.zone", 3, true},
 	{1, "bss.design", 2, true},
 	{1, "basicserver.io", 2, true},
 	{1, "virtualserver.io", 2, true},
