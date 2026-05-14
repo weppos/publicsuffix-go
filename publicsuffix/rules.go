@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version ee780b (Thu May  7 00:57:06 2026)"
+const ListVersion = "PSL version e452c7 (Wed May 13 19:10:53 2026)"
 
-func DefaultRules() [10207]Rule {
+func DefaultRules() [10208]Rule {
 	return r
 }
 
-var r = [10207]Rule{
+var r = [10208]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -5501,8 +5501,6 @@ var r = [10207]Rule{
 	{1, "lib.mt.us", 3, false},
 	{1, "cc.nc.us", 3, false},
 	{1, "lib.nc.us", 3, false},
-	{1, "cc.nd.us", 3, false},
-	{1, "lib.nd.us", 3, false},
 	{1, "cc.ne.us", 3, false},
 	{1, "lib.ne.us", 3, false},
 	{1, "cc.nh.us", 3, false},
@@ -8962,6 +8960,7 @@ var r = [10207]Rule{
 	{1, "ltd.ng", 2, true},
 	{1, "ngo.ng", 2, true},
 	{1, "plc.ng", 2, true},
+	{1, "hstgr.cloud", 2, true},
 	{1, "hostyhosting.io", 2, true},
 	{1, "hf.space", 2, true},
 	{1, "static.hf.space", 3, true},
@@ -10059,6 +10058,8 @@ var r = [10207]Rule{
 	{1, "cust.testing.thingdust.io", 4, true},
 	{1, "reservd.testing.thingdust.io", 4, true},
 	{1, "tickets.io", 2, true},
+	{1, "t3.storage.dev", 3, true},
+	{1, "t3.storageapi.dev", 3, true},
 	{1, "arvo.network", 2, true},
 	{1, "azimuth.network", 2, true},
 	{1, "tlon.network", 2, true},
