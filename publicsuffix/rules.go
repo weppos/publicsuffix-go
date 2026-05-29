@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version e452c7 (Wed May 13 19:10:53 2026)"
+const ListVersion = "PSL version e59603 (Thu May 28 06:25:44 2026)"
 
-func DefaultRules() [10208]Rule {
+func DefaultRules() [10210]Rule {
 	return r
 }
 
-var r = [10208]Rule{
+var r = [10210]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -1093,6 +1093,7 @@ var r = [10208]Rule{
 	{1, "video.hu", 2, false},
 	{1, "id", 1, false},
 	{1, "ac.id", 2, false},
+	{1, "ai.id", 2, false},
 	{1, "biz.id", 2, false},
 	{1, "co.id", 2, false},
 	{1, "desa.id", 2, false},
@@ -7951,10 +7952,12 @@ var r = [10208]Rule{
 	{1, "cafjs.com", 2, true},
 	{1, "canva-apps.cn", 2, true},
 	{1, "my.canvasite.cn", 3, true},
+	{1, "khsj.cn", 2, true},
 	{1, "canva-apps.com", 2, true},
 	{1, "canva-hosted-embed.com", 2, true},
 	{1, "canvacode.com", 2, true},
 	{1, "rice-labs.com", 2, true},
+	{1, "canva.link", 2, true},
 	{1, "canva.run", 2, true},
 	{1, "my.canva.site", 3, true},
 	{1, "drr.ac", 2, true},
@@ -10138,10 +10141,9 @@ var r = [10208]Rule{
 	{1, "webflow.io", 2, true},
 	{1, "webflowtest.io", 2, true},
 	{2, "webhare.dev", 3, true},
-	{1, "bookonline.app", 2, true},
 	{1, "hotelwithflight.com", 2, true},
-	{1, "reserve-online.com", 2, true},
 	{1, "reserve-online.net", 2, true},
+	{1, "book.online", 2, true},
 	{1, "cprapid.com", 2, true},
 	{1, "pleskns.com", 2, true},
 	{1, "wp2.host", 2, true},
