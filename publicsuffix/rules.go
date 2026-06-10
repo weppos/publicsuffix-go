@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version e59603 (Thu May 28 06:25:44 2026)"
+const ListVersion = "PSL version 8239d0 (Wed Jun 10 05:34:13 2026)"
 
-func DefaultRules() [10210]Rule {
+func DefaultRules() [10212]Rule {
 	return r
 }
 
-var r = [10210]Rule{
+var r = [10212]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -8885,6 +8885,7 @@ var r = [10210]Rule{
 	{1, "whitesnow.jp", 2, true},
 	{1, "zombie.jp", 2, true},
 	{1, "heteml.net", 2, true},
+	{1, "vibehost.space", 2, true},
 	{1, "graphic.design", 2, true},
 	{1, "goip.de", 2, true},
 	{2, "hosted.app", 3, true},
@@ -9564,6 +9565,7 @@ var r = [10210]Rule{
 	{1, "is-local.org", 2, true},
 	{1, "opensocial.site", 2, true},
 	{2, "oaiusercontent.com", 3, true},
+	{1, "chatgpt.site", 2, true},
 	{1, "opencraft.hosting", 2, true},
 	{1, "16-b.it", 2, true},
 	{1, "32-b.it", 2, true},
