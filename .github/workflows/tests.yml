@@ -17,12 +17,12 @@ jobs:
 
     steps:
       - name: Set up Go
-        uses: actions/setup-go@v6
+        uses: actions/setup-go@v6.0.0
         with:
           go-version: ${{ matrix.go-version }}
 
       - name: Check out code
-        uses: actions/checkout@v7
+        uses: actions/checkout@v7.0.0
 
       - name: Get dependencies
         run: go get -v ./...
