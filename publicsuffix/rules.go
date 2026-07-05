@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version e59603 (Thu May 28 06:25:44 2026)"
+const ListVersion = "PSL version d67b6c (Wed Jul  1 10:57:25 2026)"
 
-func DefaultRules() [10210]Rule {
+func DefaultRules() [10228]Rule {
 	return r
 }
 
-var r = [10210]Rule{
+var r = [10228]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -8177,7 +8177,20 @@ var r = [10210]Rule{
 	{1, "cc.cd", 2, true},
 	{1, "us.ci", 2, true},
 	{1, "de5.net", 2, true},
+	{1, "dnshome.at", 2, true},
+	{1, "resolve.bar", 2, true},
+	{1, "ddns.berlin", 2, true},
+	{1, "dnshome.cloud", 2, true},
+	{1, "ddnssec.de", 2, true},
 	{1, "dnshome.de", 2, true},
+	{1, "dyndnssec.de", 2, true},
+	{1, "heimdns.de", 2, true},
+	{1, "srvdns.de", 2, true},
+	{1, "dnshome.eu", 2, true},
+	{1, "dnshome.it", 2, true},
+	{1, "dyn.now", 2, true},
+	{1, "heimdns.online", 2, true},
+	{1, "ddns.wtf", 2, true},
 	{1, "online.th", 2, true},
 	{1, "shop.th", 2, true},
 	{1, "co.scot", 2, true},
@@ -8885,6 +8898,7 @@ var r = [10210]Rule{
 	{1, "whitesnow.jp", 2, true},
 	{1, "zombie.jp", 2, true},
 	{1, "heteml.net", 2, true},
+	{1, "vibehost.space", 2, true},
 	{1, "graphic.design", 2, true},
 	{1, "goip.de", 2, true},
 	{2, "hosted.app", 3, true},
@@ -9272,7 +9286,6 @@ var r = [10210]Rule{
 	{1, "mwcloudnonprod.com", 2, true},
 	{1, "polyspace.com", 2, true},
 	{1, "mayfirst.info", 2, true},
-	{1, "mayfirst.org", 2, true},
 	{1, "mcdir.me", 2, true},
 	{1, "mcdir.ru", 2, true},
 	{1, "vps.mcdir.ru", 3, true},
@@ -9342,6 +9355,7 @@ var r = [10210]Rule{
 	{1, "mittwaldserver.info", 2, true},
 	{1, "typo3server.info", 2, true},
 	{1, "project.space", 2, true},
+	{1, "mkm.fan", 2, true},
 	{1, "mocha.app", 2, true},
 	{1, "mochausercontent.com", 2, true},
 	{1, "mocha-sandbox.dev", 2, true},
@@ -9564,6 +9578,7 @@ var r = [10210]Rule{
 	{1, "is-local.org", 2, true},
 	{1, "opensocial.site", 2, true},
 	{2, "oaiusercontent.com", 3, true},
+	{1, "chatgpt.site", 2, true},
 	{1, "opencraft.hosting", 2, true},
 	{1, "16-b.it", 2, true},
 	{1, "32-b.it", 2, true},
@@ -9638,6 +9653,9 @@ var r = [10210]Rule{
 	{1, "nyc.mn", 2, true},
 	{2, "cn.st", 3, true},
 	{1, "pubtls.org", 2, true},
+	{1, "puter.app", 2, true},
+	{1, "puter.site", 2, true},
+	{1, "puter.work", 2, true},
 	{1, "pythonanywhere.com", 2, true},
 	{1, "eu.pythonanywhere.com", 3, true},
 	{1, "qa2.com", 2, true},
