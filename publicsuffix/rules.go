@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version 9b5c81 (Wed Jul 15 18:13:50 2026)"
+const ListVersion = "PSL version ca355e (Mon Jul 20 19:57:09 2026)"
 
-func DefaultRules() [10248]Rule {
+func DefaultRules() [10241]Rule {
 	return r
 }
 
-var r = [10248]Rule{
+var r = [10241]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -1276,7 +1276,6 @@ var r = [10248]Rule{
 	{1, "xn--trentin-sdtirol-7vb.it", 2, false},
 	{1, "trentin-sued-tirol.it", 2, false},
 	{1, "trentin-suedtirol.it", 2, false},
-	{1, "trentino.it", 2, false},
 	{1, "trentino-a-adige.it", 2, false},
 	{1, "trentino-aadige.it", 2, false},
 	{1, "trentino-alto-adige.it", 2, false},
@@ -1297,7 +1296,6 @@ var r = [10248]Rule{
 	{1, "trentinostirol.it", 2, false},
 	{1, "trentinosud-tirol.it", 2, false},
 	{1, "xn--trentinosd-tirol-rzb.it", 2, false},
-	{1, "trentinosudtirol.it", 2, false},
 	{1, "xn--trentinosdtirol-7vb.it", 2, false},
 	{1, "trentinosued-tirol.it", 2, false},
 	{1, "trentinosuedtirol.it", 2, false},
@@ -1313,7 +1311,6 @@ var r = [10248]Rule{
 	{1, "val-d-aosta.it", 2, false},
 	{1, "val-daosta.it", 2, false},
 	{1, "vald-aosta.it", 2, false},
-	{1, "valdaosta.it", 2, false},
 	{1, "valle-aosta.it", 2, false},
 	{1, "valle-d-aosta.it", 2, false},
 	{1, "valle-daosta.it", 2, false},
@@ -1349,7 +1346,6 @@ var r = [10248]Rule{
 	{1, "aoste.it", 2, false},
 	{1, "ap.it", 2, false},
 	{1, "aq.it", 2, false},
-	{1, "aquila.it", 2, false},
 	{1, "ar.it", 2, false},
 	{1, "arezzo.it", 2, false},
 	{1, "ascoli-piceno.it", 2, false},
@@ -1573,6 +1569,9 @@ var r = [10248]Rule{
 	{1, "sp.it", 2, false},
 	{1, "sr.it", 2, false},
 	{1, "ss.it", 2, false},
+	{1, "su.it", 2, false},
+	{1, "sud-sardegna.it", 2, false},
+	{1, "sudsardegna.it", 2, false},
 	{1, "xn--sdtirol-n2a.it", 2, false},
 	{1, "suedtirol.it", 2, false},
 	{1, "sv.it", 2, false},
@@ -1593,6 +1592,7 @@ var r = [10248]Rule{
 	{1, "traniandriabarletta.it", 2, false},
 	{1, "tranibarlettaandria.it", 2, false},
 	{1, "trapani.it", 2, false},
+	{1, "trentino.it", 2, false},
 	{1, "trento.it", 2, false},
 	{1, "treviso.it", 2, false},
 	{1, "trieste.it", 2, false},
@@ -1611,6 +1611,7 @@ var r = [10248]Rule{
 	{1, "venezia.it", 2, false},
 	{1, "venice.it", 2, false},
 	{1, "verbania.it", 2, false},
+	{1, "verbano-cusio-ossola.it", 2, false},
 	{1, "vercelli.it", 2, false},
 	{1, "verona.it", 2, false},
 	{1, "vi.it", 2, false},
@@ -7960,9 +7961,6 @@ var r = [10248]Rule{
 	{1, "cdn.bubble.io", 3, true},
 	{1, "bubbleapps.io", 2, true},
 	{2, "bwcloud-os-instance.de", 3, true},
-	{1, "uk0.bigv.io", 3, true},
-	{1, "dh.bytemark.co.uk", 4, true},
-	{1, "vm.bytemark.co.uk", 4, true},
 	{1, "cafjs.com", 2, true},
 	{1, "canva-apps.cn", 2, true},
 	{1, "my.canvasite.cn", 3, true},
@@ -8116,7 +8114,6 @@ var r = [10248]Rule{
 	{1, "static-access.net", 2, true},
 	{1, "craft.me", 2, true},
 	{1, "realm.cz", 2, true},
-	{2, "cryptonomic.net", 3, true},
 	{1, "cfolks.pl", 2, true},
 	{1, "cyon.link", 2, true},
 	{1, "cyon.site", 2, true},
@@ -9663,7 +9660,6 @@ var r = [10248]Rule{
 	{1, "mmv.kr", 2, true},
 	{1, "vki.kr", 2, true},
 	{1, "dev.project-study.com", 3, true},
-	{1, "protonet.io", 2, true},
 	{1, "platter-app.dev", 2, true},
 	{1, "e.id", 2, true},
 	{1, "chirurgiens-dentistes-en-france.fr", 2, true},
@@ -9752,7 +9748,6 @@ var r = [10248]Rule{
 	{1, "repl.run", 2, true},
 	{1, "resindevice.io", 2, true},
 	{1, "devices.resinstaging.io", 3, true},
-	{1, "hzc.io", 2, true},
 	{1, "adimo.co.uk", 3, true},
 	{1, "itcouldbewor.se", 2, true},
 	{1, "aus.basketball", 2, true},
@@ -10005,7 +10000,6 @@ var r = [10248]Rule{
 	{1, "indevs.in", 2, true},
 	{1, "musician.io", 2, true},
 	{1, "novecore.site", 2, true},
-	{1, "api.stdlib.com", 3, true},
 	{1, "statichost.page", 2, true},
 	{1, "feedback.ac", 2, true},
 	{1, "forms.ac", 2, true},
@@ -10020,7 +10014,6 @@ var r = [10248]Rule{
 	{1, "ipfs.storacha.link", 3, true},
 	{1, "ipfs.w3s.link", 3, true},
 	{1, "storebase.store", 2, true},
-	{1, "storj.farm", 2, true},
 	{1, "strapiapp.com", 2, true},
 	{1, "media.strapiapp.com", 3, true},
 	{1, "vps-host.net", 2, true},
