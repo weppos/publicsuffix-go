@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version 54cf55 (Tue Jul 21 22:22:53 2026)"
+const ListVersion = "PSL version 438c5e (Thu Jul 23 05:57:23 2026)"
 
-func DefaultRules() [10240]Rule {
+func DefaultRules() [10238]Rule {
 	return r
 }
 
-var r = [10240]Rule{
+var r = [10238]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -8154,8 +8154,6 @@ var r = [10240]Rule{
 	{1, "piebox.site", 2, true},
 	{1, "deployagent.space", 2, true},
 	{1, "dedyn.io", 2, true},
-	{1, "deta.app", 2, true},
-	{1, "deta.dev", 2, true},
 	{1, "deuxfleurs.eu", 2, true},
 	{1, "deuxfleurs.page", 2, true},
 	{2, "at.ply.gg", 4, true},
