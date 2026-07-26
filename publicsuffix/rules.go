@@ -3,7 +3,7 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version 93b4eb (Thu Jul 23 18:24:10 2026)"
+const ListVersion = "PSL version e1b801 (Sat Jul 25 14:19:54 2026)"
 
 func DefaultRules() [10239]Rule {
 	return r
@@ -6824,6 +6824,7 @@ var r = [10239]Rule{
 	{1, "watches", 1, false},
 	{1, "weather", 1, false},
 	{1, "weatherchannel", 1, false},
+	{1, "web", 1, false},
 	{1, "webcam", 1, false},
 	{1, "weber", 1, false},
 	{1, "website", 1, false},
@@ -6972,7 +6973,6 @@ var r = [10239]Rule{
 	{1, "611.to", 2, true},
 	{1, "a2hosted.com", 2, true},
 	{1, "cpserver.com", 2, true},
-	{2, "on-acorn.io", 3, true},
 	{1, "activetrail.biz", 2, true},
 	{1, "adaptable.app", 2, true},
 	{1, "myaddr.dev", 2, true},
