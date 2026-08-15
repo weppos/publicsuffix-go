@@ -3,7 +3,7 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version e1b801 (Sat Jul 25 14:19:54 2026)"
+const ListVersion = "PSL version a77cfe (Fri Aug 14 20:15:38 2026)"
 
 func DefaultRules() [10239]Rule {
 	return r
@@ -10187,9 +10187,9 @@ var r = [10239]Rule{
 	{1, "wmcloud.org", 2, true},
 	{1, "beta.wmcloud.org", 3, true},
 	{1, "wmflabs.org", 2, true},
-	{1, "vps.hrsn.au", 3, true},
 	{1, "hrsn.dev", 2, true},
 	{1, "is-a.dev", 2, true},
+	{1, "vps.hrsn.net", 3, true},
 	{1, "localcert.net", 2, true},
 	{1, "windsurf.app", 2, true},
 	{1, "windsurf.build", 2, true},
