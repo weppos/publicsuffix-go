@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version a77cfe (Fri Aug 14 20:15:38 2026)"
+const ListVersion = "PSL version fe5aa0 (Mon Aug 17 18:44:38 2026)"
 
-func DefaultRules() [10239]Rule {
+func DefaultRules() [10247]Rule {
 	return r
 }
 
-var r = [10239]Rule{
+var r = [10247]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -6974,7 +6974,6 @@ var r = [10239]Rule{
 	{1, "a2hosted.com", 2, true},
 	{1, "cpserver.com", 2, true},
 	{1, "activetrail.biz", 2, true},
-	{1, "adaptable.app", 2, true},
 	{1, "myaddr.dev", 2, true},
 	{1, "myaddr.io", 2, true},
 	{1, "dyn.addr.tools", 3, true},
@@ -6995,6 +6994,7 @@ var r = [10239]Rule{
 	{1, "beep.pl", 2, true},
 	{1, "aiven.app", 2, true},
 	{1, "aivencloud.com", 2, true},
+	{2, "aivencloud.com", 3, true},
 	{1, "akadns.net", 2, true},
 	{1, "akamai.net", 2, true},
 	{1, "akamai-staging.net", 2, true},
@@ -7869,6 +7869,7 @@ var r = [10239]Rule{
 	{1, "opentunnel.xyz", 2, true},
 	{1, "antagonist.cloud", 2, true},
 	{1, "claude.app", 2, true},
+	{2, "cursorusercontent.com", 3, true},
 	{1, "apigee.io", 2, true},
 	{1, "panel.dev", 2, true},
 	{1, "siiites.com", 2, true},
@@ -8081,6 +8082,8 @@ var r = [10239]Rule{
 	{1, "dev.cv", 2, true},
 	{1, "store.cv", 2, true},
 	{1, "codeberg.page", 2, true},
+	{1, "codepen.app", 2, true},
+	{1, "codepen.dev", 2, true},
 	{1, "csb.app", 2, true},
 	{1, "preview.csb.app", 3, true},
 	{1, "co.nl", 2, true},
@@ -8960,6 +8963,7 @@ var r = [10239]Rule{
 	{1, "onhercules.app", 2, true},
 	{1, "hercules-app.com", 2, true},
 	{1, "hercules-dev.com", 2, true},
+	{1, "here.now", 2, true},
 	{1, "herokuapp.com", 2, true},
 	{1, "heyflow.page", 2, true},
 	{1, "heyflow.site", 2, true},
@@ -9055,6 +9059,7 @@ var r = [10239]Rule{
 	{1, "botdash.net", 2, true},
 	{1, "botda.sh", 2, true},
 	{1, "botdash.xyz", 2, true},
+	{1, "online-server.cloud", 2, true},
 	{1, "apps-1and1.com", 2, true},
 	{1, "live-website.com", 2, true},
 	{1, "webspace-host.com", 2, true},
@@ -9894,6 +9899,9 @@ var r = [10239]Rule{
 	{1, "scalebook.scw.cloud", 3, true},
 	{1, "smartlabeling.scw.cloud", 3, true},
 	{1, "dedibox.fr", 2, true},
+	{1, "scw.site", 2, true},
+	{1, "ams.scw.site", 3, true},
+	{1, "waw.scw.site", 3, true},
 	{1, "schokokeks.net", 2, true},
 	{1, "gov.scot", 2, true},
 	{1, "service.gov.scot", 3, true},
