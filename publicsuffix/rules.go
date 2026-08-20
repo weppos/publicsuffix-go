@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version fe5aa0 (Mon Aug 17 18:44:38 2026)"
+const ListVersion = "PSL version e8c9a2 (Wed Aug 19 19:18:36 2026)"
 
-func DefaultRules() [10247]Rule {
+func DefaultRules() [10248]Rule {
 	return r
 }
 
-var r = [10247]Rule{
+var r = [10248]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -6993,7 +6993,6 @@ var r = [10247]Rule{
 	{2, "auiusercontent.com", 3, true},
 	{1, "beep.pl", 2, true},
 	{1, "aiven.app", 2, true},
-	{1, "aivencloud.com", 2, true},
 	{2, "aivencloud.com", 3, true},
 	{1, "akadns.net", 2, true},
 	{1, "akamai.net", 2, true},
@@ -7869,6 +7868,8 @@ var r = [10247]Rule{
 	{1, "opentunnel.xyz", 2, true},
 	{1, "antagonist.cloud", 2, true},
 	{1, "claude.app", 2, true},
+	{1, "claudeusercontent.com", 2, true},
+	{1, "frame.claudeusercontent.com", 3, true},
 	{2, "cursorusercontent.com", 3, true},
 	{1, "apigee.io", 2, true},
 	{1, "panel.dev", 2, true},
