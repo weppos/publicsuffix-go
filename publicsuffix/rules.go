@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version 3955e3 (Tue Sep  8 12:18:25 2026)"
+const ListVersion = "PSL version 329834 (Thu Sep 17 19:09:43 2026)"
 
-func DefaultRules() [10325]Rule {
+func DefaultRules() [10324]Rule {
 	return r
 }
 
-var r = [10325]Rule{
+var r = [10324]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -8971,6 +8971,7 @@ var r = [10325]Rule{
 	{1, "hercules-dev.com", 2, true},
 	{1, "here.now", 2, true},
 	{1, "herokuapp.com", 2, true},
+	{2, "compute.herokuapp.com", 4, true},
 	{1, "heyflow.page", 2, true},
 	{1, "heyflow.site", 2, true},
 	{1, "ravendb.cloud", 2, true},
@@ -9757,8 +9758,6 @@ var r = [10325]Rule{
 	{1, "qcx.io", 2, true},
 	{2, "sys.qcx.io", 4, true},
 	{1, "myqnapcloud.cn", 2, true},
-	{1, "alpha-myqnapcloud.com", 2, true},
-	{1, "dev-myqnapcloud.com", 2, true},
 	{1, "mycloudnas.com", 2, true},
 	{1, "mynascloud.com", 2, true},
 	{1, "myqnapcloud.com", 2, true},
