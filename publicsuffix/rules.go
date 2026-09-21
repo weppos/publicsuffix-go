@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version 329834 (Thu Sep 17 19:09:43 2026)"
+const ListVersion = "PSL version 645b36 (Sun Sep 20 14:15:13 2026)"
 
-func DefaultRules() [10324]Rule {
+func DefaultRules() [10326]Rule {
 	return r
 }
 
-var r = [10324]Rule{
+var r = [10326]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -8732,6 +8732,7 @@ var r = [10324]Rule{
 	{1, "figma-gov.site", 2, true},
 	{1, "preview.site", 2, true},
 	{1, "filegear.me", 2, true},
+	{1, "hosted-by-files.com", 2, true},
 	{1, "firebaseapp.com", 2, true},
 	{1, "fldrv.com", 2, true},
 	{1, "on-fleek.app", 2, true},
@@ -10117,6 +10118,7 @@ var r = [10324]Rule{
 	{1, "storage.supabase.co", 3, true},
 	{1, "supabase.in", 2, true},
 	{1, "supabase.net", 2, true},
+	{1, "surge.sh", 2, true},
 	{1, "syncloud.it", 2, true},
 	{1, "dscloud.biz", 2, true},
 	{1, "direct.quickconnect.cn", 3, true},
