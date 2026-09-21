@@ -33,7 +33,7 @@ jobs:
       - name: Run tests
         run: ./test.sh
 
-      - uses: codecov/codecov-action@v7.0.0
+      - uses: codecov/codecov-action@v7.1.1
         with:
           files: ./coverage.txt
           verbose: true
