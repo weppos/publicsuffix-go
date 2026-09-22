@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version 645b36 (Sun Sep 20 14:15:13 2026)"
+const ListVersion = "PSL version 728555 (Mon Sep 21 18:49:52 2026)"
 
-func DefaultRules() [10326]Rule {
+func DefaultRules() [10330]Rule {
 	return r
 }
 
-var r = [10326]Rule{
+var r = [10330]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -8131,6 +8131,10 @@ var r = [10326]Rule{
 	{1, "dyndns.dappnode.io", 3, true},
 	{1, "builtwithdark.com", 2, true},
 	{1, "darklang.io", 2, true},
+	{1, "aws.databricksapps.com", 3, true},
+	{2, "azure.databricksapps.com", 4, true},
+	{1, "gcp.databricksapps.com", 3, true},
+	{1, "aws-gov.databricksapps.us", 3, true},
 	{1, "demo.datadetect.com", 3, true},
 	{1, "instance.datadetect.com", 3, true},
 	{1, "edgestack.me", 2, true},
