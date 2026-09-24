@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version 728555 (Mon Sep 21 18:49:52 2026)"
+const ListVersion = "PSL version 8af981 (Wed Sep 23 15:28:06 2026)"
 
-func DefaultRules() [10330]Rule {
+func DefaultRules() [10333]Rule {
 	return r
 }
 
-var r = [10330]Rule{
+var r = [10333]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -8093,8 +8093,10 @@ var r = [10330]Rule{
 	{1, "co.no", 2, true},
 	{2, "devinapps.com", 3, true},
 	{1, "webhosting.be", 2, true},
+	{1, "site.webhosting.be", 3, true},
 	{1, "prvw.eu", 2, true},
 	{1, "hosting-cluster.nl", 2, true},
+	{1, "site.hosting-cluster.nl", 3, true},
 	{1, "ctfcloud.net", 2, true},
 	{1, "convex.app", 2, true},
 	{1, "convex.cloud", 2, true},
@@ -9086,6 +9088,7 @@ var r = [10330]Rule{
 	{1, "home64.de", 2, true},
 	{1, "ipv64.de", 2, true},
 	{1, "ipv64.net", 2, true},
+	{1, "iqhs.pl", 2, true},
 	{1, "ir.md", 2, true},
 	{1, "is-a-good.dev", 2, true},
 	{1, "iservschule.de", 2, true},
