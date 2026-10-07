@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version 921b51 (Tue Oct  6 06:54:49 2026)"
+const ListVersion = "PSL version 4018bd (Tue Oct  6 16:12:58 2026)"
 
-func DefaultRules() [10333]Rule {
+func DefaultRules() [10361]Rule {
 	return r
 }
 
-var r = [10333]Rule{
+var r = [10361]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -7056,6 +7056,7 @@ var r = [10333]Rule{
 	{1, "cloudfront.net", 2, true},
 	{1, "auth.af-south-1.amazoncognito.com", 4, true},
 	{1, "auth.ap-east-1.amazoncognito.com", 4, true},
+	{1, "auth.ap-east-2.amazoncognito.com", 4, true},
 	{1, "auth.ap-northeast-1.amazoncognito.com", 4, true},
 	{1, "auth.ap-northeast-2.amazoncognito.com", 4, true},
 	{1, "auth.ap-northeast-3.amazoncognito.com", 4, true},
@@ -7066,6 +7067,7 @@ var r = [10333]Rule{
 	{1, "auth.ap-southeast-3.amazoncognito.com", 4, true},
 	{1, "auth.ap-southeast-4.amazoncognito.com", 4, true},
 	{1, "auth.ap-southeast-5.amazoncognito.com", 4, true},
+	{1, "auth.ap-southeast-6.amazoncognito.com", 4, true},
 	{1, "auth.ap-southeast-7.amazoncognito.com", 4, true},
 	{1, "auth.ca-central-1.amazoncognito.com", 4, true},
 	{1, "auth.ca-west-1.amazoncognito.com", 4, true},
@@ -7196,6 +7198,26 @@ var r = [10333]Rule{
 	{1, "emrappui-prod.us-west-2.amazonaws.com", 4, true},
 	{1, "emrnotebooks-prod.us-west-2.amazonaws.com", 4, true},
 	{1, "emrstudio-prod.us-west-2.amazonaws.com", 4, true},
+	{1, "amazonlightsail.com", 2, true},
+	{2, "ap-east-1.cs.amazonlightsail.com", 5, true},
+	{2, "ap-northeast-1.cs.amazonlightsail.com", 5, true},
+	{2, "ap-northeast-2.cs.amazonlightsail.com", 5, true},
+	{2, "ap-south-1.cs.amazonlightsail.com", 5, true},
+	{2, "ap-southeast-1.cs.amazonlightsail.com", 5, true},
+	{2, "ap-southeast-2.cs.amazonlightsail.com", 5, true},
+	{2, "ap-southeast-3.cs.amazonlightsail.com", 5, true},
+	{2, "ap-southeast-5.cs.amazonlightsail.com", 5, true},
+	{2, "ca-central-1.cs.amazonlightsail.com", 5, true},
+	{2, "eu-central-1.cs.amazonlightsail.com", 5, true},
+	{2, "eu-north-1.cs.amazonlightsail.com", 5, true},
+	{2, "eu-south-2.cs.amazonlightsail.com", 5, true},
+	{2, "eu-west-1.cs.amazonlightsail.com", 5, true},
+	{2, "eu-west-2.cs.amazonlightsail.com", 5, true},
+	{2, "eu-west-3.cs.amazonlightsail.com", 5, true},
+	{2, "sa-east-1.cs.amazonlightsail.com", 5, true},
+	{2, "us-east-1.cs.amazonlightsail.com", 5, true},
+	{2, "us-east-2.cs.amazonlightsail.com", 5, true},
+	{2, "us-west-2.cs.amazonlightsail.com", 5, true},
 	{2, "airflow.af-south-1.on.aws", 5, true},
 	{2, "airflow.ap-east-1.on.aws", 5, true},
 	{2, "airflow.ap-northeast-1.on.aws", 5, true},
@@ -7776,13 +7798,18 @@ var r = [10333]Rule{
 	{1, "ap-northeast-2.elasticbeanstalk.com", 3, true},
 	{1, "ap-northeast-3.elasticbeanstalk.com", 3, true},
 	{1, "ap-south-1.elasticbeanstalk.com", 3, true},
+	{1, "ap-south-2.elasticbeanstalk.com", 3, true},
 	{1, "ap-southeast-1.elasticbeanstalk.com", 3, true},
 	{1, "ap-southeast-2.elasticbeanstalk.com", 3, true},
 	{1, "ap-southeast-3.elasticbeanstalk.com", 3, true},
+	{1, "ap-southeast-4.elasticbeanstalk.com", 3, true},
 	{1, "ap-southeast-5.elasticbeanstalk.com", 3, true},
+	{1, "ap-southeast-6.elasticbeanstalk.com", 3, true},
 	{1, "ap-southeast-7.elasticbeanstalk.com", 3, true},
 	{1, "ca-central-1.elasticbeanstalk.com", 3, true},
+	{1, "ca-west-1.elasticbeanstalk.com", 3, true},
 	{1, "eu-central-1.elasticbeanstalk.com", 3, true},
+	{1, "eu-central-2.elasticbeanstalk.com", 3, true},
 	{1, "eu-north-1.elasticbeanstalk.com", 3, true},
 	{1, "eu-south-1.elasticbeanstalk.com", 3, true},
 	{1, "eu-south-2.elasticbeanstalk.com", 3, true},
@@ -9836,6 +9863,7 @@ var r = [10333]Rule{
 	{1, "repl.run", 2, true},
 	{1, "resindevice.io", 2, true},
 	{1, "devices.resinstaging.io", 3, true},
+	{1, "retool.app", 2, true},
 	{1, "adimo.co.uk", 3, true},
 	{1, "itcouldbewor.se", 2, true},
 	{1, "aus.basketball", 2, true},
