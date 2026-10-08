@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version 4018bd (Tue Oct  6 16:12:58 2026)"
+const ListVersion = "PSL version 392946 (Wed Oct  7 07:28:10 2026)"
 
-func DefaultRules() [10361]Rule {
+func DefaultRules() [10336]Rule {
 	return r
 }
 
-var r = [10361]Rule{
+var r = [10336]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -9833,33 +9833,8 @@ var r = [10361]Rule{
 	{1, "id.firewalledreplit.co", 3, true},
 	{1, "repl.co", 2, true},
 	{1, "id.repl.co", 3, true},
-	{1, "replit.dev", 2, true},
-	{1, "archer.replit.dev", 3, true},
-	{1, "bones.replit.dev", 3, true},
-	{1, "canary.replit.dev", 3, true},
-	{1, "global.replit.dev", 3, true},
-	{1, "hacker.replit.dev", 3, true},
-	{1, "id.replit.dev", 3, true},
-	{1, "janeway.replit.dev", 3, true},
-	{1, "kim.replit.dev", 3, true},
-	{1, "kira.replit.dev", 3, true},
-	{1, "kirk.replit.dev", 3, true},
-	{1, "odo.replit.dev", 3, true},
-	{1, "paris.replit.dev", 3, true},
-	{1, "picard.replit.dev", 3, true},
-	{1, "pike.replit.dev", 3, true},
-	{1, "prerelease.replit.dev", 3, true},
-	{1, "reed.replit.dev", 3, true},
-	{1, "riker.replit.dev", 3, true},
-	{1, "sisko.replit.dev", 3, true},
-	{1, "spock.replit.dev", 3, true},
-	{1, "staging.replit.dev", 3, true},
-	{1, "sulu.replit.dev", 3, true},
-	{1, "tarpit.replit.dev", 3, true},
-	{1, "teams.replit.dev", 3, true},
-	{1, "tucker.replit.dev", 3, true},
-	{1, "wesley.replit.dev", 3, true},
-	{1, "worf.replit.dev", 3, true},
+	{2, "replit.dev", 3, true},
+	{2, "teams.replit.dev", 4, true},
 	{1, "repl.run", 2, true},
 	{1, "resindevice.io", 2, true},
 	{1, "devices.resinstaging.io", 3, true},
