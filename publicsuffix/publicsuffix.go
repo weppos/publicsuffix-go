@@ -196,7 +196,7 @@ Scanning:
 	return rules, scanner.Err()
 }
 
-// Find and returns the most appropriate rule for the domain name.
+// Find returns a copy of the most appropriate rule for the domain name.
 func (l *List) Find(name string, options *FindOptions) *Rule {
 	if options == nil {
 		options = DefaultFindOptions
@@ -207,12 +207,17 @@ func (l *List) Find(name string, options *FindOptions) *Rule {
 		rule, ok := l.rules[part]
 
 		if ok && rule.Match(name) && !(options.IgnorePrivate && rule.Private) {
-			return rule
+			result := *rule
+			return &result
 		}
 
 		i := strings.IndexRune(part, '.')
 		if i < 0 {
-			return options.DefaultRule
+			if options.DefaultRule == nil {
+				return nil
+			}
+			result := *options.DefaultRule
+			return &result
 		}
 
 		part = part[i+1:]
@@ -296,7 +301,7 @@ func (r *Rule) Match(name string) bool {
 // Decompose takes a name as input and decomposes it into a tuple of <TRD+SLD, TLD>,
 // according to the rule definition and type.
 func (r *Rule) Decompose(name string) (result [2]string) {
-	if r == DefaultRule {
+	if r.Type == WildcardType && r.Value == "" {
 		i := strings.LastIndexByte(name, '.')
 		if i < 0 {
 			return
