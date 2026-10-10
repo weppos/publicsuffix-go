@@ -2,6 +2,7 @@ package publicsuffix
 
 import (
 	"reflect"
+	"sync"
 	"testing"
 
 	xlib "golang.org/x/net/publicsuffix"
@@ -276,6 +277,105 @@ blogspot.com
 	}
 }
 
+func testDetachedRuleResults(t *testing.T, list *List, input string, options *FindOptions, original *Rule) {
+	t.Helper()
+	want := *original
+	for _, source := range []string{"Find", "Parse"} {
+		t.Run(source, func(t *testing.T) {
+			t.Cleanup(func() { *original = want })
+			parsed, err := ParseFromListWithOptions(list, input, options)
+			if err != nil {
+				t.Fatal(err)
+			}
+			result := parsed.Rule
+			if source == "Find" {
+				result = list.Find(input, options)
+			}
+			if result == nil {
+				t.Fatal("expected a matching rule")
+			}
+			parsed.Rule = &want
+			*result = Rule{Type: want.Type + 1, Value: "changed.invalid", Length: want.Length + 1, Private: !want.Private}
+
+			if *original != want {
+				t.Errorf("mutating a result changed the original rule: got %v, want %v", *original, want)
+			}
+			if got := list.Find(input, options); got == nil || *got != want {
+				t.Errorf("subsequent Find returned %v, want %v", got, want)
+			}
+			if got, err := ParseFromListWithOptions(list, input, options); err != nil || !reflect.DeepEqual(got, parsed) {
+				t.Errorf("subsequent Parse returned %v, %v, want %v", got, err, parsed)
+			}
+		})
+	}
+}
+
+func TestListFindReturnsRuleCopies(t *testing.T) {
+	testCases := []struct {
+		name, content, input string
+		private              bool
+	}{
+		{"normal", "com", "www.example.com", false},
+		{"wildcard", "*.com", "www.foo.example.com", false},
+		{"exception", "!city.kawasaki.jp", "www.city.kawasaki.jp", false},
+		{"private", "blogspot.com", "www.foo.blogspot.com", true},
+	}
+	for _, testCase := range testCases {
+		t.Run(testCase.name, func(t *testing.T) {
+			list := NewList()
+			rule := MustNewRule(testCase.content)
+			rule.Private = testCase.private
+			_ = list.AddRule(rule)
+			testDetachedRuleResults(t, list, testCase.input, &FindOptions{DefaultRule: nil}, rule)
+		})
+	}
+}
+
+func TestListFindReturnsFallbackCopies(t *testing.T) {
+	testCases := []struct {
+		name, input string
+		rule        *Rule
+	}{
+		{"global", "www.example.unknown", DefaultRule},
+		{"custom_wildcard", "www.example.unknown", MustNewRule("*")},
+		{"custom_normal", "www.example.com", MustNewRule("com")},
+	}
+	for _, testCase := range testCases {
+		t.Run(testCase.name, func(t *testing.T) {
+			options := &FindOptions{DefaultRule: testCase.rule}
+			if testCase.name == "global" {
+				options = nil
+			}
+			testDetachedRuleResults(t, NewList(), testCase.input, options, testCase.rule)
+		})
+	}
+	if got := NewList().Find("example.unknown", &FindOptions{DefaultRule: nil}); got != nil {
+		t.Errorf("Find with a nil fallback returned %v", got)
+	}
+}
+
+func TestListFindConcurrentResultMutation(t *testing.T) {
+	list := NewList()
+	original := MustNewRule("com")
+	_ = list.AddRule(original)
+	var workers sync.WaitGroup
+	for range 8 {
+		workers.Add(1)
+		go func() {
+			defer workers.Done()
+			for range 100 {
+				rule := list.Find("example.com", nil)
+				rule.Value = "com"
+				rule.Private = true
+			}
+		}()
+	}
+	workers.Wait()
+	if original.Private {
+		t.Error("concurrent result mutations changed the original rule")
+	}
+}
+
 func TestNewRule_Normal(t *testing.T) {
 	rule := MustNewRule("com")
 	want := &Rule{Type: NormalType, Value: "com", Length: 1}
@@ -389,7 +489,13 @@ type ruleDecomposeTestCase struct {
 }
 
 func TestRuleDecompose(t *testing.T) {
+	defaultCopy := *DefaultRule
 	testCases := []ruleDecomposeTestCase{
+		{&defaultCopy, "", [2]string{"", ""}},
+		{&defaultCopy, "test", [2]string{"", ""}},
+		{&defaultCopy, "example.test", [2]string{"example", "test"}},
+		{&defaultCopy, "www.example.test", [2]string{"www.example", "test"}},
+
 		{MustNewRule("com"), "com", [2]string{"", ""}},
 		{MustNewRule("com"), "example.com", [2]string{"example", "com"}},
 		{MustNewRule("com"), "foo.example.com", [2]string{"foo.example", "com"}},
