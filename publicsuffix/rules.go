@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version 73f8cc (Sat Oct 31 14:17:18 2026)"
+const ListVersion = "PSL version aae37a (Wed Nov  4 19:07:17 2026)"
 
-func DefaultRules() [10396]Rule {
+func DefaultRules() [10406]Rule {
 	return r
 }
 
-var r = [10396]Rule{
+var r = [10406]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -7923,7 +7923,6 @@ var r = [10396]Rule{
 	{1, "claude.app", 2, true},
 	{1, "claudeusercontent.com", 2, true},
 	{1, "frame.claudeusercontent.com", 3, true},
-	{2, "cursorusercontent.com", 3, true},
 	{1, "apigee.io", 2, true},
 	{1, "panel.dev", 2, true},
 	{1, "siiites.com", 2, true},
@@ -8015,6 +8014,7 @@ var r = [10396]Rule{
 	{1, "radio.fm", 2, true},
 	{1, "cdn.bubble.io", 3, true},
 	{1, "bubbleapps.io", 2, true},
+	{1, "manus.space", 2, true},
 	{2, "bwcloud-os-instance.de", 3, true},
 	{1, "cafjs.com", 2, true},
 	{1, "canva-apps.cn", 2, true},
@@ -8268,6 +8268,7 @@ var r = [10396]Rule{
 	{1, "dyn.now", 2, true},
 	{1, "heimdns.online", 2, true},
 	{1, "ddns.wtf", 2, true},
+	{1, "docsflowy.site", 2, true},
 	{1, "online.th", 2, true},
 	{1, "shop.th", 2, true},
 	{1, "co.scot", 2, true},
@@ -9290,6 +9291,7 @@ var r = [10396]Rule{
 	{1, "co.technology", 2, true},
 	{1, "linkyard-cloud.ch", 2, true},
 	{1, "linkyard.cloud", 2, true},
+	{1, "linkyhost.page", 2, true},
 	{1, "members.linode.com", 3, true},
 	{2, "nodebalancer.linode.com", 4, true},
 	{2, "linodeobjects.com", 3, true},
@@ -9313,6 +9315,7 @@ var r = [10396]Rule{
 	{1, "loginline.site", 2, true},
 	{1, "lohmus.me", 2, true},
 	{1, "lovable.app", 2, true},
+	{1, "auth.lovable.app", 3, true},
 	{1, "lovableproject.com", 2, true},
 	{1, "lovable.run", 2, true},
 	{1, "lovable.sh", 2, true},
@@ -9796,6 +9799,7 @@ var r = [10396]Rule{
 	{2, "owo.codes", 3, true},
 	{1, "ox.rs", 2, true},
 	{1, "oy.lc", 2, true},
+	{1, "pagelemon.dev", 2, true},
 	{1, "pgfog.com", 2, true},
 	{1, "gotpantheon.com", 2, true},
 	{1, "pantheonsite.io", 2, true},
@@ -9997,6 +10001,8 @@ var r = [10396]Rule{
 	{2, "we.crm.dev", 4, true},
 	{2, "wf.crm.dev", 4, true},
 	{1, "sandcats.io", 2, true},
+	{1, "sanity.run", 2, true},
+	{1, "sanity.studio", 2, true},
 	{1, "sav.case", 2, true},
 	{1, "logoip.com", 2, true},
 	{1, "logoip.de", 2, true},
@@ -10093,6 +10099,7 @@ var r = [10396]Rule{
 	{1, "sinaapp.com", 2, true},
 	{1, "vipsinaapp.com", 2, true},
 	{1, "siteleaf.net", 2, true},
+	{1, "sliplane.app", 2, true},
 	{1, "small-web.org", 2, true},
 	{1, "aeroport.fr", 2, true},
 	{1, "avocat.fr", 2, true},
@@ -10121,6 +10128,10 @@ var r = [10396]Rule{
 	{1, "my.de", 2, true},
 	{2, "nxa.eu", 3, true},
 	{1, "nx.gw", 2, true},
+	{2, "apps.grok.bot", 4, true},
+	{2, "pages.grok.bot", 4, true},
+	{2, "cursorusercontent.com", 3, true},
+	{1, "grok.me", 2, true},
 	{1, "spawnbase.app", 2, true},
 	{1, "customer.speedpartner.de", 3, true},
 	{1, "myspreadshop.at", 2, true},
@@ -10376,7 +10387,6 @@ var r = [10396]Rule{
 	{1, "weeklylottery.org.uk", 3, true},
 	{1, "wpenginepowered.com", 2, true},
 	{1, "js.wpenginepowered.com", 3, true},
-	{1, "grok.me", 2, true},
 	{2, "xenonconnect.de", 3, true},
 	{1, "half.host", 2, true},
 	{1, "cistron.nl", 2, true},
