@@ -64,6 +64,33 @@ blogspot.com
 	}
 }
 
+func TestNewListFromString_RuleLineIsReadUpToItsFirstWhitespace(t *testing.T) {
+	// The Public Suffix List format says that each line is only read up to
+	// its first whitespace.
+	src := `
+// ===BEGIN ICANN DOMAINS===
+
+com // the rule is com
+xn--p1ai b
+
+// ===END ICANN DOMAINS===
+	`
+
+	list, err := NewListFromString(src, nil)
+	if err != nil {
+		t.Fatalf("Parse returned an error: %v", err)
+	}
+
+	if want, got := 2, list.Size(); want != got {
+		t.Errorf("Parse returned a list with %v rules, want %v", got, want)
+		t.Fatalf("%v", list.rules)
+	}
+
+	if rule := list.Find("example.com", nil); rule == nil || rule.Value != "com" {
+		t.Errorf("Find(example.com) = %v, want the rule \"com\"", rule)
+	}
+}
+
 func TestNewListFromString_IDNAInputIsUnicode(t *testing.T) {
 	src := `
 // xn--d1alf ("mkd", Macedonian) : MK
