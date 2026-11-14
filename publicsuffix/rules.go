@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version 7a21dc (Sun Nov  8 13:20:59 2026)"
+const ListVersion = "PSL version 71c235 (Fri Nov 13 14:44:23 2026)"
 
-func DefaultRules() [10409]Rule {
+func DefaultRules() [10425]Rule {
 	return r
 }
 
-var r = [10409]Rule{
+var r = [10425]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -6975,6 +6975,7 @@ var r = [10409]Rule{
 	{1, "611.to", 2, true},
 	{1, "a2hosted.com", 2, true},
 	{1, "cpserver.com", 2, true},
+	{1, "abyme.dev", 2, true},
 	{1, "activetrail.biz", 2, true},
 	{1, "myaddr.dev", 2, true},
 	{1, "myaddr.io", 2, true},
@@ -7921,6 +7922,10 @@ var r = [10409]Rule{
 	{1, "transfer-webapp.eusc-de-east-1.on.amazonwebservices.eu", 5, true},
 	{1, "eero.online", 2, true},
 	{1, "eero-stage.online", 2, true},
+	{1, "app.amba.host", 3, true},
+	{1, "cdn.amba.host", 3, true},
+	{1, "fn.amba.host", 3, true},
+	{1, "go.amba.host", 3, true},
 	{1, "opentunnel.xyz", 2, true},
 	{1, "antagonist.cloud", 2, true},
 	{1, "claude.app", 2, true},
@@ -7990,8 +7995,10 @@ var r = [10409]Rule{
 	{1, "pages.gay", 2, true},
 	{1, "bnr.la", 2, true},
 	{1, "bitbucket.io", 2, true},
+	{1, "ship.place", 2, true},
 	{1, "blackbaudcdn.net", 2, true},
 	{1, "of.je", 2, true},
+	{1, "prod.page", 2, true},
 	{1, "square.site", 2, true},
 	{1, "bluebite.io", 2, true},
 	{1, "boomla.net", 2, true},
@@ -8131,6 +8138,7 @@ var r = [10409]Rule{
 	{1, "objects.rma.cloudscale.ch", 4, true},
 	{1, "lpg.objectstorage.ch", 3, true},
 	{1, "rma.objectstorage.ch", 3, true},
+	{1, "cloudzyro.app", 2, true},
 	{1, "wnext.app", 2, true},
 	{1, "cnpy.gdn", 2, true},
 	{2, "otap.co", 3, true},
@@ -8177,6 +8185,7 @@ var r = [10409]Rule{
 	{1, "static-access.net", 2, true},
 	{1, "craft.me", 2, true},
 	{1, "realm.cz", 2, true},
+	{1, "crbts.app", 2, true},
 	{1, "cfolks.pl", 2, true},
 	{1, "cyon.link", 2, true},
 	{1, "cyon.site", 2, true},
@@ -9004,6 +9013,7 @@ var r = [10409]Rule{
 	{1, "ai.studio", 2, true},
 	{1, "goupile.fr", 2, true},
 	{1, "pymnt.uk", 2, true},
+	{1, "gov.de", 2, true},
 	{1, "gov.nl", 2, true},
 	{1, "grafana-dev.net", 2, true},
 	{1, "grayjayleagues.com", 2, true},
@@ -9381,6 +9391,7 @@ var r = [10409]Rule{
 	{1, "mediatech.dev", 2, true},
 	{1, "hra.health", 2, true},
 	{1, "medusajs.app", 2, true},
+	{1, "medusajs.site", 2, true},
 	{1, "miniserver.com", 2, true},
 	{1, "memset.net", 2, true},
 	{1, "messerli.app", 2, true},
@@ -9518,6 +9529,9 @@ var r = [10409]Rule{
 	{1, "mocha.app", 2, true},
 	{1, "mochausercontent.com", 2, true},
 	{1, "mocha-sandbox.dev", 2, true},
+	{1, "modelence.app", 2, true},
+	{1, "cloud.modelence.app", 3, true},
+	{1, "sandbox.modelence.app", 3, true},
 	{1, "modx.dev", 2, true},
 	{1, "bmoattachments.org", 2, true},
 	{1, "net.ru", 2, true},
@@ -9888,6 +9902,7 @@ var r = [10409]Rule{
 	{1, "ravpage.co.il", 3, true},
 	{1, "readthedocs-hosted.com", 2, true},
 	{1, "readthedocs.io", 2, true},
+	{1, "rwx.run", 2, true},
 	{1, "rhcloud.com", 2, true},
 	{1, "instances.spawn.cc", 3, true},
 	{2, "clusters.rdpa.co", 4, true},
@@ -10330,6 +10345,7 @@ var r = [10409]Rule{
 	{1, "vercel.run", 2, true},
 	{1, "now.sh", 2, true},
 	{1, "2038.io", 2, true},
+	{1, "vibekit.page", 2, true},
 	{1, "v-info.info", 2, true},
 	{1, "vistablog.ir", 2, true},
 	{1, "deus-canvas.com", 2, true},
