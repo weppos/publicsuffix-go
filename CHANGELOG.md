@@ -1,6 +1,14 @@
 # Changelog
 
 
+## main
+
+### Changed
+
+- Supported minimum version is now Go 1.26.
+- Updated golang.org/x/net to v0.63.0.
+
+
 ## 0.50.4 - 2026-11-24
 
 ### Changed
