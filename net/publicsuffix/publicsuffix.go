@@ -22,6 +22,10 @@ func PublicSuffix(domain string) (publicSuffix string, icann bool) {
 
 	rule := psl.DefaultList.Find(domain, nil)
 	publicSuffix = rule.Decompose(domain)[1]
+	// Decompose returns no suffix when the domain is itself a public suffix.
+	if publicSuffix == "" {
+		publicSuffix = domain
+	}
 	icann = !rule.Private
 
 	// x/net/publicsuffix sets icann to false when the default rule "*" is used

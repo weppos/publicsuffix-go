@@ -17,8 +17,14 @@ func TestPublicSuffix(t *testing.T) {
 		"www.example.blogspot.com",
 		"parliament.uk",
 		"www.parliament.uk",
+		// the domain itself is a public suffix
+		"co.uk",
+		"com",
+		"foo.ck",
+		"blogspot.com",
 		// not listed
 		"www.example.test",
+		"test",
 	}
 
 	for _, testCase := range testCases {
