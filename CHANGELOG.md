@@ -1,6 +1,17 @@
 # Changelog
 
 
+## main
+
+### Changed
+
+- Definition updates.
+
+### Fixed
+
+- Read a rule line only up to its first whitespace, as the Public Suffix List format requires (#1292).
+
+
 ## 0.50.3 - 2026-03-03
 
 ### Changed
@@ -26,7 +37,7 @@
 
 ### Changed
 
-- Removed dependency from go-github #1067
+- Removed dependency from go-github (#1067).
 - Supported minimum version is now Go 1.23.
 - Definition updates.
 
