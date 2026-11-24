@@ -177,12 +177,8 @@ Scanning:
 			var rule *Rule
 			var err error
 
-			// The list format says a line is only read up to its first
-			// whitespace, so "com // the rule is com" is the rule "com".
-			content := line
-			if i := strings.IndexAny(content, " \t"); i >= 0 {
-				content = content[:i]
-			}
+			// The list format reads a rule line only up to its first whitespace.
+			content := strings.Fields(line)[0]
 
 			if options.ASCIIEncoded {
 				rule, err = NewRule(content)

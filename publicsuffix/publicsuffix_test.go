@@ -65,29 +65,34 @@ blogspot.com
 }
 
 func TestNewListFromString_RuleLineIsReadUpToItsFirstWhitespace(t *testing.T) {
-	// The Public Suffix List format says that each line is only read up to
-	// its first whitespace.
-	src := `
-// ===BEGIN ICANN DOMAINS===
-
-com // the rule is com
-xn--p1ai b
-
-// ===END ICANN DOMAINS===
-	`
+	src := "// ===BEGIN ICANN DOMAINS===\n" +
+		"com // the rule is com\n" +
+		"xn--p1ai b\n" +
+		"net\u00a0b\n" +
+		"// ===END ICANN DOMAINS===\n"
 
 	list, err := NewListFromString(src, nil)
 	if err != nil {
 		t.Fatalf("Parse returned an error: %v", err)
 	}
 
-	if want, got := 2, list.Size(); want != got {
+	if want, got := 3, list.Size(); want != got {
 		t.Errorf("Parse returned a list with %v rules, want %v", got, want)
 		t.Fatalf("%v", list.rules)
 	}
 
-	if rule := list.Find("example.com", nil); rule == nil || rule.Value != "com" {
-		t.Errorf("Find(example.com) = %v, want the rule \"com\"", rule)
+	testCases := []struct {
+		name string
+		want string
+	}{
+		{"example.com", "com"},
+		{"example.xn--p1ai", "xn--p1ai"},
+		{"example.net", "net"},
+	}
+	for _, tc := range testCases {
+		if rule := list.Find(tc.name, nil); rule == nil || rule.Value != tc.want {
+			t.Errorf("Find(%v) = %v, want the rule %q", tc.name, rule, tc.want)
+		}
 	}
 }
 
