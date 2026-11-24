@@ -536,10 +536,7 @@ func (l cookiejarList) PublicSuffix(domain string) string {
 	if suffix := rule.Decompose(domain)[1]; suffix != "" {
 		return suffix
 	}
-	// Decompose returns an empty suffix when the domain has no more labels
-	// than the rule, that is when the domain itself is a public suffix
-	// (e.g. "co.uk", "com", or a name covered only by a wildcard rule like
-	// "foo.ck"). In that case the public suffix is the domain itself.
+	// Decompose returns no suffix when the domain is itself a public suffix.
 	return domain
 }
 
