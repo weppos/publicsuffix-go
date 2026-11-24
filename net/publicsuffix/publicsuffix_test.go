@@ -17,14 +17,8 @@ func TestPublicSuffix(t *testing.T) {
 		"www.example.blogspot.com",
 		"parliament.uk",
 		"www.parliament.uk",
-		// the domain itself is a public suffix
-		"co.uk",
-		"com",
-		"foo.ck",
-		"blogspot.com",
 		// not listed
 		"www.example.test",
-		"test",
 	}
 
 	for _, testCase := range testCases {
@@ -33,6 +27,35 @@ func TestPublicSuffix(t *testing.T) {
 
 		if ws != xs || wb != xb {
 			t.Errorf("PublicSuffix(%v): x/psl -> (%v, %v) != w/psl -> (%v, %v)", testCase, xs, xb, ws, wb)
+		}
+	}
+}
+
+func TestPublicSuffixEdgeCases(t *testing.T) {
+	testCases := []struct {
+		domain string
+		suffix string
+		icann  bool
+	}{
+		// the domain itself is a public suffix
+		{"co.uk", "co.uk", true},
+		{"com", "com", true},
+		{"foo.ck", "foo.ck", true},
+		{"blogspot.com", "blogspot.com", false},
+		{"test", "test", false},
+		// trailing dot
+		{"example.com.", "", false},
+		{"test.", "", false},
+		{".", "", false},
+		// IP address
+		{"127.0.0.1", "127.0.0.1", false},
+		{"::1", "::1", false},
+	}
+
+	for _, tc := range testCases {
+		suffix, icann := wpsl.PublicSuffix(tc.domain)
+		if suffix != tc.suffix || icann != tc.icann {
+			t.Errorf("PublicSuffix(%q) = (%q, %v), want (%q, %v)", tc.domain, suffix, icann, tc.suffix, tc.icann)
 		}
 	}
 }

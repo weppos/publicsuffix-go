@@ -3,6 +3,9 @@
 package publicsuffix
 
 import (
+	"net/netip"
+	"strings"
+
 	psl "github.com/weppos/publicsuffix-go/publicsuffix"
 )
 
@@ -16,10 +19,14 @@ func PublicSuffix(domain string) (publicSuffix string, icann bool) {
 	//
 	//return d.Rule.Value, !d.Rule.Private
 
+	if _, err := netip.ParseAddr(domain); err == nil {
+		return domain, false
+	}
+
 	rule := psl.DefaultList.Find(domain, nil)
 	publicSuffix = rule.Decompose(domain)[1]
-	// Decompose returns no suffix when the domain is itself a public suffix.
-	if publicSuffix == "" {
+	// Decompose returns no suffix when the domain is itself a public suffix or ends with a dot.
+	if publicSuffix == "" && !strings.HasSuffix(domain, ".") {
 		publicSuffix = domain
 	}
 	icann = !rule.Private

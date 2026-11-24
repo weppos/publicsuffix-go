@@ -533,11 +533,12 @@ type cookiejarList struct {
 // PublicSuffix implements cookiejar.PublicSuffixList.
 func (l cookiejarList) PublicSuffix(domain string) string {
 	rule := l.List.Find(domain, nil)
-	if suffix := rule.Decompose(domain)[1]; suffix != "" {
-		return suffix
+	suffix := rule.Decompose(domain)[1]
+	// Decompose returns no suffix when the domain is itself a public suffix or ends with a dot.
+	if suffix == "" && !strings.HasSuffix(domain, ".") {
+		return domain
 	}
-	// Decompose returns no suffix when the domain is itself a public suffix.
-	return domain
+	return suffix
 }
 
 // PublicSuffix implements cookiejar.String.

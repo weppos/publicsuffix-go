@@ -549,6 +549,9 @@ func TestCookieJarList(t *testing.T) {
 		// not listed
 		"www.example.test": "test",
 		"test":             "test",
+		// trailing dot
+		"example.com.": "",
+		"test.":        "",
 	}
 
 	for input, suffix := range testCases {
