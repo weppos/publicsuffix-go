@@ -1,6 +1,9 @@
 package publicsuffix
 
 import (
+	"net/http"
+	"net/http/cookiejar"
+	"net/url"
 	"reflect"
 	"testing"
 
@@ -538,14 +541,48 @@ func TestCookieJarList(t *testing.T) {
 		"www.example.blogspot.com": "blogspot.com",
 		"parliament.uk":            "uk",
 		"www.parliament.uk":        "uk",
+		// the domain itself is a public suffix
+		"co.uk":        "co.uk",
+		"com":          "com",
+		"foo.ck":       "foo.ck",
+		"blogspot.com": "blogspot.com",
 		// not listed
 		"www.example.test": "test",
+		"test":             "test",
 	}
 
 	for input, suffix := range testCases {
 		if output := CookieJarList.PublicSuffix(input); output != suffix {
 			t.Errorf("CookieJarList.PublicSuffix(%v) = %v, want %v", input, output, suffix)
 		}
+	}
+}
+
+func TestCookieJarListRejectsPublicSuffixDomainAttribute(t *testing.T) {
+	jar, err := cookiejar.New(&cookiejar.Options{PublicSuffixList: CookieJarList})
+	if err != nil {
+		t.Fatalf("cookiejar.New returned error: %v", err)
+	}
+
+	u, err := url.Parse("http://www.example.co.uk/")
+	if err != nil {
+		t.Fatalf("url.Parse returned error: %v", err)
+	}
+
+	// RFC 6265 5.3 #5: a cookie whose Domain attribute is a public suffix
+	// must be rejected unless it is set by the public suffix itself.
+	jar.SetCookies(u, []*http.Cookie{
+		{Name: "injected", Value: "x", Domain: "co.uk"},
+	})
+	if cookies := jar.Cookies(u); len(cookies) != 0 {
+		t.Errorf("cookie with Domain=co.uk stored: %v", cookies)
+	}
+
+	jar.SetCookies(u, []*http.Cookie{
+		{Name: "hostonly", Value: "y", Domain: "www.example.co.uk"},
+	})
+	if cookies := jar.Cookies(u); len(cookies) != 1 {
+		t.Errorf("cookie with Domain=www.example.co.uk not stored: %v", cookies)
 	}
 }
 
