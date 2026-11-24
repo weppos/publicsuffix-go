@@ -549,6 +549,9 @@ func TestCookieJarList(t *testing.T) {
 		// not listed
 		"www.example.test": "test",
 		"test":             "test",
+		// trailing dot
+		"example.com.": "",
+		"test.":        "",
 	}
 
 	for input, suffix := range testCases {
@@ -579,7 +582,7 @@ func TestCookieJarListRejectsPublicSuffixDomainAttribute(t *testing.T) {
 	}
 
 	jar.SetCookies(u, []*http.Cookie{
-		{Name: "hostonly", Value: "y", Domain: "www.example.co.uk"},
+		{Name: "domain", Value: "y", Domain: "www.example.co.uk"},
 	})
 	if cookies := jar.Cookies(u); len(cookies) != 1 {
 		t.Errorf("cookie with Domain=www.example.co.uk not stored: %v", cookies)

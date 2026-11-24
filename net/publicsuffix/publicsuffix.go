@@ -3,15 +3,14 @@
 package publicsuffix
 
 import (
+	"net/netip"
+	"strings"
+
 	psl "github.com/weppos/publicsuffix-go/publicsuffix"
 )
 
 // PublicSuffix returns the public suffix of the domain
 // using a copy of the publicsuffix.org database packaged into this library.
-//
-// Note. To maintain compatibility with the golang.org/x/net/publicsuffix
-// this method doesn't return an error. However, in case of error,
-// the returned value is empty.
 func PublicSuffix(domain string) (publicSuffix string, icann bool) {
 	//d, err := psl.Parse(domain)
 	//if err != nil {
@@ -20,8 +19,16 @@ func PublicSuffix(domain string) (publicSuffix string, icann bool) {
 	//
 	//return d.Rule.Value, !d.Rule.Private
 
+	if _, err := netip.ParseAddr(domain); err == nil {
+		return domain, false
+	}
+
 	rule := psl.DefaultList.Find(domain, nil)
 	publicSuffix = rule.Decompose(domain)[1]
+	// Decompose returns no suffix when the domain is itself a public suffix or ends with a dot.
+	if publicSuffix == "" && !strings.HasSuffix(domain, ".") {
+		publicSuffix = domain
+	}
 	icann = !rule.Private
 
 	// x/net/publicsuffix sets icann to false when the default rule "*" is used
