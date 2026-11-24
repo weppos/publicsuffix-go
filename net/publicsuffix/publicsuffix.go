@@ -8,10 +8,6 @@ import (
 
 // PublicSuffix returns the public suffix of the domain
 // using a copy of the publicsuffix.org database packaged into this library.
-//
-// Note. To maintain compatibility with the golang.org/x/net/publicsuffix
-// this method doesn't return an error. However, in case of error,
-// the returned value is empty.
 func PublicSuffix(domain string) (publicSuffix string, icann bool) {
 	//d, err := psl.Parse(domain)
 	//if err != nil {
