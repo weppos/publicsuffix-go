@@ -1,7 +1,7 @@
 # Changelog
 
 
-## main
+## 0.50.4 - 2026-11-24
 
 ### Changed
 
