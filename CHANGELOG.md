@@ -12,6 +12,7 @@
 
 - Return the domain itself from `CookieJarList.PublicSuffix` when the domain is a public suffix, so `net/http/cookiejar` rejects cookies set for a public suffix (#1293).
 - Return the domain itself from `net/publicsuffix.PublicSuffix` when the domain is a public suffix, as `golang.org/x/net/publicsuffix` does (#1297).
+- Return an IP address unchanged from `net/publicsuffix.PublicSuffix`, as `golang.org/x/net/publicsuffix` does (#1297).
 
 
 ## 0.50.4 - 2026-11-24
