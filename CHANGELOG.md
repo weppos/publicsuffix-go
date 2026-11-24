@@ -1,7 +1,7 @@
 # Changelog
 
 
-## main
+## main (targeting 1.0.0)
 
 ### Changed
 
