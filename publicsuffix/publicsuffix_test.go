@@ -64,6 +64,38 @@ blogspot.com
 	}
 }
 
+func TestNewListFromString_RuleLineIsReadUpToItsFirstWhitespace(t *testing.T) {
+	src := "// ===BEGIN ICANN DOMAINS===\n" +
+		"com // the rule is com\n" +
+		"xn--p1ai b\n" +
+		"net\u00a0b\n" +
+		"// ===END ICANN DOMAINS===\n"
+
+	list, err := NewListFromString(src, nil)
+	if err != nil {
+		t.Fatalf("Parse returned an error: %v", err)
+	}
+
+	if want, got := 3, list.Size(); want != got {
+		t.Errorf("Parse returned a list with %v rules, want %v", got, want)
+		t.Fatalf("%v", list.rules)
+	}
+
+	testCases := []struct {
+		name string
+		want string
+	}{
+		{"example.com", "com"},
+		{"example.xn--p1ai", "xn--p1ai"},
+		{"example.net", "net"},
+	}
+	for _, tc := range testCases {
+		if rule := list.Find(tc.name, nil); rule == nil || rule.Value != tc.want {
+			t.Errorf("Find(%v) = %v, want the rule %q", tc.name, rule, tc.want)
+		}
+	}
+}
+
 func TestNewListFromString_IDNAInputIsUnicode(t *testing.T) {
 	src := `
 // xn--d1alf ("mkd", Macedonian) : MK

@@ -177,10 +177,13 @@ Scanning:
 			var rule *Rule
 			var err error
 
+			// The list format reads a rule line only up to its first whitespace.
+			content := strings.Fields(line)[0]
+
 			if options.ASCIIEncoded {
-				rule, err = NewRule(line)
+				rule, err = NewRule(content)
 			} else {
-				rule, err = NewRuleUnicode(line)
+				rule, err = NewRuleUnicode(content)
 			}
 			if err != nil {
 				return []Rule{}, err
