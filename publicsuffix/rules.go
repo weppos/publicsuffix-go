@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version faf981 (Mon Nov 23 15:49:18 2026)"
+const ListVersion = "PSL version bfb50c (Wed Nov 25 05:20:22 2026)"
 
-func DefaultRules() [10472]Rule {
+func DefaultRules() [10477]Rule {
 	return r
 }
 
-var r = [10472]Rule{
+var r = [10477]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -7970,8 +7970,11 @@ var r = [10472]Rule{
 	{1, "sweetpepper.org", 2, true},
 	{1, "myasustor.com", 2, true},
 	{2, "atlassian-3p.com", 3, true},
+	{2, "shared.atlassian-3p.com", 4, true},
 	{2, "atlassian-3p-us-gov-mod.com", 3, true},
+	{2, "shared.atlassian-3p-us-gov-mod.com", 4, true},
 	{2, "atlassian-isolated-3p.com", 3, true},
+	{2, "shared.atlassian-isolated-3p.com", 4, true},
 	{1, "cdn.prod.atlassian-dev.net", 4, true},
 	{1, "space.fast", 2, true},
 	{1, "view.fast", 2, true},
@@ -8002,6 +8005,8 @@ var r = [10472]Rule{
 	{1, "bitbucket.io", 2, true},
 	{1, "ship.place", 2, true},
 	{1, "blackbaudcdn.net", 2, true},
+	{1, "blacktops.app", 2, true},
+	{1, "blacktops.page", 2, true},
 	{1, "of.je", 2, true},
 	{1, "prod.page", 2, true},
 	{1, "square.site", 2, true},
@@ -8623,6 +8628,8 @@ var r = [10472]Rule{
 	{1, "twmail.org", 2, true},
 	{1, "mymailer.com.tw", 3, true},
 	{1, "url.tw", 2, true},
+	{1, "ipdisk.co.kr", 3, true},
+	{1, "iptime.org", 2, true},
 	{1, "at.emf.camp", 3, true},
 	{1, "rt.ht", 2, true},
 	{1, "elementor.cloud", 2, true},
@@ -8708,6 +8715,7 @@ var r = [10472]Rule{
 	{1, "on.expo.app", 3, true},
 	{1, "staging.expo.app", 3, true},
 	{1, "on.staging.expo.app", 4, true},
+	{1, "faable.link", 2, true},
 	{1, "fspages.org", 2, true},
 	{1, "ru.net", 2, true},
 	{1, "adygeya.ru", 2, true},
@@ -9040,6 +9048,7 @@ var r = [10472]Rule{
 	{1, "grafana-dev.net", 2, true},
 	{1, "grayjayleagues.com", 2, true},
 	{1, "grebedoc.dev", 2, true},
+	{1, "greybull.site", 2, true},
 	{1, "xn--gnstigbestellen-zvb.de", 2, true},
 	{1, "xn--gnstigliefern-wob.de", 2, true},
 	{1, "gv.uy", 2, true},
@@ -9078,6 +9087,7 @@ var r = [10472]Rule{
 	{2, "kin.one", 3, true},
 	{2, "id.pub", 3, true},
 	{2, "kin.pub", 3, true},
+	{1, "onhomemade.com", 2, true},
 	{1, "seprox.hooc.me", 3, true},
 	{1, "hoplix.shop", 2, true},
 	{1, "orx.biz", 2, true},
@@ -9190,7 +9200,6 @@ var r = [10472]Rule{
 	{1, "alp1.ae.flow.ch", 4, true},
 	{1, "appengine.flow.ch", 3, true},
 	{1, "es-1.axarnet.cloud", 3, true},
-	{1, "diadem.cloud", 2, true},
 	{1, "vip.jelastic.cloud", 3, true},
 	{1, "jele.cloud", 2, true},
 	{1, "it1.eur.aruba.jenv-aruba.cloud", 5, true},
@@ -9222,7 +9231,6 @@ var r = [10472]Rule{
 	{1, "jelastic.dogado.eu", 3, true},
 	{1, "fi.cloudplatform.fi", 3, true},
 	{1, "jele.host", 2, true},
-	{1, "mircloud.host", 2, true},
 	{1, "paas.beebyte.io", 3, true},
 	{1, "sekd1.beebyteapp.io", 3, true},
 	{1, "jele.io", 2, true},
@@ -9252,7 +9260,6 @@ var r = [10472]Rule{
 	{1, "orangecloud.tn", 2, true},
 	{1, "j.layershift.co.uk", 4, true},
 	{1, "phx.enscaled.us", 3, true},
-	{1, "mircloud.us", 2, true},
 	{1, "myjino.ru", 2, true},
 	{2, "hosting.myjino.ru", 4, true},
 	{2, "landing.myjino.ru", 4, true},
@@ -9310,8 +9317,6 @@ var r = [10472]Rule{
 	{1, "lpages.co", 2, true},
 	{1, "lpusercontent.com", 2, true},
 	{1, "leapcell.app", 2, true},
-	{1, "leapcell.dev", 2, true},
-	{1, "leapcell.online", 2, true},
 	{1, "liara.run", 2, true},
 	{1, "iran.liara.run", 3, true},
 	{1, "libp2p.direct", 2, true},
@@ -9958,7 +9963,6 @@ var r = [10472]Rule{
 	{1, "resindevice.io", 2, true},
 	{1, "devices.resinstaging.io", 3, true},
 	{1, "retool.app", 2, true},
-	{1, "adimo.co.uk", 3, true},
 	{1, "itcouldbewor.se", 2, true},
 	{1, "aus.basketball", 2, true},
 	{1, "nz.basketball", 2, true},
@@ -10143,6 +10147,7 @@ var r = [10472]Rule{
 	{1, "yicp.fun", 2, true},
 	{1, "zicp.fun", 2, true},
 	{1, "sheezy.games", 2, true},
+	{1, "shipstatic.com", 2, true},
 	{1, "myshopblocks.com", 2, true},
 	{1, "myshopify.com", 2, true},
 	{1, "shopitsite.com", 2, true},
