@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version bfb50c (Wed Nov 25 05:20:22 2026)"
+const ListVersion = "PSL version 88260f (Wed Nov 25 18:55:05 2026)"
 
-func DefaultRules() [10477]Rule {
+func DefaultRules() [10494]Rule {
 	return r
 }
 
-var r = [10477]Rule{
+var r = [10494]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -591,10 +591,13 @@ var r = [10477]Rule{
 	{1, "bv", 1, false},
 	{1, "bw", 1, false},
 	{1, "ac.bw", 2, false},
+	{1, "agric.bw", 2, false},
 	{1, "co.bw", 2, false},
 	{1, "gov.bw", 2, false},
+	{1, "me.bw", 2, false},
 	{1, "net.bw", 2, false},
 	{1, "org.bw", 2, false},
+	{1, "shop.bw", 2, false},
 	{1, "by", 1, false},
 	{1, "gov.by", 2, false},
 	{1, "mil.by", 2, false},
@@ -8011,6 +8014,7 @@ var r = [10477]Rule{
 	{1, "prod.page", 2, true},
 	{1, "square.site", 2, true},
 	{1, "bluebite.io", 2, true},
+	{1, "bonto.page", 2, true},
 	{1, "boomla.net", 2, true},
 	{1, "boutir.com", 2, true},
 	{1, "boxfuse.io", 2, true},
@@ -8646,6 +8650,7 @@ var r = [10477]Rule{
 	{1, "api.lp.dev", 3, true},
 	{1, "objects.lp.dev", 3, true},
 	{1, "eu.encoway.cloud", 3, true},
+	{1, "entrypages.net", 2, true},
 	{1, "eu.org", 2, true},
 	{1, "al.eu.org", 3, true},
 	{1, "asso.eu.org", 3, true},
@@ -8854,6 +8859,7 @@ var r = [10477]Rule{
 	{2, "frusky.de", 3, true},
 	{1, "wien.funkfeuer.at", 3, true},
 	{1, "xwx.me", 2, true},
+	{1, "fusebase.site", 2, true},
 	{1, "daemon.asia", 2, true},
 	{1, "dix.asia", 2, true},
 	{1, "mydns.bz", 2, true},
@@ -9104,6 +9110,8 @@ var r = [10477]Rule{
 	{1, "ngo.ng", 2, true},
 	{1, "plc.ng", 2, true},
 	{1, "hstgr.cloud", 2, true},
+	{1, "hostney.app", 2, true},
+	{1, "hostney.cloud", 2, true},
 	{1, "hostyhosting.io", 2, true},
 	{1, "hf.space", 2, true},
 	{1, "static.hf.space", 3, true},
@@ -9133,6 +9141,7 @@ var r = [10477]Rule{
 	{1, "in-vpn.org", 2, true},
 	{1, "oninferno.net", 2, true},
 	{1, "info.cx", 2, true},
+	{1, "infusion-ai.cloud", 2, true},
 	{1, "ac.leg.br", 3, true},
 	{1, "al.leg.br", 3, true},
 	{1, "am.leg.br", 3, true},
@@ -9316,7 +9325,6 @@ var r = [10477]Rule{
 	{1, "leadpages.co", 2, true},
 	{1, "lpages.co", 2, true},
 	{1, "lpusercontent.com", 2, true},
-	{1, "leapcell.app", 2, true},
 	{1, "liara.run", 2, true},
 	{1, "iran.liara.run", 3, true},
 	{1, "libp2p.direct", 2, true},
@@ -9431,6 +9439,8 @@ var r = [10477]Rule{
 	{1, "custom.metacentrum.cz", 3, true},
 	{1, "flt.cloud.muni.cz", 4, true},
 	{1, "usr.cloud.muni.cz", 4, true},
+	{1, "atoms.world", 2, true},
+	{1, "pub.atoms.world", 3, true},
 	{1, "meteorapp.com", 2, true},
 	{1, "eu.meteorapp.com", 3, true},
 	{1, "co.pl", 2, true},
@@ -9567,6 +9577,7 @@ var r = [10477]Rule{
 	{1, "org.ru", 2, true},
 	{1, "pp.ru", 2, true},
 	{1, "my.be", 2, true},
+	{1, "mythex.app", 2, true},
 	{1, "hostedpi.com", 2, true},
 	{1, "caracal.mythic-beasts.com", 3, true},
 	{1, "customer.mythic-beasts.com", 3, true},
@@ -9901,12 +9912,16 @@ var r = [10477]Rule{
 	{1, "e.id", 2, true},
 	{1, "chirurgiens-dentistes-en-france.fr", 2, true},
 	{1, "byen.site", 2, true},
+	{1, "fs.kg", 2, true},
+	{1, "bg5.net", 2, true},
+	{1, "is-a.si", 2, true},
 	{1, "nyc.mn", 2, true},
 	{2, "cn.st", 3, true},
 	{1, "pubtls.org", 2, true},
 	{1, "puter.app", 2, true},
 	{1, "puter.site", 2, true},
 	{1, "puter.work", 2, true},
+	{1, "pymaia.app", 2, true},
 	{1, "pythonanywhere.com", 2, true},
 	{1, "eu.pythonanywhere.com", 3, true},
 	{1, "qa2.com", 2, true},
@@ -10253,6 +10268,7 @@ var r = [10477]Rule{
 	{1, "atl.jelastic.vps-host.net", 4, true},
 	{1, "njs.jelastic.vps-host.net", 4, true},
 	{1, "ric.jelastic.vps-host.net", 4, true},
+	{1, "strw.app", 2, true},
 	{1, "streak-link.com", 2, true},
 	{1, "streaklinks.com", 2, true},
 	{1, "streakusercontent.com", 2, true},
@@ -10431,6 +10447,7 @@ var r = [10477]Rule{
 	{1, "localcert.net", 2, true},
 	{1, "windsurf.app", 2, true},
 	{1, "windsurf.build", 2, true},
+	{1, "wirechunk.site", 2, true},
 	{1, "drive-platform.com", 2, true},
 	{1, "drive-platform.io", 2, true},
 	{1, "panel.gg", 2, true},
