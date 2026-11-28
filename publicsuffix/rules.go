@@ -3,13 +3,13 @@
 
 package publicsuffix
 
-const ListVersion = "PSL version 88260f (Wed Nov 25 18:55:05 2026)"
+const ListVersion = "PSL version 73edc2 (Fri Nov 27 12:48:23 2026)"
 
-func DefaultRules() [10494]Rule {
+func DefaultRules() [10507]Rule {
 	return r
 }
 
-var r = [10494]Rule{
+var r = [10507]Rule{
 	{1, "ac", 1, false},
 	{1, "com.ac", 2, false},
 	{1, "edu.ac", 2, false},
@@ -6995,11 +6995,13 @@ var r = [10494]Rule{
 	{1, "adobeio-static.net", 2, true},
 	{1, "adobeioruntime.net", 2, true},
 	{1, "africa.com", 2, true},
+	{1, "agental.site", 2, true},
 	{2, "auiusercontent.com", 3, true},
 	{1, "agilevibes.app", 2, true},
 	{1, "beep.pl", 2, true},
 	{1, "aiven.app", 2, true},
 	{2, "aivencloud.com", 3, true},
+	{1, "aiwebinfra.app", 2, true},
 	{1, "akadns.net", 2, true},
 	{1, "akamai.net", 2, true},
 	{1, "akamai-staging.net", 2, true},
@@ -9312,6 +9314,7 @@ var r = [10494]Rule{
 	{1, "webthings.io", 2, true},
 	{1, "krellian.net", 2, true},
 	{1, "co.de", 2, true},
+	{1, "lambforge.app", 2, true},
 	{1, "shiptoday.app", 2, true},
 	{1, "shiptoday.build", 2, true},
 	{1, "laravel.cloud", 2, true},
@@ -9804,6 +9807,7 @@ var r = [10494]Rule{
 	{1, "omgs.page", 2, true},
 	{1, "omg.lol", 2, true},
 	{1, "cloudycluster.net", 2, true},
+	{1, "eureka.zone", 2, true},
 	{1, "omniwe.site", 2, true},
 	{1, "123webseite.at", 2, true},
 	{1, "123website.be", 2, true},
@@ -9873,6 +9877,7 @@ var r = [10494]Rule{
 	{1, "gl.srv.us", 3, true},
 	{1, "mypep.link", 2, true},
 	{1, "pplx.app", 2, true},
+	{1, "phronusercontent.com", 2, true},
 	{1, "forgeblocks.com", 2, true},
 	{1, "id.forgerock.io", 3, true},
 	{1, "support.site", 2, true},
@@ -9964,6 +9969,7 @@ var r = [10494]Rule{
 	{1, "reliantlabs.dev", 2, true},
 	{1, "sites.reliantlabs.dev", 3, true},
 	{1, "reliantpreview.dev", 2, true},
+	{1, "relumesite.ai", 2, true},
 	{1, "onrender.com", 2, true},
 	{1, "app.render.com", 3, true},
 	{1, "replit.app", 2, true},
@@ -10197,6 +10203,7 @@ var r = [10494]Rule{
 	{1, "streamlit.app", 2, true},
 	{1, "streamlitapp.com", 2, true},
 	{1, "try-snowplow.com", 2, true},
+	{1, "softr.app", 2, true},
 	{1, "mafelo.net", 2, true},
 	{1, "sol.site", 2, true},
 	{1, "solidres.page", 2, true},
@@ -10215,6 +10222,7 @@ var r = [10494]Rule{
 	{1, "grok.me", 2, true},
 	{1, "spawnbase.app", 2, true},
 	{1, "customer.speedpartner.de", 3, true},
+	{1, "spheron.live", 2, true},
 	{1, "myspreadshop.at", 2, true},
 	{1, "myspreadshop.com.au", 3, true},
 	{1, "myspreadshop.be", 2, true},
@@ -10248,6 +10256,7 @@ var r = [10494]Rule{
 	{1, "indevs.in", 2, true},
 	{1, "musician.io", 2, true},
 	{1, "novecore.site", 2, true},
+	{1, "staticrun.app", 2, true},
 	{1, "statichost.page", 2, true},
 	{1, "feedback.ac", 2, true},
 	{1, "forms.ac", 2, true},
@@ -10324,6 +10333,7 @@ var r = [10494]Rule{
 	{1, "telebit.io", 2, true},
 	{2, "telebit.xyz", 3, true},
 	{1, "teleport.sh", 2, true},
+	{1, "tnas.online", 2, true},
 	{1, "terramind.io", 2, true},
 	{2, "firenet.ch", 3, true},
 	{2, "svc.firenet.ch", 4, true},
@@ -10475,6 +10485,9 @@ var r = [10494]Rule{
 	{1, "js.wpenginepowered.com", 3, true},
 	{2, "xenonconnect.de", 3, true},
 	{1, "half.host", 2, true},
+	{1, "xport.free", 2, true},
+	{1, "xport.host", 2, true},
+	{1, "xport.sh", 2, true},
 	{1, "cistron.nl", 2, true},
 	{1, "demon.nl", 2, true},
 	{1, "xs4all.space", 2, true},
